@@ -29,6 +29,9 @@ class NormaliseResult:
     rejected: list[tuple[str, list[str]]] = field(default_factory=list)
     unchanged: list[str] = field(default_factory=list)
     pruned: list[str] = field(default_factory=list)
+    collisions: list[tuple[str, str, str]] = field(default_factory=list)
+    """(file_stem, first doc_id, colliding doc_id) — nothing is written when
+    this is non-empty, because writing would destroy one of them."""
 
     @property
     def total(self) -> int:
@@ -59,6 +62,21 @@ def normalise(
     output_dir.mkdir(parents=True, exist_ok=True)
     result = NormaliseResult()
 
+    # doc_id -> file_stem is lossy: slugify truncates at 80 characters, so two
+    # long ids sharing a prefix would map to one file and the second would
+    # overwrite the first. That loss would be invisible — the manifest would
+    # list both documents while only one existed on disk. Detect it and refuse
+    # rather than discover it later as a document that cannot be found.
+    seen_stems: dict[str, str] = {}
+    for document in documents:
+        clash = seen_stems.get(document.file_stem)
+        if clash is not None and clash != document.doc_id:
+            result.collisions.append((document.file_stem, clash, document.doc_id))
+        seen_stems.setdefault(document.file_stem, document.doc_id)
+
+    if result.collisions:
+        return result
+
     for document in documents:
         problems = document.validate()
         if problems:
@@ -74,7 +92,8 @@ def normalise(
             _to_markdown(document), encoding="utf-8"
         )
         json_path.write_text(
-            json.dumps(document.to_dict(), indent=2, ensure_ascii=False), encoding="utf-8"
+            json.dumps(document.to_dict(), indent=2, ensure_ascii=False),
+            encoding="utf-8",
         )
         result.written.append(document.doc_id)
 
@@ -136,7 +155,9 @@ def _to_markdown(document: ParsedDocument) -> str:
         f"is_demo: {str(document.is_demo).lower()}",
     ]
     if document.is_demo:
-        lines.append(f"demo_reason: {json.dumps(document.demo_reason, ensure_ascii=False)}")
+        lines.append(
+            f"demo_reason: {json.dumps(document.demo_reason, ensure_ascii=False)}"
+        )
     lines.append("---")
     lines.append("")
 

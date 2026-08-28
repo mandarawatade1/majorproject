@@ -232,7 +232,9 @@ def cmd_parse(args: argparse.Namespace) -> int:
     documents.extend(demo_documents)
     failures.extend(demo_errors)
 
-    print(f"parsed {real_count} real document(s), {len(demo_documents)} demo document(s)")
+    print(
+        f"parsed {real_count} real document(s), {len(demo_documents)} demo document(s)"
+    )
 
     # Suppress identical content before anything is written. A hub page whose
     # only substantive block is a shared table is legitimate content once, and
@@ -244,6 +246,22 @@ def cmd_parse(args: argparse.Namespace) -> int:
     _write_suppression_record(corpus, suppressed)
 
     result = normalise(documents, out_dir, force=args.force)
+
+    if result.collisions:
+        print(
+            f"\nABORTED: {len(result.collisions)} document(s) map to a filename "
+            f"already used by another.\n"
+            f"         Writing would silently destroy one of each pair, so nothing "
+            f"was written.",
+            file=sys.stderr,
+        )
+        for stem, first, second in result.collisions[:10]:
+            print(
+                f"         {stem}\n             {first}\n             {second}",
+                file=sys.stderr,
+            )
+        return 1
+
     print(
         f"written {len(result.written)}, unchanged {len(result.unchanged)}, "
         f"pruned {len(result.pruned)}"
@@ -375,13 +393,21 @@ def build_parser() -> argparse.ArgumentParser:
     def add_crawl_args(p: argparse.ArgumentParser) -> None:
         p.add_argument(
             "--urls",
-            default=_env("CRAWL_BASE_URLS", "https://www.pce.ac.in,https://admissions.pce.ac.in"),
+            default=_env(
+                "CRAWL_BASE_URLS", "https://www.pce.ac.in,https://admissions.pce.ac.in"
+            ),
             help="Comma-separated base URLs. Only these hosts are ever fetched.",
         )
-        p.add_argument("--delay", type=float, default=float(_env("CRAWL_DELAY_SECONDS", "1.0")))
-        p.add_argument("--max-pages", type=int, default=int(_env("CRAWL_MAX_PAGES", "1000")))
+        p.add_argument(
+            "--delay", type=float, default=float(_env("CRAWL_DELAY_SECONDS", "1.0"))
+        )
+        p.add_argument(
+            "--max-pages", type=int, default=int(_env("CRAWL_MAX_PAGES", "1000"))
+        )
         p.add_argument("--max-depth", type=int, default=4)
-        p.add_argument("--refresh", action="store_true", help="Re-fetch even if cached.")
+        p.add_argument(
+            "--refresh", action="store_true", help="Re-fetch even if cached."
+        )
         p.add_argument("--ignore-robots", action="store_true", help=argparse.SUPPRESS)
         p.add_argument(
             "--user-agent",
@@ -393,12 +419,18 @@ def build_parser() -> argparse.ArgumentParser:
         )
 
     def add_parse_args(p: argparse.ArgumentParser) -> None:
-        p.add_argument("--force", action="store_true", help="Rewrite unchanged documents.")
-        p.add_argument("--tables", action="store_true", help="Extract PDF tables (slower).")
+        p.add_argument(
+            "--force", action="store_true", help="Rewrite unchanged documents."
+        )
+        p.add_argument(
+            "--tables", action="store_true", help="Extract PDF tables (slower)."
+        )
 
     def add_manifest_args(p: argparse.ArgumentParser) -> None:
         p.add_argument(
-            "--strict", action="store_true", help="Exit non-zero if the 80/20 target is missed."
+            "--strict",
+            action="store_true",
+            help="Exit non-zero if the 80/20 target is missed.",
         )
 
     crawl = sub.add_parser("crawl", help="Fetch pages and PDFs into corpus/raw/")

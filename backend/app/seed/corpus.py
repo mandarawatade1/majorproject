@@ -36,12 +36,22 @@ from app.models.knowledge import Document, DocumentSection, SuppressedDocument
 
 @dataclass
 class LoadReport:
+    manifest_total: int = 0
     inserted: int = 0
     updated: int = 0
     unchanged: int = 0
     suppressed: int = 0
     sections: int = 0
     skipped: list[str] = field(default_factory=list)
+
+    @property
+    def accounted_for(self) -> int:
+        """Documents this run actually put in, or confirmed already in, the DB."""
+        return self.inserted + self.updated + self.unchanged
+
+    @property
+    def is_complete(self) -> bool:
+        return self.accounted_for == self.manifest_total
 
     def summary(self) -> str:
         return (
@@ -62,7 +72,7 @@ def load_corpus(session: Session, corpus_dir: Path) -> LoadReport:
 
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     normalised_dir = corpus_dir / "normalised"
-    report = LoadReport()
+    report = LoadReport(manifest_total=len(manifest.get("documents", [])))
 
     departments = {d.name: d.id for d in session.scalars(select(Department))}
 
@@ -91,9 +101,12 @@ def _load_one(
         report.unchanged += 1
         return
 
-    payload = _read_normalised(normalised_dir, doc_id)
+    payload = _read_normalised(normalised_dir, doc_id, row.get("file_stem"))
     if payload is None:
-        report.skipped.append(f"{doc_id}: no normalised .json on disk")
+        report.skipped.append(
+            f"{doc_id}: no normalised .json on disk "
+            f"(looked for {row.get('file_stem') or '<derived stem>'}.json)"
+        )
         return
 
     fields = _document_fields(row, payload, departments)
@@ -206,12 +219,28 @@ def _load_suppressed(session: Session, rows: list[dict[str, Any]]) -> int:
 # ---------------------------------------------------------------------------
 
 
-def _read_normalised(normalised_dir: Path, doc_id: str) -> dict[str, Any] | None:
-    """Find a document's .json by its file_stem, which is doc_id slugified."""
-    import re
+def _read_normalised(
+    normalised_dir: Path, doc_id: str, file_stem: str | None = None
+) -> dict[str, Any] | None:
+    """Find a document's .json by the stem the pipeline actually wrote it under.
 
-    stem = re.sub(r"[^a-z0-9]+", "-", doc_id.replace("/", "-").lower()).strip("-")
-    path = normalised_dir / f"{stem}.json"
+    `file_stem` comes from the manifest. It is passed in rather than derived
+    because doc_id -> filename is lossy: slugify truncates at 80 characters, so
+    re-deriving it produces the wrong name for any longer id. An earlier version
+    of this function did re-derive it, without the truncation, and silently
+    skipped all 27 documents whose doc_id exceeded 80 characters.
+
+    The fallback exists only for manifests written before `file_stem` was
+    recorded, and it calls the pipeline's own slugify rather than
+    reimplementing it — the whole point being that this transformation is
+    defined in exactly one place.
+    """
+    if not file_stem:
+        from rag.ingestion.models import slugify
+
+        file_stem = slugify(doc_id.replace("/", "-"))
+
+    path = normalised_dir / f"{file_stem}.json"
     if not path.exists():
         return None
     try:

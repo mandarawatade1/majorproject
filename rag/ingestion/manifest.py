@@ -59,7 +59,9 @@ class CorpusStats:
 
     @property
     def demo_share_by_document(self) -> float:
-        return self.demo_documents / self.total_documents if self.total_documents else 0.0
+        return (
+            self.demo_documents / self.total_documents if self.total_documents else 0.0
+        )
 
     @property
     def demo_share_by_word(self) -> float:
@@ -67,7 +69,9 @@ class CorpusStats:
 
     @property
     def real_share_by_document(self) -> float:
-        return self.real_documents / self.total_documents if self.total_documents else 0.0
+        return (
+            self.real_documents / self.total_documents if self.total_documents else 0.0
+        )
 
     @property
     def meets_target(self) -> bool:
@@ -96,7 +100,9 @@ class CorpusStats:
         }
 
 
-def compute_stats(documents: list[ParsedDocument], duplicates_suppressed: int = 0) -> CorpusStats:
+def compute_stats(
+    documents: list[ParsedDocument], duplicates_suppressed: int = 0
+) -> CorpusStats:
     real = [d for d in documents if not d.is_demo]
     demo = [d for d in documents if d.is_demo]
 
@@ -108,8 +114,12 @@ def compute_stats(documents: list[ParsedDocument], duplicates_suppressed: int = 
         real_words=sum(d.word_count for d in real),
         demo_words=sum(d.word_count for d in demo),
         by_category=dict(Counter(d.category.value for d in documents).most_common()),
-        by_source_type=dict(Counter(d.source_type.value for d in documents).most_common()),
-        by_department=dict(Counter(d.department for d in documents if d.department).most_common()),
+        by_source_type=dict(
+            Counter(d.source_type.value for d in documents).most_common()
+        ),
+        by_department=dict(
+            Counter(d.department for d in documents if d.department).most_common()
+        ),
         documents_with_page_provenance=sum(
             1 for d in documents if any(s.start_page is not None for s in d.sections)
         ),
@@ -140,6 +150,13 @@ def build_manifest(
         "documents": [
             {
                 "doc_id": d.doc_id,
+                # The filename its .md/.json were written under. Carried
+                # explicitly because doc_id -> filename is a lossy
+                # transformation (slugify truncates at 80 characters), and a
+                # consumer that re-derives it will get it wrong for any long
+                # id. The seed loader did exactly that and silently skipped 27
+                # documents.
+                "file_stem": d.file_stem,
                 "title": d.title,
                 "category": d.category.value,
                 "source_type": d.source_type.value,
@@ -152,11 +169,15 @@ def build_manifest(
                 "page_count": d.page_count,
                 "word_count": d.word_count,
                 "section_count": len(d.sections),
-                "has_page_provenance": any(s.start_page is not None for s in d.sections),
+                "has_page_provenance": any(
+                    s.start_page is not None for s in d.sections
+                ),
                 "is_demo": d.is_demo,
                 "demo_reason": d.demo_reason,
             }
-            for d in sorted(documents, key=lambda x: (x.is_demo, x.category.value, x.doc_id))
+            for d in sorted(
+                documents, key=lambda x: (x.is_demo, x.category.value, x.doc_id)
+            )
         ],
     }
 
@@ -168,7 +189,9 @@ def write_manifest(
 ) -> dict[str, Any]:
     manifest = build_manifest(documents, suppressed)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+    path.write_text(
+        json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
     return manifest
 
 

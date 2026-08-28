@@ -133,13 +133,36 @@ def seed_admin(session: Session) -> None:
 
 
 def seed_corpus(session: Session) -> None:
+    """Load the corpus, and refuse to call a partial load a success.
+
+    The seed once loaded 582 of 609 documents and reported it only as a line in
+    a skipped list nobody read. A corpus quietly missing 27 documents is a
+    retrieval system that quietly cannot answer questions about them, so a
+    shortfall now raises.
+    """
     corpus_dir = Path(settings.corpus_dir)
     report = load_corpus(session, corpus_dir)
     print(report.summary())
+
     if report.skipped:
         print(f"\n{len(report.skipped)} document(s) skipped:")
         for line in report.skipped[:15]:
             print(f"  {line}")
+        if len(report.skipped) > 15:
+            print(f"  ... and {len(report.skipped) - 15} more")
+
+    print(
+        f"\nreconciled: manifest {report.manifest_total}, "
+        f"loaded {report.accounted_for}, skipped {len(report.skipped)}"
+    )
+    if not report.is_complete:
+        missing = report.manifest_total - report.accounted_for
+        raise RuntimeError(
+            f"{missing} of {report.manifest_total} documents in the manifest did not "
+            f"reach the database. The corpus is incomplete, so the load is being "
+            f"treated as a failure rather than a partial success. See the skipped "
+            f"list above for which documents and why."
+        )
 
 
 def verify(session: Session) -> int:

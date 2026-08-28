@@ -1195,3 +1195,99 @@ docker compose exec api python -m app.seed
 No regeneration needed — the existing migration is fixed in place. If the
 schema is ever regenerated, `render_item` now makes the output correct by
 default.
+
+---
+
+## 16. Phase 2.2 — 27 documents that never reached the database (28 Aug 2026)
+
+The seed reported **582 documents**. The manifest holds **609**. Both numbers
+were reported as a success.
+
+```
+manifest documents            609
+normalised .json on disk      609
+loaded into the database      582     <- 27 documents missing
+docs the seed could not find   27
+docs actually missing           0     <- every file was on disk all along
+```
+
+### 16.1 Cause
+
+`ParsedDocument.file_stem` slugifies `doc_id` and **truncates at 80
+characters**. Twenty-seven doc_ids are longer than that — up to 86 — so their
+files were written under the truncated name.
+
+`app/seed/corpus.py` did not use `file_stem`. It **reimplemented** the
+derivation:
+
+```python
+stem = re.sub(r"[^a-z0-9]+", "-", doc_id.replace("/", "-").lower()).strip("-")
+```
+
+…and omitted the truncation. For a long id it therefore looked for an 86-
+character filename that has never existed, found nothing, and skipped the
+document.
+
+This is the same class of defect as the crawler's `.pdf.pdf` failure in Phase
+1: **one transformation, implemented twice, drifted apart.** Both times the
+writer was right, the reader was wrong, and the loss was silent.
+
+### 16.2 Fix
+
+**`file_stem` is now carried in the manifest.** The pipeline writes it; the
+seed reads it. Nothing downstream re-derives a lossy transformation.
+
+**The fallback calls the pipeline's own `slugify`** rather than reimplementing
+it, for manifests written before the field existed — which is why the 27
+documents are recoverable without regenerating anything.
+
+**Collisions are now refused, not absorbed.** Truncation means two long ids
+sharing an 80-character prefix map to one filename, and the second would
+overwrite the first — the manifest listing both while only one existed.
+`normalise()` detects this before writing anything and `parse` aborts with a
+non-zero exit and the offending pair named. There are no collisions in the
+current corpus; the guard is there because there is no reason there could not
+be.
+
+**The seed reconciles and refuses to call a partial load a success:**
+
+```
+reconciled: manifest 609, loaded 609, skipped 0
+```
+
+A shortfall now raises. A corpus quietly missing 27 documents is a retrieval
+system that quietly cannot answer questions about them, and reporting that as
+success is worse than failing.
+
+### 16.3 Verification
+
+| Check | Result |
+|---|---|
+| `pytest rag/tests` | **158 passed** (up from 150) |
+| All 609 manifest documents resolvable with the fix | pass (0 unresolvable) |
+| Long doc_id truncates to exactly 80 chars, and the file written matches | pass |
+| Naive re-derivation demonstrably finds nothing | pass — pins the exact defect |
+| Shared `slugify` reproduces `file_stem` for pathological ids | pass |
+| Two ids sharing an 80-char prefix detected as a collision | pass |
+| Nothing written when a collision exists | pass |
+| ruff lint and format | clean |
+
+### 16.4 What the team must run
+
+```bash
+docker compose exec api python -m rag.ingestion manifest   # adds file_stem
+docker compose exec api python -m app.seed corpus
+```
+
+Expect `reconciled: manifest 609, loaded 609, skipped 0` and 609 documents in
+the database — 570 real, 39 demo, about 93.6% real.
+
+### 16.5 Why this gates Phase 3
+
+Phase 3 builds the C0 baseline index from the documents in the database. That
+index, and the numbers measured against it, become the reference point every
+later configuration is compared to in Chapter 4. Building it over a corpus
+missing 27 documents means rebuilding it — and worse, means the C0 figures
+would not be comparable to C1-C5 measured later over the full corpus.
+
+One minute of re-seeding now avoids invalidating the baseline.

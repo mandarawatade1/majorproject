@@ -1,0 +1,203 @@
+# ===========================================================================
+# PCE Knowledge Management System — local development stack
+#
+#   cp .env.example .env && docker compose up -d
+#   ./scripts/verify-stack.sh        # confirms every health check is green
+#
+# First run downloads ~9.6 GB of Ollama models. See README "First run".
+# ===========================================================================
+name: pce-kms
+
+services:
+
+  # -------------------------------------------------------------------------
+  # PostgreSQL — institutional entities, users, chats, citations, eval results
+  # -------------------------------------------------------------------------
+  postgres:
+    image: postgres:16-alpine
+    container_name: pce-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-pce}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pce_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-pce_kms}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "${POSTGRES_HOST_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-pce} -d $${POSTGRES_DB:-pce_kms}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+    networks: [pce-net]
+
+  # -------------------------------------------------------------------------
+  # Redis — response/embedding cache and Celery broker
+  # -------------------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: pce-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes", "--save", "60", "1"]
+    ports:
+      - "${REDIS_HOST_PORT:-6379}:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+    networks: [pce-net]
+
+  # -------------------------------------------------------------------------
+  # ChromaDB — dense vector index (HNSW), persisted to a named volume
+  # -------------------------------------------------------------------------
+  chroma:
+    image: chromadb/chroma:0.6.3
+    container_name: pce-chroma
+    restart: unless-stopped
+    environment:
+      IS_PERSISTENT: "TRUE"
+      PERSIST_DIRECTORY: /chroma/chroma
+      ANONYMIZED_TELEMETRY: "FALSE"
+      CHROMA_SERVER_HOST: 0.0.0.0
+    ports:
+      - "${CHROMA_HOST_PORT:-8001}:8000"
+    volumes:
+      - chromadata:/chroma/chroma
+    # Chroma moved its heartbeat from /api/v1 to /api/v2 across releases, and
+    # the image ships no curl. Probe both paths with whichever python exists.
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - |
+          for P in python3 python; do
+            for V in v2 v1; do
+              $$P -c "import urllib.request as u; u.urlopen('http://localhost:8000/api/$$V/heartbeat', timeout=3)" 2>/dev/null && exit 0
+            done
+          done
+          exit 1
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 20s
+    networks: [pce-net]
+
+  # -------------------------------------------------------------------------
+  # Ollama — local open-source LLM runtime. No data leaves this machine.
+  #
+  # macOS note: containerised Ollama is CPU-only (Docker cannot pass through
+  # Metal). For a usable demo on a Mac, run Ollama natively and point
+  # OLLAMA_BASE_URL at http://host.docker.internal:11434 — see the README.
+  # -------------------------------------------------------------------------
+  ollama:
+    image: ollama/ollama:latest
+    container_name: pce-ollama
+    restart: unless-stopped
+    ports:
+      - "${OLLAMA_HOST_PORT:-11434}:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    networks: [pce-net]
+
+  # -------------------------------------------------------------------------
+  # One-shot: pulls the generator and judge models, then exits 0.
+  # Runs in parallel with the API — it does not block startup.
+  # Set OLLAMA_AUTO_PULL=false to skip the ~9.6 GB download.
+  # -------------------------------------------------------------------------
+  ollama-init:
+    image: ollama/ollama:latest
+    container_name: pce-ollama-init
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+      OLLAMA_AUTO_PULL: ${OLLAMA_AUTO_PULL:-true}
+      GENERATOR: ${OLLAMA_GENERATOR_MODEL:-qwen2.5:7b-instruct-q4_K_M}
+      JUDGE: ${OLLAMA_JUDGE_MODEL:-llama3.1:8b-instruct-q4_K_M}
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        if [ "$$OLLAMA_AUTO_PULL" != "true" ]; then
+          echo "OLLAMA_AUTO_PULL is not true — skipping model download."
+          exit 0
+        fi
+        set -e
+        for M in "$$GENERATOR" "$$JUDGE"; do
+          if ollama list 2>/dev/null | awk '{print $$1}' | grep -qx "$$M"; then
+            echo "already present: $$M"
+          else
+            echo "pulling: $$M   (this can take a long while on first run)"
+            ollama pull "$$M"
+          fi
+        done
+        echo "ollama-init: all models present."
+    restart: "no"
+    networks: [pce-net]
+
+  # -------------------------------------------------------------------------
+  # FastAPI application + knowledge service
+  # -------------------------------------------------------------------------
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: development
+    container_name: pce-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      chroma:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      # Force in-network hostnames regardless of what .env says, so the same
+      # .env works whether you run the API in Docker or on the host.
+      POSTGRES_HOST: postgres
+      REDIS_HOST: redis
+      CHROMA_HOST: chroma
+      CORPUS_DIR: /corpus
+      DATA_DIR: /data
+      HF_HOME: /data/hf-cache
+    ports:
+      - "${API_PORT:-8000}:8000"
+    volumes:
+      - ./backend:/app          # hot reload in development
+      - ./rag:/app/rag
+      - ./corpus:/corpus
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=5)\""]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    networks: [pce-net]
+
+volumes:
+  pgdata:
+  redisdata:
+  chromadata:
+  ollama_models:
+
+networks:
+  pce-net:
+    driver: bridge

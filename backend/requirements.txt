@@ -1,0 +1,54 @@
+# ---------------------------------------------------------------------------
+# Phase 0-2 runtime dependencies.
+#
+# The heavy AI stack (langchain, langgraph, sentence-transformers, torch,
+# ragas) is deliberately NOT here yet — it is added in Phase 3 when the RAG
+# pipeline lands. Keeping it out now means a ~200 MB image and a fast CI run
+# instead of a ~4 GB image and a 10-minute one.
+# ---------------------------------------------------------------------------
+
+# Web framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# Settings and validation
+pydantic==2.10.4
+pydantic-settings==2.7.0
+
+# Database
+SQLAlchemy==2.0.36
+alembic==1.14.0
+psycopg[binary]==3.2.3
+
+# Cache / broker
+redis==5.2.1
+
+# Auth
+pyjwt==2.10.1
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.1
+
+# HTTP + resilience
+httpx==0.28.1
+tenacity==9.0.0
+
+# Logging
+structlog==24.4.0
+
+# ---------------------------------------------------------------------------
+# Phase 1 — corpus ingestion
+# ---------------------------------------------------------------------------
+# Boilerplate-stripping HTML extraction. This is what stops the site's repeated
+# navigation and footer becoming the most common text in the corpus.
+trafilatura==2.0.0
+beautifulsoup4==4.12.3
+lxml==5.3.0
+
+# PDF text extraction with exact page numbers (page-level provenance) and
+# table extraction.
+pymupdf==1.25.1
+pdfplumber==0.11.5
+
+# Demo-corpus front matter.
+pyyaml==6.0.2

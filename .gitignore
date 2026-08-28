@@ -1,0 +1,80 @@
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Node / Next.js
+# ---------------------------------------------------------------------------
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------------------------------------------------------------------------
+# Secrets and local config  (NEVER commit a real .env)
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ---------------------------------------------------------------------------
+# Runtime data: vector index, sparse index, model weights, caches.
+# These are large, machine-specific and fully reproducible from the corpus.
+# ---------------------------------------------------------------------------
+data/*
+!data/.gitkeep
+*.faiss
+*.bin
+*.gguf
+*.safetensors
+.cache/
+.ollama/
+
+# ---------------------------------------------------------------------------
+# Corpus: raw + normalised are rebuilt by the Phase 1 crawler and can be large.
+# corpus/demo/ IS tracked — it is hand-authored source material.
+# ---------------------------------------------------------------------------
+corpus/raw/*
+!corpus/raw/.gitkeep
+corpus/normalised/*
+!corpus/normalised/.gitkeep
+corpus/suppressed.json
+
+# ---------------------------------------------------------------------------
+# Evaluation artefacts (regenerate via the eval harness)
+# ---------------------------------------------------------------------------
+eval/runs/
+eval/exports/
+
+# ---------------------------------------------------------------------------
+# OS / editor
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+!.vscode/extensions.json
+*.swp
+*~

@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------------------
+# Git LFS — large binaries.
+#
+# This repo had ZERO commits when LFS was introduced, so every matching file
+# below goes into LFS from the very first commit. No history rewrite is needed.
+#
+# Setup (once per clone, per machine):
+#     git lfs install
+#
+# Verify a file really went to LFS:
+#     git lfs ls-files
+# ---------------------------------------------------------------------------
+*.docx  filter=lfs diff=lfs merge=lfs -text
+*.doc   filter=lfs diff=lfs merge=lfs -text
+*.pdf   filter=lfs diff=lfs merge=lfs -text
+*.pptx  filter=lfs diff=lfs merge=lfs -text
+*.xlsx  filter=lfs diff=lfs merge=lfs -text
+*.zip   filter=lfs diff=lfs merge=lfs -text
+*.png   filter=lfs diff=lfs merge=lfs -text
+*.jpg   filter=lfs diff=lfs merge=lfs -text
+*.jpeg  filter=lfs diff=lfs merge=lfs -text
+*.gif   filter=lfs diff=lfs merge=lfs -text
+*.mp4   filter=lfs diff=lfs merge=lfs -text
+*.gguf  filter=lfs diff=lfs merge=lfs -text
+# ---------------------------------------------------------------------------
+# Line endings — keep the repo LF-normalised regardless of contributor OS.
+# ---------------------------------------------------------------------------
+* text=auto eol=lf
+*.sh    text eol=lf
+*.py    text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.md    text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+# Keep generated lockfiles out of diffs
+package-lock.json  -diff
+poetry.lock        -diff

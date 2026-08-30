@@ -3,6 +3,7 @@
 import { useCallback, useRef, useState } from "react";
 
 import { DemoBadge } from "@/components/demo-badge";
+import { displaySource } from "@/lib/citation";
 import {
   readEventStream,
   type AnswerPayload,
@@ -392,7 +393,9 @@ function SourceList({ sources }: { sources: SourceRef[] }) {
     <section>
       <h2 className="eyebrow mb-3">Sources</h2>
       <ol className="space-y-3">
-        {sources.map((source) => (
+        {sources.map((source) => {
+          const display = displaySource(source);
+          return (
           <li
             key={source.chunk_id}
             id={`source-${source.marker.slice(2, -1)}`}
@@ -404,7 +407,14 @@ function SourceList({ sources }: { sources: SourceRef[] }) {
               </span>
               {source.is_demo ? <DemoBadge /> : null}
             </div>
-            <p className="mt-2 text-sm leading-snug text-ink">{source.label}</p>
+            {/* The label the pipeline recorded is kept on hover, so the tidied
+                display never becomes the only version a reader can see. */}
+            <p className="mt-2 text-sm font-medium leading-snug text-ink" title={display.raw}>
+              {display.title}
+            </p>
+            {display.section ? (
+              <p className="mt-1 text-xs leading-snug text-ink-soft">{display.section}</p>
+            ) : null}
             {source.page !== null ? (
               <p className="mt-1 text-xs text-ink-muted">Page {source.page}</p>
             ) : null}
@@ -419,7 +429,8 @@ function SourceList({ sources }: { sources: SourceRef[] }) {
               </a>
             ) : null}
           </li>
-        ))}
+          );
+        })}
       </ol>
     </section>
   );

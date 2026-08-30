@@ -191,13 +191,23 @@ class TestThePlaceholderKeyIsRefusedInProduction:
     def test_the_key_env_example_actually_ships_is_one_of_them(self) -> None:
         """Read the file rather than trusting the constant.
 
-        This is the test that fails if someone edits `.env.example` and leaves
-        the guard behind — the drift that made the guard useless in the first
-        place. Skipped where the file is not shipped, as in the API image.
+        This fails if someone edits `.env.example` and leaves the guard behind
+        — the drift that made the guard useless in the first place.
+
+        It skips in the container, and that is not a detail to gloss over: the
+        image is built with `context: ./backend`, so `.env.example`, which
+        lives at the repository root, is not there and never will be. Under
+        `docker compose exec api pytest` this assertion does not run. The same
+        check therefore also exists as `scripts/check_secret_key.py`, which
+        runs on the host where the file is visible and needs no dependencies.
+        Run that; this copy only earns its keep on a host-side pytest.
         """
         example = Path(__file__).resolve().parents[2] / ".env.example"
         if not example.exists():
-            pytest.skip("no .env.example in this tree")
+            pytest.skip(
+                "no .env.example in this tree (expected in the container) — "
+                "run scripts/check_secret_key.py on the host instead"
+            )
         shipped = [
             line.split("=", 1)[1].split("#")[0].strip()
             for line in example.read_text().splitlines()

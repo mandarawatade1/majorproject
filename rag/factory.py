@@ -63,6 +63,16 @@ def build_index(
     index it cannot compare against. Both matter for the same reason: a
     mismatch does not error on its own, it just returns confident results
     computed over the wrong thing.
+
+    **The collection name carries the chunking strategy**, so the two chunkers
+    get separate collections and can coexist. Before this, one shared
+    collection meant C0 and C1-onward overwrote each other: running a C0
+    evaluation left the portal — which serves C3 — unable to answer at all
+    until someone re-indexed, and the reverse for the evaluation. The guard
+    caught it every time, but a guard that fires during normal use is a design
+    telling you something. Setting CHROMA_COLLECTION explicitly overrides this
+    and pins one name, which is what a deliberate side-by-side comparison
+    wants.
     """
     backend = (backend or _env("INDEX_BACKEND", "chroma")).lower()
 
@@ -76,10 +86,19 @@ def build_index(
     return ChromaIndex(
         host=_env("CHROMA_HOST", "localhost"),
         port=int(_env("CHROMA_PORT", "8000")),
-        collection=_env("CHROMA_COLLECTION", "pce_chunks"),
+        collection=_collection_name(chunking),
         embedding_model=embedding_model,
         chunking=chunking,
     )
+
+
+def _collection_name(chunking: str) -> str:
+    """One collection per chunking strategy, unless explicitly overridden."""
+    explicit = _env("CHROMA_COLLECTION", "")
+    if explicit:
+        return explicit
+    base = _env("CHROMA_COLLECTION_PREFIX", "pce_chunks")
+    return f"{base}_{chunking}" if chunking else base
 
 
 def build_sparse_index(path: str | None = None) -> BM25Index:

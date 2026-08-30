@@ -103,6 +103,37 @@ class TestTheCollectionRefusesAMismatch:
         assert "CHROMA_COLLECTION" in str(exc.value)
 
 
+class TestEachChunkerGetsItsOwnCollection:
+    """Why the guard above should now rarely fire.
+
+    One shared collection meant C0's fixed chunks and C1-onward's
+    structure-aware chunks overwrote each other. The guard turned that from
+    silent contamination into a loud refusal — which is right, but a guard that
+    fires during ordinary use is a design telling you something. It fired for
+    real the first time the portal served a question after a C0 evaluation.
+    Separate collections let both indexes exist at once.
+    """
+
+    def test_the_two_chunkers_resolve_to_different_collections(
+        self, monkeypatch
+    ) -> None:
+        from rag.factory import _collection_name
+
+        monkeypatch.delenv("CHROMA_COLLECTION", raising=False)
+        monkeypatch.delenv("CHROMA_COLLECTION_PREFIX", raising=False)
+        assert _collection_name("fixed") != _collection_name("structure_aware")
+        assert _collection_name("structure_aware").endswith("structure_aware")
+
+    def test_an_explicit_name_still_wins(self, monkeypatch) -> None:
+        """A deliberate side-by-side comparison needs one pinned collection,
+        and the environment variable remains the way to ask for it."""
+        from rag.factory import _collection_name
+
+        monkeypatch.setenv("CHROMA_COLLECTION", "pinned")
+        assert _collection_name("fixed") == "pinned"
+        assert _collection_name("structure_aware") == "pinned"
+
+
 class TestChunkIdsAreNotStableAcrossRuns:
     """Documents the property the guards above exist to compensate for.
 

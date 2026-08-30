@@ -22,16 +22,16 @@ export default async function HomePage() {
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
-              href="/departments"
+              href="/ask"
               className="rounded-md bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-700"
             >
-              Browse departments
+              Ask a question
             </Link>
             <Link
-              href="/programs"
+              href="/departments"
               className="rounded-md border border-line bg-white px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-navy-200 hover:bg-navy-50"
             >
-              See programmes
+              Browse departments
             </Link>
           </div>
         </div>

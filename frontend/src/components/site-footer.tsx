@@ -25,6 +25,11 @@ export function SiteFooter() {
           <p className="eyebrow mb-3">Browse</p>
           <ul className="space-y-2 text-sm">
             <li>
+              <Link href="/ask" className="text-ink-soft link-underline">
+                Ask PCE
+              </Link>
+            </li>
+            <li>
               <Link href="/departments" className="text-ink-soft link-underline">
                 Departments
               </Link>

@@ -7,6 +7,7 @@ const NAV = [
   { href: "/departments", label: "Departments" },
   { href: "/programs", label: "Programmes" },
   { href: "/faculty", label: "Faculty" },
+  { href: "/ask", label: "Ask PCE" },
 ];
 
 export function SiteHeader() {

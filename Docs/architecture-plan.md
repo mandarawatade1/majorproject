@@ -2910,3 +2910,189 @@ C3 by default.
 Note also that generation was 126 s of C3's 137 s — 92% of the wait. If the
 portal ever needs to feel faster, the lever is a smaller generator, not better
 retrieval.
+
+## 29. Phase 6b — authentication, the admin surface, and a corpus that had drifted (30 Aug 2026)
+
+Scoped as the last backend phase: gate the administrative surface, keep the
+portal public, and give an administrator enough visibility to trust the system
+without opening a terminal. What it actually produced was three defects that
+had been sitting undetected — one in the guard written during this phase.
+
+### 29.1 What was built
+
+| File | Purpose |
+| --- | --- |
+| `backend/app/core/security.py` | bcrypt passwords, JWT issue/decode, signing-key guard |
+| `backend/app/api/deps.py` | `optional_user`, `current_user`, `require_admin` |
+| `backend/app/api/routes/auth.py` | `/auth/login`, `/auth/refresh`, `/auth/me` |
+| `backend/app/api/routes/admin.py` | corpus, evaluations, index rebuild and status |
+| `backend/tests/test_auth.py` | 24 tests, no database and no live services |
+| `scripts/check_secret_key.py` | host-side check the container cannot run |
+| `backend/app/seed/corpus.py` | `prune_documents`, the seeder's first delete path |
+| `rag/ingestion/cli.py` | `corpus/discarded.json` — pages dropped below the threshold |
+
+**The role travels in the token; the database decides whether the account
+exists.** An ordinary authorisation check needs no query, but the user is loaded
+and `is_active` re-checked on every authenticated request. A role in a signed
+blob cannot know that an account was disabled a minute ago, so access tokens
+last 30 minutes to bound that window explicitly rather than by accident.
+
+**One message for every login failure.** "No such account" and "wrong password"
+are the same 401 with the same body. Distinguishing them hands an attacker a
+free account-enumeration oracle, and the user who mistyped is no better off for
+knowing which half was wrong. A test asserts the two responses are byte-equal.
+
+**401 and 403 are different answers.** 401 means *who are you*; 403 means *I
+know who you are and the answer is no*. Conflating them tells a signed-in user
+to log in again, which they cannot fix.
+
+**No registration endpoint.** The only privileged role is `admin` and the only
+account is created by `python -m app.seed admin`. Self-service registration
+would be attack surface for a feature nobody uses.
+
+**Anonymous is a valid state, not an error.** The portal is public and must stay
+that way; a test asserts `/chat/configs` and `/health` still answer 200 with no
+credentials, because the failure mode of adding auth is quietly closing the
+thing the deployment exists for.
+
+**The rebuild endpoint has teeth, so it is guarded.** It requires `confirm` to
+be the literal string `REBUILD`, refuses with 409 while another rebuild runs,
+reports progress rather than blocking, and resets the sparse index with the
+dense one — chunk identifiers are regenerated per run, so a surviving BM25 index
+shares no ids with a rebuilt Chroma collection and RRF silently stops fusing.
+
+### 29.2 A correction worth recording: the guard checked the wrong string
+
+`security.py` refuses to issue a token when the signing key is a published
+placeholder and the environment is production. The first version compared
+against `config.py`'s field default, `dev-only-insecure-key-change-me`.
+
+But `.env.example` ships `SECRET_KEY=CHANGE_ME_generate_a_long_random_string_before_first_run`,
+and copying `.env.example` to `.env` is the documented first step. The field
+default is therefore the one value a real deployment never has. The guard
+covered the impossible case and let the realistic one through — while appearing
+to handle it, which is the failure mode it was written to prevent, reproduced
+inside itself.
+
+It now rejects both literals, anything beginning with `CHANGE_ME`, and any key
+under 32 characters.
+
+**The test that should have caught it cannot run.** `test_auth.py` reads
+`.env.example` off disk and asserts the guard rejects whatever it ships. The API
+image is built with `context: ./backend`; `.env.example` lives at the repository
+root, outside that context and outside the bind mount. Under
+`docker compose exec api pytest` the file does not exist and the test skips —
+one `s` among 93 dots, indistinguishable from a pass. The same assertion now
+also exists as `scripts/check_secret_key.py`, which runs on the host and parses
+the constants out of `security.py` rather than restating them. **A skipped test
+looks exactly like a passing one.**
+
+### 29.3 The finding: the database had drifted from the corpus
+
+`/admin/corpus` reports database counts beside index counts so a drift is
+visible. On its first real call it found one:
+
+| | documents | sections |
+| --- | --- | --- |
+| Database, as found | 609 | 2,893 |
+| Manifest | 765 | — |
+| After `seed corpus` | **788** | 2,515 |
+| After `seed prune` | **765** | 2,466 |
+
+The database had been seeded before the corpus was corrected and nothing
+re-runs that seed when the corpus is regenerated. So the portal, which reads the
+database, was serving 609 documents while Ask PCE answered from an index built
+over 765.
+
+Re-seeding *overshot*, and the reason is the second defect: `load_corpus`
+inserts and updates but never deletes. Its only `delete` is for the sections of
+a document it is already updating. **A document that leaves the corpus keeps its
+row for ever.** 765 current + 23 stale = 788.
+
+The 23 were checked before anything was deleted. Two — `academics/admissions`
+and `academics/ph-d` — are landing pages superseded by more specific children,
+not losses. The other 21, including six faculty profiles and the IQAC AQAR
+reports index, are covered in §29.4.
+
+`python -m app.seed prune` now removes documents the manifest no longer lists.
+It is deliberately **not** part of `all`: every other step only adds, which is
+what makes `all` safe to re-run, and this one deletes. It refuses outright when
+the manifest lists documents the database has not got (the two are not from the
+same load, so extra rows prove nothing) and when the deletion would exceed a
+fifth of the corpus (a truncated manifest must not be able to empty a working
+database). Sections and chunks carry `ondelete="CASCADE"`.
+
+**A reporting bug of this phase's own making.** The endpoint originally printed
+`chunks: 0` beside `documents: 609`, which reads as a failed load. It is the
+expected value: there are two unrelated classes named `Chunk` — the ORM table,
+which nothing anywhere writes to, and the `rag.chunking` dataclass, which goes
+to Chroma and BM25. The count moved into its own `chunk_table` block with its
+meaning attached, and the endpoint now reads the manifest itself and reports a
+`corpus_agreement` block naming the *direction* of any drift, because too few
+rows and too many rows are different faults wanting different answers.
+
+### 29.4 The silent discard: 168 pages with no record anywhere
+
+Tracing the 21 genuinely-missing documents reached a single line in `cmd_parse`:
+
+```python
+if document is None:
+    continue  # navigation-only page; not an error
+```
+
+`parse_html` returns `None` for exactly one reason — extracted body text below
+`MIN_USEFUL_CHARS = 250`. Every other rejection in the pipeline is recorded:
+PDF failures, unreadable metadata and demo errors are collected into `failures`
+and printed; suppressed duplicates are written to `suppressed.json`. This one
+appeared in no output, no manifest and no record file. **A run could report
+"parsed 785 documents" while discarding 168 pages without a word.**
+
+Measured over the full crawl: 993 crawled HTML pages examined, 825 retained,
+**168 discarded**.
+
+**A correction worth recording.** The first diagnostic flagged parser failures
+as pages extracting 20 characters or fewer, and found none — so the conclusion
+was "the filter is working as intended". That discriminator was wrong. The
+failures sit at 237–249 characters, just under the threshold, and are only
+visible in the ratio of extracted text to raw bytes: roughly 0.0012. Reading the
+ratio then produced the opposite error — "the extractor is broken" — because a
+217 KB file yielding 247 characters looks like a catastrophe. Only opening three
+pages by hand settled it, and the truth was neither: the bulk of those files is
+the site's mega-menu, which the extractor correctly strips, and most of the
+discarded pages genuinely have no prose. **A summary statistic chosen before
+looking at the data got it wrong twice in opposite directions.**
+
+The one real defect is narrower and worse. The automobile curriculum page
+extracts 247 characters, while its `post-content` wrapper holds ~1,246
+characters and **16 links to syllabus PDFs**: the extraction library treats a
+block that is mostly anchors as navigation boilerplate, which on this site is
+inverted — the pages whose whole purpose is to list official documents are
+exactly the pages whose content is links. None of those 16 PDFs are in
+`corpus/raw`, and no AQAR report PDF was crawled at all, though 170 PDFs were
+crawled overall.
+
+The pipeline now writes `corpus/discarded.json` on every parse and prints the
+count, so the figure is reproducible rather than archaeological.
+
+**The gap was not closed.** Doing so requires re-crawling to follow the linked
+PDFs, re-parsing, rebuilding both indexes and re-running all seven
+configurations over 140 questions. The evaluation evidence was judged more
+valuable than the additional coverage, and the exclusion is documented in
+`Docs/corpus-coverage-limitation.md` with the measured figures rather than left
+as an unexplained hole.
+
+### 29.5 Where this leaves the system
+
+93 backend tests pass, 2 skip for stated reasons. Login issues a token pair, the
+admin gate answers 403 to a signed-in non-admin and 401 to nobody, and the
+portal still answers 200 without credentials. The database, the manifest and the
+index all describe the same 765 documents — 726 real, 39 demo, 94.9% real by
+document.
+
+The phase's lasting lesson is the one it kept repeating: **every defect found
+here was a report of success covering an absence.** A guard naming a string
+nothing uses. A test that skips where it runs. A seeder that reports a load and
+never removes. A parser that counts what it kept and says nothing about what it
+threw away. None of them failed; all of them were silent, and each was found
+only by comparing two independent accounts of the same thing and noticing they
+disagreed.

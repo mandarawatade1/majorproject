@@ -16,7 +16,7 @@ from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.api.routes import chat, health, portal
+from app.api.routes import admin, auth, chat, health, portal
 
 configure_logging()
 logger = get_logger(__name__)
@@ -113,6 +113,8 @@ app.include_router(health.router)
 # the prefix changes.
 app.include_router(portal.router, prefix=settings.api_prefix)
 app.include_router(chat.router, prefix=settings.api_prefix)
+app.include_router(auth.router, prefix=settings.api_prefix)
+app.include_router(admin.router, prefix=settings.api_prefix)
 
 
 @app.get("/", tags=["meta"], summary="Service banner")

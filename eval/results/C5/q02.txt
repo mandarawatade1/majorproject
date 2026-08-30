@@ -12,15 +12,15 @@ Sources:
 
   1 retrieved chunk(s) omitted for context budget.
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 98578ms, generation 86653ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 119375ms, generation 77627ms]
 
 {
   "question": "What postgraduate programmes does the Computer Engineering department offer?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 270174.5,
-  "retrieval_ms": 98578.3,
-  "generation_ms": 86653.3,
+  "latency_ms": 262403.9,
+  "retrieval_ms": 119374.6,
+  "generation_ms": 77626.7,
   "sources": [
     "cf8088fd-bbdc-44c2-9551-47f02957c320",
     "8834cbb3-2da9-4432-ad6a-b6bced53084c",
@@ -31,7 +31,8 @@ Sources:
   "retrieval": {
     "original_query": "What postgraduate programmes does the Computer Engineering department offer?",
     "rewritten_queries": [
-      "Postgraduate programmes offered by Pillai College of Engineering Computer Engineering department"
+      "What postgraduate programmes are offered by the Computer Engineering department at Pillai College of Engineering?",
+      "What specific postgraduate programmes does the Computer Engineering department at Pillai College of Engineering offer?"
     ],
     "dense_hits": [
       {
@@ -155,111 +156,141 @@ Sources:
         "is_demo": true
       },
       {
+        "chunk_id": "c931f0f9-74f4-4b2f-bdb1-db9e9c5c93b5",
+        "score": 0.755263,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
+        "score": 0.748083,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "37ad9d7c-4d39-423a-875b-38460a0b3855",
+        "score": 0.74378,
+        "document_id": "pce-faculty-faculty-directory-sowmya-p-2",
+        "is_demo": false
+      },
+      {
         "chunk_id": "8a37d06f-907d-4aa1-9bca-cd92c7d0cf60",
-        "score": 0.795531,
+        "score": 0.740281,
         "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
         "is_demo": false
       },
       {
         "chunk_id": "4842b382-238a-44b7-bfc7-42d6a2c65129",
-        "score": 0.794349,
+        "score": 0.738625,
         "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
         "is_demo": false
       },
       {
-        "chunk_id": "c931f0f9-74f4-4b2f-bdb1-db9e9c5c93b5",
-        "score": 0.792127,
-        "document_id": "pce-pdf-pce-prospectus-2022",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "37ad9d7c-4d39-423a-875b-38460a0b3855",
-        "score": 0.791745,
-        "document_id": "pce-faculty-faculty-directory-sowmya-p-2",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
-        "score": 0.783846,
-        "document_id": "pce-about-the-institute",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "99c5e8e7-0ea7-4c76-abfc-a203d2aa986a",
-        "score": 0.781521,
-        "document_id": "pce-about-the-institute",
+        "chunk_id": "278a2ba5-8e95-48f6-888e-518bbb18f717",
+        "score": 0.738088,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
         "is_demo": false
       },
       {
         "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
-        "score": 0.780218,
+        "score": 0.735961,
         "document_id": "pce-bachelors-information-technology",
         "is_demo": false
       },
       {
+        "chunk_id": "6939b636-e348-4cc4-8e11-657af62fac43",
+        "score": 0.730643,
+        "document_id": "pce-understanding-information-technology-a-beginners-guide-to-the-it-world",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e524af20-f167-416f-a209-5461514f64a9",
+        "score": 0.724403,
+        "document_id": "pce-pdf-utakarsh-mittal-comp",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "99c5e8e7-0ea7-4c76-abfc-a203d2aa986a",
+        "score": 0.722189,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3a39860e-e6d4-4720-90ea-81e72fa4b0a2",
+        "score": 0.720851,
+        "document_id": "pce-bachelors-electronics-and-telecommunication",
+        "is_demo": false
+      },
+      {
         "chunk_id": "76efce62-25ae-408d-9e65-3a8fdc56f934",
-        "score": 0.779174,
+        "score": 0.718246,
         "document_id": "pce-about-us",
         "is_demo": false
       },
       {
-        "chunk_id": "51dded6d-8b04-406b-948c-721081abe119",
-        "score": 0.778417,
-        "document_id": "pce-bws-gallery-graduation-day-2017",
+        "chunk_id": "e8a811a3-03d5-43a9-b1c7-71e6e7d94396",
+        "score": 0.716762,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "281c9fc6-3fa8-4f98-9cf1-5d4118c2eb12",
+        "score": 0.714786,
+        "document_id": "pce-bws-gallery-formula-student-combustion-event",
         "is_demo": false
       },
       {
         "chunk_id": "fa6d5100-d362-4589-80db-58ae58f44233",
-        "score": 0.778417,
+        "score": 0.714786,
         "document_id": "pce-bws-gallery-graduation-function-2019",
         "is_demo": false
       },
       {
-        "chunk_id": "90ffa8c4-2451-4983-8b4d-996ae623330b",
-        "score": 0.778417,
-        "document_id": "pce-bws-gallery-heres-how-you-can-have-the-best-college-experience",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "e327b69e-3a46-4689-81af-1b5a21dc97c2",
-        "score": 0.778417,
-        "document_id": "pce-bws-gallery-graduation-day-2018",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "4f01aac4-e2e5-4817-ad2e-60f29aa74dcb",
-        "score": 0.778417,
-        "document_id": "pce-bws-gallery-exploring-first-year-at-pce",
-        "is_demo": false
-      },
-      {
         "chunk_id": "3f26d3ae-d1fe-4437-a3fd-bce5af4489e8",
-        "score": 0.778417,
+        "score": 0.714786,
         "document_id": "pce-bws-gallery-workshop-on-concept-based-teachers-training-in-physics",
         "is_demo": false
       },
       {
-        "chunk_id": "2c3d4bdf-3c71-491a-abe0-dcf4f4eac8f8",
-        "score": 0.778417,
-        "document_id": "pce-bws-gallery-makers-day-2022",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "c8194377-7746-462b-9012-3bf728bf6abb",
-        "score": 0.778417,
-        "document_id": "pce-bws-gallery-national-technology-day-2018",
-        "is_demo": false
-      },
-      {
         "chunk_id": "2d00e483-0c3f-4efc-8428-adb01c326747",
-        "score": 0.778417,
+        "score": 0.714786,
         "document_id": "pce-bws-gallery-makers-day-2023",
         "is_demo": false
       },
       {
         "chunk_id": "861e0bba-ab77-444c-ad6d-332e778c901b",
-        "score": 0.778417,
+        "score": 0.714786,
         "document_id": "pce-bws-gallery-pbl-topic-archive-fe-2017-18-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "22778487-7563-47dc-aa64-4f3f23057ba4",
+        "score": 0.730286,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "98ec8d4e-da30-4eb0-8a5d-e6311c40f34f",
+        "score": 0.730074,
+        "document_id": "pce-faculty-faculty-directory-suhas-j-lawand",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "53479c96-0e54-4cbe-ae76-ad2061cd903e",
+        "score": 0.727257,
+        "document_id": "pce-an-introduction-to-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c68c880d-5920-4295-acfd-d93904de96bd",
+        "score": 0.724079,
+        "document_id": "pce-bachelors-automobile-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 0.722418,
+        "document_id": "pce-perks-of-pillai",
         "is_demo": false
       }
     ],
@@ -385,63 +416,99 @@ Sources:
         "is_demo": true
       },
       {
+        "chunk_id": "88c5b1c6-74cc-4527-a4a0-e3cdc6b7d8b9",
+        "score": 23.844944,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c4a0bd9c-8db9-4320-a2db-45389d2ac3b5",
+        "score": 23.844944,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "87d20413-c243-475f-b01d-6ab5426c2cff",
+        "score": 22.201617,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 22.201617,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9f9f580d-f9be-4791-b2f6-4e6fb0f88996",
+        "score": 22.139216,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
+        "score": 22.139216,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
         "chunk_id": "0e5cfd70-55b5-43bb-b84a-918e3054a5cb",
-        "score": 21.105903,
+        "score": 21.386295,
         "document_id": "pce-pdf-naac-approved-national-webinar-on-assessment-and-accreditation-process-of-naac",
         "is_demo": false
       },
       {
         "chunk_id": "3ec4ba38-0686-4b05-abf3-da1f89c4bab6",
-        "score": 21.105903,
+        "score": 21.386295,
         "document_id": "pce-pdf-naac-approved-national-webinar-on-assessment-and-accreditation-process-of-naac",
         "is_demo": false
       },
       {
-        "chunk_id": "277191e3-59eb-4218-9438-a4227ca89426",
-        "score": 19.876797,
-        "document_id": "pce-about-governance",
+        "chunk_id": "4ca014ee-ee41-48c5-811f-c11a8c96c76a",
+        "score": 20.977575,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
         "is_demo": false
       },
       {
-        "chunk_id": "b8c5b8b4-e9eb-44fa-b617-a69dd35c29a2",
-        "score": 19.876797,
-        "document_id": "pce-about-governance",
+        "chunk_id": "819e9b7b-5e06-4add-9437-e7ad397299c0",
+        "score": 20.977575,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
         "is_demo": false
       },
       {
-        "chunk_id": "ec6c962c-b7fa-459c-b85d-81e78e511887",
-        "score": 19.447427,
-        "document_id": "pce-academics-admissions-explore-pce",
+        "chunk_id": "265070a8-7310-4ddb-8a03-e2a777cc95e6",
+        "score": 22.524679,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
         "is_demo": false
       },
       {
-        "chunk_id": "ef0433c3-4002-4170-837b-32c7b67554ca",
-        "score": 19.447427,
-        "document_id": "pce-academics-admissions-explore-pce",
+        "chunk_id": "3399e2fc-fb2d-4be8-8f71-5ffaaa61142d",
+        "score": 22.524679,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
         "is_demo": false
       },
       {
-        "chunk_id": "2a2093cb-2231-4df1-b2b3-12c2d0714dae",
-        "score": 17.694495,
-        "document_id": "pce-pdf-ari-c-33505",
+        "chunk_id": "93ffa6e0-36fd-4e24-b597-b6bc5cab3534",
+        "score": 21.406809,
+        "document_id": "pce-an-introduction-to-mechanical-engineering",
         "is_demo": false
       },
       {
-        "chunk_id": "ace55cd1-73d9-47fe-83ec-c635db57fda0",
-        "score": 17.694495,
-        "document_id": "pce-pdf-ari-c-33505",
+        "chunk_id": "53479c96-0e54-4cbe-ae76-ad2061cd903e",
+        "score": 21.406809,
+        "document_id": "pce-an-introduction-to-mechanical-engineering",
         "is_demo": false
       },
       {
-        "chunk_id": "338cbb73-ed17-4dce-97e3-0441160f42d0",
-        "score": 17.507336,
-        "document_id": "pce-sitemap",
+        "chunk_id": "64aa6f1e-bdcb-4a15-abc7-3f4972080b74",
+        "score": 20.008414,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
         "is_demo": false
       },
       {
-        "chunk_id": "b3c810f3-167f-4119-b0c0-da1f0f8b3eaa",
-        "score": 17.507336,
-        "document_id": "pce-sitemap",
+        "chunk_id": "8ad26f01-1a1d-46af-b9c1-b4c9f97c168a",
+        "score": 20.008414,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
         "is_demo": false
       }
     ],
@@ -567,93 +634,117 @@ Sources:
         "is_demo": false
       },
       {
-        "chunk_id": "8a37d06f-907d-4aa1-9bca-cd92c7d0cf60",
-        "score": 0.016129,
-        "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
-        "score": 0.015873,
-        "document_id": "pce-bachelors-computer-engineering",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "b1524fa6-6628-4056-86c5-3a680b166e8a",
-        "score": 0.015873,
-        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "4842b382-238a-44b7-bfc7-42d6a2c65129",
-        "score": 0.015625,
-        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "2d866af2-ad8e-4562-81c2-c77293528eef",
-        "score": 0.015625,
-        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "c931f0f9-74f4-4b2f-bdb1-db9e9c5c93b5",
-        "score": 0.015385,
-        "document_id": "pce-pdf-pce-prospectus-2022",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "37ad9d7c-4d39-423a-875b-38460a0b3855",
-        "score": 0.015152,
-        "document_id": "pce-faculty-faculty-directory-sowmya-p-2",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
-        "score": 0.014925,
-        "document_id": "pce-about-the-institute",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "59846ac6-f629-4b27-bba3-6ef15d314202",
-        "score": 0.014925,
-        "document_id": "pce-research-research-facilities",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "99c5e8e7-0ea7-4c76-abfc-a203d2aa986a",
-        "score": 0.014706,
-        "document_id": "pce-about-the-institute",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "87fcc8f6-ba99-4e7d-901a-a838bd021bce",
-        "score": 0.014706,
-        "document_id": "pce-research-research-facilities",
-        "is_demo": false
-      },
-      {
         "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
-        "score": 0.014493,
+        "score": 0.028006,
         "document_id": "pce-bachelors-information-technology",
         "is_demo": false
       },
       {
-        "chunk_id": "0e5cfd70-55b5-43bb-b84a-918e3054a5cb",
+        "chunk_id": "59846ac6-f629-4b27-bba3-6ef15d314202",
+        "score": 0.016393,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c931f0f9-74f4-4b2f-bdb1-db9e9c5c93b5",
+        "score": 0.016129,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "87fcc8f6-ba99-4e7d-901a-a838bd021bce",
+        "score": 0.016129,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
+        "score": 0.015873,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
+        "score": 0.015625,
+        "document_id": "pce-bachelors-computer-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "37ad9d7c-4d39-423a-875b-38460a0b3855",
+        "score": 0.015385,
+        "document_id": "pce-faculty-faculty-directory-sowmya-p-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8a37d06f-907d-4aa1-9bca-cd92c7d0cf60",
+        "score": 0.015152,
+        "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4842b382-238a-44b7-bfc7-42d6a2c65129",
+        "score": 0.014925,
+        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "88c5b1c6-74cc-4527-a4a0-e3cdc6b7d8b9",
+        "score": 0.014925,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "278a2ba5-8e95-48f6-888e-518bbb18f717",
+        "score": 0.014706,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c4a0bd9c-8db9-4320-a2db-45389d2ac3b5",
+        "score": 0.014706,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b1524fa6-6628-4056-86c5-3a680b166e8a",
         "score": 0.014493,
-        "document_id": "pce-pdf-naac-approved-national-webinar-on-assessment-and-accreditation-process-of-naac",
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
         "is_demo": false
       },
       {
-        "chunk_id": "76efce62-25ae-408d-9e65-3a8fdc56f934",
+        "chunk_id": "6939b636-e348-4cc4-8e11-657af62fac43",
         "score": 0.014286,
-        "document_id": "pce-about-us",
+        "document_id": "pce-understanding-information-technology-a-beginners-guide-to-the-it-world",
         "is_demo": false
       },
       {
-        "chunk_id": "3ec4ba38-0686-4b05-abf3-da1f89c4bab6",
+        "chunk_id": "2d866af2-ad8e-4562-81c2-c77293528eef",
         "score": 0.014286,
-        "document_id": "pce-pdf-naac-approved-national-webinar-on-assessment-and-accreditation-process-of-naac",
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "53479c96-0e54-4cbe-ae76-ad2061cd903e",
+        "score": 0.027273,
+        "document_id": "pce-an-introduction-to-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "265070a8-7310-4ddb-8a03-e2a777cc95e6",
+        "score": 0.015873,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3399e2fc-fb2d-4be8-8f71-5ffaaa61142d",
+        "score": 0.015625,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "93ffa6e0-36fd-4e24-b597-b6bc5cab3534",
+        "score": 0.014493,
+        "document_id": "pce-an-introduction-to-mechanical-engineering",
         "is_demo": false
       }
     ],
@@ -691,52 +782,70 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 6576.1,
-      "dense_search_1": 54.2,
-      "sparse_search_1": 302.67,
-      "fuse_1": 0.04,
-      "decide_1": 45486.89,
-      "embed_query_2": 85.8,
-      "dense_search_2": 17.05,
-      "sparse_search_2": 26.55,
-      "fuse_2": 0.04,
-      "decide_2": 39882.8,
-      "rerank": 6146.14
+      "embed_query_1": 7492.77,
+      "dense_search_1": 19.23,
+      "sparse_search_1": 357.89,
+      "fuse_1": 0.07,
+      "decide_1": 57784.25,
+      "embed_query_2": 68.02,
+      "dense_search_2": 15.17,
+      "sparse_search_2": 73.2,
+      "fuse_2": 0.03,
+      "decide_2": 46266.67,
+      "embed_query_3": 66.38,
+      "dense_search_3": 7.57,
+      "sparse_search_3": 18.33,
+      "fuse_3": 0.03,
+      "rerank": 7204.94
     },
-    "iteration_count": 2,
+    "iteration_count": 3,
     "iterations": [
       {
         "iteration": 1,
         "query": "What postgraduate programmes does the Computer Engineering department offer?",
         "hits_returned": 20,
         "new_chunks": 20,
-        "decision": "SEARCH: Postgraduate programmes offered by Pillai College of Engineering Computer Engineering department",
-        "decision_raw": "SEARCH: Postgraduate programmes offered by Pillai College of Engineering Computer Engineering department",
+        "decision": "SEARCH: What postgraduate programmes are offered by the Computer Engineering department at Pillai College of Engineering?",
+        "decision_raw": "SEARCH: What postgraduate programmes are offered by the Computer Engineering department at Pillai College of Engineering?",
         "latencies_ms": {
-          "embed_query": 6576.1,
-          "dense_search": 54.2,
-          "sparse_search": 302.7,
-          "fuse": 0.0,
-          "decide": 45486.9
+          "embed_query": 7492.8,
+          "dense_search": 19.2,
+          "sparse_search": 357.9,
+          "fuse": 0.1,
+          "decide": 57784.3
         }
       },
       {
         "iteration": 2,
-        "query": "Postgraduate programmes offered by Pillai College of Engineering Computer Engineering department",
+        "query": "What postgraduate programmes are offered by the Computer Engineering department at Pillai College of Engineering?",
         "hits_returned": 20,
         "new_chunks": 15,
-        "decision": "SEARCH: Postgraduate programmes offered by Pillai College of Engineering Computer Engineering department",
-        "decision_raw": "SEARCH: Postgraduate programmes offered by Pillai College of Engineering Computer Engineering department",
+        "decision": "SEARCH: What specific postgraduate programmes does the Computer Engineering department at Pillai College of Engineering offer?",
+        "decision_raw": "SEARCH: What specific postgraduate programmes does the Computer Engineering department at Pillai College of Engineering offer?",
         "latencies_ms": {
-          "embed_query": 85.8,
-          "dense_search": 17.0,
-          "sparse_search": 26.6,
+          "embed_query": 68.0,
+          "dense_search": 15.2,
+          "sparse_search": 73.2,
           "fuse": 0.0,
-          "decide": 39882.8
+          "decide": 46266.7
+        }
+      },
+      {
+        "iteration": 3,
+        "query": "What specific postgraduate programmes does the Computer Engineering department at Pillai College of Engineering offer?",
+        "hits_returned": 20,
+        "new_chunks": 4,
+        "decision": "CAP",
+        "decision_raw": "",
+        "latencies_ms": {
+          "embed_query": 66.4,
+          "dense_search": 7.6,
+          "sparse_search": 18.3,
+          "fuse": 0.0
         }
       }
     ],
-    "stop_reason": "repeated_query"
+    "stop_reason": "iteration_cap"
   },
   "verification": {
     "verdict": "supported",
@@ -747,6 +856,6 @@ Sources:
     "support_rate": 1.0,
     "refused": false,
     "raw": "SUPPORTED",
-    "latency_ms": 84756.2
+    "latency_ms": 65177.5
   }
 }

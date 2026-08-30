@@ -1,4 +1,4 @@
-The process for admission to the Ph.D. programme in Computer Engineering involves contacting the Ph.D. guides directly [S4]. Students interested in admission should reach out to the guides listed for more information on the Ph.D. program. [S4]
+I cannot answer that from the institutional documents available to me.
 
 Sources:
   [S1] Program Overview > Ph.D. in Computer Engineering
@@ -12,17 +12,18 @@ Sources:
   [S5] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
         https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
 
-  VERIFICATION: sentence(s) 2 of 2 were not supported by the cited sources (50% supported).
+  VERIFICATION: no sentence of the generated answer was supported by its cited sources, so the answer was withheld.
+  Withheld text: The process for admission to the PhD programme in Computer Engineering involves contacting the guides directly as they have specific areas of research and can provide guidance on the application process. [S4]
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 144275ms, generation 130571ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 125746ms, generation 109364ms]
 
 {
   "question": "What is the process for admission to the PhD programme in Computer Engineering?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 378549.9,
-  "retrieval_ms": 144274.8,
-  "generation_ms": 130571.0,
+  "latency_ms": 334925.0,
+  "retrieval_ms": 125745.6,
+  "generation_ms": 109364.1,
   "sources": [
     "46b3b785-3587-44ae-812f-ce6312435ee0",
     "ee43c9df-ec32-4eb4-9fb4-5a1b952fd61c",
@@ -34,6 +35,7 @@ Sources:
   "retrieval": {
     "original_query": "What is the process for admission to the PhD programme in Computer Engineering?",
     "rewritten_queries": [
+      "admission process for PhD in Computer Engineering at Pillai College",
       "admission process for PhD in Computer Engineering at Pillai College of Engineering"
     ],
     "dense_hits": [
@@ -159,8 +161,116 @@ Sources:
       },
       {
         "chunk_id": "98ec8d4e-da30-4eb0-8a5d-e6311c40f34f",
-        "score": 0.786621,
+        "score": 0.787979,
         "document_id": "pce-faculty-faculty-directory-suhas-j-lawand",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e7075761-b886-4a73-ab17-812350570fab",
+        "score": 0.781479,
+        "document_id": "pce-about-careers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1b68a3aa-b8ea-4b56-94d3-8b264e98b953",
+        "score": 0.781479,
+        "document_id": "pce-about-institute-organogram",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a157922a-9ec4-4118-bd7a-6062fdee9bbb",
+        "score": 0.781479,
+        "document_id": "pce-about-mandatory-disclosure-university-affiliation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2b1614df-3837-403f-9c88-29e5a293c16b",
+        "score": 0.781479,
+        "document_id": "pce-about-service-rules-regulations",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4341da2b-ab94-4834-b01f-1752db67f1f7",
+        "score": 0.781479,
+        "document_id": "pce-about-mandatory-disclosure-fee-fixation-committee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5e457be4-3bbd-4525-b782-46e3c7dd5263",
+        "score": 0.781479,
+        "document_id": "pce-about-mandatory-disclosure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "81d0960c-3b4d-43aa-923b-8ed072cc6ba1",
+        "score": 0.781479,
+        "document_id": "pce-academics-bachelors-electronics-and-telecommunication-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7da17c0a-9c9e-4e08-a96a-89d6372d4c65",
+        "score": 0.781479,
+        "document_id": "pce-accreditation-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "861e0bba-ab77-444c-ad6d-332e778c901b",
+        "score": 0.781479,
+        "document_id": "pce-bws-gallery-pbl-topic-archive-fe-2017-18-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b9aeffc0-45e8-42c4-b0ce-d5fabc4d1f34",
+        "score": 0.781479,
+        "document_id": "pce-library-ieee-article-requisition-form",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2812f88e-d7f5-464b-b4e8-6c6271f0830d",
+        "score": 0.781479,
+        "document_id": "pce-nba-dcs-automobile-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d57a945-3849-43e9-8c41-991731d574ee",
+        "score": 0.781479,
+        "document_id": "pce-library-search-for-books-opac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1d1b706b-75f7-4837-950b-c991cfc5d71e",
+        "score": 0.781479,
+        "document_id": "pce-nba-dcs",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bb4b4cba-ea5c-4da0-b815-7d44a6e83b5a",
+        "score": 0.781479,
+        "document_id": "pce-students-announcements-exams-results",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "34893dbd-2829-4396-ae0b-357531c9d434",
+        "score": 0.781479,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-deep-blue",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "070e8bc0-835c-40cb-b099-e8c1ba609eea",
+        "score": 0.781479,
+        "document_id": "pce-students-student-activities-student-associations-tpc-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bfcc8cdc-b82d-4ac8-bad8-40e87d8d68ab",
+        "score": 0.781479,
+        "document_id": "pce-students-get-career-ready-agnipath-yojana",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6b973f8-f83b-4678-a5b2-aa1a4b4685ac",
+        "score": 0.781479,
+        "document_id": "pce-students-student-entrepreneurship",
         "is_demo": false
       },
       {
@@ -230,12 +340,6 @@ Sources:
         "is_demo": false
       },
       {
-        "chunk_id": "861e0bba-ab77-444c-ad6d-332e778c901b",
-        "score": 0.782845,
-        "document_id": "pce-bws-gallery-pbl-topic-archive-fe-2017-18-2",
-        "is_demo": false
-      },
-      {
         "chunk_id": "070cf7d1-fbac-4de6-afc5-c0335f453412",
         "score": 0.782845,
         "document_id": "pce-about-mandatory-disclosure-ugc-2f-and-12b",
@@ -257,18 +361,6 @@ Sources:
         "chunk_id": "d011747d-d12a-4aca-829c-f0c9794562dc",
         "score": 0.782845,
         "document_id": "pce-nba-dcs-electronics-telecommunication-engineering",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "bb4b4cba-ea5c-4da0-b815-7d44a6e83b5a",
-        "score": 0.782845,
-        "document_id": "pce-students-announcements-exams-results",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "bfcc8cdc-b82d-4ac8-bad8-40e87d8d68ab",
-        "score": 0.782845,
-        "document_id": "pce-students-get-career-ready-agnipath-yojana",
         "is_demo": false
       },
       {
@@ -400,75 +492,99 @@ Sources:
         "is_demo": true
       },
       {
-        "chunk_id": "ccbe7807-1967-48d1-9777-9de137bfa1f9",
-        "score": 20.331662,
-        "document_id": "pce-faculty-faculty-directory-binsu-babu-2",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "a0d10b4b-83bc-42b0-bc8e-059c0e810cf7",
-        "score": 20.331662,
-        "document_id": "pce-faculty-faculty-directory-binsu-babu-2",
-        "is_demo": false
-      },
-      {
         "chunk_id": "59846ac6-f629-4b27-bba3-6ef15d314202",
-        "score": 19.769583,
+        "score": 15.409061,
         "document_id": "pce-research-research-facilities",
         "is_demo": false
       },
       {
         "chunk_id": "87fcc8f6-ba99-4e7d-901a-a838bd021bce",
-        "score": 19.769583,
+        "score": 15.409061,
         "document_id": "pce-research-research-facilities",
         "is_demo": false
       },
       {
-        "chunk_id": "d77cf167-8fd2-4d47-a2f6-764b04237b8d",
-        "score": 19.532092,
-        "document_id": "pce-about-the-institute",
+        "chunk_id": "ccbe7807-1967-48d1-9777-9de137bfa1f9",
+        "score": 15.102827,
+        "document_id": "pce-faculty-faculty-directory-binsu-babu-2",
         "is_demo": false
       },
       {
-        "chunk_id": "99c5e8e7-0ea7-4c76-abfc-a203d2aa986a",
-        "score": 19.532092,
-        "document_id": "pce-about-the-institute",
+        "chunk_id": "a0d10b4b-83bc-42b0-bc8e-059c0e810cf7",
+        "score": 15.102827,
+        "document_id": "pce-faculty-faculty-directory-binsu-babu-2",
         "is_demo": false
       },
       {
-        "chunk_id": "5e52e57d-7319-4127-adb3-4b260634e900",
-        "score": 19.51959,
-        "document_id": "pce-about-us",
+        "chunk_id": "e3d43eeb-349c-4c30-89a0-294b832327c2",
+        "score": 15.023567,
+        "document_id": "pce-placements",
         "is_demo": false
       },
       {
-        "chunk_id": "76efce62-25ae-408d-9e65-3a8fdc56f934",
-        "score": 19.51959,
-        "document_id": "pce-about-us",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "bc2e3c6c-4205-4422-9414-4f574a9b5256",
-        "score": 19.33605,
-        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "4842b382-238a-44b7-bfc7-42d6a2c65129",
-        "score": 19.33605,
-        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
+        "chunk_id": "b1742a39-1f58-43de-8889-c1420ddac553",
+        "score": 15.023567,
+        "document_id": "pce-placements",
         "is_demo": false
       },
       {
         "chunk_id": "46164713-43eb-4982-9abe-8eed5020ab2c",
-        "score": 18.847961,
+        "score": 14.738135,
         "document_id": "pce-pdf-nri-pio-2023",
         "is_demo": false
       },
       {
         "chunk_id": "6763c550-2de9-4e15-8397-4b62a322153e",
-        "score": 18.847961,
+        "score": 14.738135,
         "document_id": "pce-pdf-nri-pio-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d77cf167-8fd2-4d47-a2f6-764b04237b8d",
+        "score": 14.286198,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "99c5e8e7-0ea7-4c76-abfc-a203d2aa986a",
+        "score": 14.286198,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5e52e57d-7319-4127-adb3-4b260634e900",
+        "score": 14.275002,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "76efce62-25ae-408d-9e65-3a8fdc56f934",
+        "score": 14.275002,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9cff6e22-5bb5-4837-8515-d0a9fc231662",
+        "score": 14.217187,
+        "document_id": "pce-national-level-webinar-on-assessment-and-accreditation-process-of-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d13e65f-31b7-4386-8751-4964b400ca9c",
+        "score": 14.217187,
+        "document_id": "pce-national-level-webinar-on-assessment-and-accreditation-process-of-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bc2e3c6c-4205-4422-9414-4f574a9b5256",
+        "score": 14.118664,
+        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4842b382-238a-44b7-bfc7-42d6a2c65129",
+        "score": 14.118664,
+        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
         "is_demo": false
       },
       {
@@ -481,18 +597,6 @@ Sources:
         "chunk_id": "3ec4ba38-0686-4b05-abf3-da1f89c4bab6",
         "score": 18.732764,
         "document_id": "pce-pdf-naac-approved-national-webinar-on-assessment-and-accreditation-process-of-naac",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "9cff6e22-5bb5-4837-8515-d0a9fc231662",
-        "score": 18.644279,
-        "document_id": "pce-national-level-webinar-on-assessment-and-accreditation-process-of-naac",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "6d13e65f-31b7-4386-8751-4964b400ca9c",
-        "score": 18.644279,
-        "document_id": "pce-national-level-webinar-on-assessment-and-accreditation-process-of-naac",
         "is_demo": false
       }
     ],
@@ -624,6 +728,96 @@ Sources:
         "is_demo": false
       },
       {
+        "chunk_id": "8ad26f01-1a1d-46af-b9c1-b4c9f97c168a",
+        "score": 0.016129,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e7075761-b886-4a73-ab17-812350570fab",
+        "score": 0.015873,
+        "document_id": "pce-about-careers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1b68a3aa-b8ea-4b56-94d3-8b264e98b953",
+        "score": 0.015625,
+        "document_id": "pce-about-institute-organogram",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a157922a-9ec4-4118-bd7a-6062fdee9bbb",
+        "score": 0.015385,
+        "document_id": "pce-about-mandatory-disclosure-university-affiliation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "59846ac6-f629-4b27-bba3-6ef15d314202",
+        "score": 0.015385,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2b1614df-3837-403f-9c88-29e5a293c16b",
+        "score": 0.015152,
+        "document_id": "pce-about-service-rules-regulations",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "87fcc8f6-ba99-4e7d-901a-a838bd021bce",
+        "score": 0.015152,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4341da2b-ab94-4834-b01f-1752db67f1f7",
+        "score": 0.014925,
+        "document_id": "pce-about-mandatory-disclosure-fee-fixation-committee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ccbe7807-1967-48d1-9777-9de137bfa1f9",
+        "score": 0.014925,
+        "document_id": "pce-faculty-faculty-directory-binsu-babu-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5e457be4-3bbd-4525-b782-46e3c7dd5263",
+        "score": 0.014706,
+        "document_id": "pce-about-mandatory-disclosure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a0d10b4b-83bc-42b0-bc8e-059c0e810cf7",
+        "score": 0.014706,
+        "document_id": "pce-faculty-faculty-directory-binsu-babu-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "81d0960c-3b4d-43aa-923b-8ed072cc6ba1",
+        "score": 0.014493,
+        "document_id": "pce-academics-bachelors-electronics-and-telecommunication-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e3d43eeb-349c-4c30-89a0-294b832327c2",
+        "score": 0.014493,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7da17c0a-9c9e-4e08-a96a-89d6372d4c65",
+        "score": 0.014286,
+        "document_id": "pce-accreditation-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b1742a39-1f58-43de-8889-c1420ddac553",
+        "score": 0.014286,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
         "chunk_id": "51dded6d-8b04-406b-948c-721081abe119",
         "score": 0.016129,
         "document_id": "pce-bws-gallery-graduation-day-2017",
@@ -648,21 +842,9 @@ Sources:
         "is_demo": false
       },
       {
-        "chunk_id": "ccbe7807-1967-48d1-9777-9de137bfa1f9",
-        "score": 0.015385,
-        "document_id": "pce-faculty-faculty-directory-binsu-babu-2",
-        "is_demo": false
-      },
-      {
         "chunk_id": "e327b69e-3a46-4689-81af-1b5a21dc97c2",
         "score": 0.015152,
         "document_id": "pce-bws-gallery-graduation-day-2018",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "a0d10b4b-83bc-42b0-bc8e-059c0e810cf7",
-        "score": 0.015152,
-        "document_id": "pce-faculty-faculty-directory-binsu-babu-2",
         "is_demo": false
       },
       {
@@ -672,21 +854,9 @@ Sources:
         "is_demo": false
       },
       {
-        "chunk_id": "59846ac6-f629-4b27-bba3-6ef15d314202",
-        "score": 0.014925,
-        "document_id": "pce-research-research-facilities",
-        "is_demo": false
-      },
-      {
         "chunk_id": "3f26d3ae-d1fe-4437-a3fd-bce5af4489e8",
         "score": 0.014706,
         "document_id": "pce-bws-gallery-workshop-on-concept-based-teachers-training-in-physics",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "87fcc8f6-ba99-4e7d-901a-a838bd021bce",
-        "score": 0.014706,
-        "document_id": "pce-research-research-facilities",
         "is_demo": false
       },
       {
@@ -748,64 +918,82 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 7428.87,
-      "dense_search_1": 17.6,
-      "sparse_search_1": 347.47,
-      "fuse_1": 0.03,
-      "decide_1": 69028.09,
-      "embed_query_2": 130.42,
-      "dense_search_2": 26.39,
-      "sparse_search_2": 67.32,
-      "fuse_2": 0.06,
-      "decide_2": 59565.2,
-      "rerank": 7663.39
+      "embed_query_1": 20138.36,
+      "dense_search_1": 16.65,
+      "sparse_search_1": 305.67,
+      "fuse_1": 0.05,
+      "decide_1": 54649.18,
+      "embed_query_2": 33.2,
+      "dense_search_2": 14.64,
+      "sparse_search_2": 13.22,
+      "fuse_2": 0.03,
+      "decide_2": 43619.5,
+      "embed_query_3": 117.64,
+      "dense_search_3": 12.91,
+      "sparse_search_3": 17.21,
+      "fuse_3": 0.03,
+      "rerank": 6807.35
     },
-    "iteration_count": 2,
+    "iteration_count": 3,
     "iterations": [
       {
         "iteration": 1,
         "query": "What is the process for admission to the PhD programme in Computer Engineering?",
         "hits_returned": 20,
         "new_chunks": 20,
-        "decision": "SEARCH: admission process for PhD in Computer Engineering at Pillai College of Engineering",
-        "decision_raw": "SEARCH: admission process for PhD in Computer Engineering at Pillai College of Engineering",
+        "decision": "SEARCH: admission process for PhD in Computer Engineering at Pillai College",
+        "decision_raw": "SEARCH: admission process for PhD in Computer Engineering at Pillai College",
         "latencies_ms": {
-          "embed_query": 7428.9,
-          "dense_search": 17.6,
-          "sparse_search": 347.5,
+          "embed_query": 20138.4,
+          "dense_search": 16.6,
+          "sparse_search": 305.7,
           "fuse": 0.0,
-          "decide": 69028.1
+          "decide": 54649.2
         }
       },
       {
         "iteration": 2,
-        "query": "admission process for PhD in Computer Engineering at Pillai College of Engineering",
+        "query": "admission process for PhD in Computer Engineering at Pillai College",
         "hits_returned": 20,
         "new_chunks": 16,
         "decision": "SEARCH: admission process for PhD in Computer Engineering at Pillai College of Engineering",
         "decision_raw": "SEARCH: admission process for PhD in Computer Engineering at Pillai College of Engineering",
         "latencies_ms": {
-          "embed_query": 130.4,
-          "dense_search": 26.4,
-          "sparse_search": 67.3,
-          "fuse": 0.1,
-          "decide": 59565.2
+          "embed_query": 33.2,
+          "dense_search": 14.6,
+          "sparse_search": 13.2,
+          "fuse": 0.0,
+          "decide": 43619.5
+        }
+      },
+      {
+        "iteration": 3,
+        "query": "admission process for PhD in Computer Engineering at Pillai College of Engineering",
+        "hits_returned": 20,
+        "new_chunks": 11,
+        "decision": "CAP",
+        "decision_raw": "",
+        "latencies_ms": {
+          "embed_query": 117.6,
+          "dense_search": 12.9,
+          "sparse_search": 17.2,
+          "fuse": 0.0
         }
       }
     ],
-    "stop_reason": "repeated_query"
+    "stop_reason": "iteration_cap"
   },
   "verification": {
-    "verdict": "partially_supported",
-    "sentences": 2,
-    "checked": 2,
-    "supported": 1,
+    "verdict": "unsupported",
+    "sentences": 1,
+    "checked": 1,
+    "supported": 0,
     "unsupported": [
-      2
+      1
     ],
-    "support_rate": 0.5,
-    "refused": false,
-    "raw": "UNSUPPORTED: 2",
-    "latency_ms": 103460.3
+    "support_rate": 0.0,
+    "refused": true,
+    "raw": "UNSUPPORTED: 1",
+    "latency_ms": 99654.9
   }
 }

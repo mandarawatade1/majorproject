@@ -1,6 +1,4 @@
-The context provided does not contain specific information about the placement record of the Computer Engineering programme at Pillai College of Engineering. Therefore, I cannot compare the Computer Engineering programme's accreditation status with its placement record based on the given information.
-
-For more detailed information on the placement record, you might want to refer to the college's official website or contact the college directly. [S1] [S2]
+The context provided does not contain specific information about the placement record of the Computer Engineering programme at Pillai College of Engineering. Therefore, I cannot compare the Computer Engineering programme's accreditation status with its placement record based on the given information. [S1] [S2]
 
 Sources:
   [S1] About Us
@@ -10,17 +8,17 @@ Sources:
 
   3 retrieved chunk(s) omitted for context budget.
 
-  VERIFICATION: sentence(s) 1, 2 of 3 were not supported by the cited sources (33% supported).
+  VERIFICATION: sentence(s) 1 of 1 were not supported by the cited sources (0% supported).
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 147939ms, generation 125483ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 140406ms, generation 115508ms]
 
 {
   "question": "Compare the Computer Engineering programme's accreditation status with its placement record.",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 379615.0,
-  "retrieval_ms": 147938.8,
-  "generation_ms": 125482.7,
+  "latency_ms": 354512.9,
+  "retrieval_ms": 140406.3,
+  "generation_ms": 115507.8,
   "sources": [
     "5e52e57d-7319-4127-adb3-4b260634e900",
     "76efce62-25ae-408d-9e65-3a8fdc56f934"
@@ -30,7 +28,7 @@ Sources:
     "original_query": "Compare the Computer Engineering programme's accreditation status with its placement record.",
     "rewritten_queries": [
       "Computer Engineering programme accreditation status Pillai College of Engineering",
-      "Pillai College of Engineering Computer Engineering accreditation status and placement record comparison"
+      "Pillai College of Engineering Computer Engineering accreditation status placement record"
     ],
     "dense_hits": [
       {
@@ -262,75 +260,87 @@ Sources:
         "is_demo": false
       },
       {
-        "chunk_id": "98ec8d4e-da30-4eb0-8a5d-e6311c40f34f",
-        "score": 0.782697,
-        "document_id": "pce-faculty-faculty-directory-suhas-j-lawand",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
-        "score": 0.777309,
-        "document_id": "pce-bachelors-information-technology",
+        "chunk_id": "ca0f5028-861c-4ca3-8546-e594fbb396bd",
+        "score": 0.772932,
+        "document_id": "pce-placements",
         "is_demo": false
       },
       {
         "chunk_id": "51dded6d-8b04-406b-948c-721081abe119",
-        "score": 0.773643,
+        "score": 0.771763,
         "document_id": "pce-bws-gallery-graduation-day-2017",
         "is_demo": false
       },
       {
         "chunk_id": "fa6d5100-d362-4589-80db-58ae58f44233",
-        "score": 0.773643,
+        "score": 0.771763,
         "document_id": "pce-bws-gallery-graduation-function-2019",
         "is_demo": false
       },
       {
         "chunk_id": "90ffa8c4-2451-4983-8b4d-996ae623330b",
-        "score": 0.773643,
+        "score": 0.771763,
         "document_id": "pce-bws-gallery-heres-how-you-can-have-the-best-college-experience",
         "is_demo": false
       },
       {
         "chunk_id": "e327b69e-3a46-4689-81af-1b5a21dc97c2",
-        "score": 0.773643,
+        "score": 0.771763,
         "document_id": "pce-bws-gallery-graduation-day-2018",
         "is_demo": false
       },
       {
         "chunk_id": "4f01aac4-e2e5-4817-ad2e-60f29aa74dcb",
-        "score": 0.773643,
+        "score": 0.771763,
         "document_id": "pce-bws-gallery-exploring-first-year-at-pce",
         "is_demo": false
       },
       {
         "chunk_id": "3f26d3ae-d1fe-4437-a3fd-bce5af4489e8",
-        "score": 0.773643,
+        "score": 0.771763,
         "document_id": "pce-bws-gallery-workshop-on-concept-based-teachers-training-in-physics",
         "is_demo": false
       },
       {
         "chunk_id": "2c3d4bdf-3c71-491a-abe0-dcf4f4eac8f8",
-        "score": 0.773643,
+        "score": 0.771763,
         "document_id": "pce-bws-gallery-makers-day-2022",
         "is_demo": false
       },
       {
         "chunk_id": "2d00e483-0c3f-4efc-8428-adb01c326747",
-        "score": 0.773643,
+        "score": 0.771763,
         "document_id": "pce-bws-gallery-makers-day-2023",
         "is_demo": false
       },
       {
         "chunk_id": "66d8c324-7724-47ac-ae6a-f0854bdedd4b",
-        "score": 0.773643,
+        "score": 0.771763,
         "document_id": "pce-bws-gallery-vocabulary-treasure-hunt",
         "is_demo": false
       },
       {
-        "chunk_id": "2b1614df-3837-403f-9c88-29e5a293c16b",
-        "score": 0.773643,
-        "document_id": "pce-about-service-rules-regulations",
+        "chunk_id": "beef04b5-6ae5-4700-b460-82eab3ee6b7f",
+        "score": 0.771763,
+        "document_id": "pce-academics-admissions-important-admission-notice",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "64f1058d-97d7-463e-9812-c15a020ff33c",
+        "score": 0.771763,
+        "document_id": "pce-bachelors-applied-science-and-mathematics",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7938ee8a-b54d-4c3b-84f3-429e6cf6d326",
+        "score": 0.771763,
+        "document_id": "pce-bws-gallery-15097-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "885b92dc-4968-4c66-b192-a97ba5d2f2fc",
+        "score": 0.771763,
+        "document_id": "pce-students-alegria-campus-fest",
         "is_demo": false
       }
     ],
@@ -501,18 +511,6 @@ Sources:
         "chunk_id": "6d13e65f-31b7-4386-8751-4964b400ca9c",
         "score": 17.333851,
         "document_id": "pce-national-level-webinar-on-assessment-and-accreditation-process-of-naac",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "0a1bca23-0724-4434-bb15-3340474aaf0d",
-        "score": 20.62794,
-        "document_id": "pce-faculty-faculty-directory-pankaj-v-khakare-07102021",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "c87f63c3-0d6b-4929-a326-2a4e5efa477b",
-        "score": 20.62794,
-        "document_id": "pce-faculty-faculty-directory-pankaj-v-khakare-07102021",
         "is_demo": false
       }
     ],
@@ -704,45 +702,63 @@ Sources:
         "is_demo": false
       },
       {
-        "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
-        "score": 0.029762,
-        "document_id": "pce-bachelors-information-technology",
-        "is_demo": false
-      },
-      {
         "chunk_id": "8a37d06f-907d-4aa1-9bca-cd92c7d0cf60",
         "score": 0.016393,
         "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
         "is_demo": false
       },
       {
-        "chunk_id": "98ec8d4e-da30-4eb0-8a5d-e6311c40f34f",
+        "chunk_id": "ca0f5028-861c-4ca3-8546-e594fbb396bd",
         "score": 0.016129,
-        "document_id": "pce-faculty-faculty-directory-suhas-j-lawand",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "632ff800-852d-4afb-99ed-e87ce41b7e30",
-        "score": 0.015625,
-        "document_id": "pce-faculty-faculty-directory-aju-r-palleri",
+        "document_id": "pce-placements",
         "is_demo": false
       },
       {
         "chunk_id": "51dded6d-8b04-406b-948c-721081abe119",
-        "score": 0.014925,
+        "score": 0.015873,
         "document_id": "pce-bws-gallery-graduation-day-2017",
         "is_demo": false
       },
       {
         "chunk_id": "fa6d5100-d362-4589-80db-58ae58f44233",
-        "score": 0.014493,
+        "score": 0.015385,
         "document_id": "pce-bws-gallery-graduation-function-2019",
         "is_demo": false
       },
       {
         "chunk_id": "90ffa8c4-2451-4983-8b4d-996ae623330b",
-        "score": 0.014286,
+        "score": 0.015152,
         "document_id": "pce-bws-gallery-heres-how-you-can-have-the-best-college-experience",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e327b69e-3a46-4689-81af-1b5a21dc97c2",
+        "score": 0.014925,
+        "document_id": "pce-bws-gallery-graduation-day-2018",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4f01aac4-e2e5-4817-ad2e-60f29aa74dcb",
+        "score": 0.014706,
+        "document_id": "pce-bws-gallery-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3f26d3ae-d1fe-4437-a3fd-bce5af4489e8",
+        "score": 0.014493,
+        "document_id": "pce-bws-gallery-workshop-on-concept-based-teachers-training-in-physics",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2c3d4bdf-3c71-491a-abe0-dcf4f4eac8f8",
+        "score": 0.014286,
+        "document_id": "pce-bws-gallery-makers-day-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ace489cc-a736-4c68-893e-4de0a1dc7582",
+        "score": 0.014286,
+        "document_id": "pce-pdf-naac-approved-national-webinar-on-assessment-and-accreditation-process-of-naac",
         "is_demo": false
       }
     ],
@@ -780,21 +796,21 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 6462.48,
-      "dense_search_1": 12.21,
-      "sparse_search_1": 292.06,
-      "fuse_1": 0.03,
-      "decide_1": 69477.24,
-      "embed_query_2": 112.6,
-      "dense_search_2": 30.14,
-      "sparse_search_2": 77.19,
-      "fuse_2": 0.04,
-      "decide_2": 63723.1,
-      "embed_query_3": 51.44,
-      "dense_search_3": 9.02,
-      "sparse_search_3": 16.31,
-      "fuse_3": 0.04,
-      "rerank": 7674.88
+      "embed_query_1": 6545.01,
+      "dense_search_1": 17.05,
+      "sparse_search_1": 306.99,
+      "fuse_1": 0.04,
+      "decide_1": 64649.84,
+      "embed_query_2": 152.14,
+      "dense_search_2": 35.46,
+      "sparse_search_2": 70.06,
+      "fuse_2": 0.06,
+      "decide_2": 60542.84,
+      "embed_query_3": 50.57,
+      "dense_search_3": 14.87,
+      "sparse_search_3": 13.05,
+      "fuse_3": 0.03,
+      "rerank": 8008.28
     },
     "iteration_count": 3,
     "iterations": [
@@ -806,11 +822,11 @@ Sources:
         "decision": "SEARCH: Computer Engineering programme accreditation status Pillai College of Engineering",
         "decision_raw": "SEARCH: Computer Engineering programme accreditation status Pillai College of Engineering",
         "latencies_ms": {
-          "embed_query": 6462.5,
-          "dense_search": 12.2,
-          "sparse_search": 292.1,
+          "embed_query": 6545.0,
+          "dense_search": 17.1,
+          "sparse_search": 307.0,
           "fuse": 0.0,
-          "decide": 69477.2
+          "decide": 64649.8
         }
       },
       {
@@ -818,27 +834,27 @@ Sources:
         "query": "Computer Engineering programme accreditation status Pillai College of Engineering",
         "hits_returned": 20,
         "new_chunks": 11,
-        "decision": "SEARCH: Pillai College of Engineering Computer Engineering accreditation status and placement record comparison",
-        "decision_raw": "SEARCH: Pillai College of Engineering Computer Engineering accreditation status and placement record comparison",
+        "decision": "SEARCH: Pillai College of Engineering Computer Engineering accreditation status placement record",
+        "decision_raw": "SEARCH: Pillai College of Engineering Computer Engineering accreditation status placement record",
         "latencies_ms": {
-          "embed_query": 112.6,
-          "dense_search": 30.1,
-          "sparse_search": 77.2,
-          "fuse": 0.0,
-          "decide": 63723.1
+          "embed_query": 152.1,
+          "dense_search": 35.5,
+          "sparse_search": 70.1,
+          "fuse": 0.1,
+          "decide": 60542.8
         }
       },
       {
         "iteration": 3,
-        "query": "Pillai College of Engineering Computer Engineering accreditation status and placement record comparison",
+        "query": "Pillai College of Engineering Computer Engineering accreditation status placement record",
         "hits_returned": 20,
-        "new_chunks": 7,
+        "new_chunks": 10,
         "decision": "CAP",
         "decision_raw": "",
         "latencies_ms": {
-          "embed_query": 51.4,
-          "dense_search": 9.0,
-          "sparse_search": 16.3,
+          "embed_query": 50.6,
+          "dense_search": 14.9,
+          "sparse_search": 13.0,
           "fuse": 0.0
         }
       }
@@ -846,17 +862,16 @@ Sources:
     "stop_reason": "iteration_cap"
   },
   "verification": {
-    "verdict": "partially_supported",
-    "sentences": 3,
-    "checked": 3,
-    "supported": 1,
+    "verdict": "unsupported",
+    "sentences": 2,
+    "checked": 1,
+    "supported": 0,
     "unsupported": [
-      1,
-      2
+      1
     ],
-    "support_rate": 0.3333,
+    "support_rate": 0.0,
     "refused": false,
-    "raw": "UNSUPPORTED: 1,2",
-    "latency_ms": 105989.5
+    "raw": "UNSUPPORTED: 1",
+    "latency_ms": 98389.5
   }
 }

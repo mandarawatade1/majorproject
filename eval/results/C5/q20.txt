@@ -14,15 +14,15 @@ Sources:
 
   VERIFICATION: sentence(s) 3 of 3 were not supported by the cited sources (67% supported).
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 62335ms, generation 141635ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 72052ms, generation 173275ms]
 
 {
   "question": "What is the vision and mission of Pillai College of Engineering?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 297128.5,
-  "retrieval_ms": 62334.5,
-  "generation_ms": 141634.8,
+  "latency_ms": 355683.7,
+  "retrieval_ms": 72052.0,
+  "generation_ms": 173275.4,
   "sources": [
     "4acf45ee-beb0-4c69-8a9b-a2f1e0a7af1f",
     "d1ec6874-8666-4ac9-b0dd-34d9657d437c",
@@ -434,12 +434,12 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 7012.4,
-      "dense_search_1": 16.99,
-      "sparse_search_1": 319.36,
-      "fuse_1": 0.04,
-      "decide_1": 50494.62,
-      "rerank": 4491.11
+      "embed_query_1": 6813.18,
+      "dense_search_1": 19.35,
+      "sparse_search_1": 422.26,
+      "fuse_1": 0.05,
+      "decide_1": 60054.53,
+      "rerank": 4742.57
     },
     "iteration_count": 1,
     "iterations": [
@@ -451,11 +451,11 @@ Sources:
         "decision": "READY",
         "decision_raw": "READY",
         "latencies_ms": {
-          "embed_query": 7012.4,
-          "dense_search": 17.0,
-          "sparse_search": 319.4,
-          "fuse": 0.0,
-          "decide": 50494.6
+          "embed_query": 6813.2,
+          "dense_search": 19.4,
+          "sparse_search": 422.3,
+          "fuse": 0.1,
+          "decide": 60054.5
         }
       }
     ],
@@ -472,6 +472,6 @@ Sources:
     "support_rate": 0.6667,
     "refused": false,
     "raw": "UNSUPPORTED: 3",
-    "latency_ms": 92953.4
+    "latency_ms": 110148.1
   }
 }

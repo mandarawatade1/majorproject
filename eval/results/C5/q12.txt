@@ -28,15 +28,15 @@ Sources:
 
   VERIFICATION: sentence(s) 2 of 2 were not supported by the cited sources (50% supported).
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 57726ms, generation 84541ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 67769ms, generation 123077ms]
 
 {
   "question": "What research areas or centers does the Computer Engineering department focus on?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 210266.3,
-  "retrieval_ms": 57726.1,
-  "generation_ms": 84540.8,
+  "latency_ms": 274238.8,
+  "retrieval_ms": 67769.4,
+  "generation_ms": 123077.4,
   "sources": [
     "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
     "9cfc3d8c-bd21-4cf7-a45a-eee6410fa702",
@@ -448,12 +448,12 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 7044.32,
-      "dense_search_1": 57.66,
-      "sparse_search_1": 349.22,
-      "fuse_1": 0.03,
-      "decide_1": 45950.95,
-      "rerank": 4323.95
+      "embed_query_1": 7392.36,
+      "dense_search_1": 32.11,
+      "sparse_search_1": 520.62,
+      "fuse_1": 0.05,
+      "decide_1": 54794.25,
+      "rerank": 5029.99
     },
     "iteration_count": 1,
     "iterations": [
@@ -465,11 +465,11 @@ Sources:
         "decision": "READY",
         "decision_raw": "READY",
         "latencies_ms": {
-          "embed_query": 7044.3,
-          "dense_search": 57.7,
-          "sparse_search": 349.2,
-          "fuse": 0.0,
-          "decide": 45951.0
+          "embed_query": 7392.4,
+          "dense_search": 32.1,
+          "sparse_search": 520.6,
+          "fuse": 0.1,
+          "decide": 54794.3
         }
       }
     ],
@@ -486,6 +486,6 @@ Sources:
     "support_rate": 0.5,
     "refused": false,
     "raw": "UNSUPPORTED: 2",
-    "latency_ms": 67794.1
+    "latency_ms": 83163.2
   }
 }

@@ -1,9 +1,10 @@
-The context provided does not explicitly list the names of the faculty members in the Computer Engineering department. However, it does provide information about the research areas and a faculty member.
+The context provided does not explicitly list the names of the faculty members in the Computer Engineering department. However, it does provide information about the research areas and a faculty member [S1, S2, S3, S4, S5].
 
-- The faculty in the Computer Engineering department are involved in research areas such as Computer Networks, Data Mining, Image Processing, Cyber Security & Digital Forensics, Natural Language Processing, Ubiquitous Computing, Machine Learning and Data Science [S1].
-- Additionally, Dr. Mimi Cherian is mentioned as an Assistant Professor in the Computer Engineering department, though no other faculty members are named [S5].
+For example, [S4] mentions Dr. Sheetal Gawande as a faculty member in the Computer Engineering Department, teaching courses such as Computer Network, Cloud Computing, Advanced Operating System, and Advanced Computer Network.
 
-For a complete list of faculty members, you might want to refer to the official website or contact the department directly [S4, S5].
+Additionally, [S5] lists Dr. Mimi Cherian as an Assistant Professor in the Computer Engineering Department, who is also a co-coordinator for a Faculty Development Program (FDP).
+
+If you need more names or details about other faculty members, you might want to refer to the official website or contact the institution directly.
 
 Sources:
   [S1] Program Overview > Research Areas
@@ -17,17 +18,17 @@ Sources:
   [S5] FDP on “XAI for Social Good: Application in Healthcare, Finance and Education” > Co-Coordinator
         https://www.pce.ac.in/fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education/
 
-  VERIFICATION: sentence(s) 1, 3, 4 of 5 were not supported by the cited sources (40% supported).
+  VERIFICATION: sentence(s) 1, 3 of 3 were not supported by the cited sources (33% supported).
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 90931ms, generation 83553ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 101179ms, generation 52443ms]
 
 {
   "question": "Who are the faculty members in the Computer Engineering department?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 227137.2,
-  "retrieval_ms": 90930.6,
-  "generation_ms": 83553.4,
+  "latency_ms": 192165.7,
+  "retrieval_ms": 101178.9,
+  "generation_ms": 52443.0,
   "sources": [
     "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
     "9cfc3d8c-bd21-4cf7-a45a-eee6410fa702",
@@ -784,21 +785,21 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 6719.61,
-      "dense_search_1": 57.78,
-      "sparse_search_1": 320.6,
-      "fuse_1": 0.03,
-      "decide_1": 42227.04,
-      "embed_query_2": 51.54,
-      "dense_search_2": 17.62,
-      "sparse_search_2": 15.01,
-      "fuse_2": 0.04,
-      "decide_2": 35210.73,
-      "embed_query_3": 60.57,
-      "dense_search_3": 10.74,
-      "sparse_search_3": 14.88,
-      "fuse_3": 0.04,
-      "rerank": 6224.38
+      "embed_query_1": 7354.87,
+      "dense_search_1": 21.52,
+      "sparse_search_1": 365.52,
+      "fuse_1": 0.04,
+      "decide_1": 51816.92,
+      "embed_query_2": 66.27,
+      "dense_search_2": 20.28,
+      "sparse_search_2": 38.25,
+      "fuse_2": 0.05,
+      "decide_2": 35053.1,
+      "embed_query_3": 27.75,
+      "dense_search_3": 8.42,
+      "sparse_search_3": 14.72,
+      "fuse_3": 0.03,
+      "rerank": 6391.14
     },
     "iteration_count": 3,
     "iterations": [
@@ -810,11 +811,11 @@ Sources:
         "decision": "SEARCH: Faculty members in Computer Engineering department at Pillai College of Engineering",
         "decision_raw": "SEARCH: Faculty members in Computer Engineering department at Pillai College of Engineering",
         "latencies_ms": {
-          "embed_query": 6719.6,
-          "dense_search": 57.8,
-          "sparse_search": 320.6,
+          "embed_query": 7354.9,
+          "dense_search": 21.5,
+          "sparse_search": 365.5,
           "fuse": 0.0,
-          "decide": 42227.0
+          "decide": 51816.9
         }
       },
       {
@@ -825,11 +826,11 @@ Sources:
         "decision": "SEARCH: Faculty members in Computer Engineering department Pillai College of Engineering details",
         "decision_raw": "SEARCH: Faculty members in Computer Engineering department Pillai College of Engineering details",
         "latencies_ms": {
-          "embed_query": 51.5,
-          "dense_search": 17.6,
-          "sparse_search": 15.0,
+          "embed_query": 66.3,
+          "dense_search": 20.3,
+          "sparse_search": 38.3,
           "fuse": 0.0,
-          "decide": 35210.7
+          "decide": 35053.1
         }
       },
       {
@@ -840,9 +841,9 @@ Sources:
         "decision": "CAP",
         "decision_raw": "",
         "latencies_ms": {
-          "embed_query": 60.6,
-          "dense_search": 10.7,
-          "sparse_search": 14.9,
+          "embed_query": 27.7,
+          "dense_search": 8.4,
+          "sparse_search": 14.7,
           "fuse": 0.0
         }
       }
@@ -852,16 +853,15 @@ Sources:
   "verification": {
     "verdict": "partially_supported",
     "sentences": 5,
-    "checked": 5,
-    "supported": 2,
+    "checked": 3,
+    "supported": 1,
     "unsupported": [
       1,
-      3,
-      4
+      3
     ],
-    "support_rate": 0.4,
+    "support_rate": 0.3333,
     "refused": false,
-    "raw": "UNSUPPORTED: 1,3,4",
-    "latency_ms": 52444.9
+    "raw": "UNSUPPORTED: 1,3",
+    "latency_ms": 38326.4
   }
 }

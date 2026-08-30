@@ -1,4 +1,6 @@
-The undergraduate (Bachelor of Technology) Computer Engineering program at Pillai College of Engineering has a duration of 4 years [S4]. For postgraduate studies, the Master of Technology (M.Tech.) program in Computer Engineering lasts for 2 years [S4]. The eligibility for the undergraduate program typically requires a qualifying degree, such as a Bachelor of Technology in a relevant field, while the M.Tech. program is open to those who have completed a Bachelor of Technology or a related field, such as a Bachelor of Engineering [S4].
+The undergraduate (Bachelor of Technology) Computer Engineering program at Pillai College of Engineering has a duration of 4 years [S4]. For postgraduate studies, the Master of Technology (M.Tech) in Computer Engineering is offered, which lasts for 2 years [S4]. The Ph.D. program in Computer Engineering is available for those who have completed their M.Tech and is typically 3 years in duration [S4] and [S3]. 
+
+Eligibility for the undergraduate program requires a qualifying degree, typically a Bachelor's degree, while for the M.Tech program, applicants must have a Bachelor's degree in a relevant field and a Master's degree is required for the Ph.D. program [S4] and [S3].
 
 Sources:
   [S1] The Institute > Programs offered
@@ -12,17 +14,17 @@ Sources:
   [S5] Computer Engineering
         https://www.pce.ac.in/bachelors/computer-engineering/
 
-  VERIFICATION: sentence(s) 3 of 3 were not supported by the cited sources (67% supported).
+  VERIFICATION: sentence(s) 4 of 4 were not supported by the cited sources (75% supported).
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 129425ms, generation 127511ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 131475ms, generation 147638ms]
 
 {
   "question": "What are the differences between the undergraduate and postgraduate Computer Engineering programmes in terms of duration and eligibility?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 346188.5,
-  "retrieval_ms": 129424.8,
-  "generation_ms": 127510.6,
+  "latency_ms": 382520.1,
+  "retrieval_ms": 131474.7,
+  "generation_ms": 147638.2,
   "sources": [
     "8834cbb3-2da9-4432-ad6a-b6bced53084c",
     "cf8088fd-bbdc-44c2-9551-47f02957c320",
@@ -664,17 +666,17 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 7197.55,
-      "dense_search_1": 13.57,
-      "sparse_search_1": 389.55,
-      "fuse_1": 0.04,
-      "decide_1": 65858.5,
-      "embed_query_2": 92.84,
-      "dense_search_2": 17.33,
-      "sparse_search_2": 71.48,
-      "fuse_2": 0.05,
-      "decide_2": 48118.1,
-      "rerank": 7665.78
+      "embed_query_1": 7332.82,
+      "dense_search_1": 19.13,
+      "sparse_search_1": 403.55,
+      "fuse_1": 0.03,
+      "decide_1": 64245.83,
+      "embed_query_2": 99.88,
+      "dense_search_2": 28.71,
+      "sparse_search_2": 67.7,
+      "fuse_2": 0.03,
+      "decide_2": 52453.47,
+      "rerank": 6823.54
     },
     "iteration_count": 2,
     "iterations": [
@@ -686,11 +688,11 @@ Sources:
         "decision": "SEARCH: Differences in duration and eligibility criteria between undergraduate and postgraduate Computer Engineering programs at Pillai College of Engineering",
         "decision_raw": "SEARCH: Differences in duration and eligibility criteria between undergraduate and postgraduate Computer Engineering programs at Pillai College of Engineering",
         "latencies_ms": {
-          "embed_query": 7197.6,
-          "dense_search": 13.6,
-          "sparse_search": 389.6,
+          "embed_query": 7332.8,
+          "dense_search": 19.1,
+          "sparse_search": 403.6,
           "fuse": 0.0,
-          "decide": 65858.5
+          "decide": 64245.8
         }
       },
       {
@@ -698,30 +700,30 @@ Sources:
         "query": "Differences in duration and eligibility criteria between undergraduate and postgraduate Computer Engineering programs at Pillai College of Engineering",
         "hits_returned": 20,
         "new_chunks": 12,
-        "decision": "READY",
-        "decision_raw": "READY",
+        "decision": "SEARCH: Differences in duration and eligibility criteria between undergraduate and postgraduate Computer Engineering programs at Pillai College of Engineering",
+        "decision_raw": "SEARCH: Differences in duration and eligibility criteria between undergraduate and postgraduate Computer Engineering programs at Pillai College of Engineering",
         "latencies_ms": {
-          "embed_query": 92.8,
-          "dense_search": 17.3,
-          "sparse_search": 71.5,
+          "embed_query": 99.9,
+          "dense_search": 28.7,
+          "sparse_search": 67.7,
           "fuse": 0.0,
-          "decide": 48118.1
+          "decide": 52453.5
         }
       }
     ],
-    "stop_reason": "model_says_ready"
+    "stop_reason": "repeated_query"
   },
   "verification": {
     "verdict": "partially_supported",
-    "sentences": 3,
-    "checked": 3,
-    "supported": 2,
+    "sentences": 4,
+    "checked": 4,
+    "supported": 3,
     "unsupported": [
-      3
+      4
     ],
-    "support_rate": 0.6667,
+    "support_rate": 0.75,
     "refused": false,
-    "raw": "UNSUPPORTED: 3",
-    "latency_ms": 89014.4
+    "raw": "UNSUPPORTED: 4",
+    "latency_ms": 103159.4
   }
 }

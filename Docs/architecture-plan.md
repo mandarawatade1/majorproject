@@ -2577,3 +2577,119 @@ inference is dominated by evaluating the context, and the pipeline passes the
 full assembled context where the probe passes one short passage. So C5's
 overhead scales with context size, and the 20-question run should be expected
 around 100 minutes against C4's 69.
+
+---
+
+## 26. C5 evaluation results (30 Aug 2026)
+
+20 questions, 109.4 minutes, on the index C2–C4 share. `eval/results/C5/`.
+
+This is the second C5 run. The first is superseded — see §26.4.
+
+### 26.1 What the verifier did
+
+| Verdict | Count |
+| --- | --- |
+| `partially_supported` | 10 / 20 |
+| `unsupported` | 5 / 20 |
+| `supported` | 4 / 20 |
+| `skipped` (no claims to judge) | 1 / 20 |
+| `unparseable` | **0 / 20** |
+
+* **59 sentences, 48 claims judged, 17 flagged.** Mean support rate **0.537**
+  over the 19 answers that contained a claim.
+* **Zero unparseable verdicts.** Across C4's decide step and C5's verifier the
+  one-line contract has now held for **59 consecutive questions** against a
+  4-bit 7B model. That is the most reusable engineering result in this project:
+  a constrained plain-text reply is a reliable interface to a small quantized
+  model where JSON and tool-calling are not.
+* Verification cost a mean of 99 s per question, and C5 ran 109 minutes against
+  C4's 69.
+
+### 26.2 The comparison that matters: 0 / 20
+
+`--compare C4` reports the final sources handed to the generator as **identical
+on 20 of 20**. That is expected and worth stating clearly, because it is easy
+to misread: **C5 changes nothing about retrieval.** It runs C4's pipeline
+exactly and then checks the answer. The comparison confirms the ablation is
+clean rather than measuring an effect.
+
+C5's effect appears in the *answer*, not in the sources:
+
+* 13 of 20 answers now carry an explicit note naming the sentences the system
+  itself could not support;
+* 2 of 20 answers were withheld entirely.
+
+### 26.3 A limitation, recorded rather than fixed: single-sentence answers
+
+Both refusals — q03 (PhD admission process) and q06 (fee structure) — were
+**one-sentence answers**. The refusal rule requires every claim to be
+unsupported *and* the answer to consist only of claims; a one-sentence answer
+satisfies the second condition by construction, so a single flag withholds it.
+
+Both withheld answers closely match what C4 said to the same questions:
+
+> q06, withheld: "…for the first year, the fees are 2100 US$, and from the
+> second year onward, the fees are 2000 US$. [S3]"
+
+Whether those figures are in the retrieved context **cannot be determined from
+the saved artifacts** — the harness records chunk ids, not chunk text — so no
+claim is made here that the refusals are wrong. What can be said precisely:
+
+* a refusal on a one-sentence answer rests on **a single binary judgment** from
+  a model that has already been observed to misjudge systematically (§26.4);
+* the "answer must be nothing but claims" safeguard, which protects hedged
+  multi-sentence answers, **provides no protection at all** in this case.
+
+**Why this was not fixed.** The obvious remedy — require at least two flagged
+claims before refusing — would make C5 unable to catch a one-sentence
+fabrication, which is the canonical case the feature exists for and case 2 of
+`scripts/check_verifier.py`. That is a genuine design trade-off, not a bug, and
+resolving it by tuning against these 20 results would be fitting the mechanism
+to the sample. It is recorded as a limitation for Chapter 5 and as future work:
+saving the assembled context alongside each result would make the question
+decidable rather than arguable.
+
+### 26.4 Why the first C5 run was discarded
+
+The first run (19 of 20 completing; one lost to an Ollama read timeout at 300 s,
+since raised to 900 s) exposed a systematic defect. The verifier flagged
+statements of the form *"The context provided does not contain information
+about X"* as unsupported claims, on 3 of 19 answers. On q18 the answer was
+composed entirely of such statements, so every claim was flagged and the
+refusal fired, withholding this:
+
+> "The context provided does not contain information about the current Prime
+> Minister of India. The context is focused on the Smart India Hackathon 2017…"
+
+— a correct and specific response to an out-of-scope question, replaced by a
+generic refusal. Strictly worse for the reader, and the worst outcome C5 can
+produce.
+
+`VERIFY_SYSTEM` had always forbidden this in as many words. The model ignored
+the instruction, so the rule moved into code: `is_claim()` excludes absence
+statements and signposts before the verifier sees them, they do not count
+toward `checked`, and an answer with no claims cannot be refused because there
+is nothing in it to be unfounded. In this run q18 is correctly `skipped`.
+
+**Replaying the discarded run through the corrected code caught a second
+defect before it cost anything.** Excluding non-claims shrinks the denominator,
+so two answers that were mostly an honest "the context does not specify X" plus
+one hedged observation reduced to a single claim; flagging it made "all claims
+unsupported" true and would have refused them. The fix would have traded one
+bad refusal for two. Hence the additional requirement that a refusal needs the
+answer to be *nothing but* unfounded claims. Both defects are pinned by tests.
+
+The general lesson, which belongs in the report: **an instruction in a prompt
+is a request; a rule in code is a guarantee.** Where a constraint must hold,
+enforce it outside the model.
+
+### 26.5 Status
+
+C5 is complete. Every configuration C0–C5 is built and measured, and no further
+C5 data collection is planned — per the stopping rule agreed before this run:
+clean parses and no anomalous behaviour means the numbers stand, and a
+remaining imperfection is documented rather than chased.
+
+One measurement still outstanding for the ablation as a whole: a genuine C0 on
+a fixed-chunk index (§22).

@@ -1,4 +1,4 @@
-The High Performance Computing Lab, equipped with AMD Thread Ripper (2nd Gen) 2970WX and Nvidia RTX 3090 24 GB GPU, is available for Computer Engineering students [S1]. This lab supports various Machine Learning, Deep Learning projects and is used for hands-on training and workshops on these techniques [S1].
+The High Performance Computing Lab, equipped with AMD Thread Ripper (2nd Gen) 2970WX and Nvidia RTX 3090 24 GB GPU, is available for Computer Engineering students. This lab supports various Machine Learning, Deep Learning projects, and is also used for training and workshops [S1].
 
 Sources:
   [S1] Research Facilities > High performance Computing Lab
@@ -14,15 +14,15 @@ Sources:
 
   VERIFICATION: sentence(s) 2 of 2 were not supported by the cited sources (50% supported).
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 112650ms, generation 134262ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 96745ms, generation 114776ms]
 
 {
   "question": "What laboratory facilities are available for Computer Engineering students?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 337617.9,
-  "retrieval_ms": 112650.2,
-  "generation_ms": 134262.1,
+  "latency_ms": 300505.8,
+  "retrieval_ms": 96744.6,
+  "generation_ms": 114776.0,
   "sources": [
     "87fcc8f6-ba99-4e7d-901a-a838bd021bce",
     "2f1ed7ea-54d7-4514-b1a4-9a25d012909d",
@@ -33,8 +33,8 @@ Sources:
   "retrieval": {
     "original_query": "What laboratory facilities are available for Computer Engineering students?",
     "rewritten_queries": [
-      "What laboratory facilities are available for Computer Engineering students at Pillai College of Engineering?",
-      "What laboratory facilities are available specifically for Computer Engineering students at Pillai College of Engineering?"
+      "What laboratory facilities are available specifically for Computer Engineering students?",
+      "What laboratory facilities are available for Computer Engineering students at Pillai College of Engineering?"
     ],
     "dense_hits": [
       {
@@ -158,6 +158,12 @@ Sources:
         "is_demo": false
       },
       {
+        "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
+        "score": 0.673895,
+        "document_id": "pce-bachelors-computer-engineering",
+        "is_demo": false
+      },
+      {
         "chunk_id": "4443f81a-ac9b-4b8b-906d-62635c2df1e7",
         "score": 0.752598,
         "document_id": "pce-students-project-based-learning-component-library",
@@ -185,12 +191,6 @@ Sources:
         "chunk_id": "22778487-7563-47dc-aa64-4f3f23057ba4",
         "score": 0.745719,
         "document_id": "pce-perks-of-pillai",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
-        "score": 0.743762,
-        "document_id": "pce-bachelors-computer-engineering",
         "is_demo": false
       },
       {
@@ -251,12 +251,6 @@ Sources:
         "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
         "score": 0.727659,
         "document_id": "pce-perks-of-pillai",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "96e312fd-9ff4-47cd-8d5f-f001ab5ed21d",
-        "score": 0.725617,
-        "document_id": "pce-exploring-first-year-at-pce",
         "is_demo": false
       }
     ],
@@ -382,6 +376,30 @@ Sources:
         "is_demo": false
       },
       {
+        "chunk_id": "c14b6f6a-1a60-4885-afbb-5cc0f34f4526",
+        "score": 16.318541,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "38d0844d-32b1-4e97-a06e-8bf88ff52dea",
+        "score": 16.318541,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b8ce4da9-5980-4ecc-843e-87302ed636d8",
+        "score": 12.543581,
+        "document_id": "pce-pdf-ashish-mathew-comp",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0cab0813-1df4-4458-8957-04bf794c440d",
+        "score": 12.543581,
+        "document_id": "pce-pdf-ashish-mathew-comp",
+        "is_demo": false
+      },
+      {
         "chunk_id": "76b1263f-9542-4e12-a63b-c9002579c6f2",
         "score": 22.585908,
         "document_id": "pce-bachelors-electronics-and-computer-science",
@@ -451,18 +469,6 @@ Sources:
         "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
         "score": 20.173779,
         "document_id": "pce-bachelors-computer-engineering",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "c14b6f6a-1a60-4885-afbb-5cc0f34f4526",
-        "score": 20.858273,
-        "document_id": "pce-pdf-pce-prospectus-2022",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "38d0844d-32b1-4e97-a06e-8bf88ff52dea",
-        "score": 20.858273,
-        "document_id": "pce-pdf-pce-prospectus-2022",
         "is_demo": false
       }
     ],
@@ -588,6 +594,18 @@ Sources:
         "is_demo": false
       },
       {
+        "chunk_id": "38d0844d-32b1-4e97-a06e-8bf88ff52dea",
+        "score": 0.030214,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c14b6f6a-1a60-4885-afbb-5cc0f34f4526",
+        "score": 0.016393,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
         "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
         "score": 0.02904,
         "document_id": "pce-bachelors-information-technology",
@@ -658,12 +676,6 @@ Sources:
         "score": 0.014286,
         "document_id": "pce-bachelors-electronics-and-computer-science",
         "is_demo": false
-      },
-      {
-        "chunk_id": "8a37d06f-907d-4aa1-9bca-cd92c7d0cf60",
-        "score": 0.014286,
-        "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
-        "is_demo": false
       }
     ],
     "reranked_hits": [
@@ -700,21 +712,21 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 7515.46,
-      "dense_search_1": 57.11,
-      "sparse_search_1": 409.11,
-      "fuse_1": 0.07,
-      "decide_1": 54762.33,
-      "embed_query_2": 152.42,
-      "dense_search_2": 28.38,
-      "sparse_search_2": 62.26,
-      "fuse_2": 0.05,
-      "decide_2": 42770.93,
-      "embed_query_3": 62.59,
-      "dense_search_3": 13.86,
-      "sparse_search_3": 32.52,
-      "fuse_3": 0.04,
-      "rerank": 6783.09
+      "embed_query_1": 6591.19,
+      "dense_search_1": 12.16,
+      "sparse_search_1": 300.41,
+      "fuse_1": 0.04,
+      "decide_1": 45831.27,
+      "embed_query_2": 75.94,
+      "dense_search_2": 6.75,
+      "sparse_search_2": 12.95,
+      "fuse_2": 0.03,
+      "decide_2": 37870.15,
+      "embed_query_3": 37.66,
+      "dense_search_3": 8.16,
+      "sparse_search_3": 18.06,
+      "fuse_3": 0.03,
+      "rerank": 5979.82
     },
     "iteration_count": 3,
     "iterations": [
@@ -723,42 +735,42 @@ Sources:
         "query": "What laboratory facilities are available for Computer Engineering students?",
         "hits_returned": 20,
         "new_chunks": 20,
-        "decision": "SEARCH: What laboratory facilities are available for Computer Engineering students at Pillai College of Engineering?",
-        "decision_raw": "SEARCH: What laboratory facilities are available for Computer Engineering students at Pillai College of Engineering?",
+        "decision": "SEARCH: What laboratory facilities are available specifically for Computer Engineering students?",
+        "decision_raw": "SEARCH: What laboratory facilities are available specifically for Computer Engineering students?",
         "latencies_ms": {
-          "embed_query": 7515.5,
-          "dense_search": 57.1,
-          "sparse_search": 409.1,
-          "fuse": 0.1,
-          "decide": 54762.3
+          "embed_query": 6591.2,
+          "dense_search": 12.2,
+          "sparse_search": 300.4,
+          "fuse": 0.0,
+          "decide": 45831.3
         }
       },
       {
         "iteration": 2,
-        "query": "What laboratory facilities are available for Computer Engineering students at Pillai College of Engineering?",
+        "query": "What laboratory facilities are available specifically for Computer Engineering students?",
         "hits_returned": 20,
-        "new_chunks": 12,
-        "decision": "SEARCH: What laboratory facilities are available specifically for Computer Engineering students at Pillai College of Engineering?",
-        "decision_raw": "SEARCH: What laboratory facilities are available specifically for Computer Engineering students at Pillai College of Engineering?",
+        "new_chunks": 2,
+        "decision": "SEARCH: What laboratory facilities are available for Computer Engineering students at Pillai College of Engineering?",
+        "decision_raw": "SEARCH: What laboratory facilities are available for Computer Engineering students at Pillai College of Engineering?",
         "latencies_ms": {
-          "embed_query": 152.4,
-          "dense_search": 28.4,
-          "sparse_search": 62.3,
-          "fuse": 0.1,
-          "decide": 42770.9
+          "embed_query": 75.9,
+          "dense_search": 6.8,
+          "sparse_search": 13.0,
+          "fuse": 0.0,
+          "decide": 37870.1
         }
       },
       {
         "iteration": 3,
-        "query": "What laboratory facilities are available specifically for Computer Engineering students at Pillai College of Engineering?",
+        "query": "What laboratory facilities are available for Computer Engineering students at Pillai College of Engineering?",
         "hits_returned": 20,
-        "new_chunks": 1,
+        "new_chunks": 12,
         "decision": "CAP",
         "decision_raw": "",
         "latencies_ms": {
-          "embed_query": 62.6,
-          "dense_search": 13.9,
-          "sparse_search": 32.5,
+          "embed_query": 37.7,
+          "dense_search": 8.2,
+          "sparse_search": 18.1,
           "fuse": 0.0
         }
       }
@@ -776,6 +788,6 @@ Sources:
     "support_rate": 0.5,
     "refused": false,
     "raw": "UNSUPPORTED: 2",
-    "latency_ms": 90489.3
+    "latency_ms": 88798.8
   }
 }

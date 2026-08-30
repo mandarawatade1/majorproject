@@ -1,4 +1,4 @@
-The context provided does not contain any information about the current or future weather forecast for Mumbai. The text discusses Pillai College of Engineering's involvement with the SAFAR project, which provides air quality and weather forecasting information for greater metropolitan cities of India, but it does not specify the weather forecast for Mumbai this week. For current weather conditions or forecasts, you might want to check a reliable weather forecasting website or service. [S1] [S2]
+The context provided does not contain any specific weather forecast information for Mumbai this week. The information given is about the SAFAR initiative, which provides air quality and weather forecasting for metropolitan cities, but it does not specify the current or upcoming weather conditions for Mumbai. For a current or detailed weather forecast, you might want to check a reliable weather forecasting service or website. [S1] [S2]
 
 Sources:
   [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 17 > page 20
@@ -8,17 +8,17 @@ Sources:
 
   3 retrieved chunk(s) omitted for context budget.
 
-  VERIFICATION: sentence(s) 1, 2 of 3 were not supported by the cited sources (33% supported).
+  VERIFICATION: sentence(s) 1 of 1 were not supported by the cited sources (0% supported).
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 129394ms, generation 126089ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 136791ms, generation 150401ms]
 
 {
   "question": "What is the weather forecast for Mumbai this week?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 357511.0,
-  "retrieval_ms": 129394.1,
-  "generation_ms": 126088.9,
+  "latency_ms": 406683.8,
+  "retrieval_ms": 136790.9,
+  "generation_ms": 150401.2,
   "sources": [
     "d717ddfc-1688-4c37-8815-5c7f71708faa",
     "4cd26c20-4197-4f95-ba2a-457561f5f395"
@@ -609,17 +609,17 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 7545.74,
-      "dense_search_1": 45.21,
-      "sparse_search_1": 375.81,
-      "fuse_1": 0.04,
-      "decide_1": 54241.93,
-      "embed_query_2": 35.1,
-      "dense_search_2": 15.13,
-      "sparse_search_2": 15.18,
+      "embed_query_1": 7290.09,
+      "dense_search_1": 54.02,
+      "sparse_search_1": 411.79,
+      "fuse_1": 0.07,
+      "decide_1": 67765.9,
+      "embed_query_2": 77.05,
+      "dense_search_2": 21.41,
+      "sparse_search_2": 32.38,
       "fuse_2": 0.04,
-      "decide_2": 50131.08,
-      "rerank": 16988.89
+      "decide_2": 54718.83,
+      "rerank": 6419.34
     },
     "iteration_count": 2,
     "iterations": [
@@ -631,11 +631,11 @@ Sources:
         "decision": "SEARCH: weather forecast mumbai this week",
         "decision_raw": "SEARCH: weather forecast mumbai this week",
         "latencies_ms": {
-          "embed_query": 7545.7,
-          "dense_search": 45.2,
-          "sparse_search": 375.8,
-          "fuse": 0.0,
-          "decide": 54241.9
+          "embed_query": 7290.1,
+          "dense_search": 54.0,
+          "sparse_search": 411.8,
+          "fuse": 0.1,
+          "decide": 67765.9
         }
       },
       {
@@ -646,28 +646,27 @@ Sources:
         "decision": "SEARCH: weather forecast mumbai this week",
         "decision_raw": "SEARCH: weather forecast mumbai this week",
         "latencies_ms": {
-          "embed_query": 35.1,
-          "dense_search": 15.1,
-          "sparse_search": 15.2,
+          "embed_query": 77.0,
+          "dense_search": 21.4,
+          "sparse_search": 32.4,
           "fuse": 0.0,
-          "decide": 50131.1
+          "decide": 54718.8
         }
       }
     ],
     "stop_reason": "repeated_query"
   },
   "verification": {
-    "verdict": "partially_supported",
+    "verdict": "unsupported",
     "sentences": 3,
-    "checked": 3,
-    "supported": 1,
+    "checked": 1,
+    "supported": 0,
     "unsupported": [
-      1,
-      2
+      1
     ],
-    "support_rate": 0.3333,
+    "support_rate": 0.0,
     "refused": false,
-    "raw": "UNSUPPORTED: 1,2",
-    "latency_ms": 101808.6
+    "raw": "UNSUPPORTED: 1",
+    "latency_ms": 119277.3
   }
 }

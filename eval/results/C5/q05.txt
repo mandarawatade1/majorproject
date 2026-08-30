@@ -1,4 +1,4 @@
-The context provided does not specify which entrance exams are accepted for admission to Pillai College of Engineering. However, it mentions "MOCK CET" under the "Other Programs" section, which might be related to the admission process. For more detailed information, one might look at the "Important Admission Notice" or "Admissions" section on the official website or contact the college directly. [S1]
+The context provided does not specify which entrance exams are accepted for admission to Pillai College of Engineering. It mentions "MOCK CET" under "Other Programs" but does not clarify if this is an accepted entrance exam for admissions. For detailed information on accepted entrance exams, one might look at the "Important Admission Notice" or "Admissions" section on the college's official website or contact the admissions office directly. [S1]
 
 Sources:
   [S1] Graduation Day 2017
@@ -8,17 +8,17 @@ Sources:
 
   3 retrieved chunk(s) omitted for context budget.
 
-  VERIFICATION: sentence(s) 1, 2 of 3 were not supported by the cited sources (33% supported).
+  VERIFICATION: sentence(s) 1 of 1 were not supported by the cited sources (0% supported).
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 102748ms, generation 110786ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 123150ms, generation 152742ms]
 
 {
   "question": "What entrance exams are accepted for admission to Pillai College of Engineering?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 309567.5,
-  "retrieval_ms": 102748.4,
-  "generation_ms": 110786.4,
+  "latency_ms": 391492.6,
+  "retrieval_ms": 123150.0,
+  "generation_ms": 152741.5,
   "sources": [
     "51dded6d-8b04-406b-948c-721081abe119",
     "281c9fc6-3fa8-4f98-9cf1-5d4118c2eb12"
@@ -687,17 +687,17 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 7056.24,
-      "dense_search_1": 32.89,
-      "sparse_search_1": 351.31,
-      "fuse_1": 0.04,
-      "decide_1": 51067.7,
-      "embed_query_2": 39.9,
-      "dense_search_2": 15.18,
-      "sparse_search_2": 12.29,
-      "fuse_2": 0.03,
-      "decide_2": 38061.8,
-      "rerank": 6111.04
+      "embed_query_1": 7057.99,
+      "dense_search_1": 13.79,
+      "sparse_search_1": 502.12,
+      "fuse_1": 0.06,
+      "decide_1": 60826.54,
+      "embed_query_2": 70.61,
+      "dense_search_2": 18.22,
+      "sparse_search_2": 31.9,
+      "fuse_2": 0.04,
+      "decide_2": 46929.55,
+      "rerank": 7699.2
     },
     "iteration_count": 2,
     "iterations": [
@@ -709,11 +709,11 @@ Sources:
         "decision": "SEARCH: entrance exams accepted by Pillai College of Engineering",
         "decision_raw": "SEARCH: entrance exams accepted by Pillai College of Engineering",
         "latencies_ms": {
-          "embed_query": 7056.2,
-          "dense_search": 32.9,
-          "sparse_search": 351.3,
-          "fuse": 0.0,
-          "decide": 51067.7
+          "embed_query": 7058.0,
+          "dense_search": 13.8,
+          "sparse_search": 502.1,
+          "fuse": 0.1,
+          "decide": 60826.5
         }
       },
       {
@@ -724,28 +724,27 @@ Sources:
         "decision": "SEARCH: entrance exams accepted by Pillai College of Engineering",
         "decision_raw": "SEARCH: entrance exams accepted by Pillai College of Engineering",
         "latencies_ms": {
-          "embed_query": 39.9,
-          "dense_search": 15.2,
-          "sparse_search": 12.3,
+          "embed_query": 70.6,
+          "dense_search": 18.2,
+          "sparse_search": 31.9,
           "fuse": 0.0,
-          "decide": 38061.8
+          "decide": 46929.5
         }
       }
     ],
     "stop_reason": "repeated_query"
   },
   "verification": {
-    "verdict": "partially_supported",
+    "verdict": "unsupported",
     "sentences": 3,
-    "checked": 3,
-    "supported": 1,
+    "checked": 1,
+    "supported": 0,
     "unsupported": [
-      1,
-      2
+      1
     ],
-    "support_rate": 0.3333,
+    "support_rate": 0.0,
     "refused": false,
-    "raw": "UNSUPPORTED: 1,2",
-    "latency_ms": 95821.8
+    "raw": "UNSUPPORTED: 1",
+    "latency_ms": 115380.9
   }
 }

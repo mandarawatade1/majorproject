@@ -1,91 +1,475 @@
-ERROR (exit 1):
-onnxruntime cpuid_info warning: Unknown CPU vendor. cpuinfo_vendor value: 0
-Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
-    yield
-  File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 250, in handle_request
-    resp = self._pool.handle_request(req)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
-    raise exc from None
-  File "/usr/local/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
-    response = connection.handle_request(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
-    return self._connection.handle_request(request)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
-    raise exc
-  File "/usr/local/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
-    ) = self._receive_response_headers(**kwargs)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
-    event = self._receive_event(timeout=timeout)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
-    data = self._network_stream.read(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 126, in read
-    with map_exceptions(exc_map):
-  File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
-    self.gen.throw(typ, value, traceback)
-  File "/usr/local/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
-    raise to_exc(exc) from exc
-httpcore.ReadTimeout: timed out
+The eligibility criteria for admission to the B.Tech programme at Pillai College of Engineering, New Panvel, as per the provided context, are as follows:
 
-The above exception was the direct cause of the following exception:
+- The candidate must be an Indian National [S1, S2].
+- For Maharashtra State Candidature Candidates, the candidate must have passed the HSC or its equivalent examination with Physics and Mathematics as compulsory subjects, along with one of the specified subjects, and obtained at least 45% marks (40% for certain categories) in these subjects. The candidate must also have appeared in all subjects in MHT-CET2022 and obtained a non-zero score in MHT-CET 2022 [S1, S2].
+- Alternatively, the candidate can have passed a Diploma in Engineering and Technology and obtained at least 45% marks (40% for certain categories) [S1, S2].
+- For All India Candidature Candidates, Union Territory of Jammu and Kashmir, and Union Territory of Ladakh Migrant Candidature Candidates, the criteria are similar to those for Maharashtra State Candidature Candidates, with the additional condition that preference is given to candidates who have obtained a non-zero positive score in JEE Main (B.E/B.Tech) over those who obtained a non-zero score in MHT-CET 2022 [S1, S2].
 
-Traceback (most recent call last):
-  File "/app/rag/generation/ollama.py", line 54, in generate
-    response = httpx.post(
-               ^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpx/_api.py", line 304, in post
-    return request(
-           ^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpx/_api.py", line 109, in request
-    return client.request(
-           ^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 825, in request
-    return self.send(request, auth=auth, follow_redirects=follow_redirects)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
-    response = self._send_handling_auth(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
-    response = self._send_handling_redirects(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
-    response = self._send_single_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1014, in _send_single_request
-    response = transport.handle_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 249, in handle_request
-    with map_httpcore_exceptions():
-  File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
-    self.gen.throw(typ, value, traceback)
-  File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
-    raise mapped_exc(message) from exc
-httpx.ReadTimeout: timed out
+Sources:
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 50 > page 53
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 50 > page 53
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
 
-The above exception was the direct cause of the following exception:
+  3 retrieved chunk(s) omitted for context budget.
 
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/app/rag/__main__.py", line 241, in <module>
-    raise SystemExit(main())
-                     ^^^^^^
-  File "/app/rag/__main__.py", line 231, in main
-    return int(args.func(args))
-               ^^^^^^^^^^^^^^^
-  File "/app/rag/__main__.py", line 183, in cmd_ask
-    answer = pipeline.ask(args.question)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/app/rag/pipeline.py", line 253, in ask
-    generated = self.generator.generate(prompt, system=system)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/app/rag/generation/ollama.py", line 59, in generate
-    raise RuntimeError(
-RuntimeError: Ollama generation failed against http://ollama:11434: timed out. Check the server is up and `qwen2.5:7b-instruct-q4_K_M` is pulled.
+  VERIFICATION: sentence(s) 5 of 5 were not supported by the cited sources (80% supported).
+
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 97790ms, generation 193482ms]
+
+{
+  "question": "What is the eligibility criteria for admission to the B.Tech programme?",
+  "config": "C5",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 425955.4,
+  "retrieval_ms": 97789.9,
+  "generation_ms": 193482.3,
+  "sources": [
+    "b0fc991c-690b-4d9e-b285-0f6601338282",
+    "0a872093-a876-4091-8615-84a692a1ff2c"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What is the eligibility criteria for admission to the B.Tech programme?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "ec03ec0a-8aff-4a93-9d90-ce8de6964f23",
+        "score": 0.746517,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b0fc991c-690b-4d9e-b285-0f6601338282",
+        "score": 0.737208,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "57d672d2-9f25-4df5-abd2-d5e558c6098c",
+        "score": 0.730677,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a2c1b19c-2029-488c-9f86-e3065842fa31",
+        "score": 0.727101,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "703c15ec-05a9-432c-8bc0-0798d8ae649a",
+        "score": 0.713564,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "67e93a8c-dc7b-4a51-988d-e942030db1b8",
+        "score": 0.708751,
+        "document_id": "pce-academics-bachelors",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8106aca0-2559-4bc7-9785-212b347f2353",
+        "score": 0.697296,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
+        "score": 0.691036,
+        "document_id": "pce-bachelors-computer-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "11f56fd1-3a09-49d3-8a72-69b069d67c87",
+        "score": 0.675878,
+        "document_id": "pce-bachelors-information-technology-curriculum",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "54ff11dc-ab30-42cc-8c62-719b1ac1823f",
+        "score": 0.674482,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "337db8e4-3cce-4f6e-a859-1ee62d98f939",
+        "score": 0.672843,
+        "document_id": "pce-faculty-faculty-directory-dr-sachin-s-wani",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f8390a34-a208-42d4-96f9-b77701d0f050",
+        "score": 0.672031,
+        "document_id": "pce-pdf-graduate-apprentice-at-bpcl-mr-2019-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e564f338-eebc-4099-af31-1f6e852ce1bb",
+        "score": 0.670046,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "aaf16570-38fa-47fe-8c8d-267b520054cb",
+        "score": 0.669576,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8e85741-2b47-4a7e-a2ad-9888ae4d540d",
+        "score": 0.667363,
+        "document_id": "pce-faculty-faculty-directory-kirti-rana",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4be8d7c6-ffc0-42a4-8f01-2c3ef47a3dd2",
+        "score": 0.665415,
+        "document_id": "pce-faculty-faculty-directory-varunakshi-s-bhojane",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "de3c25d7-e81d-41cf-a01d-47b06d8aafa7",
+        "score": 0.664825,
+        "document_id": "pce-faculty-faculty-directory-shreedevi-kulkarni",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "633df52e-9f79-4934-a910-b81b3c5dcc01",
+        "score": 0.663208,
+        "document_id": "pce-faculty-faculty-directory-pranita-s-pingale",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "206bde9d-7cb7-4b78-add4-96b0ec421842",
+        "score": 0.659919,
+        "document_id": "pce-academics-masters",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "31729a14-d5db-4a57-a64a-2c3b33576e89",
+        "score": 0.658432,
+        "document_id": "pce-academics-other-programs-moocs-and-nptel",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "0a872093-a876-4091-8615-84a692a1ff2c",
+        "score": 26.88663,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b0fc991c-690b-4d9e-b285-0f6601338282",
+        "score": 26.88663,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "75f41890-2361-43ef-ae2e-ef5e2f6210ab",
+        "score": 26.338262,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a2c1b19c-2029-488c-9f86-e3065842fa31",
+        "score": 26.338262,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6476a752-3e10-4156-9250-f0e2b5d49aa7",
+        "score": 24.853408,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8106aca0-2559-4bc7-9785-212b347f2353",
+        "score": 24.853408,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "46d51b49-065d-4da0-97f4-6eeea2588f1e",
+        "score": 23.146304,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "703c15ec-05a9-432c-8bc0-0798d8ae649a",
+        "score": 23.146304,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3f6d6979-c0d1-48e1-a041-9a897a4f3f53",
+        "score": 22.909143,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "57d672d2-9f25-4df5-abd2-d5e558c6098c",
+        "score": 22.909143,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a64cce2c-f82a-439e-8900-e10cebab52bc",
+        "score": 22.171336,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "aaf16570-38fa-47fe-8c8d-267b520054cb",
+        "score": 22.171336,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "53db15f1-8c70-4930-a167-a81ca3bdbb1b",
+        "score": 21.657479,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ec03ec0a-8aff-4a93-9d90-ce8de6964f23",
+        "score": 21.657479,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5e5ab909-8719-402b-8e9b-9abf12a932b8",
+        "score": 21.140331,
+        "document_id": "pce-pdf-pce-cap-reporting-process-22-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "24580276-4e0f-4583-bcb4-cfbab8c24c6c",
+        "score": 21.140331,
+        "document_id": "pce-pdf-pce-cap-reporting-process-22-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3ca9a916-aa43-4d90-b46d-016800b94265",
+        "score": 17.949951,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f397e5f7-d63e-4245-a6a5-8dccfdeeb02a",
+        "score": 17.949951,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "64be4f9b-4c20-480c-9c67-6f145beea880",
+        "score": 17.896328,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "54ff11dc-ab30-42cc-8c62-719b1ac1823f",
+        "score": 17.896328,
+        "document_id": "pce-placements",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "b0fc991c-690b-4d9e-b285-0f6601338282",
+        "score": 0.032258,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a2c1b19c-2029-488c-9f86-e3065842fa31",
+        "score": 0.03125,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "57d672d2-9f25-4df5-abd2-d5e558c6098c",
+        "score": 0.030159,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "703c15ec-05a9-432c-8bc0-0798d8ae649a",
+        "score": 0.03009,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8106aca0-2559-4bc7-9785-212b347f2353",
+        "score": 0.030077,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ec03ec0a-8aff-4a93-9d90-ce8de6964f23",
+        "score": 0.029907,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "aaf16570-38fa-47fe-8c8d-267b520054cb",
+        "score": 0.027402,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "54ff11dc-ab30-42cc-8c62-719b1ac1823f",
+        "score": 0.026786,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0a872093-a876-4091-8615-84a692a1ff2c",
+        "score": 0.016393,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "75f41890-2361-43ef-ae2e-ef5e2f6210ab",
+        "score": 0.015873,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6476a752-3e10-4156-9250-f0e2b5d49aa7",
+        "score": 0.015385,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "67e93a8c-dc7b-4a51-988d-e942030db1b8",
+        "score": 0.015152,
+        "document_id": "pce-academics-bachelors",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "46d51b49-065d-4da0-97f4-6eeea2588f1e",
+        "score": 0.014925,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
+        "score": 0.014706,
+        "document_id": "pce-bachelors-computer-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "11f56fd1-3a09-49d3-8a72-69b069d67c87",
+        "score": 0.014493,
+        "document_id": "pce-bachelors-information-technology-curriculum",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3f6d6979-c0d1-48e1-a041-9a897a4f3f53",
+        "score": 0.014493,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "337db8e4-3cce-4f6e-a859-1ee62d98f939",
+        "score": 0.014085,
+        "document_id": "pce-faculty-faculty-directory-dr-sachin-s-wani",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a64cce2c-f82a-439e-8900-e10cebab52bc",
+        "score": 0.014085,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f8390a34-a208-42d4-96f9-b77701d0f050",
+        "score": 0.013889,
+        "document_id": "pce-pdf-graduate-apprentice-at-bpcl-mr-2019-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e564f338-eebc-4099-af31-1f6e852ce1bb",
+        "score": 0.013699,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "b0fc991c-690b-4d9e-b285-0f6601338282",
+        "score": 4.442883,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0a872093-a876-4091-8615-84a692a1ff2c",
+        "score": 4.442883,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8106aca0-2559-4bc7-9785-212b347f2353",
+        "score": 2.425327,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6476a752-3e10-4156-9250-f0e2b5d49aa7",
+        "score": 2.425327,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "11f56fd1-3a09-49d3-8a72-69b069d67c87",
+        "score": 2.330082,
+        "document_id": "pce-bachelors-information-technology-curriculum",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 7301.38,
+      "dense_search_1": 17.64,
+      "sparse_search_1": 345.86,
+      "fuse_1": 0.04,
+      "decide_1": 73905.33,
+      "rerank": 16219.6
+    },
+    "iteration_count": 1,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "What is the eligibility criteria for admission to the B.Tech programme?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "READY",
+        "decision_raw": "READY",
+        "latencies_ms": {
+          "embed_query": 7301.4,
+          "dense_search": 17.6,
+          "sparse_search": 345.9,
+          "fuse": 0.0,
+          "decide": 73905.3
+        }
+      }
+    ],
+    "stop_reason": "model_says_ready"
+  },
+  "verification": {
+    "verdict": "partially_supported",
+    "sentences": 5,
+    "checked": 5,
+    "supported": 4,
+    "unsupported": [
+      5
+    ],
+    "support_rate": 0.8,
+    "refused": false,
+    "raw": "UNSUPPORTED: 5",
+    "latency_ms": 134470.3
+  }
+}

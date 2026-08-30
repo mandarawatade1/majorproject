@@ -1,4 +1,4 @@
-The fee structure for the Computer Engineering programme is as follows: [S2] For the first year, the fees are $2,100, and from the second year onward, the fees are $2,000. [S3]
+I cannot answer that from the institutional documents available to me.
 
 Sources:
   [S1] Value Added Courses
@@ -10,15 +10,18 @@ Sources:
 
   2 retrieved chunk(s) omitted for context budget.
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 142962ms, generation 117809ms]
+  VERIFICATION: no sentence of the generated answer was supported by its cited sources, so the answer was withheld.
+  Withheld text: The fee structure for the Computer Engineering programme is as follows: [S2] for the first year, the fees are 2100 US$, and from the second year onward, the fees are 2000 US$. [S3]
+
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 148907ms, generation 142560ms]
 
 {
   "question": "What is the fee structure for the Computer Engineering programme?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 369024.5,
-  "retrieval_ms": 142962.4,
-  "generation_ms": 117808.8,
+  "latency_ms": 419046.1,
+  "retrieval_ms": 148907.4,
+  "generation_ms": 142560.1,
   "sources": [
     "3d011d81-a528-46e5-815f-2b09e6a5590c",
     "c58314bf-8e9c-4a06-bdf9-eb36e5111ff2",
@@ -28,8 +31,8 @@ Sources:
   "retrieval": {
     "original_query": "What is the fee structure for the Computer Engineering programme?",
     "rewritten_queries": [
-      "fee structure for Computer Engineering at Pillai College of Engineering",
-      "fee structure for Computer Engineering at Pillai College of Engineering 2023"
+      "Fee structure for Computer Engineering at Pillai College of Engineering",
+      "Fee structure for Computer Engineering programme at Pillai College of Engineering"
     ],
     "dense_hits": [
       {
@@ -261,9 +264,21 @@ Sources:
         "is_demo": false
       },
       {
-        "chunk_id": "0a479655-1c5d-47f6-b848-cde64288ef6c",
-        "score": 0.734947,
-        "document_id": "pce-category-competitions",
+        "chunk_id": "645c3b9f-bc91-4843-996c-6090edb4e4b2",
+        "score": 0.745901,
+        "document_id": "pce-faculty-faculty-handbook",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "965cf5af-d980-40be-90b9-833fe0edeb34",
+        "score": 0.745901,
+        "document_id": "pce-library-book-article-requisition-form",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bb4b4cba-ea5c-4da0-b815-7d44a6e83b5a",
+        "score": 0.745901,
+        "document_id": "pce-students-announcements-exams-results",
         "is_demo": false
       }
     ],
@@ -485,99 +500,51 @@ Sources:
         "is_demo": false
       },
       {
-        "chunk_id": "87a666cd-7c9e-47f4-84ea-c0a01cd94fc2",
-        "score": 21.046356,
-        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "chunk_id": "b1524fa6-6628-4056-86c5-3a680b166e8a",
+        "score": 18.125491,
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
         "is_demo": false
       },
       {
-        "chunk_id": "738364bf-420f-486c-b132-d6778d98f57c",
-        "score": 21.046356,
-        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "chunk_id": "2d866af2-ad8e-4562-81c2-c77293528eef",
+        "score": 18.125491,
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
         "is_demo": false
       },
       {
-        "chunk_id": "634876c8-b4b1-439e-beee-6e223a0a180a",
-        "score": 20.18674,
-        "document_id": "pce-pdf-makerthon",
+        "chunk_id": "9bcce778-fd56-40d7-aee1-cf790907a101",
+        "score": 17.522377,
+        "document_id": "pce-pdf-pce-prospectus-2022",
         "is_demo": false
       },
       {
-        "chunk_id": "663e0fef-aedb-46cd-9645-9315a96c9267",
-        "score": 20.18674,
-        "document_id": "pce-pdf-makerthon",
+        "chunk_id": "cbf25f35-9717-424b-a955-088546c4fe45",
+        "score": 17.522377,
+        "document_id": "pce-pdf-pce-prospectus-2022",
         "is_demo": false
       },
       {
-        "chunk_id": "37f40561-1ff8-424c-a130-2e9a5844a2b2",
-        "score": 19.738905,
-        "document_id": "pce-faculty-faculty-directory-shubham-thakur",
+        "chunk_id": "86c181ad-aaf0-4ede-b0ec-eef3c4918c37",
+        "score": 17.43105,
+        "document_id": "pce-arduino-workshop",
         "is_demo": false
       },
       {
-        "chunk_id": "1aaae25e-3ad3-49b3-a3b5-54f03723a613",
-        "score": 19.738905,
-        "document_id": "pce-faculty-faculty-directory-shubham-thakur",
+        "chunk_id": "2cdd585d-546e-4c9e-986a-731d7af65e94",
+        "score": 17.43105,
+        "document_id": "pce-arduino-workshop",
         "is_demo": false
       },
       {
-        "chunk_id": "8d6c2eed-861f-4830-b566-098132541d9a",
-        "score": 19.376114,
-        "document_id": "pce-kavach-2023",
+        "chunk_id": "2bdcd47a-8513-405f-886e-c3251f53fc84",
+        "score": 16.811062,
+        "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
         "is_demo": false
       },
       {
-        "chunk_id": "b770e4c5-7d1f-44c8-9424-7b55c831c1b1",
-        "score": 19.376114,
-        "document_id": "pce-kavach-2023",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "23f25af4-3e4b-40e6-8e2f-e9f858b33821",
-        "score": 18.737746,
-        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "419a1236-402b-4926-85e8-7b1a61292ba1",
-        "score": 18.737746,
-        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "a0b3b690-adc9-47ac-8ec0-d341ca2a2219",
-        "score": 18.556178,
-        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "5e6ffa22-5c8f-47fb-b0ef-b3209ec1c860",
-        "score": 18.556178,
-        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "84f7ea41-a52f-4e90-9cc6-bf416412c911",
-        "score": 18.205803,
-        "document_id": "pce-faculty-faculty-directory-priyanka-s-patil",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "8bdafafa-e6b7-44ab-a705-50486e5b8575",
-        "score": 18.205803,
-        "document_id": "pce-faculty-faculty-directory-priyanka-s-patil",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "338cbb73-ed17-4dce-97e3-0441160f42d0",
-        "score": 18.199599,
-        "document_id": "pce-sitemap",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "b3c810f3-167f-4119-b0c0-da1f0f8b3eaa",
-        "score": 18.199599,
-        "document_id": "pce-sitemap",
+        "chunk_id": "7cfa391e-2130-450d-9f30-ec26661cbf68",
+        "score": 16.811062,
+        "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
         "is_demo": false
       }
     ],
@@ -811,57 +778,33 @@ Sources:
         "is_demo": false
       },
       {
-        "chunk_id": "87a666cd-7c9e-47f4-84ea-c0a01cd94fc2",
-        "score": 0.016393,
-        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "chunk_id": "b1524fa6-6628-4056-86c5-3a680b166e8a",
+        "score": 0.015873,
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
         "is_demo": false
       },
       {
-        "chunk_id": "738364bf-420f-486c-b132-d6778d98f57c",
-        "score": 0.016129,
-        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "chunk_id": "2d866af2-ad8e-4562-81c2-c77293528eef",
+        "score": 0.015625,
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
         "is_demo": false
       },
       {
-        "chunk_id": "634876c8-b4b1-439e-beee-6e223a0a180a",
-        "score": 0.015385,
-        "document_id": "pce-pdf-makerthon",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "663e0fef-aedb-46cd-9645-9315a96c9267",
-        "score": 0.015152,
-        "document_id": "pce-pdf-makerthon",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "0a479655-1c5d-47f6-b848-cde64288ef6c",
-        "score": 0.014925,
-        "document_id": "pce-category-competitions",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "37f40561-1ff8-424c-a130-2e9a5844a2b2",
-        "score": 0.014925,
-        "document_id": "pce-faculty-faculty-directory-shubham-thakur",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "1aaae25e-3ad3-49b3-a3b5-54f03723a613",
-        "score": 0.014706,
-        "document_id": "pce-faculty-faculty-directory-shubham-thakur",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "8d6c2eed-861f-4830-b566-098132541d9a",
-        "score": 0.014493,
-        "document_id": "pce-kavach-2023",
-        "is_demo": false
-      },
-      {
-        "chunk_id": "b770e4c5-7d1f-44c8-9424-7b55c831c1b1",
+        "chunk_id": "e327b69e-3a46-4689-81af-1b5a21dc97c2",
         "score": 0.014286,
-        "document_id": "pce-kavach-2023",
+        "document_id": "pce-bws-gallery-graduation-day-2018",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4f01aac4-e2e5-4817-ad2e-60f29aa74dcb",
+        "score": 0.014085,
+        "document_id": "pce-bws-gallery-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9bcce778-fd56-40d7-aee1-cf790907a101",
+        "score": 0.014085,
+        "document_id": "pce-pdf-pce-prospectus-2022",
         "is_demo": false
       }
     ],
@@ -899,21 +842,21 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 7135.73,
-      "dense_search_1": 50.62,
-      "sparse_search_1": 354.31,
-      "fuse_1": 0.06,
-      "decide_1": 67912.68,
-      "embed_query_2": 117.6,
-      "dense_search_2": 32.61,
-      "sparse_search_2": 57.46,
-      "fuse_2": 0.04,
-      "decide_2": 59489.27,
-      "embed_query_3": 64.83,
-      "dense_search_3": 13.37,
-      "sparse_search_3": 32.39,
-      "fuse_3": 0.04,
-      "rerank": 7701.42
+      "embed_query_1": 7271.09,
+      "dense_search_1": 116.05,
+      "sparse_search_1": 366.12,
+      "fuse_1": 0.04,
+      "decide_1": 71522.98,
+      "embed_query_2": 90.84,
+      "dense_search_2": 35.29,
+      "sparse_search_2": 82.21,
+      "fuse_2": 0.03,
+      "decide_2": 60364.95,
+      "embed_query_3": 65.57,
+      "dense_search_3": 12.89,
+      "sparse_search_3": 18.45,
+      "fuse_3": 0.03,
+      "rerank": 8960.85
     },
     "iteration_count": 3,
     "iterations": [
@@ -922,42 +865,42 @@ Sources:
         "query": "What is the fee structure for the Computer Engineering programme?",
         "hits_returned": 20,
         "new_chunks": 20,
-        "decision": "SEARCH: fee structure for Computer Engineering at Pillai College of Engineering",
-        "decision_raw": "SEARCH: fee structure for Computer Engineering at Pillai College of Engineering",
+        "decision": "SEARCH: Fee structure for Computer Engineering at Pillai College of Engineering",
+        "decision_raw": "SEARCH: Fee structure for Computer Engineering at Pillai College of Engineering",
         "latencies_ms": {
-          "embed_query": 7135.7,
-          "dense_search": 50.6,
-          "sparse_search": 354.3,
-          "fuse": 0.1,
-          "decide": 67912.7
+          "embed_query": 7271.1,
+          "dense_search": 116.1,
+          "sparse_search": 366.1,
+          "fuse": 0.0,
+          "decide": 71523.0
         }
       },
       {
         "iteration": 2,
-        "query": "fee structure for Computer Engineering at Pillai College of Engineering",
+        "query": "Fee structure for Computer Engineering at Pillai College of Engineering",
         "hits_returned": 20,
         "new_chunks": 18,
-        "decision": "SEARCH: fee structure for Computer Engineering at Pillai College of Engineering 2023",
-        "decision_raw": "SEARCH: fee structure for Computer Engineering at Pillai College of Engineering 2023",
+        "decision": "SEARCH: Fee structure for Computer Engineering programme at Pillai College of Engineering",
+        "decision_raw": "SEARCH: Fee structure for Computer Engineering programme at Pillai College of Engineering",
         "latencies_ms": {
-          "embed_query": 117.6,
-          "dense_search": 32.6,
-          "sparse_search": 57.5,
+          "embed_query": 90.8,
+          "dense_search": 35.3,
+          "sparse_search": 82.2,
           "fuse": 0.0,
-          "decide": 59489.3
+          "decide": 60365.0
         }
       },
       {
         "iteration": 3,
-        "query": "fee structure for Computer Engineering at Pillai College of Engineering 2023",
+        "query": "Fee structure for Computer Engineering programme at Pillai College of Engineering",
         "hits_returned": 20,
-        "new_chunks": 9,
+        "new_chunks": 5,
         "decision": "CAP",
         "decision_raw": "",
         "latencies_ms": {
-          "embed_query": 64.8,
-          "dense_search": 13.4,
-          "sparse_search": 32.4,
+          "embed_query": 65.6,
+          "dense_search": 12.9,
+          "sparse_search": 18.4,
           "fuse": 0.0
         }
       }
@@ -965,14 +908,16 @@ Sources:
     "stop_reason": "iteration_cap"
   },
   "verification": {
-    "verdict": "supported",
+    "verdict": "unsupported",
     "sentences": 1,
     "checked": 1,
-    "supported": 1,
-    "unsupported": [],
-    "support_rate": 1.0,
-    "refused": false,
-    "raw": "SUPPORTED",
-    "latency_ms": 108036.7
+    "supported": 0,
+    "unsupported": [
+      1
+    ],
+    "support_rate": 0.0,
+    "refused": true,
+    "raw": "UNSUPPORTED: 1",
+    "latency_ms": 127327.0
   }
 }

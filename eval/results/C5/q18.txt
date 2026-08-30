@@ -1,4 +1,4 @@
-I cannot answer that from the institutional documents available to me.
+The context provided does not contain information about the current Prime Minister of India. The context is focused on the Smart India Hackathon 2017 and does not include details about the current political leadership in India. [S1] [S2]
 
 Sources:
   [S1] Hackathon
@@ -12,18 +12,15 @@ Sources:
 
   1 retrieved chunk(s) omitted for context budget.
 
-  VERIFICATION: no sentence of the generated answer was supported by its cited sources, so the answer was withheld.
-  Withheld text: The context provided does not contain information about the current Prime Minister of India. The context is focused on the Smart India Hackathon 2017 and does not include details about the current political leadership in India. [S1] [S2]
-
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 144772ms, generation 110190ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 131564ms, generation 97904ms]
 
 {
   "question": "Who is the current Prime Minister of India?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 350285.3,
-  "retrieval_ms": 144771.9,
-  "generation_ms": 110189.7,
+  "latency_ms": 229702.6,
+  "retrieval_ms": 131564.0,
+  "generation_ms": 97904.0,
   "sources": [
     "da2a09c7-4874-436f-9537-2dcae3fa9a6c",
     "38375a3f-6de4-4c3d-bfca-3db4a8f44408",
@@ -707,21 +704,21 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 7084.91,
-      "dense_search_1": 30.42,
-      "sparse_search_1": 361.21,
-      "fuse_1": 0.05,
-      "decide_1": 61655.03,
-      "embed_query_2": 54.73,
-      "dense_search_2": 11.99,
-      "sparse_search_2": 8.34,
-      "fuse_2": 0.03,
-      "decide_2": 57653.39,
-      "embed_query_3": 136.58,
-      "dense_search_3": 61.11,
-      "sparse_search_3": 52.07,
-      "fuse_3": 0.05,
-      "rerank": 17662.05
+      "embed_query_1": 7489.64,
+      "dense_search_1": 39.12,
+      "sparse_search_1": 373.82,
+      "fuse_1": 0.04,
+      "decide_1": 66147.46,
+      "embed_query_2": 95.29,
+      "dense_search_2": 26.53,
+      "sparse_search_2": 43.84,
+      "fuse_2": 0.07,
+      "decide_2": 50891.19,
+      "embed_query_3": 46.12,
+      "dense_search_3": 22.38,
+      "sparse_search_3": 11.67,
+      "fuse_3": 0.03,
+      "rerank": 6376.77
     },
     "iteration_count": 3,
     "iterations": [
@@ -733,11 +730,11 @@ Sources:
         "decision": "SEARCH: current Prime Minister of India",
         "decision_raw": "SEARCH: current Prime Minister of India",
         "latencies_ms": {
-          "embed_query": 7084.9,
-          "dense_search": 30.4,
-          "sparse_search": 361.2,
-          "fuse": 0.1,
-          "decide": 61655.0
+          "embed_query": 7489.6,
+          "dense_search": 39.1,
+          "sparse_search": 373.8,
+          "fuse": 0.0,
+          "decide": 66147.5
         }
       },
       {
@@ -748,11 +745,11 @@ Sources:
         "decision": "SEARCH: current Prime Minister of India 2023",
         "decision_raw": "SEARCH: current Prime Minister of India 2023",
         "latencies_ms": {
-          "embed_query": 54.7,
-          "dense_search": 12.0,
-          "sparse_search": 8.3,
-          "fuse": 0.0,
-          "decide": 57653.4
+          "embed_query": 95.3,
+          "dense_search": 26.5,
+          "sparse_search": 43.8,
+          "fuse": 0.1,
+          "decide": 50891.2
         }
       },
       {
@@ -763,9 +760,9 @@ Sources:
         "decision": "CAP",
         "decision_raw": "",
         "latencies_ms": {
-          "embed_query": 136.6,
-          "dense_search": 61.1,
-          "sparse_search": 52.1,
+          "embed_query": 46.1,
+          "dense_search": 22.4,
+          "sparse_search": 11.7,
           "fuse": 0.0
         }
       }
@@ -773,17 +770,14 @@ Sources:
     "stop_reason": "iteration_cap"
   },
   "verification": {
-    "verdict": "unsupported",
+    "verdict": "skipped",
     "sentences": 2,
-    "checked": 2,
+    "checked": 0,
     "supported": 0,
-    "unsupported": [
-      1,
-      2
-    ],
-    "support_rate": 0.0,
-    "refused": true,
-    "raw": "UNSUPPORTED: 1,2",
-    "latency_ms": 95114.9
+    "unsupported": [],
+    "support_rate": null,
+    "refused": false,
+    "raw": "",
+    "latency_ms": 0.0
   }
 }

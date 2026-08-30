@@ -1,4 +1,4 @@
-Yes, hostel accommodation is available for students at the college [S1, S2, S3, S4, S5]. The facilities are designed to provide a comfortable and convenient living environment for both boys and girls [S1, S2, S5]. Girls' and boys' hostels are separately available with various room options including single bed rooms with AC, double rooms, and triple rooms [S1, S2, S5].
+Yes, hostel accommodation is available for students at the college [S1, S2, S3, S4, S5]. The facilities are designed to provide a comfortable and convenient living environment for both boys and girls [S1, S2, S5]. Girls' and boys' hostels are separately available, with various room options including single occupancy (with AC), double occupancy, and triple occupancy [S1, S2, S5].
 
 Sources:
   [S1] Hostel Details
@@ -12,17 +12,15 @@ Sources:
   [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 13 > page 16
         https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
 
-  VERIFICATION: sentence(s) 2, 3 of 3 were not supported by the cited sources (33% supported).
-
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 66466ms, generation 132654ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 74368ms, generation 160797ms]
 
 {
   "question": "Is hostel accommodation available for students at the college?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 363589.6,
-  "retrieval_ms": 66465.5,
-  "generation_ms": 132653.7,
+  "latency_ms": 344727.4,
+  "retrieval_ms": 74368.4,
+  "generation_ms": 160797.0,
   "sources": [
     "e9eca599-4467-4d63-92d6-daa68f550e6a",
     "a3ad0355-bde4-4baf-ac66-7de1110ebaea",
@@ -434,12 +432,12 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 8070.64,
-      "dense_search_1": 36.74,
-      "sparse_search_1": 346.18,
+      "embed_query_1": 7352.03,
+      "dense_search_1": 34.45,
+      "sparse_search_1": 405.71,
       "fuse_1": 0.04,
-      "decide_1": 52662.85,
-      "rerank": 5349.1
+      "decide_1": 61216.53,
+      "rerank": 5359.63
     },
     "iteration_count": 1,
     "iterations": [
@@ -451,28 +449,25 @@ Sources:
         "decision": "READY",
         "decision_raw": "READY",
         "latencies_ms": {
-          "embed_query": 8070.6,
-          "dense_search": 36.7,
-          "sparse_search": 346.2,
+          "embed_query": 7352.0,
+          "dense_search": 34.4,
+          "sparse_search": 405.7,
           "fuse": 0.0,
-          "decide": 52662.8
+          "decide": 61216.5
         }
       }
     ],
     "stop_reason": "model_says_ready"
   },
   "verification": {
-    "verdict": "partially_supported",
+    "verdict": "supported",
     "sentences": 3,
     "checked": 3,
-    "supported": 1,
-    "unsupported": [
-      2,
-      3
-    ],
-    "support_rate": 0.3333,
+    "supported": 3,
+    "unsupported": [],
+    "support_rate": 1.0,
     "refused": false,
-    "raw": "UNSUPPORTED: 2,3",
-    "latency_ms": 164281.9
+    "raw": "SUPPORTED",
+    "latency_ms": 109312.2
   }
 }

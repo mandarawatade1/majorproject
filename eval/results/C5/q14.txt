@@ -1,4 +1,4 @@
-The attendance policy for students at Pillai College of Engineering, New Panvel, is as follows:
+The attendance policy for students at Pillai College of Engineering, New Panvel, is structured as follows:
 
 - Attendance is computed per course, not as an overall average. A student can be at risk in a course even if their overall attendance is high [S5].
 - The thresholds for attendance status are as follows:
@@ -7,7 +7,7 @@ The attendance policy for students at Pillai College of Engineering, New Panvel,
   - 55% to 64.9%: Second warning, with the parent/guardian informed and a mentor meeting [S5].
   - Below 55%: Detention risk, referred to the detention committee [S5].
 
-This policy aims to ensure that students maintain a satisfactory level of attendance in each course, as failing to do so can lead to warnings and, ultimately, detention risk [S5].
+This policy ensures that students are monitored closely in each course, and appropriate actions are taken based on their attendance in individual courses [S5].
 
 Sources:
   [S1] SOP: Attendance Shortage, Warning and Detention > 2. Computation [DEMO DATA]
@@ -20,15 +20,15 @@ Sources:
 
   VERIFICATION: sentence(s) 7 of 7 were not supported by the cited sources (86% supported).
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 105423ms, generation 70184ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 105536ms, generation 66491ms]
 
 {
   "question": "What is the attendance policy for students?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 227463.9,
-  "retrieval_ms": 105422.7,
-  "generation_ms": 70183.8,
+  "latency_ms": 223170.1,
+  "retrieval_ms": 105535.8,
+  "generation_ms": 66491.5,
   "sources": [
     "e166c646-a5a2-4404-8925-24f1f4026e5a",
     "2f7779fc-15ef-40ea-8905-531e51883f1a",
@@ -971,21 +971,21 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 6159.43,
-      "dense_search_1": 15.36,
-      "sparse_search_1": 289.84,
-      "fuse_1": 0.04,
-      "decide_1": 49880.94,
-      "embed_query_2": 39.95,
-      "dense_search_2": 14.56,
-      "sparse_search_2": 10.88,
-      "fuse_2": 0.04,
-      "decide_2": 41210.99,
-      "embed_query_3": 51.73,
-      "dense_search_3": 9.94,
-      "sparse_search_3": 12.37,
+      "embed_query_1": 6142.59,
+      "dense_search_1": 15.02,
+      "sparse_search_1": 312.17,
+      "fuse_1": 0.03,
+      "decide_1": 48783.96,
+      "embed_query_2": 39.29,
+      "dense_search_2": 12.06,
+      "sparse_search_2": 11.13,
+      "fuse_2": 0.03,
+      "decide_2": 42516.59,
+      "embed_query_3": 20.97,
+      "dense_search_3": 8.01,
+      "sparse_search_3": 12.55,
       "fuse_3": 0.03,
-      "rerank": 7726.55
+      "rerank": 7661.33
     },
     "iteration_count": 3,
     "iterations": [
@@ -997,11 +997,11 @@ Sources:
         "decision": "SEARCH: attendance policy details for Pillai College of Engineering",
         "decision_raw": "SEARCH: attendance policy details for Pillai College of Engineering",
         "latencies_ms": {
-          "embed_query": 6159.4,
-          "dense_search": 15.4,
-          "sparse_search": 289.8,
+          "embed_query": 6142.6,
+          "dense_search": 15.0,
+          "sparse_search": 312.2,
           "fuse": 0.0,
-          "decide": 49880.9
+          "decide": 48784.0
         }
       },
       {
@@ -1012,11 +1012,11 @@ Sources:
         "decision": "SEARCH: specific attendance policy details for Pillai College of Engineering",
         "decision_raw": "SEARCH: specific attendance policy details for Pillai College of Engineering",
         "latencies_ms": {
-          "embed_query": 39.9,
-          "dense_search": 14.6,
-          "sparse_search": 10.9,
+          "embed_query": 39.3,
+          "dense_search": 12.1,
+          "sparse_search": 11.1,
           "fuse": 0.0,
-          "decide": 41211.0
+          "decide": 42516.6
         }
       },
       {
@@ -1027,9 +1027,9 @@ Sources:
         "decision": "CAP",
         "decision_raw": "",
         "latencies_ms": {
-          "embed_query": 51.7,
-          "dense_search": 9.9,
-          "sparse_search": 12.4,
+          "embed_query": 21.0,
+          "dense_search": 8.0,
+          "sparse_search": 12.6,
           "fuse": 0.0
         }
       }
@@ -1047,6 +1047,6 @@ Sources:
     "support_rate": 0.8571,
     "refused": false,
     "raw": "UNSUPPORTED: 7",
-    "latency_ms": 51669.3
+    "latency_ms": 50982.2
   }
 }

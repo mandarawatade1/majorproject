@@ -1,7 +1,7 @@
-According to the provided context, the following UG engineering programs at Pillai College of Engineering are NBA accredited:
+According to the provided context, the following programs at Pillai College of Engineering are NBA accredited:
 
-- 2 UG courses in Automobile, Electronics and Telecommunication are accredited.
-- 3 UG courses in Computer, Information Technology, and Mechanical Engineering are re-accredited for 3 years, up to 30th June, 2025 [S1, S2].
+- 2 UG courses in Automobile, Electronics and Telecommunication are accredited and
+- 3 UG courses in Computer, Information Technology and Mechanical Engineering departments are re-accredited for 3 years, up to 30th June, 2025 [S1, S2].
 
 Sources:
   [S1] The Institute > Accreditation
@@ -15,15 +15,15 @@ Sources:
   [S5] Sitemap
         https://www.pce.ac.in/sitemap/
 
-[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 59939ms, generation 129760ms]
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 68100ms, generation 136387ms]
 
 {
   "question": "Which programmes at the college are NBA accredited?",
   "config": "C5",
   "model": "qwen2.5:7b-instruct-q4_K_M",
-  "latency_ms": 311571.7,
-  "retrieval_ms": 59939.5,
-  "generation_ms": 129759.6,
+  "latency_ms": 322504.9,
+  "retrieval_ms": 68100.4,
+  "generation_ms": 136386.7,
   "sources": [
     "927c64c7-5b22-4d41-a2ed-0243184262b6",
     "ff41e0dc-4535-41fe-b1e9-3015cc17829d",
@@ -435,12 +435,12 @@ Sources:
     ],
     "filters_applied": {},
     "stage_latencies": {
-      "embed_query_1": 6143.28,
-      "dense_search_1": 23.06,
-      "sparse_search_1": 337.95,
+      "embed_query_1": 6333.18,
+      "dense_search_1": 19.84,
+      "sparse_search_1": 365.0,
       "fuse_1": 0.05,
-      "decide_1": 48914.01,
-      "rerank": 4521.11
+      "decide_1": 56136.76,
+      "rerank": 5245.53
     },
     "iteration_count": 1,
     "iterations": [
@@ -452,11 +452,11 @@ Sources:
         "decision": "READY",
         "decision_raw": "READY",
         "latencies_ms": {
-          "embed_query": 6143.3,
-          "dense_search": 23.1,
-          "sparse_search": 337.9,
+          "embed_query": 6333.2,
+          "dense_search": 19.8,
+          "sparse_search": 365.0,
           "fuse": 0.1,
-          "decide": 48914.0
+          "decide": 56136.8
         }
       }
     ],
@@ -464,13 +464,13 @@ Sources:
   },
   "verification": {
     "verdict": "supported",
-    "sentences": 2,
-    "checked": 2,
-    "supported": 2,
+    "sentences": 1,
+    "checked": 1,
+    "supported": 1,
     "unsupported": [],
     "support_rate": 1.0,
     "refused": false,
     "raw": "SUPPORTED",
-    "latency_ms": 121609.2
+    "latency_ms": 117796.7
   }
 }

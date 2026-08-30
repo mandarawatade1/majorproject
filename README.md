@@ -21,17 +21,21 @@ Nothing leaves the machine it runs on.
 | Phase | Description | Status |
 |---|---|---|
 | **0** | Foundations: scaffold, Docker stack, Alembic, CI | **complete** |
-| 1 | Corpus acquisition: crawler, parsers, real/demo labelling | not started |
-| 2 | Data layer: full schema, migrations, seed | not started |
-| 3 | Baseline RAG (**C0**) — the comparison baseline | not started |
-| 4 | Structure-aware chunking, hybrid retrieval, reranking (**C1-C3**) | not started |
-| 5 | Agentic planner-executor and verification (**C4-C5**) | not started |
-| 6 | Backend API: auth, portal endpoints, streaming chat | not started |
-| 7 | Portal frontend (Next.js) | not started |
+| **1** | Corpus acquisition: crawler, parsers, real/demo labelling | **complete** — 765 documents, 94.9% real |
+| **2** | Data layer: full schema, migrations, seed | **complete** |
+| **3** | Baseline RAG (**C0**) — the comparison baseline | **complete** — evaluated, 20 questions |
+| **4** | Structure-aware chunking, hybrid retrieval, reranking (**C1-C3**) | **complete** — evaluated, plus C1-CONTROL |
+| **5** | Agentic planner-executor and verification (**C4-C5**) | **complete** — evaluated |
+| **6** | Backend API: auth, portal endpoints, streaming chat | **complete** — 6a portal + SSE, 6b auth + admin |
+| **7** | Portal frontend (Next.js) | **complete** — home, departments, programmes, faculty |
 | 8 | Ask PCE chat, knowledge explorer, baseline-vs-proposed comparison | not started |
-| 9 | Admin console | not started |
-| 10 | Evaluation: RAGAS, LLM-judge, ablation study | not started |
+| 9 | Admin console | partial — endpoints exist, no UI |
+| 10 | Evaluation: RAGAS, LLM-judge, ablation study | mostly done — 7 configs over 140 questions; RAGAS harness outstanding |
 | 11 | Hardening and handover | not started |
+
+Seven of twelve phases complete. The evaluation data is collected and
+Chapter 4 is drafted; what remains in Phase 10 is the RAGAS harness, not the
+ablation study.
 
 The full design lives in **[`Docs/architecture-plan.md`](Docs/architecture-plan.md)**.
 Read that before changing anything structural.

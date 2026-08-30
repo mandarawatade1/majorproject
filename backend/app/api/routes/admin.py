@@ -41,21 +41,46 @@ EVAL_ROOT = Path("/app/eval/results")
 # ---------------------------------------------------------------------------
 
 
+def _manifest_documents() -> int | None:
+    """How many documents the manifest says the corpus holds.
+
+    The manifest is the definition of the corpus: the ingestion CLI writes it,
+    the indexer reads the same `normalised/` directory it describes, and the
+    report quotes its statistics. The database is a *copy*, loaded by
+    `python -m app.seed corpus`. Nothing re-runs that seed when the corpus is
+    regenerated, so the copy can fall behind the original silently — and when
+    it does, the portal serves one set of documents while Ask PCE answers from
+    another. That is the specific failure this endpoint exists to make visible,
+    so the comparison is computed here rather than left to the reader.
+    """
+    try:
+        raw = json.loads((CORPUS_ROOT / "manifest.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    documents = raw.get("documents")
+    if isinstance(documents, list):
+        return len(documents)
+    statistics = raw.get("statistics") or {}
+    total = statistics.get("total_documents")
+    return total if isinstance(total, int) else None
+
+
 @router.get("/corpus", summary="Corpus and index contents")
 def corpus_detail(_: AdminUser, db: DbSession) -> dict[str, Any]:
-    """Database counts beside index counts, so a drift is visible.
+    """What the database holds, what the manifest defines, what the index contains.
 
-    These two should agree. When they do not — an index rebuilt from a
-    different corpus, a seed that half-completed — every answer the system
-    gives is computed over something other than what the database describes,
-    and nothing else in the system will say so.
+    All three describe the same corpus and should agree. When they do not — a
+    corpus regenerated without re-seeding, an index built from a different
+    document set, a seed that half-completed — every answer the system gives is
+    computed over something other than what the database describes, and nothing
+    else in the system will say so.
     """
     documents = db.scalar(select(func.count()).select_from(Document)) or 0
     demo = (
         db.scalar(select(func.count()).select_from(Document).where(Document.is_demo.is_(True))) or 0
     )
     sections = db.scalar(select(func.count()).select_from(DocumentSection)) or 0
-    chunks = db.scalar(select(func.count()).select_from(Chunk)) or 0
+    chunk_rows = db.scalar(select(func.count()).select_from(Chunk)) or 0
 
     by_category = db.execute(
         select(Document.category, func.count())
@@ -75,6 +100,39 @@ def corpus_detail(_: AdminUser, db: DbSession) -> dict[str, Any]:
     except Exception as exc:  # noqa: BLE001 - reported, never fatal
         index["error"] = str(exc)
 
+    manifest_documents = _manifest_documents()
+    if manifest_documents is None:
+        corpus_agreement: dict[str, Any] = {"error": f"no readable manifest at {CORPUS_ROOT}"}
+    else:
+        corpus_agreement = {
+            "manifest_documents": manifest_documents,
+            "database_documents": documents,
+            "agree": manifest_documents == documents,
+        }
+        drift = documents - manifest_documents
+        if drift < 0:
+            corpus_agreement["difference"] = f"{-drift} missing from the database"
+            corpus_agreement["action"] = (
+                f"{-drift} documents the manifest defines are not in the database. Run "
+                "`python -m app.seed corpus` to load them. Until then the portal serves "
+                "fewer documents than retrieval can cite."
+            )
+        elif drift > 0:
+            # The two directions are different faults and want different
+            # answers. Missing rows are a seed that has not been run. Extra
+            # rows are documents the corpus no longer contains, and re-running
+            # the seed will not clear them: `load_corpus` inserts and updates,
+            # and the only delete it issues is for the sections of a document
+            # it is already updating. Nothing removes a Document whose source
+            # file has gone.
+            corpus_agreement["difference"] = f"{drift} in the database but not the manifest"
+            corpus_agreement["action"] = (
+                f"{drift} documents in the database are absent from the manifest — rows left "
+                "behind by an earlier corpus. Re-seeding will NOT remove them: the seeder "
+                "never deletes documents. The portal will list documents that retrieval "
+                "cannot cite, because the index was built from the manifest."
+            )
+
     return {
         "database": {
             "documents": documents,
@@ -82,10 +140,23 @@ def corpus_detail(_: AdminUser, db: DbSession) -> dict[str, Any]:
             "demo": demo,
             "real_share": round((documents - demo) / documents, 4) if documents else None,
             "sections": sections,
-            "chunks": chunks,
             "by_category": {str(c.value): n for c, n in by_category},
         },
+        "corpus_agreement": corpus_agreement,
         "index": index,
+        # Reported apart from the document counts, and with its meaning
+        # attached, because a bare `chunks: 0` beside them reads as a failed
+        # load. Chunks are never written to PostgreSQL: `rag.chunking` builds
+        # its own `Chunk` — a different class that happens to share the name —
+        # and passes it to the vector store. The counts that matter are under
+        # `index`. Zero here is the expected value.
+        "chunk_table": {
+            "rows": chunk_rows,
+            "note": (
+                "expected to be 0 — the chunks table is declared in the schema but "
+                "nothing writes to it; chunk storage is the vector and BM25 indexes"
+            ),
+        },
         "reference_data": {
             "departments": db.scalar(select(func.count()).select_from(Department)) or 0,
             "programs": db.scalar(select(func.count()).select_from(Program)) or 0,

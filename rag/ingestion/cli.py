@@ -148,7 +148,7 @@ def cmd_parse(args: argparse.Namespace) -> int:
     from rag.ingestion.dedupe import deduplicate, format_report
     from rag.ingestion.models import ParsedDocument
     from rag.ingestion.normalise import normalise
-    from rag.ingestion.parsers.html import parse_html
+    from rag.ingestion.parsers.html import MIN_USEFUL_CHARS, parse_html
     from rag.ingestion.parsers.markdown import load_demo_corpus
     from rag.ingestion.parsers.pdf import parse_pdf
 
@@ -157,6 +157,7 @@ def cmd_parse(args: argparse.Namespace) -> int:
 
     documents: list[ParsedDocument] = []
     failures: list[str] = []
+    thin: list[dict[str, str]] = []
 
     # --- real: crawled HTML and PDFs ---
     for meta_path in sorted(raw_dir.rglob("*.meta.json")):
@@ -217,7 +218,17 @@ def cmd_parse(args: argparse.Namespace) -> int:
                     fetched_at=meta.get("fetched_at"),
                 )
                 if document is None:
-                    continue  # navigation-only page; not an error
+                    # Below MIN_USEFUL_CHARS of body text. Usually right — a
+                    # link hub with no prose — but it is a decision about what
+                    # the corpus contains, and until it was recorded here it
+                    # was the only one in this pipeline that left no trace: not
+                    # in this run's output, not in the manifest, not in
+                    # suppressed.json. 168 of 993 crawled pages exit this way,
+                    # and nothing downstream could say so.
+                    thin.append(
+                        {"stem": stem, "url": url, "local_path": str(html_path)}
+                    )
+                    continue
             elif "pdf" in content_type:
                 failures.append(
                     f"{stem}: sidecar says PDF but no body file found at {pdf_path.name}"
@@ -268,6 +279,13 @@ def cmd_parse(args: argparse.Namespace) -> int:
     parsed_total = real_count + len(demo_documents)
     documents, suppressed = deduplicate(documents)
     print(format_report(suppressed, parsed_total))
+
+    _write_discarded_record(corpus, thin)
+    if thin:
+        print(
+            f"discarded {len(thin)} page(s) with under {MIN_USEFUL_CHARS} characters "
+            f"of body text (written to corpus/discarded.json)"
+        )
 
     _write_suppression_record(corpus, suppressed)
 
@@ -325,6 +343,30 @@ def cmd_parse(args: argparse.Namespace) -> int:
             print(f"  ... and {len(failures) - 20} more")
 
     return 1 if result.rejected else 0
+
+
+def _write_discarded_record(corpus: Path, thin: list[dict[str, str]]) -> None:
+    """Persist pages dropped for having too little body text.
+
+    Written unconditionally, empty list included, so the absence of discards is
+    itself recorded rather than indistinguishable from the file never having
+    been produced.
+    """
+    from rag.ingestion.parsers.html import MIN_USEFUL_CHARS
+
+    path = corpus / "discarded.json"
+    path.write_text(
+        json.dumps(
+            {
+                "reason": f"under MIN_USEFUL_CHARS ({MIN_USEFUL_CHARS}) of body text",
+                "count": len(thin),
+                "documents": thin,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
 
 
 def _write_suppression_record(corpus: Path, suppressed: list) -> None:

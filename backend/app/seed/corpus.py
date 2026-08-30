@@ -275,3 +275,70 @@ def _date(value: str | None) -> date | None:
 
 
 __all__ = ["LoadReport", "load_corpus"]
+
+
+# ---------------------------------------------------------------------------
+# Pruning
+# ---------------------------------------------------------------------------
+
+
+class PruneRefusedError(RuntimeError):
+    """Raised rather than deleting documents on evidence that looks wrong."""
+
+
+def prune_documents(session: Session, corpus_dir: Path) -> tuple[int, list[str]]:
+    """Delete documents the manifest no longer lists. Returns (deleted, doc_ids).
+
+    `load_corpus` inserts and updates but never deletes, and nothing else does
+    either, so a document that leaves the corpus keeps its database row for
+    ever. The rows then outlive the index that was built from the manifest, and
+    the portal lists documents that retrieval cannot cite.
+
+    Deleting is the dangerous direction, so this refuses in the two cases where
+    the evidence for a deletion is not trustworthy:
+
+    * **The manifest is not a superset of the database's loaded set.** If the
+      manifest lists documents the database has not got, the two were not
+      produced from the same load, and a difference in the other direction says
+      nothing about what should be removed. Run `corpus` first.
+    * **The deletion is implausibly large.** A truncated or half-written
+      manifest would otherwise take most of a working corpus with it. One in
+      five is well past any real corpus revision and reads as a broken input.
+
+    Sections and chunks carry `ondelete="CASCADE"`, so the database removes
+    them; nothing here has to walk the children.
+    """
+    manifest_path = corpus_dir / "manifest.json"
+    try:
+        raw = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise PruneRefusedError(f"cannot read {manifest_path}: {exc}") from exc
+
+    manifest_ids = {d["doc_id"] for d in raw.get("documents", []) if d.get("doc_id")}
+    if not manifest_ids:
+        raise PruneRefusedError(f"{manifest_path} lists no documents; refusing to prune")
+
+    database_ids = set(session.scalars(select(Document.doc_id)))
+    orphans = sorted(database_ids - manifest_ids)
+    absent = manifest_ids - database_ids
+
+    if absent:
+        raise PruneRefusedError(
+            f"{len(absent)} document(s) in the manifest are not in the database. "
+            f"The two are not from the same load, so the extra rows cannot be "
+            f"assumed stale. Run `python -m app.seed corpus` first."
+        )
+
+    if not orphans:
+        return 0, []
+
+    if database_ids and len(orphans) > len(database_ids) * 0.2:
+        raise PruneRefusedError(
+            f"{len(orphans)} of {len(database_ids)} documents are absent from the "
+            f"manifest. That is too large a share to be a corpus revision and looks "
+            f"like a truncated manifest. Nothing was deleted; check "
+            f"{manifest_path} before forcing this through."
+        )
+
+    session.execute(delete(Document).where(Document.doc_id.in_(orphans)))
+    return len(orphans), orphans

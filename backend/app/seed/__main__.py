@@ -4,6 +4,8 @@
     docker compose exec api python -m app.seed reference    # departments etc.
     docker compose exec api python -m app.seed corpus       # the Phase 1 corpus
     docker compose exec api python -m app.seed admin        # the admin account
+    docker compose exec api python -m app.seed prune        # drop rows the manifest
+                                                            #   no longer lists
 
 Every step is idempotent: running it twice is the same as running it once.
 That matters because the seed is what a supervisor runs on a clean machine
@@ -17,6 +19,13 @@ import argparse
 import sys
 from pathlib import Path
 
+from app.models.interaction import User
+from app.seed.reference import (
+    ACCREDITATIONS,
+    BTECH_PROGRAMS,
+    DEPARTMENTS,
+    TOTAL_BTECH_INTAKE,
+)
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
@@ -25,14 +34,7 @@ from app.core.logging import configure_logging, get_logger
 from app.db.session import SessionLocal
 from app.models.enums import AccreditationBody, ProgramLevel, UserRole
 from app.models.institutional import Accreditation, Department, Program
-from app.models.interaction import User
-from app.seed.corpus import load_corpus
-from app.seed.reference import (
-    ACCREDITATIONS,
-    BTECH_PROGRAMS,
-    DEPARTMENTS,
-    TOTAL_BTECH_INTAKE,
-)
+from app.seed.corpus import PruneRefusedError, load_corpus, prune_documents
 
 logger = get_logger(__name__)
 
@@ -165,6 +167,27 @@ def seed_corpus(session: Session) -> None:
         )
 
 
+def seed_prune(session: Session) -> None:
+    """Delete documents the manifest no longer lists.
+
+    Never part of `all`. Every other step only adds, so running `all` twice is
+    harmless; this one removes, and a manifest written by a failed parse would
+    make it remove real documents. It has to be asked for by name.
+    """
+    deleted, doc_ids = prune_documents(session, Path(settings.corpus_dir))
+    if not deleted:
+        print("nothing to prune: every document in the database is in the manifest")
+        logger.info("prune", status="already consistent")
+        return
+
+    print(f"deleted {deleted} document(s) absent from the manifest:")
+    for doc_id in doc_ids[:25]:
+        print(f"  {doc_id}")
+    if deleted > 25:
+        print(f"  ... and {deleted - 25} more")
+    logger.warning("prune", deleted=deleted)
+
+
 def verify(session: Session) -> int:
     """Print what is actually in the database. Run after any seed step."""
     from app.models.knowledge import Document, DocumentSection
@@ -209,6 +232,15 @@ STEPS = {
     "admin": seed_admin,
 }
 
+# Steps that must be named explicitly and never ride along on `all`. Everything
+# in STEPS only ever adds or updates, which is what makes `all` safe to re-run;
+# `prune` deletes, so it is kept out of that set deliberately.
+EXPLICIT_STEPS = {
+    "prune": seed_prune,
+}
+
+ALL_STEPS = {**STEPS, **EXPLICIT_STEPS}
+
 
 def main(argv: list[str] | None = None) -> int:
     configure_logging()
@@ -216,7 +248,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "steps",
         nargs="*",
-        choices=[*STEPS, "all"],
+        choices=[*ALL_STEPS, "all"],
         default=["all"],
         help="Which steps to run. Default: all.",
     )
@@ -228,8 +260,14 @@ def main(argv: list[str] | None = None) -> int:
         try:
             for name in chosen:
                 print(f"==> {name}")
-                STEPS[name](session)
+                ALL_STEPS[name](session)
             session.commit()
+        except PruneRefusedError as exc:
+            # Not a crash: the refusal is the feature. Say what stopped it
+            # without a traceback, so the message is the thing that is read.
+            session.rollback()
+            print(f"\nPRUNE REFUSED: {exc}", file=sys.stderr)
+            return 1
         except Exception as exc:
             session.rollback()
             print(f"\nSEED FAILED during '{name}': {type(exc).__name__}: {exc}", file=sys.stderr)

@@ -8,7 +8,9 @@ somewhere else.
 
 from __future__ import annotations
 
+import json
 import time
+from collections.abc import Iterator
 from typing import Any
 
 import httpx
@@ -33,11 +35,11 @@ class OllamaGenerator:
         self.max_tokens = max_tokens
         self.timeout = timeout
 
-    def generate(self, prompt: str, system: str | None = None) -> GenerationResult:
+    def _payload(self, prompt: str, system: str | None, stream: bool) -> dict[str, Any]:
         payload: dict[str, Any] = {
             "model": self.model_name,
             "prompt": prompt,
-            "stream": False,
+            "stream": stream,
             "options": {
                 # Low temperature on purpose. This system answers factual
                 # questions about an institution; creative variation is a
@@ -48,6 +50,10 @@ class OllamaGenerator:
         }
         if system:
             payload["system"] = system
+        return payload
+
+    def generate(self, prompt: str, system: str | None = None) -> GenerationResult:
+        payload = self._payload(prompt, system, stream=False)
 
         started = time.perf_counter()
         try:
@@ -71,6 +77,64 @@ class OllamaGenerator:
             prompt_tokens=body.get("prompt_eval_count"),
             completion_tokens=body.get("eval_count"),
             raw={k: v for k, v in body.items() if k != "response"},
+        )
+
+    def stream(
+        self, prompt: str, system: str | None = None
+    ) -> Iterator[str | GenerationResult]:
+        """Yield answer fragments as Ollama produces them, then the result.
+
+        Same endpoint, same options, same model as `generate()` -- only
+        `stream` differs -- so a streamed answer is the answer `generate()`
+        would have produced, delivered differently. That equivalence is what
+        lets the portal stream without drifting from the measured pipeline.
+
+        Ollama replies with newline-delimited JSON objects, each carrying a
+        `response` fragment, the last carrying `done` and the token counts.
+        """
+        payload = self._payload(prompt, system, stream=True)
+        started = time.perf_counter()
+        pieces: list[str] = []
+        final: dict[str, Any] = {}
+
+        try:
+            with httpx.stream(
+                "POST",
+                f"{self.base_url}/api/generate",
+                json=payload,
+                timeout=self.timeout,
+            ) as response:
+                response.raise_for_status()
+                for line in response.iter_lines():
+                    if not line.strip():
+                        continue
+                    try:
+                        body = json.loads(line)
+                    except json.JSONDecodeError:
+                        # A partial or malformed line is skipped rather than
+                        # failing the whole answer: the stream is a sequence of
+                        # independent objects, so one bad line costs a fragment,
+                        # not the response.
+                        continue
+                    fragment = body.get("response") or ""
+                    if fragment:
+                        pieces.append(fragment)
+                        yield fragment
+                    if body.get("done"):
+                        final = body
+        except httpx.HTTPError as exc:
+            raise RuntimeError(
+                f"Ollama streaming failed against {self.base_url}: {exc}. "
+                f"Check the server is up and `{self.model_name}` is pulled."
+            ) from exc
+
+        yield GenerationResult(
+            answer="".join(pieces).strip(),
+            model_name=self.model_name,
+            latency_ms=(time.perf_counter() - started) * 1000,
+            prompt_tokens=final.get("prompt_eval_count"),
+            completion_tokens=final.get("eval_count"),
+            raw={k: v for k, v in final.items() if k != "response"},
         )
 
     def is_available(self) -> tuple[bool, str]:

@@ -10,13 +10,13 @@ from collections.abc import AsyncIterator, Awaitable, Callable
 from contextlib import asynccontextmanager
 
 import structlog
+from app.core.config import settings
+from app.core.logging import configure_logging, get_logger
 from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.api.routes import health
-from app.core.config import settings
-from app.core.logging import configure_logging, get_logger
+from app.api.routes import chat, health, portal
 
 configure_logging()
 logger = get_logger(__name__)
@@ -106,6 +106,13 @@ async def request_context(
 # Health lives at the root, outside the versioned prefix, so orchestrators and
 # the verify script never have to know the API version.
 app.include_router(health.router)
+
+# Everything a visitor touches lives under the versioned prefix. /health stays
+# unprefixed: it is an operational probe for Docker and CI, not part of the API
+# surface, and pinning it to a version would break every healthcheck the day
+# the prefix changes.
+app.include_router(portal.router, prefix=settings.api_prefix)
+app.include_router(chat.router, prefix=settings.api_prefix)
 
 
 @app.get("/", tags=["meta"], summary="Service banner")

@@ -28,7 +28,7 @@ from rag.config import (
     implemented_configs,
 )
 from rag.embedding.base import Embedder
-from rag.generation.base import Generator
+from rag.generation.base import GenerationResult, Generator
 from rag.generation.prompts import (
     REFUSAL_TEXT,
     AssembledContext,
@@ -145,6 +145,23 @@ class Answer:
 
 
 @dataclass(slots=True)
+class Prepared:
+    """The state of an answer just before the model is called.
+
+    Exists so `ask()` and the API's streaming path share one retrieval and one
+    prompt. A portal answer that differed from the measured one would make
+    Chapter 4 describe a system the user never used.
+    """
+
+    question: str
+    retrieval: RetrievalResult
+    context: AssembledContext
+    system: str
+    prompt: str
+    retrieval_ms: float
+
+
+@dataclass(slots=True)
 class IndexReport:
     documents: int = 0
     chunks: int = 0
@@ -227,9 +244,16 @@ class Pipeline:
 
     # --- Answering ----------------------------------------------------
 
-    def ask(self, question: str) -> Answer:
-        started = time.perf_counter()
+    def prepare(self, question: str) -> Prepared:
+        """Everything up to the point of generation.
 
+        Split out of `ask()` so the streaming path in the API can reuse it
+        rather than reimplementing retrieval. That reuse is not a convenience:
+        if the portal assembled its context or built its prompt even slightly
+        differently, the answers a user sees would not be the answers Chapter 4
+        measured, and no amount of care elsewhere would make them comparable
+        again. One implementation, two callers.
+        """
         retrieval = self.retriever.retrieve(question, top_k=self.config.dense_top_k)
 
         context_hits = retrieval.hits
@@ -241,47 +265,64 @@ class Pipeline:
             retrieval.reranked_hits = reranked
             context_hits = reranked
 
-        retrieval_ms = sum(retrieval.stage_latencies.values())
-
         context = assemble_context(
             context_hits, max_chars=self.config.max_context_chars
         )
         system, prompt = build_prompt(
             question, context, enforce_citations=self.config.enforce_citations
         )
+        return Prepared(
+            question=question,
+            retrieval=retrieval,
+            context=context,
+            system=system,
+            prompt=prompt,
+            retrieval_ms=sum(retrieval.stage_latencies.values()),
+        )
 
-        generated = self.generator.generate(prompt, system=system)
-
-        # C5, and the only thing it adds. Generation above is byte-for-byte
-        # C4's — same context, same prompt, same call — so a C4-to-C5
-        # difference is the check and nothing else. The verifier reports; the
-        # decision to replace the text is taken here, once, in the open.
+    def finish(
+        self, prepared: Prepared, generated: GenerationResult, started: float
+    ) -> Answer:
+        """Verification and assembly, shared by the blocking and streaming paths."""
         answer_text = generated.answer
         verification = None
         if self.verifier is not None:
-            verification = self.verifier.verify(question, answer_text, context)
+            verification = self.verifier.verify(
+                prepared.question, answer_text, prepared.context
+            )
             if verification.refused:
                 answer_text = REFUSAL_TEXT
 
         return Answer(
-            question=question,
+            question=prepared.question,
             answer=answer_text,
             config_name=self.config.name,
             model_name=generated.model_name,
-            context=context,
-            retrieval=retrieval,
+            context=prepared.context,
+            retrieval=prepared.retrieval,
             verification=verification,
             latency_ms=(time.perf_counter() - started) * 1000,
             generation_ms=generated.latency_ms,
-            retrieval_ms=retrieval_ms,
+            retrieval_ms=prepared.retrieval_ms,
             prompt_tokens=generated.prompt_tokens,
             completion_tokens=generated.completion_tokens,
             metadata={
                 "innovations": self.config.innovations_enabled,
-                "context_chunks": context.included,
-                "context_dropped": context.dropped_for_budget,
+                "context_chunks": prepared.context.included,
+                "context_dropped": prepared.context.dropped_for_budget,
             },
         )
+
+    def ask(self, question: str) -> Answer:
+        """Answer one question. The path every Chapter 4 number came from."""
+        started = time.perf_counter()
+        prepared = self.prepare(question)
+
+        # C5's check happens inside `finish`. Generation here is byte-for-byte
+        # C4's -- same context, same prompt, same call -- so a C4-to-C5
+        # difference is the verification and nothing else.
+        generated = self.generator.generate(prepared.prompt, system=prepared.system)
+        return self.finish(prepared, generated, started)
 
 
 # ---------------------------------------------------------------------------

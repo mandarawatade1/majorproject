@@ -1,0 +1,735 @@
+The context provided does not specify which entrance exams are accepted for admission to Pillai College of Engineering. It mentions "MOCK CET" under "Other Programs" but does not clarify if this is an accepted entrance exam for admissions. For detailed information on accepted entrance exams, one might look at the "Important Admission Notice" or "Admissions" section on the college's official website [S1].
+
+Sources:
+  [S1] Graduation Day 2017
+        https://www.pce.ac.in/bws-gallery/graduation-day-2017/
+  [S2] Formula Student Combustion Event
+        https://www.pce.ac.in/bws-gallery/formula-student-combustion-event/
+
+  3 retrieved chunk(s) omitted for context budget.
+
+[C4 | qwen2.5:7b-instruct-q4_K_M | retrieval 107226ms, generation 130029ms]
+
+{
+  "question": "What entrance exams are accepted for admission to Pillai College of Engineering?",
+  "config": "C4",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 237455.2,
+  "retrieval_ms": 107226.3,
+  "generation_ms": 130029.5,
+  "sources": [
+    "51dded6d-8b04-406b-948c-721081abe119",
+    "281c9fc6-3fa8-4f98-9cf1-5d4118c2eb12"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What entrance exams are accepted for admission to Pillai College of Engineering?",
+    "rewritten_queries": [
+      "entrance exams accepted by Pillai College of Engineering"
+    ],
+    "dense_hits": [
+      {
+        "chunk_id": "22778487-7563-47dc-aa64-4f3f23057ba4",
+        "score": 0.76567,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "51dded6d-8b04-406b-948c-721081abe119",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-graduation-day-2017",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "281c9fc6-3fa8-4f98-9cf1-5d4118c2eb12",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-formula-student-combustion-event",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fa6d5100-d362-4589-80db-58ae58f44233",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-graduation-function-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "90ffa8c4-2451-4983-8b4d-996ae623330b",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-heres-how-you-can-have-the-best-college-experience",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e327b69e-3a46-4689-81af-1b5a21dc97c2",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-graduation-day-2018",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4f01aac4-e2e5-4817-ad2e-60f29aa74dcb",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3f26d3ae-d1fe-4437-a3fd-bce5af4489e8",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-workshop-on-concept-based-teachers-training-in-physics",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2c3d4bdf-3c71-491a-abe0-dcf4f4eac8f8",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-makers-day-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c8194377-7746-462b-9012-3bf728bf6abb",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-national-technology-day-2018",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2d00e483-0c3f-4efc-8428-adb01c326747",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-makers-day-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "66d8c324-7724-47ac-ae6a-f0854bdedd4b",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-vocabulary-treasure-hunt",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "861e0bba-ab77-444c-ad6d-332e778c901b",
+        "score": 0.764745,
+        "document_id": "pce-bws-gallery-pbl-topic-archive-fe-2017-18-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9a9eb11c-189e-472c-aa87-34c52d929203",
+        "score": 0.764745,
+        "document_id": "pce-about-mandatory-disclosure-pce-handbook",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2b1614df-3837-403f-9c88-29e5a293c16b",
+        "score": 0.764745,
+        "document_id": "pce-about-service-rules-regulations",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c1635168-d26c-4d54-b3b0-936e7b6249d3",
+        "score": 0.764745,
+        "document_id": "pce-academics-mock-cet",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "22028976-9866-4b41-b296-3308c7aa33bc",
+        "score": 0.764745,
+        "document_id": "pce-academics-academic-and-administrative-activity-planner-aaap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "beef04b5-6ae5-4700-b460-82eab3ee6b7f",
+        "score": 0.764745,
+        "document_id": "pce-academics-admissions-important-admission-notice",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9c378e7d-7a9b-48fe-915c-20c61136f5c6",
+        "score": 0.764745,
+        "document_id": "pce-nba-dcs-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "070e8bc0-835c-40cb-b099-e8c1ba609eea",
+        "score": 0.764745,
+        "document_id": "pce-students-student-activities-student-associations-tpc-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e7075761-b886-4a73-ab17-812350570fab",
+        "score": 0.788243,
+        "document_id": "pce-about-careers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a157922a-9ec4-4118-bd7a-6062fdee9bbb",
+        "score": 0.788243,
+        "document_id": "pce-about-mandatory-disclosure-university-affiliation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4341da2b-ab94-4834-b01f-1752db67f1f7",
+        "score": 0.788243,
+        "document_id": "pce-about-mandatory-disclosure-fee-fixation-committee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7da17c0a-9c9e-4e08-a96a-89d6372d4c65",
+        "score": 0.788243,
+        "document_id": "pce-accreditation-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b9aeffc0-45e8-42c4-b0ce-d5fabc4d1f34",
+        "score": 0.788243,
+        "document_id": "pce-library-ieee-article-requisition-form",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c6257354-d6a2-4f84-b1da-394dbf28b095",
+        "score": 0.788243,
+        "document_id": "pce-library-digital-library-digital-resource",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "14ff24e7-cd9e-40a6-9ddc-e8601941ed4f",
+        "score": 0.788243,
+        "document_id": "pce-library-library-feedback-form",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7cc5c3cd-22a7-4790-a986-0c4872d69394",
+        "score": 0.788243,
+        "document_id": "pce-library",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d57a945-3849-43e9-8c41-991731d574ee",
+        "score": 0.788243,
+        "document_id": "pce-library-search-for-books-opac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1d1b706b-75f7-4837-950b-c991cfc5d71e",
+        "score": 0.788243,
+        "document_id": "pce-nba-dcs",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bb4b4cba-ea5c-4da0-b815-7d44a6e83b5a",
+        "score": 0.788243,
+        "document_id": "pce-students-announcements-exams-results",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ebb3f787-d9b8-49f2-bfd4-d3161da792dd",
+        "score": 0.788243,
+        "document_id": "pce-students-announcements-exams-time-table-oral-practical",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4c47fdd8-1e9b-43e2-9a92-2101415f5d76",
+        "score": 0.788243,
+        "document_id": "pce-students-project-based-learning",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1438d158-2944-4e0b-a806-27faa4ef83fe",
+        "score": 0.788243,
+        "document_id": "pce-webinar-on-gateway-to-success",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fd98f10c-8202-4f0e-a4b3-3351bb704469",
+        "score": 0.788243,
+        "document_id": "pce-students-student-activities-study-tours",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "ab74413f-c444-4795-bd25-aeff60d26ff9",
+        "score": 31.930822,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "903fcbde-7791-481c-806c-7695c87f2b49",
+        "score": 31.930822,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c4864719-166f-43b0-92d8-748252cbb66a",
+        "score": 20.858592,
+        "document_id": "pce-pdf-mahadbt-notice-2025-26",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "246c3317-b3d6-4a08-800a-b36ba914bf47",
+        "score": 20.858592,
+        "document_id": "pce-pdf-mahadbt-notice-2025-26",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "df251bfc-de23-4671-a47a-bb8ddc1acece",
+        "score": 20.664822,
+        "document_id": "pce-national-level-digital-art-competition",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "af27fbd4-cf51-49d1-b0e6-63a4768131f9",
+        "score": 20.664822,
+        "document_id": "pce-national-level-digital-art-competition",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cc641d49-76ad-44c2-9a81-391512f54fea",
+        "score": 20.081297,
+        "document_id": "pce-pdf-toppr-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ad738f37-ea7f-4cd3-95dc-16ad60ce0912",
+        "score": 20.081297,
+        "document_id": "pce-pdf-toppr-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "87d20413-c243-475f-b01d-6ab5426c2cff",
+        "score": 17.903157,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 17.903157,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cdd95e6f-dfc1-4efc-9c26-bc3c35a7bbeb",
+        "score": 17.503918,
+        "document_id": "DEMO/LAB/CE/DS/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "01048542-78ce-40a0-8b04-d2c7a216072c",
+        "score": 17.503918,
+        "document_id": "DEMO/LAB/CE/DS/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "ee43c9df-ec32-4eb4-9fb4-5a1b952fd61c",
+        "score": 17.144473,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e564f338-eebc-4099-af31-1f6e852ce1bb",
+        "score": 17.144473,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "96444c63-06b7-46c2-8ecd-40595822189e",
+        "score": 16.906402,
+        "document_id": "pce-alumni-achievers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9a42a79a-39ea-4a5c-958e-18a08a5e1d86",
+        "score": 16.906402,
+        "document_id": "pce-alumni-achievers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1bba814a-1637-4a79-8510-0edb58e396ec",
+        "score": 16.763619,
+        "document_id": "pce-15-things-you-cant-miss-at-pillais",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7aa8b33c-10b0-4297-a4e8-08fb4622398b",
+        "score": 16.763619,
+        "document_id": "pce-15-things-you-cant-miss-at-pillais",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5e5ab909-8719-402b-8e9b-9abf12a932b8",
+        "score": 16.419205,
+        "document_id": "pce-pdf-pce-cap-reporting-process-22-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "24580276-4e0f-4583-bcb4-cfbab8c24c6c",
+        "score": 16.419205,
+        "document_id": "pce-pdf-pce-cap-reporting-process-22-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "13a0517e-cb6e-4039-b752-969309cddc5b",
+        "score": 16.038269,
+        "document_id": "pce-ayonika-paul-won-silver-medal-in-commonwealth-games-2014",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "861c885c-730a-47e3-a078-200202da3075",
+        "score": 16.038269,
+        "document_id": "pce-ayonika-paul-won-silver-medal-in-commonwealth-games-2014",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2452f985-f36f-4f4a-9027-e0567f890a27",
+        "score": 15.388994,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3dbce582-7d26-48fb-8b17-d12e94f01ad9",
+        "score": 15.388994,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ec6c962c-b7fa-459c-b85d-81e78e511887",
+        "score": 14.59473,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ef0433c3-4002-4170-837b-32c7b67554ca",
+        "score": 14.59473,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "89baa06f-2ca0-4478-9c68-09e5cf1cb6a0",
+        "score": 14.225839,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bf8ec3ee-2f23-4159-b16f-dd20a9150c69",
+        "score": 14.225839,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a8d1b9f4-654e-4387-9989-ecd7759cbc83",
+        "score": 13.108687,
+        "document_id": "pce-faculty-faculty-directory-dr-mimi-m-cherian",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "eb906a2b-6708-4be1-a4b8-3be86f00c59c",
+        "score": 13.108687,
+        "document_id": "pce-faculty-faculty-directory-dr-mimi-m-cherian",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "68a80e9a-1cf9-4d0d-934a-c1f106cb164b",
+        "score": 12.938004,
+        "document_id": "pce-faculty-faculty-directory-bhagyashri-patil",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8d5a8baa-4aae-42cc-9a13-9f6ce1c8448f",
+        "score": 12.938004,
+        "document_id": "pce-faculty-faculty-directory-bhagyashri-patil",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "22778487-7563-47dc-aa64-4f3f23057ba4",
+        "score": 0.016393,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ab74413f-c444-4795-bd25-aeff60d26ff9",
+        "score": 0.016393,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "51dded6d-8b04-406b-948c-721081abe119",
+        "score": 0.016129,
+        "document_id": "pce-bws-gallery-graduation-day-2017",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "903fcbde-7791-481c-806c-7695c87f2b49",
+        "score": 0.016129,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "281c9fc6-3fa8-4f98-9cf1-5d4118c2eb12",
+        "score": 0.015873,
+        "document_id": "pce-bws-gallery-formula-student-combustion-event",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c4864719-166f-43b0-92d8-748252cbb66a",
+        "score": 0.015873,
+        "document_id": "pce-pdf-mahadbt-notice-2025-26",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fa6d5100-d362-4589-80db-58ae58f44233",
+        "score": 0.015625,
+        "document_id": "pce-bws-gallery-graduation-function-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "246c3317-b3d6-4a08-800a-b36ba914bf47",
+        "score": 0.015625,
+        "document_id": "pce-pdf-mahadbt-notice-2025-26",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "90ffa8c4-2451-4983-8b4d-996ae623330b",
+        "score": 0.015385,
+        "document_id": "pce-bws-gallery-heres-how-you-can-have-the-best-college-experience",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "df251bfc-de23-4671-a47a-bb8ddc1acece",
+        "score": 0.015385,
+        "document_id": "pce-national-level-digital-art-competition",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e327b69e-3a46-4689-81af-1b5a21dc97c2",
+        "score": 0.015152,
+        "document_id": "pce-bws-gallery-graduation-day-2018",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "af27fbd4-cf51-49d1-b0e6-63a4768131f9",
+        "score": 0.015152,
+        "document_id": "pce-national-level-digital-art-competition",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4f01aac4-e2e5-4817-ad2e-60f29aa74dcb",
+        "score": 0.014925,
+        "document_id": "pce-bws-gallery-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cc641d49-76ad-44c2-9a81-391512f54fea",
+        "score": 0.014925,
+        "document_id": "pce-pdf-toppr-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3f26d3ae-d1fe-4437-a3fd-bce5af4489e8",
+        "score": 0.014706,
+        "document_id": "pce-bws-gallery-workshop-on-concept-based-teachers-training-in-physics",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ad738f37-ea7f-4cd3-95dc-16ad60ce0912",
+        "score": 0.014706,
+        "document_id": "pce-pdf-toppr-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2c3d4bdf-3c71-491a-abe0-dcf4f4eac8f8",
+        "score": 0.014493,
+        "document_id": "pce-bws-gallery-makers-day-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "87d20413-c243-475f-b01d-6ab5426c2cff",
+        "score": 0.014493,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c8194377-7746-462b-9012-3bf728bf6abb",
+        "score": 0.014286,
+        "document_id": "pce-bws-gallery-national-technology-day-2018",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 0.014286,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e7075761-b886-4a73-ab17-812350570fab",
+        "score": 0.016393,
+        "document_id": "pce-about-careers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9a9eb11c-189e-472c-aa87-34c52d929203",
+        "score": 0.016129,
+        "document_id": "pce-about-mandatory-disclosure-pce-handbook",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a157922a-9ec4-4118-bd7a-6062fdee9bbb",
+        "score": 0.015873,
+        "document_id": "pce-about-mandatory-disclosure-university-affiliation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "96444c63-06b7-46c2-8ecd-40595822189e",
+        "score": 0.015873,
+        "document_id": "pce-alumni-achievers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2b1614df-3837-403f-9c88-29e5a293c16b",
+        "score": 0.015625,
+        "document_id": "pce-about-service-rules-regulations",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9a42a79a-39ea-4a5c-958e-18a08a5e1d86",
+        "score": 0.015625,
+        "document_id": "pce-alumni-achievers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4341da2b-ab94-4834-b01f-1752db67f1f7",
+        "score": 0.015385,
+        "document_id": "pce-about-mandatory-disclosure-fee-fixation-committee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "13a0517e-cb6e-4039-b752-969309cddc5b",
+        "score": 0.015385,
+        "document_id": "pce-ayonika-paul-won-silver-medal-in-commonwealth-games-2014",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c1635168-d26c-4d54-b3b0-936e7b6249d3",
+        "score": 0.015152,
+        "document_id": "pce-academics-mock-cet",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "861c885c-730a-47e3-a078-200202da3075",
+        "score": 0.015152,
+        "document_id": "pce-ayonika-paul-won-silver-medal-in-commonwealth-games-2014",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "beef04b5-6ae5-4700-b460-82eab3ee6b7f",
+        "score": 0.014925,
+        "document_id": "pce-academics-admissions-important-admission-notice",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7da17c0a-9c9e-4e08-a96a-89d6372d4c65",
+        "score": 0.014706,
+        "document_id": "pce-accreditation-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b9aeffc0-45e8-42c4-b0ce-d5fabc4d1f34",
+        "score": 0.014493,
+        "document_id": "pce-library-ieee-article-requisition-form",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2452f985-f36f-4f4a-9027-e0567f890a27",
+        "score": 0.014493,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c6257354-d6a2-4f84-b1da-394dbf28b095",
+        "score": 0.014286,
+        "document_id": "pce-library-digital-library-digital-resource",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3dbce582-7d26-48fb-8b17-d12e94f01ad9",
+        "score": 0.014286,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "51dded6d-8b04-406b-948c-721081abe119",
+        "score": 5.074231,
+        "document_id": "pce-bws-gallery-graduation-day-2017",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "281c9fc6-3fa8-4f98-9cf1-5d4118c2eb12",
+        "score": 5.074231,
+        "document_id": "pce-bws-gallery-formula-student-combustion-event",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fa6d5100-d362-4589-80db-58ae58f44233",
+        "score": 5.074231,
+        "document_id": "pce-bws-gallery-graduation-function-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "90ffa8c4-2451-4983-8b4d-996ae623330b",
+        "score": 5.074231,
+        "document_id": "pce-bws-gallery-heres-how-you-can-have-the-best-college-experience",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e327b69e-3a46-4689-81af-1b5a21dc97c2",
+        "score": 5.074231,
+        "document_id": "pce-bws-gallery-graduation-day-2018",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 7043.82,
+      "dense_search_1": 10.53,
+      "sparse_search_1": 326.39,
+      "fuse_1": 0.05,
+      "decide_1": 54778.58,
+      "embed_query_2": 91.37,
+      "dense_search_2": 21.36,
+      "sparse_search_2": 54.95,
+      "fuse_2": 0.06,
+      "decide_2": 38689.94,
+      "rerank": 6209.22
+    },
+    "iteration_count": 2,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "What entrance exams are accepted for admission to Pillai College of Engineering?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "SEARCH: entrance exams accepted by Pillai College of Engineering",
+        "decision_raw": "SEARCH: entrance exams accepted by Pillai College of Engineering",
+        "latencies_ms": {
+          "embed_query": 7043.8,
+          "dense_search": 10.5,
+          "sparse_search": 326.4,
+          "fuse": 0.1,
+          "decide": 54778.6
+        }
+      },
+      {
+        "iteration": 2,
+        "query": "entrance exams accepted by Pillai College of Engineering",
+        "hits_returned": 20,
+        "new_chunks": 16,
+        "decision": "SEARCH: entrance exams accepted by Pillai College of Engineering",
+        "decision_raw": "SEARCH: entrance exams accepted by Pillai College of Engineering",
+        "latencies_ms": {
+          "embed_query": 91.4,
+          "dense_search": 21.4,
+          "sparse_search": 55.0,
+          "fuse": 0.1,
+          "decide": 38689.9
+        }
+      }
+    ],
+    "stop_reason": "repeated_query"
+  }
+}

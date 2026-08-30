@@ -1,0 +1,15 @@
+The vision of Pillai College of Engineering (PCE) is to admit, educate, and train a diverse population of students to become responsible professionals or entrepreneurs in a technical arena. It aims to contribute to nation-building through an entrepreneurial mindset [S1, S3, S4]. The mission of PCE is to develop entrepreneurs and make them responsible citizens in technological development from both an Indian and global perspective. This is achieved through quality education, practical training, and interaction with start-up founders [S4].
+
+Sources:
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 7 > page 10
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 7 > page 10
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S3] The Institute > Vision
+        https://www.pce.ac.in/about/the-institute/
+  [S4] Wp Content  Uploads  2024  02  Iic Pce Annual Report 2022 23.Pdf > Annual Report 2022-23 > page 1
+        https://www.pce.ac.in/wp-content/uploads/2024/02/IIC-PCE-Annual-Report-2022-23.pdf
+  [S5] Exploring the Landscape of Information Technology: A Comprehensive Guide to Opportunities and Innovation > Exploring Information Technology Programs at Pillai College of Engineering
+        https://www.pce.ac.in/exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-opportunities-and-innovation/
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 10978ms, generation 117411ms]

@@ -1,0 +1,32 @@
+Computer Engineering students at Pillai College of Engineering have access to several laboratory facilities, including:
+
+- Advanced computer laboratories with the latest hardware and software [S2].
+- Specialized research centers focused on emerging technologies [S2].
+- High-speed network infrastructure for hands-on networking experience [S2].
+- Dedicated spaces for project work and innovation [S2].
+- Artificial Intelligence and Machine Learning Lab [S3, S5].
+- Big Data Lab [S5].
+- Computer Architecture Lab [S5].
+- Advanced Database Lab [S5].
+- Computer Programming and Data Structure Lab [S5].
+- Network Lab [S5].
+- Web Engineering Lab [S5].
+- Database and Data Mining Lab [S5].
+- System Software Lab [S5].
+- Open Source Lab [S5].
+
+These facilities support both undergraduate and postgraduate programs in Computer Engineering. [S5]
+
+Sources:
+  [S1] Academic Infrastructure
+        https://www.pce.ac.in/about/infrastructure-and-facilities/academic-infrastructure/
+  [S2] Exploring the Landscape of Information Technology: A Comprehensive Guide to Opportunities and Innovation > Exploring Information Technology Programs at Pillai College of Engineering > Cutting-Edge Infrastructure
+        https://www.pce.ac.in/exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-opportunities-and-innovation/
+  [S3] Research Facilities > High performance Computing Lab
+        https://www.pce.ac.in/research/research-facilities/
+  [S4] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 37 > page 40
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6262ms, generation 127968ms]

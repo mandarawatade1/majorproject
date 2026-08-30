@@ -1,0 +1,15 @@
+Pillai College of Engineering is located at Plot No. 10, Sector 16, New Panvel, Navi Mumbai – 410 206, Maharashtra, India [S1]. You can contact the admissions office at 022-65748009 or 022-65748010 [S1].
+
+Sources:
+  [S1] Contact
+        https://www.pce.ac.in/about/contact/
+  [S2] Placement Cell > Placement Contact
+        https://www.pce.ac.in/placements/placement-cell/
+  [S3] Wp Content  Uploads  2019  09  Seit Direct Second Year Student Extra Classes Odd Sem 2019 20.Pdf > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/09/SEIT-Direct-Second-Year-Student-Extra-Classes-Odd-Sem-2019-20.pdf
+  [S4] Wp Content  Uploads  2019  11  Ari C 33505.Pdf > Innovation, Pre-Incubation & Incubation Centre/Facilities exists in campus > page 12
+        https://www.pce.ac.in/wp-content/uploads/2019/11/ARI-C-33505.pdf
+  [S5] Wp Content  Uploads  2023  10  Makerthon.Pdf > www.pce.ac.in > page 4
+        https://www.pce.ac.in/wp-content/uploads/2023/10/MAKERTHON.pdf
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 11789ms, generation 71829ms]

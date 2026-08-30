@@ -28,6 +28,22 @@ MIN_USEFUL_CHARS = 400
 HEADING_SIZE_RATIO = 1.15
 """A span must be this much larger than body text to count as a heading."""
 
+import re
+
+_PAGE_NUMBER_LIKE = re.compile(r"^(page\s*)?\d{1,4}$", re.IGNORECASE)
+
+
+def _looks_like_page_number(text: str) -> bool:
+    """True for printed page-number labels ("Page 36", "36", "- 36 -").
+
+    Font-size analysis alone cannot tell a real heading from a page number
+    printed in a large running header or footer -- both are short and
+    large. Rejecting anything that is just digits (with an optional "Page"
+    prefix) keeps a footer artifact from becoming a section heading whose
+    number then disagrees with the section's real `start_page`.
+    """
+    return bool(_PAGE_NUMBER_LIKE.match(text.strip().strip("-").strip()))
+
 
 def parse_pdf(
     path: Path,
@@ -206,7 +222,11 @@ def _sections_from_spans(
 
     for page_no, size, text in spans:
         rounded = round(size, 1)
-        is_heading = rounded in level_of and 3 <= len(text) <= 120
+        is_heading = (
+            rounded in level_of
+            and 3 <= len(text) <= 120
+            and not _looks_like_page_number(text)
+        )
         if is_heading:
             flush(page_no)
             buffer = []

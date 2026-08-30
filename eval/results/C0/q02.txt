@@ -1,0 +1,15 @@
+The Computer Engineering department at Pillai College of Engineering, New Panvel, offers a Ph.D. program. This program provides post-master’s applicants with the opportunity to study in a broad range of areas, including but not limited to Computer Networks, Data Mining, Image Processing, Cyber Security & Digital Forensics, Natural Language Processing, Ubiquitous Computing, Machine Learning and Data Science, Internet of Things, and Big Data Analytics.
+
+Sources:
+  [S1] Program Overview > Ph.D. in Computer Engineering
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S2] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S3] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S4] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 36 > page 39
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S5] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/electronics-computer-science/program-overview/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6498ms, generation 75984ms]

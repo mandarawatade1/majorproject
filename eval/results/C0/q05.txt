@@ -1,0 +1,13 @@
+The context provided does not explicitly mention which entrance exams are accepted for admission to Pillai College of Engineering. However, it does refer to "MOCK CET" under the "Admissions" section, which might be an entrance exam or a mock test related to the college. For precise information on accepted entrance exams, you should refer to the official admissions section or contact the college directly.
+
+Sources:
+  [S1] PERKS of PILLAI
+        https://www.pce.ac.in/perks-of-pillai/
+  [S2] Formula Student Combustion Event
+        https://www.pce.ac.in/bws-gallery/formula-student-combustion-event/
+  [S3] Graduation Day 2018
+        https://www.pce.ac.in/bws-gallery/graduation-day-2018/
+
+  2 retrieved chunk(s) omitted for context budget.
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6599ms, generation 139002ms]

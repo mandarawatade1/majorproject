@@ -1,0 +1,31 @@
+The Computer Engineering department focuses on the following research areas:
+
+- Computer Networks
+- Data Mining
+- Image Processing
+- Cyber Security & Digital Forensics
+- Natural Language Processing
+- Ubiquitous Computing
+- Machine Learning and Data Science [S1]
+
+These areas are also mentioned in another source [S2], which adds:
+
+- Internet of Things
+- Big Data Analytics
+- Geographic Information Systems
+
+Both sources [S1] and [S2] list similar research areas, with some differences. [S2] includes Internet of Things, Big Data Analytics, and Geographic Information Systems, which are not mentioned in [S1]. [S1] includes Cyber Security & Digital Forensics, which is not explicitly stated in [S2] but is implied in Cyber Security.
+
+Sources:
+  [S1] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S2] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S3] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/electronics-computer-science/program-overview/
+  [S4] Program Overview > Ph.D. in Computer Engineering
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S5] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/electronics-computer-science/program-overview/
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6416ms, generation 66171ms]

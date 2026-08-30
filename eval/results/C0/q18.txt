@@ -1,0 +1,15 @@
+The context provided does not contain the current Prime Minister of India. However, based on the information given, it mentions "Hon’ble Prime Minister, Shri Narendra Modi, envisages a Digital India to bridge the digital divide in our country and further promote digital literacy in order." Therefore, the Prime Minister referred to in the context is Shri Narendra Modi. As of my last update, Shri Narendra Modi is the current Prime Minister of India.
+
+Sources:
+  [S1] Wp Content  Uploads  2019  07  Dharmaraj Mech.Pdf > Dharmaraj Solanki > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/07/Dharmaraj-Mech.pdf
+  [S2] Netmagic Solutions Interview Schedule and Shortlisted Candidates List
+        https://www.pce.ac.in/netmagic-solutions-interview-schedule-and-shortlisted-candidates-list/
+  [S3] Hackathon
+        https://www.pce.ac.in/students/student-activities/student-awards-and-achievements/hackathon/
+  [S4] Dr. Rashed Ali > Education
+        https://www.pce.ac.in/faculty/faculty-directory/dr-rashed-ali/
+  [S5] Society of Women Engineers PCE Affiliate
+        https://www.pce.ac.in/students/student-activities/student-associations/society-of-women-engineers-pce-affiliate/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6268ms, generation 101629ms]

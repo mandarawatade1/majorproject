@@ -1,0 +1,29 @@
+The Computer Engineering department focuses on the following research areas:
+
+- Computer Networks
+- Data Mining
+- Image Processing
+- Cyber Security & Digital Forensics
+- Natural Language Processing
+- Ubiquitous Computing
+- Machine Learning and Data Science [S1]
+
+Additionally, the department has a Ph.D. center with 10 seats [S4]. The research areas of the Ph.D. guides include:
+
+- Image Processing, Data Mining and Business Intelligence, Big Data Analytics, Data Science, Soft Computing [S4]
+- Data Science, Natural Language Processing, Information Retrieval, Data Structures, Text Mining, System Programming, Compiler Design, Parallel Computing, Advanced OS, Distributed Systems, Pattern Recognition [S4]
+- Cognitive Computing, Usability Engineering, Data Science, Data Mining, Business Intelligence, Intelligent system, Software Engineering [S4]
+
+Sources:
+  [S1] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S2] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S3] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/electronics-computer-science/program-overview/
+  [S4] Ph.D. Students
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/ph-d-students/
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 41 > page 44
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 11302ms, generation 60914ms]

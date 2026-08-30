@@ -1,0 +1,11 @@
+The provided context does not contain specific information about the intake for the Computer Engineering program or whether the program is NBA (National Board of Accreditation) accredited. The context focuses more on the vision, mission, educational objectives, and program-specific outcomes of the Computer Engineering program, as well as details about various student associations and their activities. For precise details on intake and NBA accreditation, you may need to refer to the official prospectus or contact the admissions office directly.
+
+Sources:
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 36 > page 39
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S2] Student Associations
+        https://www.pce.ac.in/students/student-activities/student-associations/
+
+  3 retrieved chunk(s) omitted for context budget.
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6440ms, generation 85988ms]

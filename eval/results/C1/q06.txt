@@ -1,0 +1,16 @@
+The fee structure for the Computer Engineering programme at Pillai College of Engineering is as follows: [S1]
+
+- First year: $3,950 [S1]
+- Fees from the second year onward: $3,850 [S1]
+
+Sources:
+  [S1] Wp Content  Uploads  2023  06  Nri Pio 2023.Pdf > E-Mail Id : pceadmissions@mes.ac.in / pragneshshah@mes.ac.in > page 2
+        https://www.pce.ac.in/wp-content/uploads/2023/06/NRI-PIO-2023.pdf
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 36 > page 39
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S3] Value Added Courses
+        https://www.pce.ac.in/academics/other-programs/add-on-courses/value-added-courses/
+
+  2 retrieved chunk(s) omitted for context budget.
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6268ms, generation 141178ms]

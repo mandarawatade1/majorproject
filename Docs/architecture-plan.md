@@ -240,7 +240,7 @@ Everything below is open-source and runs locally. **No paid APIs anywhere in the
 | Small-hardware fallback | `qwen2.5:3b-instruct` / `llama3.2:3b` | For the 8 GB machine in Report Table 3.1 — see §3.6 |
 | Judge LLM | A **different** local model (e.g. `llama3.1:8b` if generator is Qwen) | Self-judging inflates scores; using a different family is defensible methodology |
 | Embeddings | **`BAAI/bge-small-en-v1.5`** (384-d) via sentence-transformers | Sentence-BERT family as your report specifies; fast on CPU; strong MTEB retrieval scores. Upgrade path: `bge-base-en-v1.5` (768-d) |
-| Reranker | **`BAAI/bge-reranker-base`** cross-encoder | The "cross-encoder reranking" your report §3.2.1 names |
+| Reranker | **`BAAI/bge-reranker-base`** cross-encoder | The "cross-encoder reranking" your report §3.2.1 names — **superseded, see §20.1** |
 | Vector DB | **ChromaDB** (persistent, HNSW) | Metadata filtering + hybrid support; listed in your Table 3.2 |
 | Sparse retrieval | **BM25** via `rank_bm25` (or Postgres FTS for scale) | The keyword half of hybrid retrieval |
 | Fusion | **Reciprocal Rank Fusion (RRF)** | Score-scale-agnostic; the standard defensible fusion method |
@@ -271,7 +271,7 @@ Report Table 3.1 specifies **8 GB RAM**. That is workable but tight, and I'd rat
 |---|---|
 | 7–8B generator LLM, Q4 quantised | ~5.0–5.5 GB |
 | bge-small embedding model | ~0.15 GB |
-| bge-reranker-base cross-encoder | ~0.5 GB |
+| bge-reranker-base cross-encoder | ~0.5 GB | (superseded, see §20.1)
 | Postgres + Redis + Chroma | ~1.0 GB |
 | FastAPI + Next.js dev server | ~1.0 GB |
 | **Total** | **~8+ GB — over budget on an 8 GB machine** |
@@ -472,7 +472,7 @@ query
  ├─ DENSE   : Chroma cosine top-20 (metadata-filtered)
  ├─ SPARSE  : BM25 top-20 (same filter)
  ├─ FUSION  : Reciprocal Rank Fusion, k=60  →  top-15 candidates
- ├─ RERANK  : bge-reranker-base cross-encoder scores (query, chunk) → top-5
+ ├─ RERANK  : cross-encoder scores (model: see §20.1) (query, chunk) → top-5
  └─ EXPAND  : swap each child chunk for its parent section; dedupe; assemble
               context under a token budget with citation markers attached
 ```
@@ -1291,3 +1291,1237 @@ missing 27 documents means rebuilding it — and worse, means the C0 figures
 would not be comparable to C1-C5 measured later over the full corpus.
 
 One minute of re-seeding now avoids invalidating the baseline.
+
+---
+
+## 17. Phase 3 — the C0 baseline (28 Aug 2026)
+
+Corpus confirmed complete first: **609 manifest, 609 loaded, 0 skipped**, 570
+real and 39 demo, 2,893 sections, 145 with page numbers.
+
+### 17.1 What was built
+
+| Module | Role |
+|---|---|
+| `rag/config.py` | `PipelineConfig` and the six presets C0-C5 |
+| `rag/chunking/` | `Chunker` protocol; `FixedSizeChunker` for C0 |
+| `rag/embedding/` | `Embedder` protocol; sentence-transformers, Ollama and deterministic backends |
+| `rag/indexing/` | `VectorIndex` protocol; Chroma and in-memory |
+| `rag/retrieval/` | `Retriever` protocol; `DenseRetriever` for C0; `RetrievalResult` shaped for `retrieval_logs` |
+| `rag/generation/` | Ollama client; shared context assembly and prompt builder |
+| `rag/pipeline.py` | The orchestrator every configuration runs through |
+| `rag/factory.py` | Builds components from the environment |
+| `rag/__main__.py` | `configs`, `doctor`, `index`, `ask` |
+
+### 17.2 The point of PipelineConfig
+
+The obvious way to build this — a "baseline script" and a "proposed script" —
+produces a worthless comparison. Two separately written programs differ in a
+hundred incidental ways: prompt wording, context format, token budget, retry
+behaviour. A measured difference between them cannot be attributed to
+structure-aware chunking, because it also contains every accident of how each
+was written.
+
+So C0 and C5 run through the **same orchestrator**, over the **same corpus**,
+with the **same context assembly and prompt builder**. The only differences are
+the ones `PipelineConfig` declares. A test asserts each configuration is a
+strict superset of its predecessor and that the innovation counts run 0,1,2,3,4,5
+— if C2 ever differed from C1 in two ways, the build fails.
+
+**An unbuilt configuration is refused, not approximated.** Asking for C3 today
+raises and names what is missing. Silently running C0's stages under C3's label
+would put a wrong number in Chapter 4 that looks entirely right.
+
+### 17.3 Building the baseline honestly
+
+C0 is deliberately naive — fixed 512-character windows, dense-only top-5, no
+citation instructions — but it is *implemented properly*: the overlap works,
+boundaries are stable, no content is dropped, and a validator refuses an
+overlap ≥ size that would loop forever. A baseline made worse than a naive
+implementation honestly would be inflates every improvement claimed on top of
+it, and an examiner who spots that discounts the whole chapter.
+
+C0's chunks carry no `section_path` and no `page_number`. That is not an
+omission — a fixed window spans arbitrary parts of a document, so there is no
+section or page it honestly belongs to. That absence is exactly what
+structure-aware chunking fixes in C1, and a test pins it.
+
+### 17.4 Decisions worth recording
+
+**Chroma returns cosine *distance*; the index converts to similarity.**
+Reporting distance as a score would leave rankings correct while inverting
+every number in the logs — the kind of discrepancy nobody finds until Chapter 4.
+
+**The collection records which embedding model built it.** Searching an index
+with a different embedder does not error; it returns confident nonsense. The
+mismatch is checked and refused.
+
+**Three embedding backends behind one protocol.** sentence-transformers
+(`bge-small-en-v1.5`) is the default and matches Report §3.2.1. `EMBEDDING_BACKEND=ollama`
+avoids installing torch (~2.5 GB) by reusing the Ollama server already running —
+a deviation from the report, recorded on every chunk and log via the model name
+so a result can never be misattributed. `fake` is a hash-based embedder for
+tests, and must never produce a reported number.
+
+**No cloud fallback anywhere in generation.** If Ollama is unreachable the
+answer fails rather than quietly going somewhere else. That is the data
+sovereignty claim in code rather than in prose.
+
+### 17.5 Verification
+
+**197 tests passing**, all without torch, Chroma, Ollama or a model download —
+the deterministic embedder and in-memory index make the baseline checkable in
+seconds on any machine.
+
+| Check | Result |
+|---|---|
+| C0 end to end: index 3 documents, ask, get sources | pass |
+| Ablation is single-variable (0,1,2,3,4,5 innovations; each a strict superset) | pass |
+| C1, C2, C5 refused with a message naming what is missing | pass |
+| Chunk overlap carries correctly; whole document covered | pass |
+| `is_demo` propagates to every chunk and reaches the citation label | pass |
+| Context budget drops from the tail and counts what it dropped | pass |
+| C0 gets the plain system prompt; grounded prompt adds citation and refusal rules | pass |
+| Context block byte-identical between the two prompt modes | pass |
+| C0 populates only the dense stage — sparse, fused and reranked stay empty | pass |
+| Retrieval log shape matches the `retrieval_logs` columns | pass |
+| ruff lint and format | clean |
+| **Against real Chroma, real embeddings, real Ollama** | **not run** — no torch, no Chroma and no PyPI in either build environment |
+
+### 17.6 What the team must run
+
+```bash
+docker compose up -d --build          # adds chromadb + sentence-transformers + torch
+docker compose exec api python -m rag doctor
+docker compose exec api python -m rag index --config C0 --reset
+docker compose exec api python -m rag ask "What is the intake for Computer Engineering?"
+```
+
+`doctor` checks corpus, embedder, index and generator separately and says what
+to do about each failure. The first `index` downloads the embedding model
+(~130 MB) and will take several minutes over 609 documents.
+
+If the torch install is painful, set `EMBEDDING_BACKEND=ollama` in `.env`,
+comment out `sentence-transformers` and `torch` in `backend/requirements.txt`,
+and `ollama pull nomic-embed-text`. Set `EMBEDDING_DIMENSION=768` to match, and
+`--reset` the index, since vectors from two models are not comparable.
+
+### 17.7 Gate
+
+Phase 4 (structure-aware chunking, hybrid retrieval, reranking — C1 to C3) begins
+once C0 answers a question end to end against the real stack.
+
+---
+
+## 18. Phase 4 — C1 to C3 (28 Aug 2026, recorded from handoff)
+
+This phase was carried out in a separate session. It is recorded here so the
+document stays a complete history, but with an explicit caveat: **the claims in
+this section were reported to me, not verified by me**, except where noted.
+
+### 18.1 What was built
+
+| Config | Adds | Where |
+| --- | --- | --- |
+| C1 | structure-aware semantic chunking | `rag/chunking/semantic.py` |
+| C2 | hybrid dense + BM25, fused with RRF | `rag/retrieval/hybrid.py`, `rag/indexing/bm25.py` |
+| C3 | cross-encoder reranking (`ms-marco-MiniLM-L-6-v2`, **not** `bge-reranker-base` — §20.1) | `rag/reranking/cross_encoder.py` |
+
+All three are wired into `rag/pipeline.py`, indexed, and evaluated against a
+20-question set (`eval_questions.json`, `run_baseline_eval.py`, results under
+`eval/results/C0` … `C3`).
+
+### 18.2 Three defects found in that session
+
+1. **`rag/ingestion/parsers/html.py`** — the theme's real content wrapper
+   (`div.post-content`) was rejected by `MIN_USEFUL_CHARS = 250`, a threshold
+   meant for a different fallback path. Fixed with a separate, lower
+   `MIN_WRAPPER_CHARS = 40` used only for that high-confidence selector.
+2. **`rag/ingestion/cli.py`** — one real URL could arrive behind several raw
+   crawl artifacts (a `?p=1234` redirect and a slug URL resolving to the same
+   page), producing duplicate `doc_id`s that overwrote each other on disk while
+   still being counted as written. Fixed by collapsing same-`doc_id` documents
+   before `normalise()`. Corpus reconciled at **765** documents, up from 609.
+3. **`run_baseline_eval.py`** — `run_question()` never passed `--config` to the
+   `rag ask` subprocess, so every early eval run queried C0 regardless of the
+   folder its results were saved under.
+
+The third is the same shape as §14's `file_stem` bug and §11's `.pdf.pdf` bug:
+a value correct at one end of a boundary and silently dropped at the other.
+It is now three occurrences, which is a pattern rather than bad luck.
+
+### 18.3 What I did verify
+
+Given defect 3, the C1–C3 results were only trustworthy if they postdate the
+fix. Checked directly:
+
+* every `eval/results/C{1,2,3}` file is timestamped after the harness fix;
+* all 20 answers differ from C0's in each of the three configurations.
+
+Had either check failed, Chapter 4's C0→C3 comparison would have been three
+copies of the same run under different labels. The ablation is intact.
+
+---
+
+## 19. Phase 5 — C4, the agentic loop (29 Aug 2026)
+
+### 19.1 The decision that shaped everything else
+
+The obvious way to build C4 is to give the agent the whole question-to-answer
+path: a `retrieve` node, a `decide` node and an `answer` node of its own. That
+was the direction sketched in the handoff, and it was not taken.
+
+The problem is the `answer` node. The ablation's validity rests on citation and
+grounding wording being **identical** across C0 through C5 — otherwise a C4
+improvement could be the new prompt rather than the new retrieval. An `answer`
+node means a second call site for `assemble_context()` and `build_prompt()`,
+and two call sites drift. This project has now been bitten three times (§11,
+§14, §18.2) by exactly that: one transformation implemented twice, the copies
+diverging silently.
+
+So C4 is shaped as a **`Retriever`**. `AgenticRetriever` satisfies the same
+protocol as C0's dense retriever and C2's hybrid one, returns a
+`RetrievalResult`, and **`Pipeline.ask()` is not modified at all**. C4 runs the
+same reranker call, the same `assemble_context()`, the same `build_prompt()`
+and the same generation step as C3 — because it runs the identical code. The
+rule is enforced by construction rather than by remembering to keep two prompts
+in sync. The only thing C4 changes is how the candidate pool was gathered,
+which is what "adds exactly one thing" is supposed to mean.
+
+Reranking therefore happens once, in `ask()`, over the pool accumulated across
+every iteration. C4 hands the reranker a richer candidate set than C3 does and
+picks the same `rerank_top_n` from it.
+
+### 19.2 One follow-up query per iteration
+
+The open question from the handoff. Chosen: **one**.
+
+Multiple queries per round gather more per LLM call, but they make the ablation
+harder to read — with a variable fan-out, "C4 retrieved more" confounds breadth
+with depth, and the iteration count stops meaning anything comparable across
+questions. One query per round makes `agent_max_iterations` an honest knob and
+`iteration_count` an honest number. It also matches what a 4-bit 7B model can
+actually produce reliably: one line of output, not a list.
+
+### 19.3 Files
+
+| File | Contains |
+| --- | --- |
+| `rag/agentic/base.py` | `AgentState`, `AgentIteration`, `StopReason` — no LangGraph import |
+| `rag/agentic/decide.py` | the decide prompt and `parse_decision()`, all pure functions |
+| `rag/agentic/nodes.py` | `retrieve_node`, `decide_node`, `should_continue` — dependencies passed in |
+| `rag/agentic/graph.py` | `AgenticRetriever` and `build_graph()` — wiring only, no logic |
+| `rag/tests/test_agentic.py` | 60 tests, none of which import LangGraph |
+
+`RetrievalResult` gains two additive fields, `iterations` and `stop_reason`,
+empty and `None` for every single-pass configuration — so a C4 row in
+`retrieval_logs` is distinguishable from a C3 row by their presence.
+
+### 19.4 Plain text, not structured output
+
+The decide step asks for exactly one line: `READY`, or `SEARCH: <query>`. Not
+JSON, not tool-calling. A quantized 7B model does not reliably emit well-formed
+structured output, and the failure mode is what matters: a malformed JSON blob
+parsed leniently yields "no follow-up", turning C4 into C3 with nothing
+erroring. A one-line contract either matches or visibly does not, and anything
+unreadable is **recorded as unparseable** rather than averaged into the results.
+
+### 19.5 Five stop reasons, all recorded
+
+| Reason | Meaning |
+| --- | --- |
+| `model_says_ready` | the intended path |
+| `iteration_cap` | `agent_max_iterations` reached |
+| `no_new_chunks` | a round surfaced nothing new; this line of enquiry is exhausted |
+| `repeated_query` | the model proposed a query it already ran |
+| `unparseable_decision` | the output could not be read; answer with what we have |
+
+The last three mean C4 degraded towards C3 **for that question**. They are
+recorded as distinct values precisely so a degradation cannot hide inside an
+averaged score — "C4 stopped after two rounds" means something very different
+depending on which of these produced it. Expect to report their frequency in
+Chapter 4 alongside the accuracy numbers; a C4 that hits `unparseable_decision`
+on half the question set has not been measured, it has been mislabelled.
+
+Two of them also save an LLM call: at the cap, and after a barren round, the
+answer to "do you need more?" cannot be acted on, and CPU inference is the
+budget that matters here.
+
+### 19.6 Two defects found in my own C4 code
+
+Both were found by tests written against the code, not by reading it.
+
+1. **Prose accepted as a search query.** `parse_decision` has a fallback for a
+   bare query with no `SEARCH:` prefix, guarded by a blocklist of opening
+   phrases. "Hmm, I am not sure what you want me to do here." passed it and
+   would have been issued as a retrieval — and, worse, written into
+   `rewritten_queries`, where Chapter 4 reads it as a query the agent *chose*.
+   A log that misreports the agent's reasoning is worse than one that admits it
+   could not read the output. Replaced the blocklist of openings with a token
+   filter over the whole line (first/second person, hedges, negation, clause
+   punctuation), and lowered the word cap from 15 to 12. The check now errs
+   towards rejection, which costs an understated C4 rather than a fabricated
+   one.
+
+2. **Retrieval latency reported at roughly double.** `Pipeline.ask()` computes
+   retrieval time by summing every value in `stage_latencies`.
+   `retrieve_node` was recording both a round total (`retrieve`) *and* the
+   inner retriever's breakdown (`dense_search`, `sparse_search`, `fuse`) — the
+   parts and the whole, in one dict that gets summed. C4's latency, the exact
+   quantity the report must weigh against its accuracy gain, would have been
+   inflated ~2×. Now the breakdown is recorded when the inner retriever
+   provides one and a round total only when it does not.
+
+### 19.7 Two stale tests repaired
+
+Not C4's doing, but they were failing:
+
+* `test_pipeline.py::TestUnbuiltConfigsAreRefused` still asserted
+  `implemented_configs() == ["C0"]` and expected C1/C2 to raise — stale since
+  Phase 4 landed. Now asserts the real gate (`C0`–`C4` built, `C5` not).
+* `test_manifest.py` imported `TARGET_DEMO_SHARE`, removed in §12 when the gate
+  became one-sided. **The whole file failed at collection**, which means the
+  repo's test suite has not run clean since then. Its `test_far_off_target_is_reported`
+  also still encoded the two-sided band that §12 deliberately removed — it
+  asserted a 99%-real corpus *fails*. Replaced with the honest pair: mostly-real
+  passes, too-little-real fails.
+
+### 19.8 What was verified, and what was not
+
+| Check | Result |
+| --- | --- |
+| `rag/tests/test_agentic.py` (60 tests) | pass |
+| Full `rag/tests` suite (229 tests, all 10 files) | pass |
+| ruff lint and format across `rag/` | clean |
+| Parser against `READY`/`SEARCH:`/markdown/lead-ins/prose/empty | pass |
+| All five stop reasons, each by its own path | pass |
+| Dedup, ordering, per-round latency, log shape | pass |
+| C4 differs from C3 in exactly `{name, description, agentic}` | pass |
+| **LangGraph `StateGraph` compile and invoke** | **not run** — langgraph is not installable in this build environment (no PyPI) |
+| **Against real Chroma / embeddings / Ollama** | **not run**, same reason |
+
+The node bodies and the routing function are tested directly, through a
+hand-rolled driver that transcribes the graph's wiring; `build_graph()` itself
+contains no branching, and `TestWiring::test_driver_matches_graph_wiring` pins
+its shape by inspection so the driver cannot silently drift from it. But the
+compile-and-invoke path runs for the first time on the team's machine.
+
+Note that pytest itself is not installable in this environment either; the 229
+passing tests were run under a minimal local stand-in providing `parametrize`,
+`raises` and `fixture`. An earlier version of this section claimed 204 tests
+across 8 files; my working copy was missing `test_dedupe.py` and
+`test_normalise.py`, so "the full suite" was two files short of full. Corrected
+after re-syncing from the repository — see §20.3. **The authoritative run is `docker compose exec api
+pytest` on the team's machine**, and that is the first thing to do below.
+
+### 19.9 What the team must run
+
+```bash
+docker compose exec api pytest rag/tests -q        # expect 204 passed
+docker compose exec api python -c "import langgraph; print(langgraph.__version__)"
+docker compose exec api python -m rag ask "What is the eligibility for the M.E. programme?" --config C4
+```
+
+The third is the real test: it is the first time the graph compiles. If
+langgraph is missing, `build_graph()` raises a message saying exactly that
+rather than failing obscurely inside the state machine.
+
+Then compare against C3 on the same question, and check the tail of the answer
+for `iteration_count`, `stop_reason` and the per-round latencies.
+
+### 19.10 Gate
+
+`implemented_configs()` now returns `["C0", "C1", "C2", "C3", "C4"]`. C5 still
+raises.
+
+C5 (`verify_answer=True`, post-answer verification) is **not designed yet** and
+will be scoped with the team before any code is written, as agreed.
+
+---
+
+## 20. Audit of C0–C3 (29 Aug 2026)
+
+C4 wraps C3, so before trusting C4 I went back and read C1, C2 and C3 as
+implemented rather than as described in the handoff. Four things came out of
+that. The first two matter for Chapter 4; the last two are mine to own.
+
+### 20.1 The reranker is not the model this document names
+
+`rag/reranking/cross_encoder.py` uses **`cross-encoder/ms-marco-MiniLM-L-6-v2`**.
+This document names `BAAI/bge-reranker-base` in four places (§2, §3, the
+pipeline diagram, and my own §18 table, all now annotated).
+
+The substitution looks deliberate and well-reasoned — the module's docstring
+justifies it as ~80 MB and CPU-friendly, matching the 8 GB RAM constraint from
+Report Table 3.1, the same reasoning that chose BM25 over a heavier sparse
+method. Nothing is wrong with the code. What was wrong is that the change never
+reached the documents.
+
+**Action for the team:** if the report's §3.2.1 names `bge-reranker-base`, it
+now describes a model the system does not load. Either update the report to the
+MiniLM cross-encoder (with the hardware justification, which is a *better* story
+than the original) or change the code back. Do not leave them disagreeing — an
+examiner who runs the code will find the mismatch.
+
+### 20.2 The C0 → C1 step changes two things, not one
+
+This is the important one.
+
+`C1_STRUCTURE_AWARE` overrides four fields relative to C0:
+
+```python
+chunking=ChunkingStrategy.STRUCTURE_AWARE,
+enforce_citations=True,
+refuse_when_unsupported=True,
+expand_to_parent=True,
+```
+
+`enforce_citations` is not a labelling flag. In `rag/generation/prompts.py` it
+selects `GROUNDED_SYSTEM` over `BASE_SYSTEM` *and* changes the instruction
+appended to the user prompt. So C0 and C1 are answered by **different prompts**.
+
+A measured C0 → C1 improvement is therefore the combined effect of
+structure-aware chunking **and** a grounding/citation prompt. It cannot be
+attributed to chunking, which is what a row labelled "structure-aware chunking"
+in Chapter 4 would claim.
+
+Two further points make this worth acting on rather than noting:
+
+* `innovations_enabled` counts only `chunking`, so C1 reports exactly one
+  innovation. `TestTheAblationIsSingleVariable` passes. **The test certifies the
+  label, not the behaviour** — it compares the curated innovation list, not the
+  configuration fields. It would pass no matter how many other fields C1 flipped.
+* The confound is confined to this one step. C1 → C2 → C3 → C4 all share
+  `enforce_citations=True`, and I verified C4 differs from C3 in exactly
+  `{name, description, agentic}`. Every comparison from C1 onward is genuinely
+  single-variable; only the first step is affected.
+
+**Three ways forward, for the team to choose:**
+
+1. **Add a control run.** Evaluate a C1 variant with `enforce_citations=False`
+   (structure-aware chunking, C0's prompt). The C0 → C1-control delta is then
+   chunking alone, and C1-control → C1 is the prompt alone. Costs one extra
+   20-question run and turns a confound into two clean measurements — the
+   strongest option for the report.
+2. **Move the prompt change to its own step**, renumbering the ablation. Most
+   faithful to the "one variable per step" claim, most disruptive: every result
+   already collected under C1–C3 would need relabelling.
+3. **Report it honestly as a two-factor step.** Cheapest, costs nothing already
+   measured, but Chapter 4 must then say that the C0 → C1 row measures chunking
+   and grounding together and must not claim otherwise.
+
+I have deliberately not chosen. It changes what the report can claim, so it is
+not mine to decide. **Resolved: option 1 — see §20.6.**
+
+### 20.3 Two dead configuration flags
+
+`expand_to_parent` and `refuse_when_unsupported` are set on C1 and inherited by
+C2–C5, and both appear in `PipelineConfig.to_dict()` — which is what gets
+serialised into results. **Neither is read anywhere in `rag/`.** Parent-document
+expansion and explicit refusal are not implemented.
+
+They are not counted in `innovations_enabled`, so they inflate no headline
+number. But they will appear in any dumped configuration as though they were
+active. Either implement them, or drop them from the dataclass so a result file
+cannot imply a capability the run did not have. My recommendation is to drop
+them now and reintroduce `refuse_when_unsupported` in C5, where refusal is
+actually the subject. **Resolved: dropped — see §20.6.**
+
+### 20.4 My "full test suite" claim in §19.8 was two files short
+
+I reported 204 passing tests across `rag/tests`. The working copy I had staged
+was missing `test_dedupe.py` and `test_normalise.py`; the repository has ten
+test files, not eight. Re-synced from the repository and re-ran: **229 passed,
+0 failed**, with `rag/chunking/semantic.py` also refreshed (my copy of C1's
+chunker was stale, which is exactly why this mattered — I had been reasoning
+about C4's inputs from an out-of-date C1).
+
+The correction is the point. "The full suite passes" is worth nothing if the
+speaker has not checked what "full" is, and the check was one command.
+
+### 20.5 What I now know about C0–C3, having read them
+
+Recorded so the next session does not have to re-derive it:
+
+* **C0** — `FixedSizeChunker` (512/64), dense-only via `DenseRetriever`, top-5,
+  `BASE_SYSTEM`, no citations. Chunks carry no `section_path` and no
+  `page_number`, honestly, because a fixed window has no section to belong to.
+* **C1** — `StructureAwareChunker` (max 1024, overlap 128) chunks *within*
+  `document.substantive_sections`, never across a heading, falling back to one
+  whole-document section when a document has none. Every chunk carries
+  `section_path`; a section's `start_page` is stamped on all its chunks rather
+  than interpolated — a documented simplification, not a defect. Plus the
+  prompt change of §20.2.
+* **C2** — `HybridRetriever` runs dense (top-20) and BM25 (top-20) in parallel
+  and fuses by Reciprocal Rank Fusion, `1/(k+rank)` with `k=60` taken from
+  `rrf_k` rather than hardcoded. RRF rather than score averaging because cosine
+  similarity and BM25 scores are on incomparable scales. BM25 is a pickled
+  `rank_bm25` index on disk, filtered after scoring, dropping zero-score hits.
+* **C3** — `CrossEncoderReranker` rescores the fused pool jointly on
+  (query, chunk) and returns `rerank_top_n=5`. Called from `Pipeline.ask()`,
+  not from the retriever.
+
+**The consequence for C4**, which is why this mattered: `ask()` calls
+`retriever.retrieve(question, top_k=config.dense_top_k)` — 20 for C3 and C4
+alike — so the agent runs the *hybrid* retriever up to three times and hands
+the reranker up to ~60 candidates where C3 hands it 20. That is the intended
+mechanism. It also means **C4's reranking step costs up to 3× C3's**, since a
+cross-encoder scores every pair. Expect that in the latency column; it is real
+work, not overhead, and it is recorded under `rerank` in `stage_latencies`.
+
+### 20.6 Resolutions (29 Aug 2026)
+
+Both open items from §20.2 and §20.3 were decided and implemented.
+
+**§20.2 — control run added.** `C1_CONTROL` (name `C1-CONTROL`) is C1's chunker
+with C0's prompt. It is in `CONFIGURATIONS` and `implemented_configs()`, and
+deliberately **not** in `ABLATION_ORDER` — it is a measurement, not a stage of
+the proposed system. `CONTROL_ORDER` lists it, and `python -m rag configs`
+prints it separately, marked as a control.
+
+The two clean measurements it enables:
+
+| Comparison | Isolates |
+| --- | --- |
+| C0 → C1-CONTROL | structure-aware chunking (prompt held at C0's) |
+| C1-CONTROL → C1 | the grounding prompt (chunking held at C1's) |
+
+To collect it: `--config C1-CONTROL` against the same 20 questions, into
+`eval/results/C1-CONTROL`. It reuses C1's index, so no re-indexing is needed —
+only the flag differs.
+
+**§20.3 — dead flags removed.** `expand_to_parent` and
+`refuse_when_unsupported` are gone from `PipelineConfig` and from `to_dict()`,
+so no result file can imply a capability the run did not have. Note that eval
+results already written contain the two keys; they are historical records and
+were not rewritten. `refuse_when_unsupported` returns in C5, where refusal is
+the actual subject.
+
+**A new test that would have caught all of this.**
+`test_each_step_changes_exactly_the_fields_recorded_here` compares dataclass
+fields between consecutive configurations against an explicit table of expected
+deltas. The pre-existing `test_each_step_adds_exactly_one_innovation` compares
+`innovations_enabled`, which is a curated label — it certified C1 as
+single-variable while C1 was changing two things, and would have gone on doing
+so for any number of fields. Adding a field to a preset now fails this test, and
+the correct response is to justify a new entry in the table, not to widen it.
+
+Full suite after these changes: **233 passed, 0 failed.**
+
+### 20.7 One more thing Chapter 4 should name: C1 → C2 changes context size
+
+Found while writing the field-level test above, and left unresolved
+deliberately — it is the team's call, like §20.2.
+
+C2 sets `dense_top_k=20` (from C1's 5). `Pipeline.ask()` calls
+`retriever.retrieve(question, top_k=config.dense_top_k)`, and C2 has no
+reranker, so **C2 assembles its answer context from up to 20 chunks where C1
+used 5** — bounded only by `max_context_chars=8000`. C3 then reranks that pool
+down to `rerank_top_n=5`, returning to C1's context size.
+
+Across the sequence, chunks-in-context goes **5 → 20 → 5**.
+
+This is defensible design rather than an accident: RRF needs a wide pool to fuse
+over, and reranking exists precisely to narrow a wide pool well. But it means:
+
+* a C1 → C2 gain is hybrid fusion **and** four times the context;
+* part of any C3 → C2 difference is the return to a smaller, cleaner context,
+  not only the cross-encoder's judgment.
+
+Three options, in ascending cost:
+
+1. **Name it in Chapter 4.** The C1 → C2 row measures retrieval strategy and
+   context width together; say so. Free.
+2. **Add a second control**, C2 with `dense_top_k=5`/`sparse_top_k=5`, the same
+   shape of fix as C1-CONTROL. One extra run, and it separates fusion from
+   width cleanly.
+3. **Hold context width constant across the ablation** by giving C1 the wider
+   pool too. Cleanest in principle, but it changes C1 and invalidates the C1
+   results already collected.
+
+Option 1 is honest and costs nothing; option 2 is what the report would want if
+the C1 → C2 gain turns out to be the largest in the table, since that is the
+row an examiner will press on.
+
+---
+
+## 21. C0–C3 correctness audit (29 Aug 2026)
+
+§20 read C0–C3 for *design*. This is the pass that read them for *defects*:
+`dense.py`, `chroma.py`, `memory.py`, `bm25.py`, `hybrid.py`,
+`cross_encoder.py`, `fixed.py`, `semantic.py`, `chunking/base.py`,
+`prompts.py`, `factory.py`, `__main__.py` and `run_baseline_eval.py`.
+
+Three defects, all of the same family: **nothing raises, the run completes, and
+the numbers were computed over the wrong thing.**
+
+### 21.1 `--reset` never reset the sparse index
+
+`cmd_index` called `pipeline.index.reset()` and nothing else. The BM25 pickle
+survived every rebuild.
+
+Why that is worse than it sounds. `Chunk.chunk_id` defaults to a fresh
+`uuid.uuid4()`, so re-chunking the same corpus produces **different ids for
+identical text**. RRF fuses dense and sparse hits **by `chunk_id`**. So after
+`index --config C2 --reset`:
+
+* Chroma holds the new run's chunks under new ids;
+* BM25 holds the new run's chunks *and* every earlier run's, under ids that
+  exist nowhere in Chroma;
+* those stale entries can outrank the live ones on BM25 score and enter the
+  fused list as singletons that no dense hit can ever pair with.
+
+The "ranked highly by both arms" boost — the entire reason RRF was chosen over
+score averaging — degrades quietly toward a concatenation of two lists. C2's
+headline mechanism weakens with every re-index, and no output says so.
+
+**Fixed.** `--reset` now resets the sparse index too, with the reasoning in a
+comment so it is not "tidied up" later.
+
+### 21.2 One Chroma collection, two different chunkers
+
+`CHROMA_COLLECTION` defaults to `pce_chunks` for every configuration. C0 chunks
+every 512 characters; C1 onward chunks on section boundaries. Index C1 on top of
+a C0 collection without `--reset` and the collection holds a **mixture**, with
+every configuration thereafter retrieving over some other configuration's
+chunks.
+
+Compounding it: because chunk ids are random, Chroma's `upsert` can never
+update. Re-indexing the *same* config without `--reset` does not refresh the
+collection, it **doubles** it.
+
+The codebase already had exactly the right instinct here — `ChromaIndex`
+refuses a collection built with a different *embedding model*, on the grounds
+that a mismatch "returns confident, meaningless results" rather than failing.
+That argument applies verbatim to the chunker; it just had not been made.
+
+**Fixed.** The collection now records `chunking` alongside `embedding_model`,
+and a mismatch raises with the remedy in the message (`--reset`, or a different
+`CHROMA_COLLECTION`). Both checks share one `_check` helper. **Limitation,
+stated plainly:** a collection built before this key existed has no `chunking`
+recorded and cannot be checked — the first rebuild is what starts the
+protection.
+
+### 21.3 The eval harness could not parse a hyphenated config name
+
+`TIMING_RE` matched the config label as `\w+`, which excludes `-`. Given
+`[C1-CONTROL | … | retrieval 7025ms, generation 65571ms]` the pattern fails
+outright, and `parse_timings` returns empty strings rather than raising — so
+**every latency cell for C1-CONTROL would have been silently blank.**
+
+This one is mine: the harness was correct until §20.6 introduced a config name
+with a hyphen in it. Fixed to `[\w-]+` and verified against both
+`C1-CONTROL` and `C4`. The `--config` help text and the module's "Assumptions"
+block were also stale — both still described `--config` as a label that is not
+passed through, which is the bug §18.2 fixed. Updated, with the re-indexing
+requirement spelled out.
+
+### 21.4 What the team must do about the indexes
+
+The two fixed defects mean **existing indexes may already be contaminated**,
+and nothing in the results would show it. Before collecting any more numbers:
+
+```bash
+docker compose exec api python -m rag index --config C0 --reset   # fixed chunks
+# run C0 eval, then:
+docker compose exec api python -m rag index --config C1 --reset   # structure-aware
+# run C1, C1-CONTROL evals (same chunker, same index — no re-index between them)
+docker compose exec api python -m rag index --config C2 --reset   # + BM25
+# run C2, C3, C4 evals (same chunker and index; C3/C4 differ only after retrieval)
+```
+
+The grouping matters and is worth stating once: **the index depends only on the
+chunker.** C1 and C1-CONTROL share one index; C2, C3 and C4 share another,
+because reranking and the agent act after retrieval and change nothing about
+what was indexed. Only C0 ↔ C1 crosses a chunker boundary, and that is now the
+one transition that raises if you forget `--reset`.
+
+If any C0–C3 results were collected without a `--reset` between chunker
+changes, they are suspect and should be re-collected.
+
+### 21.5 A recommendation not taken unilaterally: deterministic chunk ids
+
+The root cause under both §21.1 and §21.2 is that `chunk_id` is random per run.
+Deriving it instead as a UUID5 over `(document_id, chunk_index, content_hash)`
+would make `upsert` genuinely idempotent, make dense and sparse ids agree by
+construction rather than by being built in one process, and make a re-index
+safe by default instead of safe-if-you-remember-a-flag.
+
+Not done here, because chunk ids are also the primary keys of the `chunks`
+table in PostgreSQL: changing how they are generated means re-seeding, and that
+is a data-layer decision rather than a retrieval one. Recommended for after the
+current evaluation round, not during it.
+
+### 21.6 What was checked and found sound
+
+Recorded so this audit is not re-run from scratch:
+
+* `assemble_context` — `[Sn]` markers assigned by rank, budget enforced from
+  the tail, `dropped_for_budget` counted; a single oversized first chunk is
+  admitted rather than yielding empty context. Correct.
+* `ChromaIndex.search` — converts cosine **distance** to similarity (`1 - d`).
+  This is right, and getting it wrong would have inverted every score in the
+  logs while leaving the ranking correct — a discrepancy nobody finds until
+  Chapter 4.
+* `reciprocal_rank_fusion` — `1/(k + rank)`, `k` taken from `rrf_k` rather than
+  hardcoded, first-seen hit retained per id, deterministic ordering. Correct.
+* `BM25Index.search` — filters after scoring, drops zero-score hits so an
+  unrelated chunk cannot enter the fusion on a rank alone. Correct.
+* `CrossEncoderReranker.rerank` — `strict=True` on the score/hit zip, empty
+  input handled, returns new `IndexedHit`s carrying the cross-encoder score.
+  Correct.
+* `DenseRetriever` — leaves `sparse_hits`/`fused_hits` empty, which is what
+  makes a C0 row distinguishable from a C2 row in `retrieval_logs`. Correct.
+* `Chunk.citation_label` — strips the duplicated title prefix from
+  `section_path`, appends page number when present, marks `[DEMO DATA]`.
+  Correct, and duplicated deliberately on `IndexedHit`.
+* `StructureAwareChunker` — never splits across a section; a section's
+  `start_page` is stamped on all its chunks rather than interpolated, which is
+  a documented simplification rather than fabricated precision.
+
+Suite after this phase: **244 passed, 0 failed** (11 new in
+`rag/tests/test_index_hygiene.py`).
+
+Two files fail `ruff format --check` on the team's machine —
+`rag/chunking/semantic.py` and `rag/tests/test_dedupe.py`. Both predate this
+work and were left untouched, but they will trip a CI format gate.
+
+---
+
+## 22. The C0 results are not C0 (29 Aug 2026)
+
+You are right that the two §20.6 fixes are additive and invalidate nothing:
+dropping `expand_to_parent` and `refuse_when_unsupported` changed no behaviour
+because no code read them, and C1-CONTROL is a new configuration that touches
+no existing run. Neither is a reason to re-collect anything.
+
+The §21.2 concern was a different one — how the *index* was built before those
+runs — and rather than argue it, it is checkable against the saved results.
+It was checked. **The C0 evaluation was run against a structure-aware index.**
+
+### 22.1 The evidence
+
+Two independent signals, both from `eval/results/` as committed.
+
+**1. C0 and C1 retrieved byte-identical sources on 20 of 20 questions.**
+
+| Comparison | Questions with identical cited sources |
+| --- | --- |
+| C0 vs C1 | **20 / 20** |
+| C1 vs C2 | 0 / 20 |
+| C2 vs C3 | 0 / 20 |
+| C0 vs C3 | 0 / 20 |
+
+The three zeros are the control on the method: the comparison discriminates
+sharply everywhere else, so 20/20 is not an artifact of how the citations are
+parsed. If C0 had queried a fixed-chunk index and C1 a structure-aware one, the
+retrieved text would differ on essentially every question — different
+boundaries, different embeddings, different neighbours. Identical on every
+question means both queried the same index.
+
+**2. 60 of C0's 88 citations carry a section path.**
+
+`FixedSizeChunker` sets `section_path=None` and `page_number=None` on every
+chunk it produces. This is deliberate and asserted by the project's own test,
+`test_c0_chunks_carry_no_section_or_page` — a fixed window spans arbitrary
+parts of a document, so there is no section it honestly belongs to. A C0
+citation should therefore read `Pce Prospectus 2022.Pdf` and nothing more.
+
+The saved C0 output reads:
+
+```
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 36 > page 39
+```
+
+A section path and a page number, neither of which C0's chunker can emit.
+
+### 22.2 What this means for Chapter 4
+
+C0 ran the C0 *pipeline* — fixed-chunking config, dense top-5, `BASE_SYSTEM`,
+no citation instruction — over C1's *chunks*. The chunker is selected at index
+time; `rag ask` never re-chunks anything.
+
+So across C0 → C1 the chunking was **identical in both runs**, and the only
+thing that differed was `enforce_citations`. Which gives:
+
+* **The C0 → C1 row measures the grounding prompt alone.** It contains no
+  signal about structure-aware chunking whatsoever.
+* Any Chapter 4 claim attributing a C0 → C1 gain to semantic chunking is
+  unsupported by the data collected.
+* This compounds §20.2 rather than duplicating it. §20.2 said the step changed
+  two variables; the measurement turns out to have changed only one, and it was
+  the other one.
+* **C1, C2 and C3 remain valid.** They share the structure-aware chunk base
+  they were supposed to have, and they differ from one another exactly as their
+  configurations predict. Nothing about C1 → C2 → C3 → C4 is affected.
+
+### 22.3 The remedy is one run, not four
+
+The useful consequence. At query time, "the C0 pipeline over a structure-aware
+index" is **precisely the definition of C1-CONTROL**: C1's chunking with C0's
+prompt, dense top-5, no citations. C1-CONTROL differs from C1 only in
+`enforce_citations`, and chunking cannot differ at query time.
+
+So the existing `eval/results/C0` is a valid C1-CONTROL dataset that has been
+filed under the wrong name. The control run proposed in §20.6 has, in effect,
+already been collected — and what is actually missing is a genuine C0.
+
+```bash
+docker compose exec api python -m rag index --config C0 --reset   # FIXED chunks
+docker compose exec api python -m rag index  # verify: count differs from C1's
+python run_baseline_eval.py --config C0
+```
+
+The `--reset` now raises if the collection was built with a different chunker
+(§21.2), so this is the one transition that can no longer be got wrong
+silently.
+
+**On the existing C0 directory:** re-running it under `--config C1-CONTROL`
+against the structure-aware index is cleaner than renaming the folder, and
+costs one 20-question pass. The saved summary lines say `[C0 | …]`, so a rename
+alone would leave files whose contents contradict their label — the exact
+species of problem this section exists to catch. If it is renamed rather than
+re-run, that decision must be stated in Chapter 4, not left for a reader to
+discover.
+
+### 22.4 What could not be determined
+
+The §21.1 sparse-index question — whether BM25 accumulated stale entries across
+re-indexes — **cannot be answered from the saved artifacts**, and no claim is
+made either way.
+
+Repeated citation *labels* within one answer (C0: 8, C1: 8, C2: 7, C3: 22) look
+like a candidate signal but are not one: a label is
+`title > section > page`, which several distinct chunks from the same section
+legitimately share. C3's higher count is consistent with the reranker
+concentrating its top-5 in the best-matching section, which is desirable
+behaviour, not duplication.
+
+Deciding it needs chunk ids, which `run_baseline_eval.py` does not save — it
+captures stdout, and the ids are only printed under `rag ask --json`. Worth
+adding `--json` to the harness before the next collection round, so the next
+audit of this kind is arithmetic rather than inference.
+
+---
+
+## 23. C4 validated against the real stack (29 Aug 2026)
+
+§19.8 listed the LangGraph compile-and-invoke path as unverified, because
+langgraph cannot be installed in the build environment. It has now run on the
+team's machine. This section closes that gap and records what the live runs
+showed.
+
+### 23.1 The loop works
+
+`python -m rag ask "…" --config C4 --json`, against the real corpus, Chroma,
+BM25 and Ollama:
+
+* the graph compiled and executed `retrieve → decide → retrieve → decide`;
+* the decide step produced a well-formed follow-up on the first round —
+  `SEARCH: Eligibility criteria for M.E. Computer Engineering at Pillai College
+  of Engineering` — parsed correctly by `parse_decision`;
+* round 2 returned 20 hits of which **11 were new**, so `add_hits` deduplicated
+  9 against round 1 and the reranker received a pool of **31** where C3 would
+  have handed it 20;
+* reranking ran **once**, over the accumulated pool, in `Pipeline.ask()`;
+* `iteration_count`, `iterations`, per-round latencies and `stop_reason` all
+  reached the log in the expected shape.
+
+**`stop_reason: repeated_query`.** The model proposed its own previous query
+verbatim on round 2, and the guard stopped the loop rather than spending round
+3 retrieving identical chunks. This is the small-model failure §19.5 predicted,
+observed on the very first live question — which is the argument for having
+recorded it as a distinct stop reason rather than letting it average into a
+score.
+
+### 23.2 Two defects the live run exposed, both fixed
+
+1. **`dense_hits` and `sparse_hits` came back empty.** `_to_result` set only
+   `hits` and `fused_hits`, so a C4 row in `retrieval_logs` was strictly poorer
+   than a C3 row in the same table — the log could say what the agent finished
+   with but not what each arm contributed, which is one of the questions
+   Chapter 4 asks of those rows. `AgentState` now accumulates both as
+   deduplicated unions across rounds. Confirmed live: 38 dense, 28 sparse.
+
+2. **The decide prompt did not forbid repetition.** The guard caught the repeat,
+   but a round and an LLM call were spent reaching a conclusion an instruction
+   can prevent. `DECIDE_SYSTEM` now says so explicitly, and the prompt body
+   states that a repeat will be rejected. This is the *decide* prompt only —
+   the answer prompt is untouched, so the ablation is unaffected. It did not
+   prevent the repeat on the question tested; it is a cheap improvement, not a
+   fix, and the guard remains the thing that actually holds.
+
+### 23.3 The measurement problem: this machine's timings vary about tenfold
+
+Recorded prominently because it bears directly on what Chapter 4 may claim.
+
+The **identical command**, run three times within a few minutes, produced:
+
+| Run | `decide_1` | `decide_2` | generation |
+| --- | --- | --- | --- |
+| 1 | 4,140 ms | 3,196 ms | 19,706 ms |
+| 2 | 59,159 ms | 49,714 ms | 26,040 ms |
+| 3 | 5,905 ms | 5,435 ms | — |
+
+Run 2 was initially suspected to be caused by the §23.2 prompt change. Run 3,
+with that same change in place, came back at 5.9 s — so the prompt is
+exonerated and the variance is machine state: an 8 GB machine holding Ollama's
+7B model, the cross-encoder, the embedding model, Chroma and PostgreSQL at once
+is memory-bound, and a background process changes the result by an order of
+magnitude.
+
+**What follows for the report.** A latency column populated by single runs on
+this machine measures scheduling luck, not configuration. Either report latency
+as a median over repeated runs on an otherwise idle machine, or state the
+variance explicitly and refrain from drawing conclusions from small latency
+differences between configurations. A C3-vs-C4 latency claim in particular
+cannot survive a 10× noise floor, and C4's genuine extra cost — two additional
+LLM calls and a wider rerank — is smaller than that noise.
+
+### 23.4 Generation is not deterministic, and the ablation depends on it
+
+Two runs of the same question under C4 retrieved **byte-identical** chunks —
+same five reranked ids, same scores — and produced materially different
+answers. The first gave only "criteria decided by the State CET Cell"; the
+second gave the actual criteria (HSC with Physics and Mathematics, 45% / 40%,
+a non-zero MHT-CET score).
+
+`LLM_TEMPERATURE` is `0.1`, not `0`. So identical retrieval does not imply an
+identical answer, and **two runs of one configuration differed by more than
+some configurations will differ from each other.** Any faithfulness or answer-
+relevancy delta drawn from a single run per configuration is confounded with
+sampling noise.
+
+Not changed unilaterally, because it is a decision about the whole evaluation
+and C0–C3 were collected at 0.1:
+
+1. **Quantify it first.** Run one question three times under one configuration
+   and see how far the answers move. Cheap, and it decides the rest.
+2. **Set `LLM_TEMPERATURE=0`** and re-collect every configuration. Cleanest,
+   costs a full re-run of everything.
+3. **Repeat runs per question** (`--repeat N` in the harness) and report a
+   median or an agreement rate. Strongest evidence, N× the runtime.
+4. **Keep 0.1, single runs, and say so** in Chapter 4 — honest, but it weakens
+   every small difference in the results table.
+
+### 23.5 Validated by accident: the demo-data safeguard works end to end
+
+A C3 run on a different question retrieved a synthetic circular
+(`DEMO/CE/2026/13`), and the answer carried both the inline `[DEMO DATA]`
+marker on the citation and the footer:
+
+```
+NOTE: one or more sources are synthetic DEMO DATA and do not describe real
+institutional fact.
+```
+
+That is the `is_demo` flag propagating parser → manifest → database → chunk →
+index metadata → citation → rendered answer, exactly as §2 designed it, and it
+is worth a sentence in the report: the 80/20 real-to-demo split is not merely
+declared in a manifest, it is visible to a reader at the point of use.
+
+### 23.6 Retrieval quality: a corpus finding, not a C4 finding
+
+On the eligibility question the cross-encoder ranked a **faculty profile page**
+first (`Sowmya P. > Education`, score 0.376) above the prospectus page that
+actually answers it, and three of the five final sources were faculty pages.
+Faculty "Education" sections list *M.E. Computer Engineering* as a degree held,
+so both BM25 and the cross-encoder match the phrase strongly.
+
+This affects C2 and C3 identically; C4 may fare marginally worse because a
+wider pool offers more faculty pages to choose from. Two related signals from
+the same log:
+
+* the sparse arm's top two hits were **demo documents** (BM25 16.88),
+  outranking the real prospectus on keyword match;
+* eight unrelated documents (library, study tours, galleries, `nba-dcs`) shared
+  a cosine score of exactly `0.745055`, which means near-identical boilerplate
+  chunks are occupying retrieval slots.
+
+If this is systematic across the 20 questions it belongs in Chapter 5 as a
+limitation of the corpus rather than of the architecture. `include_demo_sources
+=False` exists precisely so an evaluation run can measure against real data
+only, and is worth one comparison run.
+
+---
+
+## 24. C4 evaluation results — the agent iterates but rarely changes anything (29 Aug 2026)
+
+20 questions, 69.4 minutes, structure-aware index shared with C2 and C3.
+`eval/results/C4/`.
+
+### 24.1 What the agent did
+
+| Stop reason | Count |
+| --- | --- |
+| `model_says_ready` | 8 / 20 |
+| `iteration_cap` | 7 / 20 |
+| `repeated_query` | 5 / 20 |
+| `no_new_chunks` | 0 |
+| `unparseable_decision` | 0 |
+
+Mean iterations 1.95. **Zero unparseable decisions across 20 questions** — the
+plain-text one-line contract (§19.4) held perfectly against a 4-bit 7B model,
+which was the design's biggest risk and is worth stating as a result in its own
+right.
+
+### 24.2 The number that matters: 2 / 20
+
+Comparing the five sources actually handed to the generator, C4 against C3 on
+the same questions:
+
+| | |
+| --- | --- |
+| Final sources **identical** to C3 | **18 / 20** |
+| Final sources **changed** by the agent | **2 / 20** |
+
+C4 costs roughly three times C3's retrieval and adds up to two extra LLM calls
+per question, and on 18 of 20 questions the reranker selected exactly the
+chunks C3 selected. The widened pool contained nothing it preferred.
+
+The two that changed are not improvements:
+
+* **q02** — C3 named the M.Tech *and* Ph.D. programmes; C4 dropped the Ph.D.
+  line. Less complete.
+* **q09** — asked about **Computer Engineering** placements. C3 answered about
+  Computer Engineering (from an IT-department source); C4's answer opens "The
+  placement record for the **Information Technology** department". Both are
+  citing the wrong department's page; C4 is more explicit about doing so.
+
+So on the evidence collected: **C4 changed the outcome on 10% of questions, and
+neither change was for the better.**
+
+### 24.3 Why: the follow-up queries are rephrasings, not gap-targeting
+
+Every one of the 12 follow-ups restates the original question. Examples,
+against the originals:
+
+| Question | Follow-up the agent chose |
+| --- | --- |
+| What is the intake for Computer Engineering…? | `What is the intake for Computer Engineering at Pillai College…` |
+| What postgraduate programmes does the CE dept…? | `Postgraduate programmes offered by Pillai College of Engineering` |
+| What entrance exams are accepted…? | `entrance exams accepted by Pillai College of Engineering` |
+| What is the weather forecast for Mumbai this week? | `weather forecast mumbai this week` |
+
+`DECIDE_SYSTEM` instructs, in as many words, to "make the query target that
+missing fact — not a rephrasing of the original question". The model ignored
+that instruction on **12 of 12** follow-ups.
+
+This explains 24.2 completely. A rephrased query embeds close to the original,
+retrieves near-identical chunks, and those are deduplicated by `add_hits` — so
+the pool grows by little, and what it does gain is more of the same. The loop
+is mechanically perfect and semantically inert.
+
+**The honest framing for Chapter 4:** what C4 demonstrates is not agentic
+reasoning. It is *query reformulation with a stopping criterion*. Claiming
+"agentic planner–executor with iterative retrieval" against this evidence
+overstates what the model did. The mechanism is real and the plumbing works;
+the intelligence the mechanism was built to exploit is not present in a 7B
+quantized model at this prompt.
+
+### 24.4 C4 makes out-of-scope questions worse
+
+`q17` (Mumbai weather) and `q18` (Prime Minister of India) are deliberately
+unanswerable from a college corpus. Both are the two slowest questions in the
+run — **288.5 s and 281.5 s against a 214.6 s median** — because the agent kept
+searching for material that cannot exist. q18 spent its entire three-round
+budget on it.
+
+The answers are effectively identical to C3's; q18's is word-for-word the same.
+So the agent paid maximum cost for zero difference, on precisely the questions
+where a human would stop immediately.
+
+This is a real and reportable weakness of the agentic approach: **an agent that
+cannot conclude "this corpus does not contain this" will always spend its full
+budget on out-of-scope questions.** Worth a line in Chapter 5, and worth
+considering as C5's job — a verification step that recognises an unanswerable
+question is more valuable here than another retrieval.
+
+### 24.5 A metric of mine that flattered the result
+
+The tally I added to the harness first reported "iterated as intended: 15/20,
+degraded towards C3: 5/20". That was wrong in a way worth recording, because it
+is the exact failure this project keeps guarding against — a right-looking
+number over the wrong quantity.
+
+It counted `model_says_ready` as success. But READY on round one means **no
+follow-up ever ran**: that is C3's behaviour plus one wasted LLM call, and it
+happened on 8 of 20 questions. The metric scored 75% for a run whose
+outcome-level effect was 10%.
+
+The harness now reports the iteration distribution instead, and a new
+`--compare` flag answers the question that actually matters — did the extra
+retrieval reach the answer:
+
+```bash
+python3 run_baseline_eval.py --config C4 --compare C3
+```
+
+### 24.6 What this means for the project
+
+This is a **negative result, and a good one.** It is specific, mechanistically
+explained, and reproducible — a stronger Chapter 4 contribution than an
+unexplained improvement would have been. The ablation did its job: it isolated
+one change and showed that change does almost nothing, which is only possible
+because every other variable was held fixed.
+
+Three ways forward, in ascending cost:
+
+1. **Report it as measured.** C4 adds cost and changes 2/20 outcomes; the
+   follow-up queries are rephrasings; here is the evidence. Honest, complete,
+   costs nothing further.
+2. **Improve the decide prompt and re-run C4.** Give it few-shot examples of a
+   gap-targeting follow-up versus a rephrasing, and have it name the missing
+   fact before proposing a query. ~70 minutes per re-run. Might convert the
+   mechanism into a real gain — and if it does not, that is a stronger finding
+   still, because it shows the limit is the model rather than the prompt.
+3. **Reconsider what C4 should be.** If the 7B model cannot decompose a
+   question, the iterative-retrieval idea may need a different trigger — for
+   example, iterating only when the reranker's top score falls below a
+   threshold, which needs no reasoning at all.
+
+Not chosen unilaterally: option 2 changes what C4 *is*, and the current results
+are already a valid, defensible chapter.
+
+---
+
+## 25. Phase 6 — C5, post-answer verification (29 Aug 2026)
+
+The last configuration. Scoped with the team before any code was written, as
+agreed in the handoff.
+
+### 25.1 What C5 adds, and what it must not touch
+
+After the answer is generated, split it into sentences, show them numbered
+alongside the context they were written from, and ask the model which of them
+state a fact the context does not support.
+
+The constraint is the same one that shaped C4: **generation is untouched.**
+Retrieval, reranking, context assembly and the answer prompt are byte-for-byte
+C4's, and verification happens afterwards. So a C4-to-C5 difference is the
+check and nothing else. Confirmed by the field-level test — C5 differs from C4
+in exactly `{name, description, verify_answer}`.
+
+### 25.2 Three decisions the team made
+
+| Decision | Chosen | Why |
+| --- | --- | --- |
+| On failure | **Annotate; refuse only if *no* sentence is supported** | Flagging is non-destructive and yields a support rate. Total refusal addresses the out-of-scope weakness §24.4 exposed, where C4 was at its worst. |
+| Granularity | **One call per answer** | Per-sentence is ~4× the calls; on this hardware that turns a 90-minute evaluation into three hours. |
+| Verifier model | **The generator's own model** (`qwen2.5:7b`) | No model swap on an 8 GB machine. And `llama3.1:8b` is the *evaluation judge* — wiring it inside the system would put the examiner into the thing examined, and no Chapter 4 number computed that way would mean what it appears to. |
+
+### 25.3 Why this might work where C4 did not
+
+Worth stating as a prediction the results will test, not as optimism.
+
+C4 asked the model to **plan**: decompose a question, identify a missing fact,
+compose a query targeting it. It rephrased the question 12 times out of 12
+(§24.3). C5 asks a different kind of question — *does this sentence follow from
+this passage?* — which is entailment checking rather than generation, and small
+quantized models are markedly better at it.
+
+There is also direct evidence for the format: C4's identical one-line contract
+produced **zero unparseable outputs across 20 questions** on the same model. The
+verifier reuses that shape rather than inventing a second one.
+
+If C5 also fails, that is a stronger finding than C4's, because the two failures
+together would say something specific about what a 4-bit 7B model can and
+cannot be asked to do inside a RAG pipeline.
+
+### 25.4 Files
+
+| File | Contains |
+| --- | --- |
+| `rag/verification/base.py` | `Verdict`, `VerificationResult`, the `Verifier` protocol — no model dependency |
+| `rag/verification/claim_check.py` | the prompt, the sentence splitter, `parse_verdict`, `ClaimVerifier` |
+| `rag/tests/test_verification.py` | 48 tests, no Ollama |
+
+`Answer` gains a `verification` field, `None` for every earlier configuration —
+the same convention `RetrievalResult.stop_reason` follows for C4, so a C5 row
+is distinguishable from a C4 row by its presence.
+
+### 25.5 Four rules that make a refusal safe
+
+C5 is the only configuration that can replace a generated answer, so the
+conditions under which it does are narrow and each is tested.
+
+1. **A refusal fires only when every checked sentence is unsupported.** Partial
+   failure annotates; it never suppresses.
+2. **An unreadable verdict never refuses.** It is recorded as `UNPARSEABLE`,
+   `checked` stays 0, and the answer is shown unchanged. C4 set this precedent:
+   a parse failure must not silently change an outcome. Without it, a broken
+   verifier would delete good answers and report the generator as
+   hallucinating.
+3. **Verdict numbers that index no sentence are dropped, not escalated.**
+   `UNSUPPORTED: 7, 8` on a two-sentence answer yields an empty list, not a
+   refusal — otherwise the answer would be destroyed on the strength of two
+   numbers pointing at nothing.
+4. **Empty context is skipped without an LLM call.** The "no information"
+   answer has nothing to verify against; checking it would spend a CPU-minute
+   concluding that an answer about missing context is unsupported by the
+   missing context, and then refuse it.
+
+`SKIPPED` and `UNPARSEABLE` are distinct verdicts from `UNSUPPORTED`, and
+`support_rate` is `None` rather than `1.0` when nothing was checked. An
+unexamined answer is not a perfect score, and a mean that silently read those
+as 1.0 would report the system as fully grounded precisely when it was never
+examined.
+
+**A refusal is auditable.** `original_answer` is kept and printed with the
+refusal, so a reader can see what was withheld. Suppressing text invisibly
+would make C5 unfalsifiable — nobody could tell a caught hallucination from a
+destroyed good answer, which is the first question a refusal invites.
+
+### 25.6 The sentence splitter, and a trade-off taken deliberately
+
+Naive splitting on `". "` breaks this corpus badly. It is largely faculty
+pages: "Dr. Sowmya P.", "Suhas J. Lawand", "K. Charumathi", "Y. I. Jinesh
+Melvin", plus "B.E.", "M.Tech." and "Ph.D." throughout. A mis-split leaves a
+subjectless fragment, a fragment is trivially unsupported, and **bad splitting
+would raise the measured hallucination rate without anything erroring** — the
+project's characteristic failure mode.
+
+So a single letter before a full stop is treated as an initial. The cost is
+accepted knowingly and in one direction: a real sentence ending in one letter
+("…accredited by NAAC with grade A.") is merged with the next, giving the
+verifier one longer sentence to judge. That is a mild loss; the opposite error
+manufactures a false hallucination. Both behaviours are pinned by tests,
+including the limitation.
+
+### 25.7 What was verified, and what was not
+
+| Check | Result |
+| --- | --- |
+| `rag/tests/test_verification.py` (48 tests) | pass |
+| Full suite | **295 passed, 0 failed** |
+| ruff lint and format | clean |
+| C5 differs from C4 in exactly `{name, description, verify_answer}` | pass |
+| Splitter against real corpus name and degree forms | pass |
+| All four refusal rules | pass |
+| **Against real Ollama** | **not run** — no Ollama in this build environment |
+
+`implemented_configs()` now returns every configuration. The gate stays: each
+phase had to move it deliberately, and that is what stopped a half-built stage
+being measured under a finished name.
+
+### 25.8 What the team must run
+
+```bash
+docker compose exec api pytest rag/tests -q        # expect 295 passed
+
+docker compose exec api python -m rag ask "What is the intake for Computer Engineering?" --config C5 --json
+```
+
+The index C5 needs is the one C4 used — same chunker, same retrieval; C5
+changes only what happens after generation. **No re-indexing.**
+
+In the JSON, read `verification`: `verdict`, `support_rate`, `unsupported`, and
+`refused`. Then the full run:
+
+```bash
+python3 run_baseline_eval.py --config C5 --compare C4
+```
+
+`--compare C4` answers the question that matters, exactly as it did for C4:
+how often did the extra pass change what the reader sees. Expect roughly 90
+minutes plus one verification call per question.

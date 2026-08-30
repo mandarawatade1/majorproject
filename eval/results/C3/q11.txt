@@ -1,0 +1,23 @@
+Students have access to a variety of library resources, including:
+
+- **E-Resources**: Students can access IEEE Explorer Digital Library, which includes 336 journals. [S2]
+- **Aggregated Open Access Resources**: The library has a collection of open education resources, open courses, online free databases, and lecture videos. [S3]
+- **Physical Books and Materials**: The library has a large collection of books, journals, periodicals, project theses, CDs, multimedia CDs, and newspapers. [S4]
+- **Component Library**: For practical projects, students can check out components like sensors, motors, IoT devices, Raspberry Pis, and Arduino boards. [S1]
+- **Plagiarism Software**: The library uses Turnitin for plagiarism detection. [S4]
+
+These resources are designed to support both teaching and learning activities. [S4]
+
+Sources:
+  [S1] Research Facilities > Component Library
+        https://www.pce.ac.in/research/research-facilities/
+  [S2] Library Resources > Subscribed E-Resources
+        https://www.pce.ac.in/library/library-resources/
+  [S3] Library Resources > Aggregated Open Access
+        https://www.pce.ac.in/library/library-resources/
+  [S4] Library Information
+        https://www.pce.ac.in/library/library-information/
+  [S5] Library Information
+        https://www.pce.ac.in/library/library-information/
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 10907ms, generation 179218ms]

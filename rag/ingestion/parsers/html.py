@@ -22,6 +22,13 @@ from rag.ingestion.parsers.sections import sections_from_markdown
 MIN_USEFUL_CHARS = 250
 """Below this, a page is navigation furniture rather than content."""
 
+MIN_WRAPPER_CHARS = 40
+"""A much lower bar for the *known* .post-content wrapper: if that specific,
+high-confidence selector matched at all, even a short result is real content
+(a thin hub page), not navigation noise. MIN_USEFUL_CHARS stays high because
+it guards the generic trafilatura/BeautifulSoup fallback, which has no such
+confidence and needs a stricter bar against picking up junk."""
+
 _DATE_RE = re.compile(r"\b(20\d{2})[-/](\d{1,2})[-/](\d{1,2})\b")
 
 
@@ -64,7 +71,29 @@ def parse_html(
 
 
 def _extract_main_content(html: str) -> str | None:
-    """trafilatura first; BeautifulSoup as a fallback."""
+    """The theme's own content wrapper first; trafilatura/BeautifulSoup as
+    fallbacks for anything not built on this template.
+
+    This theme puts the real article inside a predictable, specific wrapper
+    -- `div.column-medium > div.content-block > div.post-content` -- but
+    also carries several sitewide chrome blocks (a "Departments" sidebar
+    accordion, an "Announcements" sidebar feed, a WhatsApp click-to-chat
+    popup, and the top nav menu) that are structurally indistinguishable
+    from real content to a generic extractor. trafilatura's favor_recall
+    mode picked up a different one of these each time an earlier one was
+    excluded, so unrelated pages kept hashing identically. Targeting the
+    theme's known wrapper directly sidesteps that guessing game entirely:
+    if that wrapper exists, it is unambiguously the page's own content and
+    nothing else needs to be excluded.
+    """
+    wrapper_text = _extract_post_content_wrapper(html)
+    if wrapper_text and len(wrapper_text.strip()) >= MIN_WRAPPER_CHARS:
+        return _tidy(wrapper_text)
+
+    # Not built on the known template (or too little content in it) --
+    # fall back to generic extraction, still with chrome stripped first.
+    html = _strip_sidebar_widgets(html)
+
     try:
         import trafilatura
 
@@ -85,6 +114,82 @@ def _extract_main_content(html: str) -> str | None:
         pass
 
     return _fallback_extract(html)
+
+
+def _extract_post_content_wrapper(html: str) -> str | None:
+    """Pull text from the theme's own `.post-content` wrapper, if present.
+
+    Converted with trafilatura's own HTML-string extraction where possible
+    so tables and lists still come out as markdown; falls back to the same
+    heading/paragraph walk `_fallback_extract` uses otherwise.
+    """
+    try:
+        from bs4 import BeautifulSoup
+    except ImportError:
+        return None
+
+    try:
+        soup = BeautifulSoup(html, "lxml")
+    except Exception:
+        return None
+
+    wrapper = soup.select_one("div.post-content")
+    if wrapper is None:
+        return None
+
+    try:
+        import trafilatura
+
+        extracted = trafilatura.extract(
+            str(wrapper),
+            output_format="markdown",
+            include_tables=True,
+            include_comments=False,
+            include_images=False,
+        )
+        if extracted and extracted.strip():
+            return extracted
+    except ImportError:
+        pass
+    except Exception:
+        pass
+
+    lines: list[str] = []
+    for element in wrapper.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "p", "li", "td", "th"]):
+        text = element.get_text(" ", strip=True)
+        if text:
+            lines.append(text)
+    return "\n\n".join(lines) if lines else None
+
+
+def _strip_sidebar_widgets(html: str) -> str:
+    """Remove sidebar widget blocks that are the same across many pages.
+
+    Best-effort: if BeautifulSoup is not installed, the original html is
+    returned unchanged and extraction proceeds as before.
+    """
+    try:
+        from bs4 import BeautifulSoup
+    except ImportError:
+        return html
+
+    try:
+        soup = BeautifulSoup(html, "lxml")
+    except Exception:
+        return html
+
+    # Any element in a narrow sidebar column, or explicitly marked as a
+    # widget, is chrome shared across pages -- never the page's own body.
+    # "ctc_g_" is the WhatsApp click-to-chat popup plugin's own class
+    # prefix on this site; it floats on every page and is not content
+    # either, but it lives outside any "widget"-classed wrapper so the
+    # selector above misses it.
+    for tag in soup.select(
+        '[class*="column-narrow"], [class*="widget"], [class*="ctc_g_"]'
+    ):
+        tag.decompose()
+
+    return str(soup)
 
 
 def _fallback_extract(html: str) -> str | None:

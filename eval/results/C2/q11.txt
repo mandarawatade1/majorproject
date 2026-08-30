@@ -1,0 +1,27 @@
+Based on the provided context, the library resources available to students include:
+
+- Books: The library has a collection of 26,273 books, covering major fields such as Automobile Engineering, Computer Engineering, Electronics Engineering, Electronics & Telecommunication Engineering, Information Technology, and Mechanical Engineering [S1].
+- Journals & Periodicals: There are 93 journals and periodicals available [S1].
+- Open Access Resources: The library has aggregated open education resources, including Open Education Resources (OERs), Open Courses, Online Free Database, and Lecture Videos [S2].
+- Digital Library: The library hosts a digital library with varied electronic resources [S3].
+- Reference Books: The library maintains separate collections of reference books [S3].
+- Project Reports: The library has a collection of project reports [S3].
+- Current Awareness Services (CAS), Article Indexing, Selective Dissemination of Information (SDI), Scan and Delivery Services, Bibliographic Services, and Inter Library Loan (ILL) are also provided [S3].
+- E-resources: The library provides e-resources from national or international service providers such as IEEE, ASME, Springer, McGraw Hill Digital Library, Elsevier, and J-gate [S3].
+
+These resources are designed to support the academic activities of teaching and learning [S1].
+
+Sources:
+  [S1] Library Information
+        https://www.pce.ac.in/library/library-information/
+  [S2] Library Resources > Aggregated Open Access
+        https://www.pce.ac.in/library/library-resources/
+  [S3] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 11 > page 14
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S4] Circular: End-of-Semester Library Recall and Clearance > Reading room during clearance [DEMO DATA]
+
+  NOTE: one or more sources are synthetic DEMO DATA and do not describe real institutional fact.
+
+  16 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 6812ms, generation 180533ms]

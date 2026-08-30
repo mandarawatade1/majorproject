@@ -1,0 +1,25 @@
+The Computer Engineering department at Pillai College of Engineering, New Panvel, focuses on the following research areas:
+
+- Computer Networks
+- Data Mining
+- Image Processing
+- Cyber Security & Digital Forensics
+- Natural Language Processing
+- Ubiquitous Computing
+- Machine Learning and Data Science
+
+These research areas are mentioned in the context provided under the Program Overview > Research Areas section for the Department of Computer Engineering.
+
+Sources:
+  [S1] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S2] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S3] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/electronics-computer-science/program-overview/
+  [S4] Program Overview > Ph.D. in Computer Engineering
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S5] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/electronics-computer-science/program-overview/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6754ms, generation 43529ms]

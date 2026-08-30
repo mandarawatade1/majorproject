@@ -1,0 +1,17 @@
+The process for admission to the PhD programme in Computer Engineering is not explicitly detailed in the provided context [S4]. However, it can be inferred that the admission process likely follows a similar structure to other postgraduate programs, involving registration through the CET Cell website [S2], and possibly including submission of an application, relevant documents, and possibly an interview or evaluation of research proposals. For precise details, one should refer to the official admission guidelines or contact the institute directly. [S2]
+
+Sources:
+  [S1] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+  [S2] Wp Content  Uploads  2023  06  Nri Pio 2023.Pdf > (ENGINEERING/MANAGEMENT/ARCHITECTURE) > page 1
+        https://www.pce.ac.in/wp-content/uploads/2023/06/NRI-PIO-2023.pdf
+  [S3] The Institute > Programs offered
+        https://www.pce.ac.in/about/the-institute/
+  [S4] Program Overview > Ph.D. in Computer Engineering
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 53 > page 56
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+  15 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 6715ms, generation 119698ms]

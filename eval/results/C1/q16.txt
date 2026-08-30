@@ -1,0 +1,15 @@
+The undergraduate Computer Engineering program at Pillai College of Engineering typically lasts for 4 years [S1]. For postgraduate studies, there are two options: a Master's Degree which takes 2 years [S1], and a Ph.D. Program which lasts for 3 years [S1]. 
+
+Eligibility for these programs generally requires a Bachelor's degree in a related field for the Master's program, and a Master's degree for the Ph.D. program [S1].
+
+Sources:
+  [S1] Academics
+        https://www.pce.ac.in/academics-department/
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 36 > page 39
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S3] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+
+  2 retrieved chunk(s) omitted for context budget.
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6201ms, generation 109008ms]

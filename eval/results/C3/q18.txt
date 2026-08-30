@@ -1,0 +1,15 @@
+The context provided does not contain information about the current Prime Minister of India. The context is focused on the Smart India Hackathon 2017 and does not include details about the current political leadership in India. [S1] [S2]
+
+Sources:
+  [S1] Hackathon
+        https://www.pce.ac.in/students/student-activities/student-awards-and-achievements/hackathon/
+  [S2] Hackathon
+        https://www.pce.ac.in/students/student-activities/student-awards-and-achievements/hackathon/
+  [S3] Wp Content  Uploads  2019  07  Dharmaraj Mech.Pdf > Dharmaraj Solanki > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/07/Dharmaraj-Mech.pdf
+  [S4] Wp Content  Uploads  2019  07  Dharmaraj Mech.Pdf > Dharmaraj Solanki > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/07/Dharmaraj-Mech.pdf
+
+  1 retrieved chunk(s) omitted for context budget.
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 11275ms, generation 96391ms]

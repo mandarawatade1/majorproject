@@ -1,0 +1,25 @@
+The eligibility criteria for admission to the B.Tech programme at Pillai College of Engineering, New Panvel, as per the provided context, are as follows:
+
+For Maharashtra State Candidature Candidates:
+- The candidate must be an Indian National.
+- The candidate must have passed the HSC or its equivalent examination with Physics and Mathematics as compulsory subjects, along with one of the following subjects: Chemistry, Biotechnology, Biology, Technical Vocational subject, Computer Science, Information Technology, Informatics Practices, Agriculture, or Engineering Graphics, and Business Studies.
+- The candidate must have obtained at least 45% marks (40% for backward class categories, economically weaker section, and persons with disability candidates belonging to Maharashtra State only) in the above subjects taken together.
+- The candidate must have appeared in all the subjects in MHT-CET2022 and should obtain a non-zero score in MHT-CET 2022.
+- Alternatively, the candidate must have passed a Diploma in Engineering and Technology and obtained at least 45% marks (40% for backward class categories, economically weaker section, and persons with disability candidates belonging to Maharashtra State only).
+
+For All India Candidature Candidates, Union Territory of Jammu and Kashmir, and Union Territory of Ladakh Migrant Candidature Candidates:
+- The candidate must be an Indian National.
+- The candidate must have passed the HSC or its equivalent examination with Physics and Mathematics as compulsory subjects, along with one of the following subjects: Chemistry, Biotechnology, Biology, Technical Vocational subject, Computer Science, Information Technology, Informatics Practices, Agriculture, or Engineering Graphics, and Business Studies.
+- The candidate must have obtained at least 45% marks (40% for backward class categories, economically weaker section, and persons with disability candidates belonging to Maharashtra State only) in the above subjects taken together.
+- The candidate must have obtained a non-zero positive score in JEE Main (B.E/B.Tech) or must have appeared in all the subjects in MHT-CET 2022 and obtained a non-zero score in MHT-CET 2022. Preference will be given to candidates obtaining a non-zero positive score in JEE Main (B.E/B.Tech) over those who obtained a non-zero score in MHT-CET 2022.
+- Alternatively, the candidate must have passed a Diploma in Engineering and Technology and obtained at least 45% marks (40% for backward class categories, economically weaker section, and persons with disability candidates belonging to Maharashtra State only).
+
+Sources:
+  [S1] Placements > 2021 Batch Placement
+        https://www.pce.ac.in/placements/
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 50 > page 53
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+  3 retrieved chunk(s) omitted for context budget.
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 5841ms, generation 268721ms]

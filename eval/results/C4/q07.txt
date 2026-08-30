@@ -1,0 +1,851 @@
+The context provided does not explicitly list the names of the faculty members in the Computer Engineering department. However, it does provide information about the research areas and a faculty member's contact details.
+
+- The faculty in the Computer Engineering department are involved in research areas such as Computer Networks, Data Mining, Image Processing, Cyber Security & Digital Forensics, Natural Language Processing, Ubiquitous Computing, Machine Learning and Data Science [S1].
+- The faculty in the Computer Engineering department are also involved in research areas such as Computer Networks, Data Mining, Image Processing, Cyber Security, Natural Language Processing, Ubiquitous Computing, Machine Learning, Internet of Things, Big Data Analytics, and Geographic Information Systems [S2].
+- Dr. Mimi Cherian is an Assistant Professor in the Department of Computer Engineering and is a co-coordinator for an FDP on "XAI for Social Good: Application in Healthcare, Finance and Education" [S5].
+
+For a complete list of faculty members, you might want to refer to the official website or contact the department directly [S4, S5].
+
+Sources:
+  [S1] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S2] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S3] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/electronics-computer-science/program-overview/
+  [S4] Sheetal Gawande
+        https://www.pce.ac.in/faculty/faculty-directory/sheetal-gawande/
+  [S5] FDP on “XAI for Social Good: Application in Healthcare, Finance and Education” > Co-Coordinator
+        https://www.pce.ac.in/fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education/
+
+[C4 | qwen2.5:7b-instruct-q4_K_M | retrieval 105185ms, generation 107088ms]
+
+{
+  "question": "Who are the faculty members in the Computer Engineering department?",
+  "config": "C4",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 212476.3,
+  "retrieval_ms": 105185.1,
+  "generation_ms": 107087.7,
+  "sources": [
+    "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
+    "9cfc3d8c-bd21-4cf7-a45a-eee6410fa702",
+    "697e1f82-48ba-4c24-8660-a44b2ef2700e",
+    "6d919a8e-2830-4367-b261-5ee91dfee106",
+    "f15af895-cff0-4a42-b136-fe46923e4334"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "Who are the faculty members in the Computer Engineering department?",
+    "rewritten_queries": [
+      "Faculty members in Computer Engineering department at Pillai College of Engineering",
+      "Faculty members in Computer Engineering department Pillai College of Engineering details"
+    ],
+    "dense_hits": [
+      {
+        "chunk_id": "9cfc3d8c-bd21-4cf7-a45a-eee6410fa702",
+        "score": 0.796321,
+        "document_id": "pce-academics-masters-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
+        "score": 0.794244,
+        "document_id": "pce-academics-bachelors-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d919a8e-2830-4367-b261-5ee91dfee106",
+        "score": 0.767844,
+        "document_id": "pce-faculty-faculty-directory-sheetal-gawande",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "697e1f82-48ba-4c24-8660-a44b2ef2700e",
+        "score": 0.732099,
+        "document_id": "pce-academics-bachelors-electronics-computer-science-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "79a994b4-eb5e-490c-8c7c-89e39b8dc4b6",
+        "score": 0.725333,
+        "document_id": "pce-academics-masters-electronics-computer-science-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f15af895-cff0-4a42-b136-fe46923e4334",
+        "score": 0.716998,
+        "document_id": "pce-fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d615fb91-4853-4c14-b472-8547255d5534",
+        "score": 0.709106,
+        "document_id": "pce-faculty-faculty-directory-vishwayogita-a-savalkar",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "37fba1a6-0a26-4250-827a-471717deae68",
+        "score": 0.699004,
+        "document_id": "pce-academics-masters-information-technology-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "851e3a8e-675f-4915-8110-553ae59ce25f",
+        "score": 0.695389,
+        "document_id": "pce-fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "994a2ece-cc39-4354-9f5b-ba10e0a23752",
+        "score": 0.694991,
+        "document_id": "pce-faculty-faculty-directory-k-suresh-babu",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8a811a3-03d5-43a9-b1c7-71e6e7d94396",
+        "score": 0.692706,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "551c8ead-dbca-4a76-878b-6795435c9888",
+        "score": 0.689063,
+        "document_id": "pce-faculty-faculty-directory-prerana-s-kulkarni",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2f6b080a-b4d7-4a46-8007-843521750385",
+        "score": 0.688583,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "56098b6e-382a-4a62-a65e-a3282311d8d4",
+        "score": 0.687448,
+        "document_id": "pce-faculty-faculty-directory-dr-sharvari-s-govilkar",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d4430747-0044-4a6e-ac7e-2fca4663be7c",
+        "score": 0.686947,
+        "document_id": "pce-academics-ph-d-computer-engineering-ph-d-students",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0180fc0b-e133-4c9a-ab67-41ac18057ffb",
+        "score": 0.685404,
+        "document_id": "pce-faculty-faculty-directory-k-charumathi",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "46b3b785-3587-44ae-812f-ce6312435ee0",
+        "score": 0.681971,
+        "document_id": "pce-academics-ph-d-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "66a2d77c-b5a4-4956-b8c2-2a3634be7b76",
+        "score": 0.680824,
+        "document_id": "pce-faculty-faculty-directory-sowmya-p-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9603f109-e12d-4213-b2c7-4d499ddf7ffb",
+        "score": 0.679994,
+        "document_id": "pce-faculty-faculty-directory-kirti-rana",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d1b230ad-8a21-43c8-930f-00bea0a1bcc1",
+        "score": 0.679242,
+        "document_id": "pce-academics-masters-mechanical-engineering-cad-cam-and-robotics-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c931f0f9-74f4-4b2f-bdb1-db9e9c5c93b5",
+        "score": 0.823925,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "37ad9d7c-4d39-423a-875b-38460a0b3855",
+        "score": 0.785984,
+        "document_id": "pce-faculty-faculty-directory-sowmya-p-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
+        "score": 0.784477,
+        "document_id": "pce-bachelors-computer-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8a37d06f-907d-4aa1-9bca-cd92c7d0cf60",
+        "score": 0.778138,
+        "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "da9e716b-d9e3-4bfa-8e6f-78ec78e11d22",
+        "score": 0.776936,
+        "document_id": "pce-pdf-2020-21-council-resolution",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "59bab6c9-835d-469b-8784-073a8d9ac775",
+        "score": 0.776844,
+        "document_id": "pce-pdf-iic-resolution-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fd4a870c-7c6e-4db0-8145-85266f04f6e1",
+        "score": 0.77093,
+        "document_id": "pce-pdf-iic-resolution-24-25",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "af7dcf1b-2af6-43c1-8d61-740edb412ca8",
+        "score": 0.768686,
+        "document_id": "pce-faculty-faculty-directory-shubham-mane-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "278a2ba5-8e95-48f6-888e-518bbb18f717",
+        "score": 0.76384,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4842b382-238a-44b7-bfc7-42d6a2c65129",
+        "score": 0.762852,
+        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
+        "score": 0.761429,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ad26f01-1a1d-46af-b9c1-b4c9f97c168a",
+        "score": 0.759804,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8e69c5f5-a741-49d6-a098-afb72aeb9d94",
+        "score": 0.758778,
+        "document_id": "pce-faculty-faculty-directory-dr-mimi-m-cherian",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e524af20-f167-416f-a209-5461514f64a9",
+        "score": 0.757383,
+        "document_id": "pce-pdf-utakarsh-mittal-comp",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "df1f4101-8aac-4041-a440-034f89a3b3ad",
+        "score": 0.756796,
+        "document_id": "pce-faculty-faculty-directory-krishnendu-s-nair",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "98ec8d4e-da30-4eb0-8a5d-e6311c40f34f",
+        "score": 0.748395,
+        "document_id": "pce-faculty-faculty-directory-suhas-j-lawand",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "820a6151-a548-401c-babf-a1082b6d4b1a",
+        "score": 0.747949,
+        "document_id": "pce-sayooj-pillai-topper-in-university-of-mumbai-mechanical-department",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "81e9cc60-3122-494b-8d72-4058e2cc99aa",
+        "score": 0.747535,
+        "document_id": "pce-faculty-faculty-directory-sangeetha-selvan-2",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "f9cfab28-d72c-46a0-825e-cb13b0ce5ee9",
+        "score": 19.564687,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8a811a3-03d5-43a9-b1c7-71e6e7d94396",
+        "score": 19.564687,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "00b684fb-dbaa-4ef2-84e1-26637221536a",
+        "score": 16.86108,
+        "document_id": "pce-academics-ph-d-mechanical-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3fdeb815-57a5-443c-9908-d9ba85491656",
+        "score": 16.86108,
+        "document_id": "pce-academics-ph-d-mechanical-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "15e02291-4197-441a-903f-f8d7abec20fc",
+        "score": 16.389299,
+        "document_id": "pce-pdf-naac-approved-national-webinar-on-assessment-and-accreditation-process-of-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ace489cc-a736-4c68-893e-4de0a1dc7582",
+        "score": 16.389299,
+        "document_id": "pce-pdf-naac-approved-national-webinar-on-assessment-and-accreditation-process-of-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6cddf642-d695-4c9b-88a1-2e009999d83d",
+        "score": 15.967137,
+        "document_id": "pce-faculty-faculty-directory",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "722c41be-e593-4731-ab02-fc6e663f5e01",
+        "score": 15.967137,
+        "document_id": "pce-faculty-faculty-directory",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6478715f-6d76-43e4-86a3-c24869201655",
+        "score": 14.631249,
+        "document_id": "pce-academics-ph-d-electronics-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "694dee01-4c2a-449d-8187-efac4d743122",
+        "score": 14.631249,
+        "document_id": "pce-academics-ph-d-electronics-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a354d2e6-6eb8-4689-9095-fbf76148624b",
+        "score": 14.194686,
+        "document_id": "pce-pdf-national-startup-and-innovation-policy-document-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "31404ca5-9d34-45ab-a49d-733827256cc6",
+        "score": 14.194686,
+        "document_id": "pce-pdf-national-startup-and-innovation-policy-document-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4edc71af-8b76-4a2b-b0f5-1eed9328cbce",
+        "score": 13.983945,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7c761766-4bde-4b3f-8941-a8f69c01e66f",
+        "score": 13.983945,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "88c5b1c6-74cc-4527-a4a0-e3cdc6b7d8b9",
+        "score": 13.967638,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c4a0bd9c-8db9-4320-a2db-45389d2ac3b5",
+        "score": 13.967638,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "68369702-e110-4fdf-b402-31e193d8e5b7",
+        "score": 13.224945,
+        "document_id": "pce-pdf-pce-startup-and-innovation-policy-document",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c1d9900b-e585-464a-98f0-6ecff37efb2c",
+        "score": 13.224945,
+        "document_id": "pce-pdf-pce-startup-and-innovation-policy-document",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a607ead9-e4dd-4dc1-9f98-7d387e33980d",
+        "score": 13.161403,
+        "document_id": "pce-research-research-areas",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5fa01d8d-36d4-4193-9ab9-f2dcf02e96cb",
+        "score": 13.161403,
+        "document_id": "pce-research-research-areas",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1d4b9114-d800-4863-a41c-a56a3f9eb243",
+        "score": 21.829141,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "715b90c3-1bc2-481e-9951-02926f450921",
+        "score": 21.829141,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bdfd359a-a0dc-4285-87ab-c3551c4a023f",
+        "score": 21.212569,
+        "document_id": "pce-pdf-2020-21-council-resolution",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "da9e716b-d9e3-4bfa-8e6f-78ec78e11d22",
+        "score": 21.212569,
+        "document_id": "pce-pdf-2020-21-council-resolution",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "265070a8-7310-4ddb-8a03-e2a777cc95e6",
+        "score": 20.095732,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3399e2fc-fb2d-4be8-8f71-5ffaaa61142d",
+        "score": 20.095732,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "23f25af4-3e4b-40e6-8e2f-e9f858b33821",
+        "score": 19.542056,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "419a1236-402b-4926-85e8-7b1a61292ba1",
+        "score": 19.542056,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ec6c962c-b7fa-459c-b85d-81e78e511887",
+        "score": 19.44557,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ef0433c3-4002-4170-837b-32c7b67554ca",
+        "score": 19.44557,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2eae40be-000c-499e-933b-efe34a9b849e",
+        "score": 19.405117,
+        "document_id": "pce-faculty-faculty-events-conferences-complex-systems",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "63943798-b07e-4509-8cdc-551c2c260913",
+        "score": 19.405117,
+        "document_id": "pce-mumbai-area-complex-systems-conference",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7cad3913-9b31-4745-8894-377f225fbb9a",
+        "score": 19.405117,
+        "document_id": "pce-faculty-faculty-events-conferences-complex-systems",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1c35d4f2-43f1-4718-9632-12981ee522ee",
+        "score": 19.405117,
+        "document_id": "pce-mumbai-area-complex-systems-conference",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4df2fdbb-dd3c-45db-b7f1-193ecef82ef4",
+        "score": 18.707836,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ce198a26-5bff-40ee-96d4-061832900069",
+        "score": 18.707836,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1219223f-3ad1-499c-b874-8d577c92b8ae",
+        "score": 19.288365,
+        "document_id": "pce-faculty-faculty-development-schemes",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1ee2dc51-12df-4b73-8eaf-c5d906e09dce",
+        "score": 19.288365,
+        "document_id": "pce-faculty-faculty-development-schemes",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6faf93f2-7b85-4aba-a79c-ebfcbfcb2bb7",
+        "score": 19.050963,
+        "document_id": "pce-pdf-iic-report-19-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "29e5527b-fd93-4aaa-ad1c-e3ffac55f8a4",
+        "score": 19.050963,
+        "document_id": "pce-pdf-iic-report-19-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a38aca4c-a05e-4f49-9f02-d03c55750e9e",
+        "score": 18.286434,
+        "document_id": "pce-pdf-makerthon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "12cf7781-14ed-4cd8-b902-bb48eb0fde83",
+        "score": 18.286434,
+        "document_id": "pce-pdf-makerthon",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "e8a811a3-03d5-43a9-b1c7-71e6e7d94396",
+        "score": 0.030214,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9cfc3d8c-bd21-4cf7-a45a-eee6410fa702",
+        "score": 0.016393,
+        "document_id": "pce-academics-masters-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f9cfab28-d72c-46a0-825e-cb13b0ce5ee9",
+        "score": 0.016393,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
+        "score": 0.016129,
+        "document_id": "pce-academics-bachelors-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d919a8e-2830-4367-b261-5ee91dfee106",
+        "score": 0.015873,
+        "document_id": "pce-faculty-faculty-directory-sheetal-gawande",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "00b684fb-dbaa-4ef2-84e1-26637221536a",
+        "score": 0.015873,
+        "document_id": "pce-academics-ph-d-mechanical-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "697e1f82-48ba-4c24-8660-a44b2ef2700e",
+        "score": 0.015625,
+        "document_id": "pce-academics-bachelors-electronics-computer-science-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3fdeb815-57a5-443c-9908-d9ba85491656",
+        "score": 0.015625,
+        "document_id": "pce-academics-ph-d-mechanical-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "79a994b4-eb5e-490c-8c7c-89e39b8dc4b6",
+        "score": 0.015385,
+        "document_id": "pce-academics-masters-electronics-computer-science-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "15e02291-4197-441a-903f-f8d7abec20fc",
+        "score": 0.015385,
+        "document_id": "pce-pdf-naac-approved-national-webinar-on-assessment-and-accreditation-process-of-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f15af895-cff0-4a42-b136-fe46923e4334",
+        "score": 0.015152,
+        "document_id": "pce-fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ace489cc-a736-4c68-893e-4de0a1dc7582",
+        "score": 0.015152,
+        "document_id": "pce-pdf-naac-approved-national-webinar-on-assessment-and-accreditation-process-of-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d615fb91-4853-4c14-b472-8547255d5534",
+        "score": 0.014925,
+        "document_id": "pce-faculty-faculty-directory-vishwayogita-a-savalkar",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6cddf642-d695-4c9b-88a1-2e009999d83d",
+        "score": 0.014925,
+        "document_id": "pce-faculty-faculty-directory",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "37fba1a6-0a26-4250-827a-471717deae68",
+        "score": 0.014706,
+        "document_id": "pce-academics-masters-information-technology-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "722c41be-e593-4731-ab02-fc6e663f5e01",
+        "score": 0.014706,
+        "document_id": "pce-faculty-faculty-directory",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "851e3a8e-675f-4915-8110-553ae59ce25f",
+        "score": 0.014493,
+        "document_id": "pce-fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6478715f-6d76-43e4-86a3-c24869201655",
+        "score": 0.014493,
+        "document_id": "pce-academics-ph-d-electronics-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "994a2ece-cc39-4354-9f5b-ba10e0a23752",
+        "score": 0.014286,
+        "document_id": "pce-faculty-faculty-directory-k-suresh-babu",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "694dee01-4c2a-449d-8187-efac4d743122",
+        "score": 0.014286,
+        "document_id": "pce-academics-ph-d-electronics-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "da9e716b-d9e3-4bfa-8e6f-78ec78e11d22",
+        "score": 0.029644,
+        "document_id": "pce-pdf-2020-21-council-resolution",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c931f0f9-74f4-4b2f-bdb1-db9e9c5c93b5",
+        "score": 0.016129,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1d4b9114-d800-4863-a41c-a56a3f9eb243",
+        "score": 0.015873,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "37ad9d7c-4d39-423a-875b-38460a0b3855",
+        "score": 0.015625,
+        "document_id": "pce-faculty-faculty-directory-sowmya-p-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "715b90c3-1bc2-481e-9951-02926f450921",
+        "score": 0.015625,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bdfd359a-a0dc-4285-87ab-c3551c4a023f",
+        "score": 0.015385,
+        "document_id": "pce-pdf-2020-21-council-resolution",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
+        "score": 0.015152,
+        "document_id": "pce-bachelors-computer-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8a37d06f-907d-4aa1-9bca-cd92c7d0cf60",
+        "score": 0.014706,
+        "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "265070a8-7310-4ddb-8a03-e2a777cc95e6",
+        "score": 0.014493,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "59bab6c9-835d-469b-8784-073a8d9ac775",
+        "score": 0.014286,
+        "document_id": "pce-pdf-iic-resolution-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3399e2fc-fb2d-4be8-8f71-5ffaaa61142d",
+        "score": 0.014286,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fd4a870c-7c6e-4db0-8145-85266f04f6e1",
+        "score": 0.014085,
+        "document_id": "pce-pdf-iic-resolution-24-25",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "23f25af4-3e4b-40e6-8e2f-e9f858b33821",
+        "score": 0.014085,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ec6c962c-b7fa-459c-b85d-81e78e511887",
+        "score": 0.014493,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0180fc0b-e133-4c9a-ab67-41ac18057ffb",
+        "score": 0.014286,
+        "document_id": "pce-faculty-faculty-directory-k-charumathi",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ef0433c3-4002-4170-837b-32c7b67554ca",
+        "score": 0.014286,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1219223f-3ad1-499c-b874-8d577c92b8ae",
+        "score": 0.014085,
+        "document_id": "pce-faculty-faculty-development-schemes",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
+        "score": 6.756223,
+        "document_id": "pce-academics-bachelors-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9cfc3d8c-bd21-4cf7-a45a-eee6410fa702",
+        "score": 6.532557,
+        "document_id": "pce-academics-masters-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "697e1f82-48ba-4c24-8660-a44b2ef2700e",
+        "score": 5.956466,
+        "document_id": "pce-academics-bachelors-electronics-computer-science-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d919a8e-2830-4367-b261-5ee91dfee106",
+        "score": 5.054819,
+        "document_id": "pce-faculty-faculty-directory-sheetal-gawande",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f15af895-cff0-4a42-b136-fe46923e4334",
+        "score": 4.228903,
+        "document_id": "pce-fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 7271.81,
+      "dense_search_1": 13.25,
+      "sparse_search_1": 315.85,
+      "fuse_1": 0.04,
+      "decide_1": 43641.98,
+      "embed_query_2": 32.54,
+      "dense_search_2": 12.44,
+      "sparse_search_2": 16.24,
+      "fuse_2": 0.03,
+      "decide_2": 45749.14,
+      "embed_query_3": 177.01,
+      "dense_search_3": 22.64,
+      "sparse_search_3": 50.91,
+      "fuse_3": 0.09,
+      "rerank": 7881.12
+    },
+    "iteration_count": 3,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "Who are the faculty members in the Computer Engineering department?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "SEARCH: Faculty members in Computer Engineering department at Pillai College of Engineering",
+        "decision_raw": "SEARCH: Faculty members in Computer Engineering department at Pillai College of Engineering",
+        "latencies_ms": {
+          "embed_query": 7271.8,
+          "dense_search": 13.2,
+          "sparse_search": 315.8,
+          "fuse": 0.0,
+          "decide": 43642.0
+        }
+      },
+      {
+        "iteration": 2,
+        "query": "Faculty members in Computer Engineering department at Pillai College of Engineering",
+        "hits_returned": 20,
+        "new_chunks": 13,
+        "decision": "SEARCH: Faculty members in Computer Engineering department Pillai College of Engineering details",
+        "decision_raw": "SEARCH: Faculty members in Computer Engineering department Pillai College of Engineering details",
+        "latencies_ms": {
+          "embed_query": 32.5,
+          "dense_search": 12.4,
+          "sparse_search": 16.2,
+          "fuse": 0.0,
+          "decide": 45749.1
+        }
+      },
+      {
+        "iteration": 3,
+        "query": "Faculty members in Computer Engineering department Pillai College of Engineering details",
+        "hits_returned": 20,
+        "new_chunks": 4,
+        "decision": "CAP",
+        "decision_raw": "",
+        "latencies_ms": {
+          "embed_query": 177.0,
+          "dense_search": 22.6,
+          "sparse_search": 50.9,
+          "fuse": 0.1
+        }
+      }
+    ],
+    "stop_reason": "iteration_cap"
+  }
+}

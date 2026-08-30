@@ -1,0 +1,15 @@
+The provided context does not contain specific information about the Computer Engineering programme's accreditation status or placement record at Pillai College of Engineering. Therefore, it is not possible to compare these aspects based on the given information. For detailed accreditation status and placement records, one might look at the official website of Pillai College of Engineering or contact the institution directly. [S1] [S2] [S3] [S4] [S5]
+
+Sources:
+  [S1] Deepti Lawand > Education
+        https://www.pce.ac.in/faculty/faculty-directory/deepti-lawand-2/
+  [S2] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+  [S3] K. S. Charumathi > Education
+        https://www.pce.ac.in/faculty/faculty-directory/k-charumathi/
+  [S4] Manasi S. Kulkarni > Education
+        https://www.pce.ac.in/faculty/faculty-directory/manasi-s-kulkarni/
+  [S5] Ranjita Chalke > Education
+        https://www.pce.ac.in/faculty/faculty-directory/ranjita-chalke/
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6435ms, generation 68232ms]

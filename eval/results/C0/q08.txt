@@ -1,0 +1,37 @@
+Computer Engineering students at Pillai College of Engineering have access to a variety of laboratory facilities designed to enhance their learning and research experience. These include:
+
+1. **Undergraduate Labs:**
+   - Open Source Lab
+   - Computer Architecture Lab
+   - Advanced Database Lab
+   - Computer Programming and Data Structure Lab
+   - Network Lab
+   - Web Engineering Lab
+   - Database and Data Mining Lab
+   - System Software Lab
+   - Big Data Lab
+   - Artificial Intelligence Lab
+
+2. **Postgraduate Lab:**
+   - Artificial Intelligence and Machine Learning Lab
+
+Additionally, the college offers specialized research centers and labs, such as:
+
+- **High Performance Computing Lab:** Equipped with advanced hardware like AMD Thread Ripper (2nd Gen) 2970WX and Nvidia RTX 3090 24 GB GPU, this lab supports research in Artificial Intelligence, Machine Learning, and Deep Learning.
+- **Artificial Intelligence and Machine Learning Lab:** Also funded by AICTE under MODROB's Scheme, this lab provides state-of-the-art infrastructure for students to work on projects related to AI and ML.
+
+These facilities cater to both undergraduate and postgraduate students, providing them with the necessary tools and resources to excel in their studies and research.
+
+Sources:
+  [S1] Academic Infrastructure
+        https://www.pce.ac.in/about/infrastructure-and-facilities/academic-infrastructure/
+  [S2] Exploring the Landscape of Information Technology: A Comprehensive Guide to Opportunities and Innovation > Exploring Information Technology Programs at Pillai College of Engineering > Cutting-Edge Infrastructure
+        https://www.pce.ac.in/exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-opportunities-and-innovation/
+  [S3] Research Facilities > High performance Computing Lab
+        https://www.pce.ac.in/research/research-facilities/
+  [S4] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 37 > page 40
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6231ms, generation 120468ms]

@@ -1,0 +1,17 @@
+Yes, hostel accommodation is available for students at the college [S1]. The Pillai Group of Institutions provides separate hostels for boys and girls with various room types available, including single bed rooms with AC upon request [S1]. [S2] also mentions that hostel accommodation for boys and girls is provided to approximately 500 students on the Panvel Campus.
+
+Sources:
+  [S1] Hostel Details
+        https://www.pce.ac.in/academics/admissions/hostel-details/
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 13 > page 16
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S3] Hostel Facility
+        https://www.pce.ac.in/about/infrastructure-and-facilities/hostel-facility/
+  [S4] Brochure inside pages > Page 17 > page 17
+        https://www.pce.ac.in/wp-content/uploads/2020/10/National-Startup-and-Innovation-Policy-Document-2019.pdf
+  [S5] Wp Content  Uploads  2019  07  Training Program On Reliability Engg For Beginners.Pdf > Reliability Engineering For Beginners > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/07/training-program-on-reliability-engg-for-beginners.pdf
+
+  15 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 6025ms, generation 132673ms]

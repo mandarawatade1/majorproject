@@ -1,0 +1,18 @@
+According to the provided context, the following undergraduate (UG) programmes at Pillai College of Engineering are NBA accredited:
+
+- 2 UG courses in Automobile, Electronics and Telecommunication are accredited.
+- 3 UG courses in Computer, Information Technology, and Mechanical Engineering departments are re-accredited for 3 years, up to 30th June, 2025 [S1, S2].
+
+Sources:
+  [S1] The Institute > Accreditation
+        https://www.pce.ac.in/about/the-institute/
+  [S2] The Institute > Accreditation
+        https://www.pce.ac.in/about/the-institute/
+  [S3] IQAC Roles and Responsibilities > IQAC Responsibilities:
+        https://www.pce.ac.in/iqac/iqac-roles-and-responsibilities/
+  [S4] IQAC Roles and Responsibilities > IQAC Responsibilities:
+        https://www.pce.ac.in/iqac/iqac-roles-and-responsibilities/
+  [S5] Sitemap
+        https://www.pce.ac.in/sitemap/
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 11880ms, generation 86483ms]

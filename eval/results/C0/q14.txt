@@ -1,0 +1,29 @@
+The attendance policy for students at Pillai College of Engineering, New Panvel, is structured to ensure continuous monitoring and support for students in case of medical emergencies or other absences. Here are the key points:
+
+1. **Follow-up for Medical Emergencies**: The institution has a specific SOP for responding to medical emergencies on campus. The student's return to academic activities is coordinated with the academic office to ensure that missed assessments and attendance are handled according to established procedures (DEMO/EXAM/2026/03 and DEMO/SOP/ACAD/2026/18), without the student needing to initiate these actions themselves.
+
+2. **Attendance Recording**: Attendance is meticulously recorded per session, and adjustments for rescheduled sessions are made formally to maintain accurate records. This ensures that students who attend rescheduled sessions are marked against their original slots, and any informal handling of attendance adjustments is avoided (as per the timetable for Computer Engineering Semester VII Division A).
+
+3. **Industrial Visits and Field Trips**: During such visits, attendance is recorded at multiple points to ensure that any student who is absent is identified early. This process involves checking attendance at departure, upon arrival at the host site, before the return departure, and upon arrival back at the campus (SOP for Industrial Visit and Field Trip Organisation).
+
+4. **Computation of Attendance**: Attendance is computed from the recorded sessions in the registration grid, up to the cut-off date published each semester. Sessions cancelled by the institute are excluded from the denominator, and missed sessions by the student are included. A rescheduled session is counted against its original slot, emphasizing the need for formal recording of leave adjustments (SOP for Attendance Shortage, Warning and Detention).
+
+5. **Thresholds and Actions**: The thresholds for attendance are defined as follows:
+   - 75% and above: Satisfactory, no action required.
+   - 65% to 74.9%: First warning, with a written warning and mentor informed.
+   - 55% to 64.9%: Second warning, with parental/guardian involvement and a mentor meeting.
+   - Below 55%: Detention risk, referred to the detention committee.
+   Attendance is computed per course, not as an overall average, to ensure that students who are performing well in most courses but poorly in one are identified and supported (SOP for Attendance Shortage, Warning and Detention).
+
+These policies are designed to maintain high standards of attendance and academic performance while providing necessary support and interventions for students facing challenges.
+
+Sources:
+  [S1] SOP: Response to a Medical Emergency on Campus > 6. Follow-up [DEMO DATA]
+  [S2] Timetable: Computer Engineering Semester VII Division A (Illustrative) > Attendance [DEMO DATA]
+  [S3] SOP: Industrial Visit and Field Trip Organisation > 7. During the visit [DEMO DATA]
+  [S4] SOP: Attendance Shortage, Warning and Detention > 2. Computation [DEMO DATA]
+  [S5] SOP: Attendance Shortage, Warning and Detention > 1. Thresholds [DEMO DATA]
+
+  NOTE: one or more sources are synthetic DEMO DATA and do not describe real institutional fact.
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6885ms, generation 142067ms]

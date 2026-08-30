@@ -1,0 +1,657 @@
+The context provided does not contain any specific weather forecast for Mumbai this week. The information given is about the SAFAR initiative, which provides air quality and weather forecasting for metropolitan cities, but it does not include current or upcoming weather forecasts for Mumbai. For current weather conditions or forecasts, you might want to check a reliable weather forecasting service or website. [S1]
+
+Sources:
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 17 > page 20
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 17 > page 20
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+  3 retrieved chunk(s) omitted for context budget.
+
+[C4 | qwen2.5:7b-instruct-q4_K_M | retrieval 140347ms, generation 145996ms]
+
+{
+  "question": "What is the weather forecast for Mumbai this week?",
+  "config": "C4",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 286564.3,
+  "retrieval_ms": 140347.5,
+  "generation_ms": 145995.9,
+  "sources": [
+    "d717ddfc-1688-4c37-8815-5c7f71708faa",
+    "4cd26c20-4197-4f95-ba2a-457561f5f395"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What is the weather forecast for Mumbai this week?",
+    "rewritten_queries": [
+      "weather forecast mumbai this week"
+    ],
+    "dense_hits": [
+      {
+        "chunk_id": "df6f375f-db3d-490b-a0ed-1c039c6cab2c",
+        "score": 0.609988,
+        "document_id": "pce-netmagic-solutions-interview-schedule-and-shortlisted-candidates-list",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c2abdb63-5cac-47c8-91ed-a31fd9f34bd0",
+        "score": 0.607441,
+        "document_id": "pce-pdf-term-calendar-jan-jun-2021",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1a475882-0b57-4ea2-942c-ec8f7ded992f",
+        "score": 0.607193,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a727de97-7115-4ae7-a037-6e7b21738977",
+        "score": 0.603156,
+        "document_id": "pce-students-sports-and-games-sports-report",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8c11748-dc24-49a2-924b-f8b52d05d725",
+        "score": 0.597934,
+        "document_id": "pce-covid-dashboard",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2958caae-5f46-4d71-a073-ddc2eb7a3694",
+        "score": 0.588946,
+        "document_id": "pce-pdf-term-calendar-jan-jun-2021",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "945a788f-c771-42f8-8b2e-bcb5d79bd19a",
+        "score": 0.582869,
+        "document_id": "pce-pdf-computer-engg-remedial-classes-timetable",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0e284237-a30d-4acf-9543-1c503de90f87",
+        "score": 0.582854,
+        "document_id": "pce-pdf-seit-direct-second-year-student-extra-classes-odd-sem-2019-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d0624964-904a-4fae-bb1b-5a1819b7db0a",
+        "score": 0.576013,
+        "document_id": "DEMO/IT/2026/02",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "2df3c8a3-0a3e-4074-8d76-e47c3c2f9ede",
+        "score": 0.575961,
+        "document_id": "pce-workshop-on-concept-based-teachers-training-in-physics",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "db8baee9-3bf4-4554-b0a4-c134367cfb7c",
+        "score": 0.573534,
+        "document_id": "pce-students-sports-and-games-sports-report",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3dbce582-7d26-48fb-8b17-d12e94f01ad9",
+        "score": 0.573329,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c5baef35-477a-4a0e-950a-337caa016e45",
+        "score": 0.572634,
+        "document_id": "pce-students-sports-and-games-sports-report",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ff99744b-2892-4de9-83e5-2e47bd43e670",
+        "score": 0.571671,
+        "document_id": "pce-pdf-schedule-of-remedial-classes-odd-sem-ay-2019-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c77e284c-9064-4892-97ce-00bbf97c33ab",
+        "score": 0.567134,
+        "document_id": "pce-students-student-activities-student-associations-ieee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0330ff08-81ea-4dc1-8f7e-259e7df43f89",
+        "score": 0.567072,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d717ddfc-1688-4c37-8815-5c7f71708faa",
+        "score": 0.563478,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e600125b-6a28-4621-8a5a-52d801f8db03",
+        "score": 0.562326,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8f61cef8-8b0d-435d-80af-0b754a7454b1",
+        "score": 0.561326,
+        "document_id": "pce-pdf-information-technology-remedial-classes-timetable",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7c700b75-fe7e-49be-a5f0-131e1f1b9370",
+        "score": 0.561115,
+        "document_id": "pce-india-inter-collegiate-debate-competition",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0767d208-e294-4dcc-a0fe-1fcf50feaf72",
+        "score": 0.597206,
+        "document_id": "pce-pdf-makers-day-2022-schedule",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "713f8931-8074-4f6e-9083-3ac57d9e2542",
+        "score": 0.592824,
+        "document_id": "pce-students-sports-and-games-sports-report",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a33805a7-f5bd-4b34-ac91-49dd76e9fffc",
+        "score": 0.588864,
+        "document_id": "pce-pdf-be-extc-b",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d6df8089-b788-48e4-9230-e9ddd350af93",
+        "score": 0.588864,
+        "document_id": "pce-pdf-be-extc-a",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e865a869-dba9-4cb5-9d4e-170d92589951",
+        "score": 0.588623,
+        "document_id": "pce-pdf-term-calendar-jan-jun-2021",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8a09c97-7b53-4adc-b14f-c8e9d23a0428",
+        "score": 0.588128,
+        "document_id": "pce-codevita-season-9-contest",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6d7a52c-39ae-49aa-8901-dd66a59cd2e6",
+        "score": 0.587885,
+        "document_id": "pce-pdf-se-ecs",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "627739e6-b6bd-48de-9c5d-e00b05fcf4d0",
+        "score": 20.831166,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1a475882-0b57-4ea2-942c-ec8f7ded992f",
+        "score": 20.831166,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4cd26c20-4197-4f95-ba2a-457561f5f395",
+        "score": 19.762487,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d717ddfc-1688-4c37-8815-5c7f71708faa",
+        "score": 19.762487,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "11b644cb-3489-4efe-9cce-996b5211d6cc",
+        "score": 11.910479,
+        "document_id": "pce-pdf-atidan-presentation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ffd2adbc-c629-45c5-bcf6-d0f3d3894b80",
+        "score": 11.910479,
+        "document_id": "pce-pdf-atidan-presentation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "27b4d277-27a7-4004-9c34-17dcc3861e62",
+        "score": 11.868396,
+        "document_id": "pce-exploring-electronic-computer-science-a-comprehensive-guide",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0d8b3eaa-df0f-46b6-9038-8d76a524c6a4",
+        "score": 11.868396,
+        "document_id": "pce-exploring-electronic-computer-science-a-comprehensive-guide",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2ae631a1-e815-4819-a464-6fa1a2d8fd3f",
+        "score": 11.598397,
+        "document_id": "DEMO/LAB/CE/DS/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "036653c2-68c5-46d6-af9a-38066a72d765",
+        "score": 11.598397,
+        "document_id": "DEMO/LAB/CE/DS/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "3744160a-e9fd-49a1-bbc1-c310ae7a977a",
+        "score": 11.433183,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "7b1237b9-927e-4b39-9df7-a2b4493864fd",
+        "score": 11.433183,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "cbe0db53-e13e-43fc-9d34-7d2daad33080",
+        "score": 11.24527,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "e9f43864-7785-4b1a-9407-613529dfca59",
+        "score": 11.24527,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "c46fefdd-7334-413b-afb2-7d4e8cc1cb0a",
+        "score": 11.156439,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "9da0defd-e63a-4ea5-a5aa-91c4a2f50a48",
+        "score": 11.156439,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "62abf554-78e1-464a-92a1-6f4866bac80c",
+        "score": 10.982356,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "bfa48bfa-a34d-4f11-890c-9b9ec527d19c",
+        "score": 10.982356,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "a738d677-c300-4efa-9609-359bfba95869",
+        "score": 10.720767,
+        "document_id": "pce-codevita-season-9-contest",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8a09c97-7b53-4adc-b14f-c8e9d23a0428",
+        "score": 10.720767,
+        "document_id": "pce-codevita-season-9-contest",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e3970470-27f9-40e6-a0a2-6f7f7f0dc262",
+        "score": 10.04993,
+        "document_id": "pce-pdf-toppr-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f6631629-93c5-4637-88ee-90f9cadc1b17",
+        "score": 10.04993,
+        "document_id": "pce-pdf-toppr-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3b6e34a3-c939-495f-a7c3-87b4f0ab0a99",
+        "score": 9.424881,
+        "document_id": "pce-faculty-faculty-directory-tusharika-s-banerjee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9fb56a4f-5bff-4499-ac48-96f2cdaf9aa4",
+        "score": 9.424881,
+        "document_id": "pce-faculty-faculty-directory-tusharika-s-banerjee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "959d349b-0ef0-4cca-8d08-1048b4982e92",
+        "score": 8.846102,
+        "document_id": "pce-academics-other-programs-add-on-courses-value-added-courses",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5f667cff-5a40-4bc0-a623-a64adb4d40b5",
+        "score": 8.846102,
+        "document_id": "pce-academics-other-programs-add-on-courses-value-added-courses",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "30a72c7e-af08-4399-8de6-a7663cdbb0b6",
+        "score": 8.736697,
+        "document_id": "pce-faculty-faculty-directory-dr-monika-bhagwat",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fbd0f4ee-73aa-49ec-b149-d53f9492fd2b",
+        "score": 8.736697,
+        "document_id": "pce-faculty-faculty-directory-dr-monika-bhagwat",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ecfb6b53-381e-4c89-b861-1aa9eb110f07",
+        "score": 8.71983,
+        "document_id": "pce-faculty-faculty-directory-smita-g-joshi",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e701c522-44c5-400f-a4fc-e07d53c68a56",
+        "score": 8.71983,
+        "document_id": "pce-faculty-faculty-directory-smita-g-joshi",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4c7f05c6-1b94-4aba-a738-cba918b7d3a4",
+        "score": 8.679697,
+        "document_id": "pce-academics-other-programs-iit-bombay-remote-center",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "20c5b7f4-3bae-4fd1-ba0e-5ef7572df9be",
+        "score": 8.679697,
+        "document_id": "pce-academics-other-programs-iit-bombay-remote-center",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2452f985-f36f-4f4a-9027-e0567f890a27",
+        "score": 8.596215,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3dbce582-7d26-48fb-8b17-d12e94f01ad9",
+        "score": 8.596215,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f8f954b5-f362-4e50-aa57-e6eedc4a1930",
+        "score": 8.398317,
+        "document_id": "pce-pdf-ashish-mathew-comp",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "00e748de-586d-45b7-9d6d-38fecd9ba91d",
+        "score": 8.398317,
+        "document_id": "pce-pdf-ashish-mathew-comp",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "1a475882-0b57-4ea2-942c-ec8f7ded992f",
+        "score": 0.032002,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d717ddfc-1688-4c37-8815-5c7f71708faa",
+        "score": 0.028612,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "df6f375f-db3d-490b-a0ed-1c039c6cab2c",
+        "score": 0.016393,
+        "document_id": "pce-netmagic-solutions-interview-schedule-and-shortlisted-candidates-list",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "627739e6-b6bd-48de-9c5d-e00b05fcf4d0",
+        "score": 0.016393,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c2abdb63-5cac-47c8-91ed-a31fd9f34bd0",
+        "score": 0.016129,
+        "document_id": "pce-pdf-term-calendar-jan-jun-2021",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4cd26c20-4197-4f95-ba2a-457561f5f395",
+        "score": 0.015873,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a727de97-7115-4ae7-a037-6e7b21738977",
+        "score": 0.015625,
+        "document_id": "pce-students-sports-and-games-sports-report",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8c11748-dc24-49a2-924b-f8b52d05d725",
+        "score": 0.015385,
+        "document_id": "pce-covid-dashboard",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "11b644cb-3489-4efe-9cce-996b5211d6cc",
+        "score": 0.015385,
+        "document_id": "pce-pdf-atidan-presentation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2958caae-5f46-4d71-a073-ddc2eb7a3694",
+        "score": 0.015152,
+        "document_id": "pce-pdf-term-calendar-jan-jun-2021",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ffd2adbc-c629-45c5-bcf6-d0f3d3894b80",
+        "score": 0.015152,
+        "document_id": "pce-pdf-atidan-presentation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "945a788f-c771-42f8-8b2e-bcb5d79bd19a",
+        "score": 0.014925,
+        "document_id": "pce-pdf-computer-engg-remedial-classes-timetable",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "27b4d277-27a7-4004-9c34-17dcc3861e62",
+        "score": 0.014925,
+        "document_id": "pce-exploring-electronic-computer-science-a-comprehensive-guide",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0e284237-a30d-4acf-9543-1c503de90f87",
+        "score": 0.014706,
+        "document_id": "pce-pdf-seit-direct-second-year-student-extra-classes-odd-sem-2019-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0d8b3eaa-df0f-46b6-9038-8d76a524c6a4",
+        "score": 0.014706,
+        "document_id": "pce-exploring-electronic-computer-science-a-comprehensive-guide",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d0624964-904a-4fae-bb1b-5a1819b7db0a",
+        "score": 0.014493,
+        "document_id": "DEMO/IT/2026/02",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "2ae631a1-e815-4819-a464-6fa1a2d8fd3f",
+        "score": 0.014493,
+        "document_id": "DEMO/LAB/CE/DS/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "2df3c8a3-0a3e-4074-8d76-e47c3c2f9ede",
+        "score": 0.014286,
+        "document_id": "pce-workshop-on-concept-based-teachers-training-in-physics",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "036653c2-68c5-46d6-af9a-38066a72d765",
+        "score": 0.014286,
+        "document_id": "DEMO/LAB/CE/DS/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "db8baee9-3bf4-4554-b0a4-c134367cfb7c",
+        "score": 0.014085,
+        "document_id": "pce-students-sports-and-games-sports-report",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e3970470-27f9-40e6-a0a2-6f7f7f0dc262",
+        "score": 0.015385,
+        "document_id": "pce-pdf-toppr-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f6631629-93c5-4637-88ee-90f9cadc1b17",
+        "score": 0.015152,
+        "document_id": "pce-pdf-toppr-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3b6e34a3-c939-495f-a7c3-87b4f0ab0a99",
+        "score": 0.014925,
+        "document_id": "pce-faculty-faculty-directory-tusharika-s-banerjee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9fb56a4f-5bff-4499-ac48-96f2cdaf9aa4",
+        "score": 0.014706,
+        "document_id": "pce-faculty-faculty-directory-tusharika-s-banerjee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "959d349b-0ef0-4cca-8d08-1048b4982e92",
+        "score": 0.014493,
+        "document_id": "pce-academics-other-programs-add-on-courses-value-added-courses",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5f667cff-5a40-4bc0-a623-a64adb4d40b5",
+        "score": 0.014286,
+        "document_id": "pce-academics-other-programs-add-on-courses-value-added-courses",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0767d208-e294-4dcc-a0fe-1fcf50feaf72",
+        "score": 0.014085,
+        "document_id": "pce-pdf-makers-day-2022-schedule",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "d717ddfc-1688-4c37-8815-5c7f71708faa",
+        "score": -2.109355,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4cd26c20-4197-4f95-ba2a-457561f5f395",
+        "score": -2.109355,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "db8baee9-3bf4-4554-b0a4-c134367cfb7c",
+        "score": -6.340558,
+        "document_id": "pce-students-sports-and-games-sports-report",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1a475882-0b57-4ea2-942c-ec8f7ded992f",
+        "score": -7.066201,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "627739e6-b6bd-48de-9c5d-e00b05fcf4d0",
+        "score": -7.066201,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 7809.84,
+      "dense_search_1": 26.29,
+      "sparse_search_1": 386.96,
+      "fuse_1": 0.04,
+      "decide_1": 70595.62,
+      "embed_query_2": 59.86,
+      "dense_search_2": 11.34,
+      "sparse_search_2": 6.79,
+      "fuse_2": 0.03,
+      "decide_2": 54933.1,
+      "rerank": 6517.6
+    },
+    "iteration_count": 2,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "What is the weather forecast for Mumbai this week?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "SEARCH: weather forecast mumbai this week",
+        "decision_raw": "SEARCH: weather forecast mumbai this week",
+        "latencies_ms": {
+          "embed_query": 7809.8,
+          "dense_search": 26.3,
+          "sparse_search": 387.0,
+          "fuse": 0.0,
+          "decide": 70595.6
+        }
+      },
+      {
+        "iteration": 2,
+        "query": "weather forecast mumbai this week",
+        "hits_returned": 20,
+        "new_chunks": 7,
+        "decision": "SEARCH: weather forecast mumbai this week",
+        "decision_raw": "SEARCH: weather forecast mumbai this week",
+        "latencies_ms": {
+          "embed_query": 59.9,
+          "dense_search": 11.3,
+          "sparse_search": 6.8,
+          "fuse": 0.0,
+          "decide": 54933.1
+        }
+      }
+    ],
+    "stop_reason": "repeated_query"
+  }
+}

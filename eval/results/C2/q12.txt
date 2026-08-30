@@ -1,0 +1,21 @@
+The Computer Engineering department focuses on research areas such as Computer Networks, Cyber Security, Databases, Natural Language Processing, Image Processing, and Ubiquitous Computing [S2, S3, S7]. These research areas are supported by specialized centers and labs, including advanced computer laboratories and specialized research centers focused on emerging technologies [S4].
+
+Sources:
+  [S1] Program Overview > Ph.D. in Computer Engineering
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S2] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S3] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S4] Exploring the Landscape of Information Technology: A Comprehensive Guide to Opportunities and Innovation > Exploring Information Technology Programs at Pillai College of Engineering > Cutting-Edge Infrastructure
+        https://www.pce.ac.in/exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-opportunities-and-innovation/
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 41 > page 44
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S6] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/mechanical-engineering-cad-cam-and-robotics/program-overview/
+  [S7] Research Areas
+        https://www.pce.ac.in/research/research-areas/
+
+  13 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 7439ms, generation 106078ms]

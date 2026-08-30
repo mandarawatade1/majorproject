@@ -6,7 +6,8 @@ SHELL := /bin/bash
 
 .PHONY: help bootstrap up down restart logs ps verify migrate revision \
         shell-api shell-db test lint format typecheck check pull-models \
-        ingest crawl parse corpus-stats seed seed-corpus db-stats clean clean-all
+        ingest crawl parse corpus-stats seed seed-corpus db-stats \
+        rag-doctor rag-configs rag-index ask clean clean-all
 
 help:  ## Show this help
 	@grep -hE '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) \
@@ -86,6 +87,18 @@ parse:  ## Parse raw + demo into corpus/normalised/
 
 corpus-stats:  ## Print corpus statistics and the real/demo ratio
 	docker compose exec api python -m rag.ingestion stats
+
+rag-doctor:  ## Check corpus, embedder, index and generator are reachable
+	docker compose exec api python -m rag doctor
+
+rag-configs:  ## List configurations C0-C5 and what each enables
+	docker compose exec api python -m rag configs
+
+rag-index:  ## Chunk, embed and index the corpus (make rag-index C=C0)
+	docker compose exec api python -m rag index --config $(or $(C),C0)
+
+ask:  ## Ask one question (make ask Q="What is the intake?")
+	docker compose exec api python -m rag ask "$(Q)" --config $(or $(C),C0)
 
 clean:  ## Remove Python caches
 	find . -type d -name __pycache__ -prune -exec rm -rf {} + 2>/dev/null || true

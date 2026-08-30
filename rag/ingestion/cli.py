@@ -166,7 +166,13 @@ def cmd_parse(args: argparse.Namespace) -> int:
             failures.append(f"{meta_path.name}: unreadable metadata")
             continue
 
-        url = meta.get("url", "")
+        # Use the post-redirect URL when one was recorded. A WordPress
+        # "?p=2075" request can 301 to a real slugged page
+        # ("/post-with-youtube-video/") -- the pre-redirect url has no
+        # meaningful path, so every such request built the same doc_id
+        # ("<host>-home") and silently overwrote every other one on disk.
+        # ~245 real pages were lost to this before final_url was consulted.
+        url = meta.get("final_url") or meta.get("url", "")
         content_type = meta.get("content_type", "")
 
         # Derive the body filename by APPENDING the extension to the sidecar's
@@ -224,6 +230,26 @@ def cmd_parse(args: argparse.Namespace) -> int:
             continue
 
         documents.append(document)
+
+    # Same final_url can appear behind more than one raw crawl artifact -- a
+    # "?p=1234" query-string request and a slug URL both redirecting to one
+    # real page, for instance. Each produces an identical doc_id, and without
+    # collapsing them here, normalise() writes each in turn, silently
+    # overwriting on disk while still counting every write -- exactly how
+    # "written N" can exceed what actually exists in corpus/normalised/.
+    seen_ids: dict[str, ParsedDocument] = {}
+    duplicate_url_count = 0
+    for doc in documents:
+        if doc.doc_id in seen_ids:
+            duplicate_url_count += 1
+            continue
+        seen_ids[doc.doc_id] = doc
+    if duplicate_url_count:
+        print(
+            f"same-url duplicates: collapsed {duplicate_url_count} crawl "
+            f"artifact(s) resolving to a doc_id already seen"
+        )
+    documents = list(seen_ids.values())
 
     real_count = len(documents)
 

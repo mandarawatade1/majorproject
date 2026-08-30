@@ -1,0 +1,16 @@
+The vision and mission of Pillai College of Engineering (PCE) are as follows:
+
+- To develop professional engineers with respect for the environment and to make them responsible citizens, both from a local and global perspective. This objective is fulfilled through quality education, practical training, research, entrepreneurship, and interaction with industries and social organizations. [S1]
+- The vision of the Institution's Innovation Council (IIC) at Pillai College of Engineering is to inculcate the entrepreneurship culture among students, faculty members, and alumni. It aims to train a diverse population of students to become responsible professionals or entrepreneurs in a technical arena. It will further train the faculty members and students to contribute in nation-building through an entrepreneurial mindset. [S2]
+
+Sources:
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 7 > page 10
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S2] Wp Content  Uploads  2024  02  Iic Pce Annual Report 2022 23.Pdf > Annual Report 2022-23 > page 1
+        https://www.pce.ac.in/wp-content/uploads/2024/02/IIC-PCE-Annual-Report-2022-23.pdf
+  [S3] PERKS of PILLAI
+        https://www.pce.ac.in/perks-of-pillai/
+
+  17 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 7677ms, generation 146096ms]

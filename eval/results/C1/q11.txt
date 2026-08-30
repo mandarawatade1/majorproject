@@ -1,0 +1,24 @@
+Students have access to various library resources, including:
+
+- Open Education Resources (OERs), Open Courses, Online Free Database, Lecture Video [S1]
+- E-resources such as IEEE Explorer Digital Library with 336 journals [S4]
+- Digital resources like books, lecture notes, and videos [S3]
+- Physical books and journals [S5]
+- Plagiarism software like Turnitin [S5]
+
+These resources are available through the library portal and can be accessed both physically and virtually. [S3, S5]
+
+Sources:
+  [S1] Library Resources > Aggregated Open Access
+        https://www.pce.ac.in/library/library-resources/
+  [S2] Circular: End-of-Semester Library Recall and Clearance > Circular DEMO/LIB/2026/09 [DEMO DATA]
+  [S3] Digital Library
+        https://www.pce.ac.in/library/digital-library/
+  [S4] Library Resources > Subscribed E-Resources
+        https://www.pce.ac.in/library/library-resources/
+  [S5] Library Information
+        https://www.pce.ac.in/library/library-information/
+
+  NOTE: one or more sources are synthetic DEMO DATA and do not describe real institutional fact.
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6264ms, generation 100437ms]

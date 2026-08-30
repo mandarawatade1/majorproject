@@ -1,0 +1,23 @@
+Based on the provided context, the information given is limited to only one faculty member in the Computer Engineering department, which is:
+
+- **Sheetal Gawande**
+  - Faculty of the Computer Engineering Department
+  - Email: sheetalp@mes.ac.in
+  - Education: M.E. 2012 from Mumbai University in Information Technology and B.E. 2003 from Amravtai University in Computer Science and Engineering
+  - Courses she teaches: Computer Network, Cloud Computing, Advanced Operating System, and Advanced Computer Network
+
+No other faculty members are mentioned in the provided context for the Computer Engineering department.
+
+Sources:
+  [S1] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S2] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S3] Sheetal Gawande
+        https://www.pce.ac.in/faculty/faculty-directory/sheetal-gawande/
+  [S4] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/electronics-computer-science/program-overview/
+  [S5] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/electronics-computer-science/program-overview/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6477ms, generation 47931ms]

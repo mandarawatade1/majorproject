@@ -1,0 +1,21 @@
+The attendance policy for students at Pillai College of Engineering, New Panvel, is as follows:
+
+- Attendance is computed per course, not as an overall average [S5]. This means that a student can have an overall attendance of 85% but still be at risk in a course with 52% attendance.
+- The thresholds for attendance are as follows:
+  - 75% and above: Satisfactory, no action required [S5].
+  - 65% to 74.9%: First warning, with a written warning and the mentor informed [S5].
+  - 55% to 64.9%: Second warning, with the parent/guardian informed and a mentor meeting [S5].
+  - Below 55%: Detention risk, referred to the detention committee [S5].
+
+These policies ensure that the institution can identify and address specific course attendance issues early on.
+
+Sources:
+  [S1] SOP: Attendance Shortage, Warning and Detention > 2. Computation [DEMO DATA]
+  [S2] Timetable: Computer Engineering Semester VII Division A (Illustrative) > Attendance [DEMO DATA]
+  [S3] SOP: Response to a Medical Emergency on Campus > 6. Follow-up [DEMO DATA]
+  [S4] SOP: Industrial Visit and Field Trip Organisation > 7. During the visit [DEMO DATA]
+  [S5] SOP: Attendance Shortage, Warning and Detention > 1. Thresholds [DEMO DATA]
+
+  NOTE: one or more sources are synthetic DEMO DATA and do not describe real institutional fact.
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 11635ms, generation 61455ms]

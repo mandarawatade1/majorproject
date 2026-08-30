@@ -1,0 +1,31 @@
+The process for admission to the Ph.D. programme in Computer Engineering at Pillai College of Engineering, New Panvel, involves several key steps:
+
+1. **Eligibility**: Applicants must hold a Master's degree in a relevant field, such as Computer Engineering or Computer Science.
+
+2. **Application**: Interested candidates should submit an application, which typically includes a detailed CV, academic transcripts, and a statement of purpose outlining their research interests and goals.
+
+3. **Selection Committee Review**: The application is reviewed by a selection committee, which may include faculty members from the Computer Engineering department. The committee evaluates the candidate's academic background, research potential, and alignment with the research interests of the faculty.
+
+4. **Interview**: Shortlisted candidates may be invited for an interview, either in-person or via video conferencing, to further assess their suitability for the Ph.D. program. The interview may cover topics related to their research interests, academic background, and potential contributions to the program.
+
+5. **Research Proposal**: Candidates may be required to submit a research proposal outlining their proposed area of study, objectives, and methodology. This helps the committee understand the candidate's research direction and feasibility.
+
+6. **Admission Decision**: Based on the application review, interview, and research proposal, the committee will make an admission decision. Successful candidates will be offered admission to the Ph.D. program.
+
+7. **Enrollment**: Admitted candidates will need to complete any necessary enrollment procedures, including payment of fees and submission of required documentation.
+
+External collaborations with industry and government laboratories are encouraged, and Ph.D. research scholars are supported to present their work at key conferences around the world.
+
+Sources:
+  [S1] Program Overview > Ph.D. in Computer Engineering
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 36 > page 39
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S3] Dr. Satishkumar L. Varma > Education
+        https://www.pce.ac.in/faculty/faculty-directory/dr-satishkumar-l-varma/
+  [S4] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+  [S5] Dr. Gopinath Karmakar > Education
+        https://www.pce.ac.in/faculty/faculty-directory/dr-gopinath-karmakar/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6081ms, generation 123393ms]

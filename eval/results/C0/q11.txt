@@ -1,0 +1,26 @@
+Based on the provided context, the library resources available to students at Pillai College of Engineering include:
+
+1. **Open Education Resources (OERs)**, **Open Courses**, **Online Free Database**, and **Lecture Videos** which are aggregated in a single place for easy access.
+2. **E-Resources** such as the IEEE Explorer Digital Library with access to 336 journals. Note that some resources require credentials, and students should contact the librarian for access.
+3. **Physical Books** with a collection of 26,273 plus items, including 6,508 titles, 27,468 volumes, 93 journals & periodicals, 1,768 project theses, 1,189 complementary CDs, 80 multimedia CDs, 4 newspapers, and more.
+4. **Digital Library Access** through the Library Portal, which allows students to check their issued books, view due dates, and access various resources like books, lecture notes, and videos.
+5. **Plagiarism Software** (Turnitin) for academic integrity.
+6. **Scan & Deliver Service** for obtaining scanned copies of print material.
+7. **Membership of Pillai Campus Colleges** and other colleges, with the requirement of a valid Library Card or a Reference Letter from their Librarian/Principal.
+
+These resources are designed to support the academic activities of students and enhance their learning experience.
+
+Sources:
+  [S1] Library Resources > Aggregated Open Access
+        https://www.pce.ac.in/library/library-resources/
+  [S2] Circular: End-of-Semester Library Recall and Clearance > Circular DEMO/LIB/2026/09 [DEMO DATA]
+  [S3] Digital Library
+        https://www.pce.ac.in/library/digital-library/
+  [S4] Library Resources > Subscribed E-Resources
+        https://www.pce.ac.in/library/library-resources/
+  [S5] Library Information
+        https://www.pce.ac.in/library/library-information/
+
+  NOTE: one or more sources are synthetic DEMO DATA and do not describe real institutional fact.
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6101ms, generation 126439ms]

@@ -1,10 +1,9 @@
 # ---------------------------------------------------------------------------
 # Phase 0-2 runtime dependencies.
 #
-# The heavy AI stack (langchain, langgraph, sentence-transformers, torch,
-# ragas) is deliberately NOT here yet — it is added in Phase 3 when the RAG
-# pipeline lands. Keeping it out now means a ~200 MB image and a fast CI run
-# instead of a ~4 GB image and a 10-minute one.
+# Phase 3 added the embedding and vector-store stack at the bottom of this
+# file. langchain, langgraph and ragas still are not here — they arrive with
+# the agentic layer (Phase 5) and the evaluation harness (Phase 10).
 # ---------------------------------------------------------------------------
 
 # Web framework
@@ -52,3 +51,24 @@ pdfplumber==0.11.5
 
 # Demo-corpus front matter.
 pyyaml==6.0.2
+
+# ---------------------------------------------------------------------------
+# Phase 3 - baseline RAG (C0)
+# ---------------------------------------------------------------------------
+# Vector store client. The Chroma SERVER runs as its own container, so this is
+# only the client and stays small.
+chromadb==0.6.3
+
+# Sentence-BERT embeddings (Report section 3.2.1). This pulls torch, which is
+# roughly 2.5 GB in the image and by far the slowest part of the build.
+#
+# If that is a problem, set EMBEDDING_BACKEND=ollama in .env and comment these
+# two out. The Ollama server already running for generation will produce
+# embeddings instead, with no torch at all. That is a deviation from the report,
+# and it is recorded on every chunk and every retrieval log via the embedding
+# model name, so a result can never be misattributed to the wrong embedder.
+sentence-transformers==3.3.1
+torch==2.5.1
+rank_bm25
+langgraph==0.2.62
+langchain-core==0.3.28

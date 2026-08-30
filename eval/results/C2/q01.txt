@@ -1,0 +1,13 @@
+The intake for the B.Tech. in Computer Engineering program at Pillai College of Engineering is 180 students [S1]. Additionally, the program is accredited by the National Board of Accreditation (NBA) [S1].
+
+Sources:
+  [S1] Computer Engineering
+        https://www.pce.ac.in/bachelors/computer-engineering/
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 36 > page 39
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S3] Microsoft PowerPoint - Brochure for FDP on R Programming_29 April to 3 May 2020 > In association with > page 1
+        https://www.pce.ac.in/wp-content/uploads/2020/04/Brochure-for-FDP-on-R-Programming.pdf
+
+  17 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 7049ms, generation 140133ms]

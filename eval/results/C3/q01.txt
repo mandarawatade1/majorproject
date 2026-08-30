@@ -1,0 +1,15 @@
+The intake for Computer Engineering is not specified in the provided context [S1-S4]. However, the context indicates that the Computer Engineering program is NBA accredited and has been re-accredited for 3 years until 30th June, 2025 [S1-S4].
+
+Sources:
+  [S1] The Institute > Accreditation
+        https://www.pce.ac.in/about/the-institute/
+  [S2] The Institute > Accreditation
+        https://www.pce.ac.in/about/the-institute/
+  [S3] The Institute
+        https://www.pce.ac.in/about/the-institute/
+  [S4] The Institute
+        https://www.pce.ac.in/about/the-institute/
+
+  1 retrieved chunk(s) omitted for context budget.
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 12683ms, generation 15737ms]

@@ -1,0 +1,11 @@
+The provided context does not contain specific information about the intake for the Computer Engineering program or its accreditation status with NBA. [S1] and [S2] focus on the program's vision, mission, objectives, and student associations but do not provide details on intake numbers or accreditation status. For such specific information, you may want to refer to the official prospectus or contact the admissions office directly. [S1] [S2]
+
+Sources:
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 36 > page 39
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S2] Student Associations
+        https://www.pce.ac.in/students/student-activities/student-associations/
+
+  3 retrieved chunk(s) omitted for context budget.
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6483ms, generation 122340ms]

@@ -1,0 +1,28 @@
+According to the context provided, the following undergraduate (UG) programmes at Pillai College of Engineering are NBA accredited:
+
+- 4 UG courses were accredited by NBA in 2008 [S1].
+- 3 UG courses were re-accredited in 2015 by NBA [S1].
+- 3 UG courses were re-accredited in 2018 by NBA [S1].
+- Specifically, 2 UG courses in Automobile and Electronics and Telecommunication are accredited, and 3 UG courses in Computer, Information Technology, and Mechanical Engineering are re-accredited for 3 years until 30th June, 2025 [S1].
+
+Sources:
+  [S1] The Institute > Accreditation
+        https://www.pce.ac.in/about/the-institute/
+  [S2] IQAC Roles and Responsibilities > IQAC Responsibilities:
+        https://www.pce.ac.in/iqac/iqac-roles-and-responsibilities/
+  [S3] Lalit M. Mehta > Awards and Recognitions
+        https://www.pce.ac.in/faculty/faculty-directory/lalit-m-mehta/
+  [S4] Free Coursera Courses: A Pillai Group Initiative
+        https://www.pce.ac.in/free-coursera-courses-a-pillai-group-initiative/
+  [S5] Wp Content  Uploads  2019  08  Api Workshop Brochure.Pdf > Jointly Organized by > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/08/API-Workshop-Brochure.pdf
+  [S6] Mechanical Engineering
+        https://www.pce.ac.in/nba-dcs/mechanical-engineering/
+  [S7] Wp Content  Uploads  2019  08  Api Workshop Brochure.Pdf > About the Course > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/08/API-Workshop-Brochure.pdf
+  [S8] Electronics & Telecommunication Engineering
+        https://www.pce.ac.in/nba-dcs/electronics-telecommunication-engineering/
+
+  12 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 7247ms, generation 192741ms]

@@ -1,0 +1,476 @@
+The Computer Engineering department focuses on the following research areas:
+
+- Computer Networks
+- Data Mining
+- Image Processing
+- Cyber Security & Digital Forensics
+- Natural Language Processing
+- Ubiquitous Computing
+- Machine Learning and Data Science [S1]
+
+Additionally, the department has a Ph.D. center with 10 seats [S4]. The research areas of the Ph.D. guides include:
+
+- Image Processing, Data Mining and Business Intelligence, Big Data Analytics, Data Science, Soft Computing [S4]
+- Data Science, Natural Language Processing, Information Retrieval, Data Structures, Text Mining, System Programming, Compiler Design, Parallel Computing, Advanced OS, Distributed Systems, Pattern Recognition [S4]
+- Cognitive Computing, Usability Engineering, Data Science, Data Mining, Business Intelligence, Intelligent system, Software Engineering [S4]
+
+Sources:
+  [S1] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S2] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S3] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/electronics-computer-science/program-overview/
+  [S4] Ph.D. Students
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/ph-d-students/
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 41 > page 44
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+[C4 | qwen2.5:7b-instruct-q4_K_M | retrieval 86650ms, generation 99767ms]
+
+{
+  "question": "What research areas or centers does the Computer Engineering department focus on?",
+  "config": "C4",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 186679.3,
+  "retrieval_ms": 86649.7,
+  "generation_ms": 99766.9,
+  "sources": [
+    "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
+    "9cfc3d8c-bd21-4cf7-a45a-eee6410fa702",
+    "697e1f82-48ba-4c24-8660-a44b2ef2700e",
+    "d4430747-0044-4a6e-ac7e-2fca4663be7c",
+    "88304f5a-b3b1-41e6-aa73-77f7e4f763dd"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What research areas or centers does the Computer Engineering department focus on?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
+        "score": 0.801518,
+        "document_id": "pce-academics-bachelors-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9cfc3d8c-bd21-4cf7-a45a-eee6410fa702",
+        "score": 0.799733,
+        "document_id": "pce-academics-masters-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "697e1f82-48ba-4c24-8660-a44b2ef2700e",
+        "score": 0.764115,
+        "document_id": "pce-academics-bachelors-electronics-computer-science-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "46b3b785-3587-44ae-812f-ce6312435ee0",
+        "score": 0.75289,
+        "document_id": "pce-academics-ph-d-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "79a994b4-eb5e-490c-8c7c-89e39b8dc4b6",
+        "score": 0.748632,
+        "document_id": "pce-academics-masters-electronics-computer-science-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d4430747-0044-4a6e-ac7e-2fca4663be7c",
+        "score": 0.732616,
+        "document_id": "pce-academics-ph-d-computer-engineering-ph-d-students",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "37fba1a6-0a26-4250-827a-471717deae68",
+        "score": 0.717905,
+        "document_id": "pce-academics-masters-information-technology-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e22bca21-57e6-48ae-8c33-76c672bb28fb",
+        "score": 0.717477,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5fa01d8d-36d4-4193-9ab9-f2dcf02e96cb",
+        "score": 0.71312,
+        "document_id": "pce-research-research-areas",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d1b230ad-8a21-43c8-930f-00bea0a1bcc1",
+        "score": 0.702832,
+        "document_id": "pce-academics-masters-mechanical-engineering-cad-cam-and-robotics-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fea63bdd-d33f-4e7e-85a9-cccfe13af946",
+        "score": 0.702138,
+        "document_id": "pce-academics-ph-d-information-technology-ph-d-students",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "88304f5a-b3b1-41e6-aa73-77f7e4f763dd",
+        "score": 0.701327,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2f6b080a-b4d7-4a46-8007-843521750385",
+        "score": 0.696212,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8c6cf3ab-c144-4948-8301-f7213cee8beb",
+        "score": 0.694068,
+        "document_id": "pce-academics-bachelors-mechanical-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "551c8ead-dbca-4a76-878b-6795435c9888",
+        "score": 0.6938,
+        "document_id": "pce-faculty-faculty-directory-prerana-s-kulkarni",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "545ddb4e-e4f6-486d-9061-e1adc7766391",
+        "score": 0.683286,
+        "document_id": "pce-academics-masters-mechanical-engineering-thermal-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e919e864-3c9c-4316-88dc-880ade471f21",
+        "score": 0.679722,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "994a2ece-cc39-4354-9f5b-ba10e0a23752",
+        "score": 0.678803,
+        "document_id": "pce-faculty-faculty-directory-k-suresh-babu",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9603f109-e12d-4213-b2c7-4d499ddf7ffb",
+        "score": 0.675857,
+        "document_id": "pce-faculty-faculty-directory-kirti-rana",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4326631b-1f20-4570-b819-13ada128c6d3",
+        "score": 0.675321,
+        "document_id": "pce-faculty-faculty-directory-bhagyashri-patil",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "471729c4-a773-47a3-a784-1c95a0b09679",
+        "score": 15.924401,
+        "document_id": "pce-iqac-institutional-values-and-best-practices",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4238b8d5-7b0f-41d0-8b12-40cad3bef9f7",
+        "score": 15.924401,
+        "document_id": "pce-iqac-institutional-values-and-best-practices",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3e9f40f6-96ad-4de7-8d3f-38c267f5be7c",
+        "score": 15.811052,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "5d412b74-f61a-4307-863d-33c75f063642",
+        "score": 15.811052,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "2837387d-09c5-48c3-a3e0-e0a5829d314b",
+        "score": 15.760165,
+        "document_id": "pce-academics-ph-d-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "46b3b785-3587-44ae-812f-ce6312435ee0",
+        "score": 15.760165,
+        "document_id": "pce-academics-ph-d-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "34f456fb-1a76-4076-bc75-243cb45a9269",
+        "score": 14.567548,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7af1f49a-702a-4bb4-bab1-6dbc28fc28ed",
+        "score": 14.567548,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0ced08c5-9088-4222-b178-81f41d773663",
+        "score": 14.416601,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "333d80c7-cc80-4d78-a9d0-a9db573c79db",
+        "score": 14.416601,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2c474e62-7dae-4c86-af78-7f8759f26331",
+        "score": 14.375676,
+        "document_id": "DEMO/WIKI/ACAD/037",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "303f8f62-d081-44d9-ab6e-d827c65b10b1",
+        "score": 14.375676,
+        "document_id": "DEMO/WIKI/ACAD/037",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "081fe85b-cebf-4ed6-83b5-5e1723fba317",
+        "score": 14.313262,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "88304f5a-b3b1-41e6-aa73-77f7e4f763dd",
+        "score": 14.313262,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "eddb52a2-a469-4b97-a597-34e7826a32b2",
+        "score": 13.747475,
+        "document_id": "pce-seminar-on-intellectual-property-rights",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "94476310-8f22-493c-87cf-87555b18ba10",
+        "score": 13.747475,
+        "document_id": "pce-seminar-on-intellectual-property-rights",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3826c224-1609-448b-bd5e-58f8c8347105",
+        "score": 13.735563,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "be92aede-211b-47f5-8624-9265b44250ae",
+        "score": 13.735563,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "3055c2ef-86b7-496a-a2ad-c8696a455c76",
+        "score": 13.543677,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e22bca21-57e6-48ae-8c33-76c672bb28fb",
+        "score": 13.543677,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "46b3b785-3587-44ae-812f-ce6312435ee0",
+        "score": 0.030777,
+        "document_id": "pce-academics-ph-d-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "88304f5a-b3b1-41e6-aa73-77f7e4f763dd",
+        "score": 0.027402,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e22bca21-57e6-48ae-8c33-76c672bb28fb",
+        "score": 0.027206,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
+        "score": 0.016393,
+        "document_id": "pce-academics-bachelors-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "471729c4-a773-47a3-a784-1c95a0b09679",
+        "score": 0.016393,
+        "document_id": "pce-iqac-institutional-values-and-best-practices",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9cfc3d8c-bd21-4cf7-a45a-eee6410fa702",
+        "score": 0.016129,
+        "document_id": "pce-academics-masters-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4238b8d5-7b0f-41d0-8b12-40cad3bef9f7",
+        "score": 0.016129,
+        "document_id": "pce-iqac-institutional-values-and-best-practices",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "697e1f82-48ba-4c24-8660-a44b2ef2700e",
+        "score": 0.015873,
+        "document_id": "pce-academics-bachelors-electronics-computer-science-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3e9f40f6-96ad-4de7-8d3f-38c267f5be7c",
+        "score": 0.015873,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "5d412b74-f61a-4307-863d-33c75f063642",
+        "score": 0.015625,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "79a994b4-eb5e-490c-8c7c-89e39b8dc4b6",
+        "score": 0.015385,
+        "document_id": "pce-academics-masters-electronics-computer-science-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2837387d-09c5-48c3-a3e0-e0a5829d314b",
+        "score": 0.015385,
+        "document_id": "pce-academics-ph-d-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d4430747-0044-4a6e-ac7e-2fca4663be7c",
+        "score": 0.015152,
+        "document_id": "pce-academics-ph-d-computer-engineering-ph-d-students",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "37fba1a6-0a26-4250-827a-471717deae68",
+        "score": 0.014925,
+        "document_id": "pce-academics-masters-information-technology-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "34f456fb-1a76-4076-bc75-243cb45a9269",
+        "score": 0.014925,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7af1f49a-702a-4bb4-bab1-6dbc28fc28ed",
+        "score": 0.014706,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5fa01d8d-36d4-4193-9ab9-f2dcf02e96cb",
+        "score": 0.014493,
+        "document_id": "pce-research-research-areas",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0ced08c5-9088-4222-b178-81f41d773663",
+        "score": 0.014493,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d1b230ad-8a21-43c8-930f-00bea0a1bcc1",
+        "score": 0.014286,
+        "document_id": "pce-academics-masters-mechanical-engineering-cad-cam-and-robotics-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "333d80c7-cc80-4d78-a9d0-a9db573c79db",
+        "score": 0.014286,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
+        "score": 6.995489,
+        "document_id": "pce-academics-bachelors-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9cfc3d8c-bd21-4cf7-a45a-eee6410fa702",
+        "score": 6.808381,
+        "document_id": "pce-academics-masters-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "697e1f82-48ba-4c24-8660-a44b2ef2700e",
+        "score": 5.614264,
+        "document_id": "pce-academics-bachelors-electronics-computer-science-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d4430747-0044-4a6e-ac7e-2fca4663be7c",
+        "score": 5.364824,
+        "document_id": "pce-academics-ph-d-computer-engineering-ph-d-students",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "88304f5a-b3b1-41e6-aa73-77f7e4f763dd",
+        "score": 3.972181,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 7524.78,
+      "dense_search_1": 27.85,
+      "sparse_search_1": 396.52,
+      "fuse_1": 0.04,
+      "decide_1": 60327.02,
+      "rerank": 18373.5
+    },
+    "iteration_count": 1,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "What research areas or centers does the Computer Engineering department focus on?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "READY",
+        "decision_raw": "READY",
+        "latencies_ms": {
+          "embed_query": 7524.8,
+          "dense_search": 27.9,
+          "sparse_search": 396.5,
+          "fuse": 0.0,
+          "decide": 60327.0
+        }
+      }
+    ],
+    "stop_reason": "model_says_ready"
+  }
+}

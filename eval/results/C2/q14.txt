@@ -1,0 +1,23 @@
+The attendance policy for students requires a minimum of 75% attendance for both theory and practical courses on weekdays [S12]. This policy is in line with the definitions mentioned in the approval process handbook (2023-24) of AICTE and the admission brochure of the Directorate of Technical Education (DTE), Government of Maharashtra [S12].
+
+Sources:
+  [S1] SOP: Attendance Shortage, Warning and Detention > 1. Thresholds [DEMO DATA]
+  [S2] Timetable: Computer Engineering Semester VII Division A (Illustrative) > Attendance [DEMO DATA]
+  [S3] SOP: Industrial Visit and Field Trip Organisation > 8. Reporting [DEMO DATA]
+  [S4] SOP: Response to a Medical Emergency on Campus > 6. Follow-up [DEMO DATA]
+  [S5] Internal Wiki: How Semester Registration Works Behind the Portal > Reconciliation [DEMO DATA]
+  [S6] SOP: Attendance Shortage, Warning and Detention > 2. Computation [DEMO DATA]
+  [S7] Circular: Anti-Ragging Awareness and Reporting Channels > Circular DEMO/ADMIN/2026/05 [DEMO DATA]
+  [S8] SOP: Guest Lecture and Expert Session Approval > 6. After the session [DEMO DATA]
+  [S9] SOP: Industrial Visit and Field Trip Organisation > 7. During the visit [DEMO DATA]
+  [S10] SOP: Attendance Shortage, Warning and Detention > 4. Condonation [DEMO DATA]
+  [S11] Circular: Anti-Ragging Awareness and Reporting Channels > Undertakings [DEMO DATA]
+  [S12] Wp Content  Uploads  2023  06  Nri Pio 2023.Pdf > E-Mail Id : pceadmissions@mes.ac.in / pragneshshah@mes.ac.in > page 2
+        https://www.pce.ac.in/wp-content/uploads/2023/06/NRI-PIO-2023.pdf
+  [S13] Circular: Semester Registration Window and Late Fee > Circular DEMO/ACAD/2026/11 [DEMO DATA]
+
+  NOTE: one or more sources are synthetic DEMO DATA and do not describe real institutional fact.
+
+  7 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 7704ms, generation 170901ms]

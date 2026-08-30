@@ -1,0 +1,15 @@
+Yes, hostel accommodation is available for students at the college [S1, S2, S3, S4, S5]. The facilities are designed to provide a comfortable and convenient living environment for both boys and girls [S1, S2, S5]. Girls' and boys' hostels are separately available with various room options including single occupancy (with AC), double occupancy, and triple occupancy [S1, S2, S5].
+
+Sources:
+  [S1] Hostel Details
+        https://www.pce.ac.in/academics/admissions/hostel-details/
+  [S2] Hostel Details
+        https://www.pce.ac.in/academics/admissions/hostel-details/
+  [S3] Hostel Facility
+        https://www.pce.ac.in/about/infrastructure-and-facilities/hostel-facility/
+  [S4] Hostel Facility
+        https://www.pce.ac.in/about/infrastructure-and-facilities/hostel-facility/
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 13 > page 16
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 11088ms, generation 123280ms]

@@ -1,0 +1,11 @@
+The context provided does not contain any information about the current or future weather forecast for Mumbai. The text discusses Pillai College of Engineering's involvement with the SAFAR project, which provides air quality and weather forecasting information for metropolitan cities of India, but it does not specify the weather forecast for Mumbai this week. For current weather conditions or forecasts, you might want to check a reliable weather forecasting service or website. [S1] [S2]
+
+Sources:
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 17 > page 20
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 17 > page 20
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+  3 retrieved chunk(s) omitted for context budget.
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 11550ms, generation 110459ms]

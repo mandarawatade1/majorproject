@@ -1,0 +1,21 @@
+The context provided does not explicitly list the names of the faculty members in the Computer Engineering department. However, it does provide information about the research areas and a faculty member's contact details.
+
+- The faculty in the Computer Engineering department are involved in research areas such as Computer Networks, Data Mining, Image Processing, Cyber Security & Digital Forensics, Natural Language Processing, Ubiquitous Computing, Machine Learning and Data Science [S1].
+- The faculty in the Computer Engineering department are also involved in research areas such as Computer Networks, Data Mining, Image Processing, Cyber Security, Natural Language Processing, Ubiquitous Computing, Machine Learning, Internet of Things, Big Data Analytics, and Geographic Information Systems [S2].
+- Dr. Mimi Cherian is an Assistant Professor in the Department of Computer Engineering and is a co-coordinator for an FDP on "XAI for Social Good: Application in Healthcare, Finance and Education" [S5].
+
+For a complete list of faculty members, you might want to look at the official website or contact the department directly [S4].
+
+Sources:
+  [S1] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S2] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S3] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/electronics-computer-science/program-overview/
+  [S4] Sheetal Gawande
+        https://www.pce.ac.in/faculty/faculty-directory/sheetal-gawande/
+  [S5] FDP on “XAI for Social Good: Application in Healthcare, Finance and Education” > Co-Coordinator
+        https://www.pce.ac.in/fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education/
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 10784ms, generation 58458ms]

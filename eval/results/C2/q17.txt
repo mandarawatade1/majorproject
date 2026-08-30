@@ -1,0 +1,17 @@
+The context provided does not contain specific weather forecast information for Mumbai this week. The information given is about the SAFAR project, which provides air quality and weather forecasting services, but it does not include current or upcoming weather forecasts for Mumbai. For current weather conditions and forecasts, you might want to check a reliable weather forecasting service or website [S1].
+
+Sources:
+  [S1] Research Facilities > Automatic Weather Station
+        https://www.pce.ac.in/research/research-facilities/
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 17 > page 20
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S3] Sitemap
+        https://www.pce.ac.in/sitemap/
+  [S4] Netmagic Solutions Interview Schedule and Shortlisted Candidates List
+        https://www.pce.ac.in/netmagic-solutions-interview-schedule-and-shortlisted-candidates-list/
+  [S5] Wp Content  Uploads  2021  06  Term Calendar Jan Jun 2021.Pdf > IV, VI, VIII > page 1
+        https://www.pce.ac.in/wp-content/uploads/2021/06/Term-Calendar-Jan-Jun-2021.pdf
+
+  15 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 6890ms, generation 164359ms]

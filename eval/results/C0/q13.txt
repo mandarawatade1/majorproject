@@ -1,0 +1,23 @@
+According to the provided context, the following undergraduate (UG) programmes at Pillai College of Engineering are NBA accredited:
+
+1. Automobile Engineering
+2. Electronics and Telecommunication Engineering
+3. Computer Engineering (re-accredited in 2015 and 2018)
+4. Information Technology (re-accredited in 2015 and 2018)
+5. Mechanical Engineering (re-accredited for 3 years until 30th June, 2025)
+
+These programmes have received accreditation from the National Board of Accreditation (NBA) and are re-accredited for a period extending up to 2025.
+
+Sources:
+  [S1] The Institute > Accreditation
+        https://www.pce.ac.in/about/the-institute/
+  [S2] Lalit M. Mehta > Awards and Recognitions
+        https://www.pce.ac.in/faculty/faculty-directory/lalit-m-mehta/
+  [S3] Free Coursera Courses: A Pillai Group Initiative
+        https://www.pce.ac.in/free-coursera-courses-a-pillai-group-initiative/
+  [S4] Mechanical Engineering
+        https://www.pce.ac.in/nba-dcs/mechanical-engineering/
+  [S5] Electronics & Telecommunication Engineering
+        https://www.pce.ac.in/nba-dcs/electronics-telecommunication-engineering/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6481ms, generation 105994ms]

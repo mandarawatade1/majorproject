@@ -1,0 +1,35 @@
+The faculty members in the Computer Engineering department include:
+
+- Prof. Wp Content  Uploads  2020  08 Naac Approved National Webinar On Assessment And Accreditation Process Of Naac.Pdf [S7] (Dr. Richa Agrawal) with the contact details: Mobile: +91-9619208203, Email: ragrawal@mes.ac.in.
+- Prof. Wp Content  Uploads 2020 08 Naac Approved National Webinar On Assessment And Accreditation Process Of Naac.Pdf [S7] (Prof. Rupali Nikhare) with the contact details: Mobile: +91-9769488878, Email: rnikhare@mes.ac.in.
+- Sheetal Gawande [S6] with the contact details: Email: sheetalp@mes.ac.in.
+
+Sources:
+  [S1] Information Technology
+        https://www.pce.ac.in/bachelors/information-technology/
+  [S2] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S3] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S4] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/mechanical-engineering-cad-cam-and-robotics/program-overview/
+  [S5] Program Overview > Ph.D. in Mechanical Engineering
+        https://www.pce.ac.in/academics/ph-d/mechanical-engineering/program-overview/
+  [S6] Sheetal Gawande
+        https://www.pce.ac.in/faculty/faculty-directory/sheetal-gawande/
+  [S7] Wp Content  Uploads  2020  08  Naac Approved National Webinar On Assessment And Accreditation Process Of Naac.Pdf > Program Coordinators > page 1
+        https://www.pce.ac.in/wp-content/uploads/2020/08/NAAC-Approved-National-Webinar-on-Assessment-and-Accreditation-Process-of-NAAC.pdf
+  [S8] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/electronics-computer-science/program-overview/
+  [S9] Faculty Directory
+        https://www.pce.ac.in/faculty/faculty-directory/
+  [S10] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/electronics-computer-science/program-overview/
+  [S11] Program Overview > Ph.D. in Electronics Engineering
+        https://www.pce.ac.in/academics/ph-d/electronics-engineering/program-overview/
+  [S12] FDP on “XAI for Social Good: Application in Healthcare, Finance and Education” > Co-Coordinator
+        https://www.pce.ac.in/fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education/
+
+  8 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 6670ms, generation 154832ms]

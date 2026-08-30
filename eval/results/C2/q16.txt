@@ -1,0 +1,13 @@
+The undergraduate Computer Engineering program at Pillai College of Engineering, New Panvel, lasts for 4 years [S3], while the postgraduate (Masters) Computer Engineering program is 2 years in duration [S3]. There is no specific information provided about the eligibility criteria for these programs in the given context [S3]. For detailed eligibility criteria, one might need to refer to the college's official website or admission guidelines [S3].
+
+Sources:
+  [S1] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+  [S2] Placements > 2021 Batch Placement
+        https://www.pce.ac.in/placements/
+  [S3] Academics
+        https://www.pce.ac.in/academics-department/
+
+  17 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 7062ms, generation 158290ms]

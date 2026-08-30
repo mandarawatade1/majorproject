@@ -1,0 +1,17 @@
+The context provided does not explicitly list the faculty members in the Computer Engineering department. However, it does provide information about the research areas and a specific faculty member, Sheetal Gawande, who is part of the Computer Engineering Department. 
+
+For a complete list of faculty members, you might want to look at the official faculty directory or website of Pillai College of Engineering, New Panvel. [S3] [S5]
+
+Sources:
+  [S1] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S2] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S3] Sheetal Gawande
+        https://www.pce.ac.in/faculty/faculty-directory/sheetal-gawande/
+  [S4] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/electronics-computer-science/program-overview/
+  [S5] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/electronics-computer-science/program-overview/
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6515ms, generation 46022ms]

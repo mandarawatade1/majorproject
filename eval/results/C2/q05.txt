@@ -1,0 +1,13 @@
+Pillai College of Engineering accepts entrance exams such as MHT CET [S3] and JEE Main [S3] for admission to computer engineering programs.
+
+Sources:
+  [S1] PERKS of PILLAI
+        https://www.pce.ac.in/perks-of-pillai/
+  [S2] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+  [S3] Formula Student Combustion Event
+        https://www.pce.ac.in/bws-gallery/formula-student-combustion-event/
+
+  17 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 6920ms, generation 110467ms]

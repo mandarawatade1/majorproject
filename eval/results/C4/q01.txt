@@ -1,0 +1,795 @@
+The intake for Computer Engineering at Pillai College of Engineering is not specified in the provided context [S3, S4]. However, the context indicates that the Computer Engineering program is one of the four programs accredited by the National Board of Accreditation (NBA) [S3, S4].
+
+Sources:
+  [S1] The Institute > Accreditation
+        https://www.pce.ac.in/about/the-institute/
+  [S2] The Institute > Accreditation
+        https://www.pce.ac.in/about/the-institute/
+  [S3] The Institute
+        https://www.pce.ac.in/about/the-institute/
+  [S4] The Institute
+        https://www.pce.ac.in/about/the-institute/
+
+  1 retrieved chunk(s) omitted for context budget.
+
+[C4 | qwen2.5:7b-instruct-q4_K_M | retrieval 20481ms, generation 16553ms]
+
+{
+  "question": "What is the intake for Computer Engineering and is the programme NBA accredited?",
+  "config": "C4",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 37276.4,
+  "retrieval_ms": 20480.8,
+  "generation_ms": 16552.8,
+  "sources": [
+    "ff41e0dc-4535-41fe-b1e9-3015cc17829d",
+    "927c64c7-5b22-4d41-a2ed-0243184262b6",
+    "d77cf167-8fd2-4d47-a2f6-764b04237b8d",
+    "99c5e8e7-0ea7-4c76-abfc-a203d2aa986a"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What is the intake for Computer Engineering and is the programme NBA accredited?",
+    "rewritten_queries": [
+      "What is the intake for Computer Engineering at Pillai College of Engineering?"
+    ],
+    "dense_hits": [
+      {
+        "chunk_id": "2f6b080a-b4d7-4a46-8007-843521750385",
+        "score": 0.682465,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3334404d-a3af-421e-ba14-16a35e0a0431",
+        "score": 0.677045,
+        "document_id": "pce-students-student-activities-student-associations",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ad26f01-1a1d-46af-b9c1-b4c9f97c168a",
+        "score": 0.671835,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2539bac3-4139-476b-8671-337c92265ebc",
+        "score": 0.670001,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "01cec3ad-af97-45f5-b4a1-763175df3545",
+        "score": 0.668225,
+        "document_id": "pce-pdf-1-courses-intake",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7af1f49a-702a-4bb4-bab1-6dbc28fc28ed",
+        "score": 0.666734,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "903fcbde-7791-481c-806c-7695c87f2b49",
+        "score": 0.666352,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cf8088fd-bbdc-44c2-9551-47f02957c320",
+        "score": 0.664329,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
+        "score": 0.662451,
+        "document_id": "pce-bachelors-computer-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a4dd177d-080a-46a7-8623-05ee7a9763b2",
+        "score": 0.659403,
+        "document_id": "pce-placements-placement-mous",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cb8db4f0-57b1-4d45-96e8-bbb834f63385",
+        "score": 0.654616,
+        "document_id": "pce-students-student-activities-student-associations-csi",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a91ce84e-d4b3-4077-89ba-47a485cdeca6",
+        "score": 0.654407,
+        "document_id": "pce-faculty-faculty-directory-ishmeet-riar",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c6acc083-ad08-4f4e-9fcb-48db19dc60af",
+        "score": 0.653956,
+        "document_id": "pce-pdf-1-courses-intake",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8106aca0-2559-4bc7-9785-212b347f2353",
+        "score": 0.651542,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "419a1236-402b-4926-85e8-7b1a61292ba1",
+        "score": 0.650012,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "39f2d8f6-b7b7-4c76-a519-8dc4c7057e0e",
+        "score": 0.648484,
+        "document_id": "pce-iqac-institutional-values-and-best-practices",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d16d214e-c341-46bc-9c0e-abd43a70de9a",
+        "score": 0.648037,
+        "document_id": "pce-bachelors-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "867d7f2c-2cb6-4ca3-a303-d1fd051373b3",
+        "score": 0.647483,
+        "document_id": "pce-exploring-electronic-computer-science-a-comprehensive-guide",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7fa04d7b-0e16-4e82-aa52-c5260dc127ef",
+        "score": 0.647241,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3f8f429f-7e29-4d51-843d-5744eda6b41a",
+        "score": 0.64694,
+        "document_id": "pce-about-infrastructure-and-facilities-sports-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6939b636-e348-4cc4-8e11-657af62fac43",
+        "score": 0.786664,
+        "document_id": "pce-understanding-information-technology-a-beginners-guide-to-the-it-world",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c931f0f9-74f4-4b2f-bdb1-db9e9c5c93b5",
+        "score": 0.778212,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 0.777406,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
+        "score": 0.777355,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "98ec8d4e-da30-4eb0-8a5d-e6311c40f34f",
+        "score": 0.774109,
+        "document_id": "pce-faculty-faculty-directory-suhas-j-lawand",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "278a2ba5-8e95-48f6-888e-518bbb18f717",
+        "score": 0.767421,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
+        "score": 0.764041,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e7075761-b886-4a73-ab17-812350570fab",
+        "score": 0.760962,
+        "document_id": "pce-about-careers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9a9eb11c-189e-472c-aa87-34c52d929203",
+        "score": 0.760962,
+        "document_id": "pce-about-mandatory-disclosure-pce-handbook",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "429604c2-ec2e-4919-99cc-455c6bd3ebd9",
+        "score": 0.760962,
+        "document_id": "pce-academics-mock-cet-apply-online",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "04e8b51d-72ea-4578-8b66-0c30c7ffaa39",
+        "score": 0.760962,
+        "document_id": "pce-accreditation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7da17c0a-9c9e-4e08-a96a-89d6372d4c65",
+        "score": 0.760962,
+        "document_id": "pce-accreditation-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "64f1058d-97d7-463e-9812-c15a020ff33c",
+        "score": 0.760962,
+        "document_id": "pce-bachelors-applied-science-and-mathematics",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "85b574df-a6ad-41ea-a861-5683e2026a99",
+        "score": 0.760962,
+        "document_id": "pce-library-digital-library-e-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7cc5c3cd-22a7-4790-a986-0c4872d69394",
+        "score": 0.760962,
+        "document_id": "pce-library",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9c378e7d-7a9b-48fe-915c-20c61136f5c6",
+        "score": 0.760962,
+        "document_id": "pce-nba-dcs-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ebb3f787-d9b8-49f2-bfd4-d3161da792dd",
+        "score": 0.760962,
+        "document_id": "pce-students-announcements-exams-time-table-oral-practical",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bfcc8cdc-b82d-4ac8-bad8-40e87d8d68ab",
+        "score": 0.760962,
+        "document_id": "pce-students-get-career-ready-agnipath-yojana",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "b1524fa6-6628-4056-86c5-3a680b166e8a",
+        "score": 24.24066,
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2d866af2-ad8e-4562-81c2-c77293528eef",
+        "score": 24.24066,
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ff41e0dc-4535-41fe-b1e9-3015cc17829d",
+        "score": 23.678887,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "927c64c7-5b22-4d41-a2ed-0243184262b6",
+        "score": 23.678887,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fbbf241b-b01f-45ec-90d3-fa62592e6cd1",
+        "score": 23.345704,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c931f0f9-74f4-4b2f-bdb1-db9e9c5c93b5",
+        "score": 23.345704,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3945a8a0-52f3-466f-b1cc-b0260fd9ec1c",
+        "score": 21.860232,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6b8582e6-b4b2-425d-9598-3b51a42b69df",
+        "score": 21.860232,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d77cf167-8fd2-4d47-a2f6-764b04237b8d",
+        "score": 21.196001,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "99c5e8e7-0ea7-4c76-abfc-a203d2aa986a",
+        "score": 21.196001,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5e52e57d-7319-4127-adb3-4b260634e900",
+        "score": 21.179972,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "76efce62-25ae-408d-9e65-3a8fdc56f934",
+        "score": 21.179972,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3c0dad78-917b-452b-baed-d830f18beabd",
+        "score": 21.118295,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d9c93a98-7568-40c0-aadf-b2c1c0b8d7a3",
+        "score": 21.118295,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "512c0ba3-958a-4f3e-ac9a-b3d4e8edf6d4",
+        "score": 20.834345,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0b1c51c7-c186-435b-a881-6f0f365bd354",
+        "score": 20.834345,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7924b562-f6fb-43b1-ba98-bd6b27a4ce7e",
+        "score": 19.21693,
+        "document_id": "pce-iqac-iqac-roles-and-responsibilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "269b37d6-1692-4dc7-99fe-908df3d18b83",
+        "score": 19.21693,
+        "document_id": "pce-iqac-iqac-roles-and-responsibilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2d51ab1b-9fc7-41fb-9dcf-9d1a53a350df",
+        "score": 19.081777,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0871e0e2-c2f0-4810-be2f-69d07ef28eba",
+        "score": 19.081777,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "76b1263f-9542-4e12-a63b-c9002579c6f2",
+        "score": 23.30098,
+        "document_id": "pce-bachelors-electronics-and-computer-science",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1eca9d8d-37ae-4b87-94d4-e38c78763ab3",
+        "score": 23.30098,
+        "document_id": "pce-bachelors-electronics-and-computer-science",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9f9f580d-f9be-4791-b2f6-4e6fb0f88996",
+        "score": 21.151548,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
+        "score": 21.151548,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fa235afa-c5cf-41a6-b6a3-4a60d0e2ff06",
+        "score": 20.883994,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7fa04d7b-0e16-4e82-aa52-c5260dc127ef",
+        "score": 20.883994,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6cdbaca-6a03-4f9d-ba28-bff2226267b7",
+        "score": 20.687554,
+        "document_id": "pce-bachelors-computer-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
+        "score": 20.687554,
+        "document_id": "pce-bachelors-computer-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "88c5b1c6-74cc-4527-a4a0-e3cdc6b7d8b9",
+        "score": 20.068057,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c4a0bd9c-8db9-4320-a2db-45389d2ac3b5",
+        "score": 20.068057,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2fb05408-50a6-4da8-b3a2-692547ac40fb",
+        "score": 20.036226,
+        "document_id": "pce-bachelors-electronics-and-telecommunication",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3a39860e-e6d4-4720-90ea-81e72fa4b0a2",
+        "score": 20.036226,
+        "document_id": "pce-bachelors-electronics-and-telecommunication",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1d5c7e3f-791f-4497-b6f1-5d30c2da2f34",
+        "score": 19.533081,
+        "document_id": "pce-bachelors-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0fad5f93-9eef-4e65-9d7a-6b68019bd854",
+        "score": 19.533081,
+        "document_id": "pce-bachelors-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "06b49498-20bd-42a1-8d94-6b3e87cdfdbd",
+        "score": 19.215579,
+        "document_id": "pce-coder-of-the-semester-final-round",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8dcc7f9-04ce-4994-acaa-9caa240e072a",
+        "score": 19.215579,
+        "document_id": "pce-coder-of-the-semester-final-round",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1bba814a-1637-4a79-8510-0edb58e396ec",
+        "score": 18.454601,
+        "document_id": "pce-15-things-you-cant-miss-at-pillais",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7aa8b33c-10b0-4297-a4e8-08fb4622398b",
+        "score": 18.454601,
+        "document_id": "pce-15-things-you-cant-miss-at-pillais",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "2f6b080a-b4d7-4a46-8007-843521750385",
+        "score": 0.016393,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b1524fa6-6628-4056-86c5-3a680b166e8a",
+        "score": 0.016393,
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3334404d-a3af-421e-ba14-16a35e0a0431",
+        "score": 0.016129,
+        "document_id": "pce-students-student-activities-student-associations",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2d866af2-ad8e-4562-81c2-c77293528eef",
+        "score": 0.016129,
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ad26f01-1a1d-46af-b9c1-b4c9f97c168a",
+        "score": 0.015873,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ff41e0dc-4535-41fe-b1e9-3015cc17829d",
+        "score": 0.015873,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2539bac3-4139-476b-8671-337c92265ebc",
+        "score": 0.015625,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "927c64c7-5b22-4d41-a2ed-0243184262b6",
+        "score": 0.015625,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "01cec3ad-af97-45f5-b4a1-763175df3545",
+        "score": 0.015385,
+        "document_id": "pce-pdf-1-courses-intake",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fbbf241b-b01f-45ec-90d3-fa62592e6cd1",
+        "score": 0.015385,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7af1f49a-702a-4bb4-bab1-6dbc28fc28ed",
+        "score": 0.015152,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c931f0f9-74f4-4b2f-bdb1-db9e9c5c93b5",
+        "score": 0.015152,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "903fcbde-7791-481c-806c-7695c87f2b49",
+        "score": 0.014925,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3945a8a0-52f3-466f-b1cc-b0260fd9ec1c",
+        "score": 0.014925,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cf8088fd-bbdc-44c2-9551-47f02957c320",
+        "score": 0.014706,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6b8582e6-b4b2-425d-9598-3b51a42b69df",
+        "score": 0.014706,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ecdb89f4-187e-475b-b78f-43aa6a161ec8",
+        "score": 0.014493,
+        "document_id": "pce-bachelors-computer-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d77cf167-8fd2-4d47-a2f6-764b04237b8d",
+        "score": 0.014493,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a4dd177d-080a-46a7-8623-05ee7a9763b2",
+        "score": 0.014286,
+        "document_id": "pce-placements-placement-mous",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "99c5e8e7-0ea7-4c76-abfc-a203d2aa986a",
+        "score": 0.014286,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
+        "score": 0.03101,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "76b1263f-9542-4e12-a63b-c9002579c6f2",
+        "score": 0.016393,
+        "document_id": "pce-bachelors-electronics-and-computer-science",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6939b636-e348-4cc4-8e11-657af62fac43",
+        "score": 0.016129,
+        "document_id": "pce-understanding-information-technology-a-beginners-guide-to-the-it-world",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1eca9d8d-37ae-4b87-94d4-e38c78763ab3",
+        "score": 0.016129,
+        "document_id": "pce-bachelors-electronics-and-computer-science",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9f9f580d-f9be-4791-b2f6-4e6fb0f88996",
+        "score": 0.015873,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 0.015625,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fa235afa-c5cf-41a6-b6a3-4a60d0e2ff06",
+        "score": 0.015385,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "98ec8d4e-da30-4eb0-8a5d-e6311c40f34f",
+        "score": 0.015152,
+        "document_id": "pce-faculty-faculty-directory-suhas-j-lawand",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7fa04d7b-0e16-4e82-aa52-c5260dc127ef",
+        "score": 0.015152,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6cdbaca-6a03-4f9d-ba28-bff2226267b7",
+        "score": 0.014925,
+        "document_id": "pce-bachelors-computer-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "278a2ba5-8e95-48f6-888e-518bbb18f717",
+        "score": 0.014706,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
+        "score": 0.014493,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e7075761-b886-4a73-ab17-812350570fab",
+        "score": 0.014286,
+        "document_id": "pce-about-careers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9a9eb11c-189e-472c-aa87-34c52d929203",
+        "score": 0.014085,
+        "document_id": "pce-about-mandatory-disclosure-pce-handbook",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "88c5b1c6-74cc-4527-a4a0-e3cdc6b7d8b9",
+        "score": 0.014085,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "429604c2-ec2e-4919-99cc-455c6bd3ebd9",
+        "score": 0.013889,
+        "document_id": "pce-academics-mock-cet-apply-online",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "ff41e0dc-4535-41fe-b1e9-3015cc17829d",
+        "score": 2.156298,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "927c64c7-5b22-4d41-a2ed-0243184262b6",
+        "score": 2.156298,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d77cf167-8fd2-4d47-a2f6-764b04237b8d",
+        "score": 0.136624,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "99c5e8e7-0ea7-4c76-abfc-a203d2aa986a",
+        "score": 0.136624,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fbbf241b-b01f-45ec-90d3-fa62592e6cd1",
+        "score": -0.245776,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 6972.29,
+      "dense_search_1": 14.73,
+      "sparse_search_1": 383.31,
+      "fuse_1": 0.07,
+      "decide_1": 3943.51,
+      "embed_query_2": 29.47,
+      "dense_search_2": 9.73,
+      "sparse_search_2": 16.2,
+      "fuse_2": 0.03,
+      "decide_2": 2672.77,
+      "rerank": 6438.71
+    },
+    "iteration_count": 2,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "What is the intake for Computer Engineering and is the programme NBA accredited?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "SEARCH: What is the intake for Computer Engineering at Pillai College of Engineering?",
+        "decision_raw": "SEARCH: What is the intake for Computer Engineering at Pillai College of Engineering?",
+        "latencies_ms": {
+          "embed_query": 6972.3,
+          "dense_search": 14.7,
+          "sparse_search": 383.3,
+          "fuse": 0.1,
+          "decide": 3943.5
+        }
+      },
+      {
+        "iteration": 2,
+        "query": "What is the intake for Computer Engineering at Pillai College of Engineering?",
+        "hits_returned": 20,
+        "new_chunks": 16,
+        "decision": "SEARCH: What is the intake for Computer Engineering at Pillai College of Engineering?",
+        "decision_raw": "SEARCH: What is the intake for Computer Engineering at Pillai College of Engineering?",
+        "latencies_ms": {
+          "embed_query": 29.5,
+          "dense_search": 9.7,
+          "sparse_search": 16.2,
+          "fuse": 0.0,
+          "decide": 2672.8
+        }
+      }
+    ],
+    "stop_reason": "repeated_query"
+  }
+}

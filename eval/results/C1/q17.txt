@@ -1,0 +1,15 @@
+The provided context does not contain any information about the weather forecast for Mumbai this week. The context [S3] discusses the SAFAR system, which provides air quality and weather forecasting, but it does not give specific weather forecasts for the upcoming week. For current and detailed weather forecasts, you might want to check reliable weather forecasting websites or apps. [S3] [DEMO DATA]
+
+Sources:
+  [S1] Netmagic Solutions Interview Schedule and Shortlisted Candidates List
+        https://www.pce.ac.in/netmagic-solutions-interview-schedule-and-shortlisted-candidates-list/
+  [S2] Wp Content  Uploads  2021  06  Term Calendar Jan Jun 2021.Pdf > IV, VI, VIII > page 1
+        https://www.pce.ac.in/wp-content/uploads/2021/06/Term-Calendar-Jan-Jun-2021.pdf
+  [S3] Research Facilities > Automatic Weather Station
+        https://www.pce.ac.in/research/research-facilities/
+  [S4] Sports Report
+        https://www.pce.ac.in/students/sports-and-games/sports-report/
+  [S5] Covid Dashboard
+        https://www.pce.ac.in/covid-dashboard/
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6250ms, generation 82348ms]

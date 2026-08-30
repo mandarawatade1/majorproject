@@ -1,0 +1,772 @@
+The context provided does not contain information about the current Prime Minister of India. The context is focused on the Smart India Hackathon 2017 and does not include details about the current political leadership in India. [S1] [S2]
+
+Sources:
+  [S1] Hackathon
+        https://www.pce.ac.in/students/student-activities/student-awards-and-achievements/hackathon/
+  [S2] Hackathon
+        https://www.pce.ac.in/students/student-activities/student-awards-and-achievements/hackathon/
+  [S3] Wp Content  Uploads  2019  07  Dharmaraj Mech.Pdf > Dharmaraj Solanki > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/07/Dharmaraj-Mech.pdf
+  [S4] Wp Content  Uploads  2019  07  Dharmaraj Mech.Pdf > Dharmaraj Solanki > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/07/Dharmaraj-Mech.pdf
+
+  1 retrieved chunk(s) omitted for context budget.
+
+[C4 | qwen2.5:7b-instruct-q4_K_M | retrieval 152144ms, generation 127162ms]
+
+{
+  "question": "Who is the current Prime Minister of India?",
+  "config": "C4",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 279504.8,
+  "retrieval_ms": 152144.3,
+  "generation_ms": 127162.2,
+  "sources": [
+    "da2a09c7-4874-436f-9537-2dcae3fa9a6c",
+    "38375a3f-6de4-4c3d-bfca-3db4a8f44408",
+    "dfe35886-a23f-4a5f-83e8-bb48b5612def",
+    "367dc34e-4687-4899-907a-66ff5f7e71f9"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "Who is the current Prime Minister of India?",
+    "rewritten_queries": [
+      "current Prime Minister of India",
+      "current Prime Minister of India 2023"
+    ],
+    "dense_hits": [
+      {
+        "chunk_id": "dfe35886-a23f-4a5f-83e8-bb48b5612def",
+        "score": 0.65677,
+        "document_id": "pce-pdf-dharmaraj-mech",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "df6f375f-db3d-490b-a0ed-1c039c6cab2c",
+        "score": 0.646447,
+        "document_id": "pce-netmagic-solutions-interview-schedule-and-shortlisted-candidates-list",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "da2a09c7-4874-436f-9537-2dcae3fa9a6c",
+        "score": 0.632092,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3ba582a8-4710-4b79-ae5d-b9d2279eb760",
+        "score": 0.615476,
+        "document_id": "pce-faculty-faculty-directory-dr-rashed-ali",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ebd2ac2e-746f-41a2-806e-528bdca04be5",
+        "score": 0.613754,
+        "document_id": "pce-students-student-activities-student-associations-society-of-women-engineers-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e0ddc879-0168-4f81-a36f-eafa2c37455c",
+        "score": 0.604194,
+        "document_id": "pce-faculty-faculty-directory-dr-karpagavalli-s",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7c700b75-fe7e-49be-a5f0-131e1f1b9370",
+        "score": 0.602917,
+        "document_id": "pce-india-inter-collegiate-debate-competition",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1c14b926-412e-42e6-aefd-16244a6b2036",
+        "score": 0.602801,
+        "document_id": "pce-research-research-and-consultancy-grants-research-grants",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6ebf4a6-aae0-4a13-b79a-970107c032cf",
+        "score": 0.591314,
+        "document_id": "pce-two-day-marathi-seminar-on-ai-powered-cybercrime-and-its-prevention-under-aicte",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8b53e40a-7d04-4041-9cba-3d2d83a3bb69",
+        "score": 0.587913,
+        "document_id": "pce-seminar-on-ai-powered-cybercrime-and-its-prevention",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "99a06f0d-a18b-4ec5-b0d0-7355bdd02435",
+        "score": 0.587817,
+        "document_id": "pce-students-student-activities-student-events-engineers-day",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5473b18a-b862-4efa-8fb5-ed89f552fd52",
+        "score": 0.5866,
+        "document_id": "pce-pdf-biju-chandran-it",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d1c1bb9a-36c6-422d-8e7d-de3da63558a7",
+        "score": 0.581861,
+        "document_id": "pce-faculty-faculty-events-conferences-national-technology-day",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2eaa2d7f-6fe6-4db9-95cd-c82c2c044d7e",
+        "score": 0.581067,
+        "document_id": "pce-pdf-iic-report-19-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "79ae43b9-74fe-4573-a841-69dd0f2d3e45",
+        "score": 0.580685,
+        "document_id": "pce-pdf-iic-report-20-21-final",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "117cb9c0-6138-4dfd-9693-b3bdecf9e0b2",
+        "score": 0.579742,
+        "document_id": "pce-pdf-anita-gupta-auto",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "38f0595a-31a9-49c0-a810-bd170a96f0cc",
+        "score": 0.578915,
+        "document_id": "pce-pdf-dharmaraj-mech",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e4ebae82-a319-440e-8532-35ed0feca81b",
+        "score": 0.578442,
+        "document_id": "pce-pdf-iic-report-19-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "72b1eee1-8cf0-4422-abed-4c55d6275900",
+        "score": 0.578294,
+        "document_id": "pce-faculty-faculty-directory-dr-p-goyal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "afa5c41e-35aa-439b-9270-d6201c641aba",
+        "score": 0.578242,
+        "document_id": "pce-faculty-faculty-directory-dr-monika-bhagwat",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f0efeedf-5073-4bb5-b1fc-e37b2c8be02c",
+        "score": 0.612926,
+        "document_id": "pce-about-governance",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "99646170-eb0d-425d-bedf-39794bdaf279",
+        "score": 0.608909,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "73abe8b2-98e6-4a8b-bb09-390dd88c4203",
+        "score": 0.606414,
+        "document_id": "pce-faculty-faculty-directory-dr-gajanan-n-thokal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "105bd530-1d52-4065-be97-8d7386695e52",
+        "score": 0.605831,
+        "document_id": "pce-pdf-indemnity-bond-for-return-of-sc-60pc-scholarship",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "df4cf300-5f59-4ff5-b953-5072804051e1",
+        "score": 0.605275,
+        "document_id": "pce-fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "18aa7d74-60e8-4969-9777-e4f230be0486",
+        "score": 0.604333,
+        "document_id": "pce-faculty-faculty-directory-dr-ravi-k-biradar",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e2cf0c97-13ec-4e0e-8238-c2276101efde",
+        "score": 0.650961,
+        "document_id": "pce-research-publications-conference",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "063651b4-4b46-424f-8806-628c717dcb02",
+        "score": 0.648446,
+        "document_id": "pce-research-publications-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6bd66dd-3c80-42b8-a7fa-af70c9055306",
+        "score": 0.648355,
+        "document_id": "pce-faculty-faculty-directory-pooja-b-bhise",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b615e80c-4971-4b97-badc-483b0a0a9553",
+        "score": 0.643122,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ac020b4b-0202-48d0-a379-cfb9636c3ca0",
+        "score": 0.639039,
+        "document_id": "pce-pdf-iic-report-19-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b9b38aed-3b67-4e38-af20-891430bfc0b6",
+        "score": 0.620915,
+        "document_id": "pce-bachelors-computer-engineering-student-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bf8ec3ee-2f23-4159-b16f-dd20a9150c69",
+        "score": 0.618476,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "94831270-337f-458b-b9e6-cc863c964ebf",
+        "score": 0.618423,
+        "document_id": "pce-faculty-faculty-directory-neha-ashok",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d0c6bab1-f6fb-4944-b8c1-6d40735f5fa5",
+        "score": 0.617603,
+        "document_id": "pce-pdf-mahadbt-notice-2025-26",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "eac5f0e4-123d-44e5-b73f-df75bec1a42c",
+        "score": 0.617539,
+        "document_id": "pce-pdf-term-calendar-odd-sem-2021",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "86d9115b-233a-4d66-aa2f-e048e0abb6b8",
+        "score": 0.617328,
+        "document_id": "pce-faculty-faculty-directory-pranita-g-thakur",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c7d14025-bf1c-42d0-b461-4c2095a38d40",
+        "score": 0.616573,
+        "document_id": "pce-faculty-faculty-directory-dr-moutusi-de",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e865a869-dba9-4cb5-9d4e-170d92589951",
+        "score": 0.614749,
+        "document_id": "pce-pdf-term-calendar-jan-jun-2021",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "38375a3f-6de4-4c3d-bfca-3db4a8f44408",
+        "score": 17.727645,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "da2a09c7-4874-436f-9537-2dcae3fa9a6c",
+        "score": 17.727645,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "367dc34e-4687-4899-907a-66ff5f7e71f9",
+        "score": 17.364231,
+        "document_id": "pce-pdf-dharmaraj-mech",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "dfe35886-a23f-4a5f-83e8-bb48b5612def",
+        "score": 17.364231,
+        "document_id": "pce-pdf-dharmaraj-mech",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "89cbc2a8-0520-4685-bb6e-4d83ee2cb10c",
+        "score": 16.47261,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ee9faaff-d1d6-4209-8b8d-f9a282e19427",
+        "score": 16.47261,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1ea01374-5599-479e-8b67-4c1f48118866",
+        "score": 15.244296,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5ddf194d-f0d7-4218-83c8-04333e32195e",
+        "score": 15.244296,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0bdc0d47-dc37-4439-9940-50c91bd2f2ab",
+        "score": 13.947143,
+        "document_id": "pce-pdf-nri-pio-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f84c4951-73bc-4482-b257-38c54f9f31b5",
+        "score": 13.947143,
+        "document_id": "pce-pdf-nri-pio-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a599d8f0-e602-4539-a941-c52b57ac03f1",
+        "score": 13.613365,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5913adf4-be10-4319-a250-6e10944d704b",
+        "score": 13.613365,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3d04fd92-1c68-46d7-9ce3-f71a06758234",
+        "score": 13.524945,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "14d72d9e-a310-425f-acfc-8419d388049b",
+        "score": 13.524945,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "75f41890-2361-43ef-ae2e-ef5e2f6210ab",
+        "score": 13.04707,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a2c1b19c-2029-488c-9f86-e3065842fa31",
+        "score": 13.04707,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d30df486-908f-41be-a3e6-17184f6c4e5a",
+        "score": 12.832132,
+        "document_id": "pce-bachelors-computer-engineering-student-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "be28be01-048f-4eb2-93ed-2dd37f30ffad",
+        "score": 12.832132,
+        "document_id": "pce-bachelors-computer-engineering-student-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2e5122a8-b8cb-4569-b16c-37dda39f893e",
+        "score": 12.710197,
+        "document_id": "pce-bachelors-information-technology-student-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "82c1e8f2-ca83-48b1-bce6-3ccc5ad3b342",
+        "score": 12.710197,
+        "document_id": "pce-bachelors-information-technology-student-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "89d8e9a5-2abc-47e7-b4e5-03e91be2b4e1",
+        "score": 12.387019,
+        "document_id": "pce-pdf-national-startup-and-innovation-policy-document-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7f5883c9-a668-4d90-976a-a7cdab06148d",
+        "score": 12.387019,
+        "document_id": "pce-pdf-national-startup-and-innovation-policy-document-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e6d8cf9b-67dc-4d7c-8481-424da265ff39",
+        "score": 11.153242,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f43baa20-b106-4a7f-887e-d22fd48ebd0e",
+        "score": 11.153242,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c33a97f5-2e7e-4efe-8205-819d43880640",
+        "score": 10.819722,
+        "document_id": "pce-iqac-iqac-roles-and-responsibilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e514e69a-c33c-4064-a29e-02f8eaa7ca4b",
+        "score": 10.819722,
+        "document_id": "pce-iqac-iqac-roles-and-responsibilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "84f7ea41-a52f-4e90-9cc6-bf416412c911",
+        "score": 14.384618,
+        "document_id": "pce-faculty-faculty-directory-priyanka-s-patil",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8bdafafa-e6b7-44ab-a705-50486e5b8575",
+        "score": 14.384618,
+        "document_id": "pce-faculty-faculty-directory-priyanka-s-patil",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ff53acbf-e97f-4bb9-99d4-0dcb5b1585df",
+        "score": 14.079776,
+        "document_id": "pce-faculty-faculty-directory-leenata-parab",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "830c9b5c-f736-4d06-a2f9-f9630075005c",
+        "score": 14.079776,
+        "document_id": "pce-faculty-faculty-directory-leenata-parab",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "22f4cd29-46b4-4b6e-ae76-847c2dd2afde",
+        "score": 13.270641,
+        "document_id": "pce-faculty-faculty-directory-pooja-b-bhise",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6bd66dd-3c80-42b8-a7fa-af70c9055306",
+        "score": 13.270641,
+        "document_id": "pce-faculty-faculty-directory-pooja-b-bhise",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "39e9aca3-78d2-4280-8ac0-d070d6352c98",
+        "score": 12.977593,
+        "document_id": "pce-faculty-faculty-directory-dr-karpagavalli-s",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "16219f78-02e0-446b-914b-3c6ecfa82507",
+        "score": 12.977593,
+        "document_id": "pce-faculty-faculty-directory-dr-karpagavalli-s",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "dfe35886-a23f-4a5f-83e8-bb48b5612def",
+        "score": 0.032018,
+        "document_id": "pce-pdf-dharmaraj-mech",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "da2a09c7-4874-436f-9537-2dcae3fa9a6c",
+        "score": 0.032002,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "38375a3f-6de4-4c3d-bfca-3db4a8f44408",
+        "score": 0.016393,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "df6f375f-db3d-490b-a0ed-1c039c6cab2c",
+        "score": 0.016129,
+        "document_id": "pce-netmagic-solutions-interview-schedule-and-shortlisted-candidates-list",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "367dc34e-4687-4899-907a-66ff5f7e71f9",
+        "score": 0.015873,
+        "document_id": "pce-pdf-dharmaraj-mech",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3ba582a8-4710-4b79-ae5d-b9d2279eb760",
+        "score": 0.015625,
+        "document_id": "pce-faculty-faculty-directory-dr-rashed-ali",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ebd2ac2e-746f-41a2-806e-528bdca04be5",
+        "score": 0.015385,
+        "document_id": "pce-students-student-activities-student-associations-society-of-women-engineers-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "89cbc2a8-0520-4685-bb6e-4d83ee2cb10c",
+        "score": 0.015385,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e0ddc879-0168-4f81-a36f-eafa2c37455c",
+        "score": 0.015152,
+        "document_id": "pce-faculty-faculty-directory-dr-karpagavalli-s",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ee9faaff-d1d6-4209-8b8d-f9a282e19427",
+        "score": 0.015152,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7c700b75-fe7e-49be-a5f0-131e1f1b9370",
+        "score": 0.014925,
+        "document_id": "pce-india-inter-collegiate-debate-competition",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1ea01374-5599-479e-8b67-4c1f48118866",
+        "score": 0.014925,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1c14b926-412e-42e6-aefd-16244a6b2036",
+        "score": 0.014706,
+        "document_id": "pce-research-research-and-consultancy-grants-research-grants",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5ddf194d-f0d7-4218-83c8-04333e32195e",
+        "score": 0.014706,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6ebf4a6-aae0-4a13-b79a-970107c032cf",
+        "score": 0.014493,
+        "document_id": "pce-two-day-marathi-seminar-on-ai-powered-cybercrime-and-its-prevention-under-aicte",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0bdc0d47-dc37-4439-9940-50c91bd2f2ab",
+        "score": 0.014493,
+        "document_id": "pce-pdf-nri-pio-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8b53e40a-7d04-4041-9cba-3d2d83a3bb69",
+        "score": 0.014286,
+        "document_id": "pce-seminar-on-ai-powered-cybercrime-and-its-prevention",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f84c4951-73bc-4482-b257-38c54f9f31b5",
+        "score": 0.014286,
+        "document_id": "pce-pdf-nri-pio-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "99a06f0d-a18b-4ec5-b0d0-7355bdd02435",
+        "score": 0.014085,
+        "document_id": "pce-students-student-activities-student-events-engineers-day",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a599d8f0-e602-4539-a941-c52b57ac03f1",
+        "score": 0.014085,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3d04fd92-1c68-46d7-9ce3-f71a06758234",
+        "score": 0.014493,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "79ae43b9-74fe-4573-a841-69dd0f2d3e45",
+        "score": 0.014286,
+        "document_id": "pce-pdf-iic-report-20-21-final",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "14d72d9e-a310-425f-acfc-8419d388049b",
+        "score": 0.014286,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6bd66dd-3c80-42b8-a7fa-af70c9055306",
+        "score": 0.028446,
+        "document_id": "pce-faculty-faculty-directory-pooja-b-bhise",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e2cf0c97-13ec-4e0e-8238-c2276101efde",
+        "score": 0.016129,
+        "document_id": "pce-research-publications-conference",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "063651b4-4b46-424f-8806-628c717dcb02",
+        "score": 0.015873,
+        "document_id": "pce-research-publications-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b615e80c-4971-4b97-badc-483b0a0a9553",
+        "score": 0.015385,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ac020b4b-0202-48d0-a379-cfb9636c3ca0",
+        "score": 0.015152,
+        "document_id": "pce-pdf-iic-report-19-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2eaa2d7f-6fe6-4db9-95cd-c82c2c044d7e",
+        "score": 0.014493,
+        "document_id": "pce-pdf-iic-report-19-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "84f7ea41-a52f-4e90-9cc6-bf416412c911",
+        "score": 0.014493,
+        "document_id": "pce-faculty-faculty-directory-priyanka-s-patil",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8bdafafa-e6b7-44ab-a705-50486e5b8575",
+        "score": 0.014286,
+        "document_id": "pce-faculty-faculty-directory-priyanka-s-patil",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "18aa7d74-60e8-4969-9777-e4f230be0486",
+        "score": 0.014085,
+        "document_id": "pce-faculty-faculty-directory-dr-ravi-k-biradar",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "da2a09c7-4874-436f-9537-2dcae3fa9a6c",
+        "score": -1.432798,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "38375a3f-6de4-4c3d-bfca-3db4a8f44408",
+        "score": -1.432798,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "dfe35886-a23f-4a5f-83e8-bb48b5612def",
+        "score": -4.208307,
+        "document_id": "pce-pdf-dharmaraj-mech",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "367dc34e-4687-4899-907a-66ff5f7e71f9",
+        "score": -4.208307,
+        "document_id": "pce-pdf-dharmaraj-mech",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1ea01374-5599-479e-8b67-4c1f48118866",
+        "score": -6.726711,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 7195.92,
+      "dense_search_1": 21.32,
+      "sparse_search_1": 342.18,
+      "fuse_1": 0.05,
+      "decide_1": 74997.76,
+      "embed_query_2": 137.66,
+      "dense_search_2": 31.45,
+      "sparse_search_2": 60.81,
+      "fuse_2": 0.05,
+      "decide_2": 62067.58,
+      "embed_query_3": 83.74,
+      "dense_search_3": 22.44,
+      "sparse_search_3": 12.34,
+      "fuse_3": 0.04,
+      "rerank": 7170.93
+    },
+    "iteration_count": 3,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "Who is the current Prime Minister of India?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "SEARCH: current Prime Minister of India",
+        "decision_raw": "SEARCH: current Prime Minister of India",
+        "latencies_ms": {
+          "embed_query": 7195.9,
+          "dense_search": 21.3,
+          "sparse_search": 342.2,
+          "fuse": 0.0,
+          "decide": 74997.8
+        }
+      },
+      {
+        "iteration": 2,
+        "query": "current Prime Minister of India",
+        "hits_returned": 20,
+        "new_chunks": 3,
+        "decision": "SEARCH: current Prime Minister of India 2023",
+        "decision_raw": "SEARCH: current Prime Minister of India 2023",
+        "latencies_ms": {
+          "embed_query": 137.7,
+          "dense_search": 31.4,
+          "sparse_search": 60.8,
+          "fuse": 0.0,
+          "decide": 62067.6
+        }
+      },
+      {
+        "iteration": 3,
+        "query": "current Prime Minister of India 2023",
+        "hits_returned": 20,
+        "new_chunks": 9,
+        "decision": "CAP",
+        "decision_raw": "",
+        "latencies_ms": {
+          "embed_query": 83.7,
+          "dense_search": 22.4,
+          "sparse_search": 12.3,
+          "fuse": 0.0
+        }
+      }
+    ],
+    "stop_reason": "iteration_cap"
+  }
+}

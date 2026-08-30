@@ -1,0 +1,17 @@
+The context provided does not contain specific information about the Computer Engineering program's accreditation status or placement record. Therefore, I cannot provide a comparison based on the given information. For more detailed information on accreditation status and placement records, you might want to refer to the official website of Pillai College of Engineering or contact the college directly. [S1] [S2] [S4]
+
+Sources:
+  [S1] Deepti Lawand > Education
+        https://www.pce.ac.in/faculty/faculty-directory/deepti-lawand-2/
+  [S2] Microsoft PowerPoint - Brochure for FDP on R Programming_29 April to 3 May 2020 > In association with > page 1
+        https://www.pce.ac.in/wp-content/uploads/2020/04/Brochure-for-FDP-on-R-Programming.pdf
+  [S3] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+  [S4] Wp Content  Uploads  2019  08  Api Workshop Brochure.Pdf > About the Course > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/08/API-Workshop-Brochure.pdf
+  [S5] K. S. Charumathi > Education
+        https://www.pce.ac.in/faculty/faculty-directory/k-charumathi/
+
+  15 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 7762ms, generation 115841ms]

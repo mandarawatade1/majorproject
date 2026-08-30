@@ -1,0 +1,23 @@
+The undergraduate and postgraduate Computer Engineering programs differ in both duration and eligibility requirements:
+
+1. **Duration:**
+   - **Undergraduate Programs:** These typically last for 4 years. Examples include Computer Engineering at the Bachelor's degree level, such as Computer Engineering, Electronics & Computer Science, and Information Technology.
+   - **Postgraduate Programs:** These programs are shorter, ranging from 2 to 3 years. For instance, the Master's degree in Computer Engineering and the Ph.D. program in Computer Engineering both last for 2 and 3 years, respectively.
+
+2. **Eligibility:**
+   - **Undergraduate Programs:** Generally, eligibility for these programs requires a 10+2 qualification with Physics, Chemistry, and Mathematics (PCM) or equivalent.
+   - **Postgraduate Programs:** For Master's programs, a Bachelor's degree in a relevant field is typically required. For the Ph.D. program, a Master's degree or equivalent is necessary, along with a strong academic record and research potential.
+
+These differences highlight the progression from foundational to advanced studies in the field of Computer Engineering.
+
+Sources:
+  [S1] Academics
+        https://www.pce.ac.in/academics-department/
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 36 > page 39
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S3] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+
+  2 retrieved chunk(s) omitted for context budget.
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6174ms, generation 137176ms]

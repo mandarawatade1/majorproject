@@ -1,0 +1,21 @@
+The Computer Engineering department offers postgraduate (Master of Technology) courses in Computer Engineering and Information Technology. It also offers a Ph.D. program in Computer Engineering and Information Technology. [S1] [S2]
+
+Sources:
+  [S1] The Institute > Programs offered
+        https://www.pce.ac.in/about/the-institute/
+  [S2] Program Overview > Ph.D. in Computer Engineering
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S3] Lab Manual: Data Structures Laboratory, Semester III > Submission [DEMO DATA]
+  [S4] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S5] Lab Manual: Data Structures Laboratory, Semester III > Experiment 4: Binary search tree [DEMO DATA]
+  [S6] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S7] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 36 > page 39
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+  NOTE: one or more sources are synthetic DEMO DATA and do not describe real institutional fact.
+
+  13 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 6501ms, generation 93184ms]

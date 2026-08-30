@@ -1,0 +1,13 @@
+The fee structure for the Computer Engineering programme is as follows: [S2] for the first year, the fees are 2100 US$, and from the second year onward, the fees are 2000 US$. [S3]
+
+Sources:
+  [S1] Value Added Courses
+        https://www.pce.ac.in/academics/other-programs/add-on-courses/value-added-courses/
+  [S2] Wp Content  Uploads  2023  06  Nri Pio 2023.Pdf > E-Mail Id : pceadmissions@mes.ac.in / pragneshshah@mes.ac.in > page 2
+        https://www.pce.ac.in/wp-content/uploads/2023/06/NRI-PIO-2023.pdf
+  [S3] Wp Content  Uploads  2023  06  Nri Pio 2023.Pdf > E-Mail Id : pceadmissions@mes.ac.in / pragneshshah@mes.ac.in > page 2
+        https://www.pce.ac.in/wp-content/uploads/2023/06/NRI-PIO-2023.pdf
+
+  2 retrieved chunk(s) omitted for context budget.
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 12269ms, generation 140072ms]

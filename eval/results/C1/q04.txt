@@ -1,0 +1,16 @@
+The eligibility criteria for admission to the B.Tech programme at Pillai College of Engineering, New Panvel, as per the provided context, are based on the eligibility criteria decided by the State Common Entrance Test Cell, Government of Maharashtra or the Director of Technical Education, Government of Maharashtra from time to time. For details, candidates are advised to visit the website http://cetcell.mahacet.org or www.dtemaharashtra.gov.in or refer to the admission rules published by the State CET cell from time to time [S2]. Specifically, the criteria are as follows:
+
+- The candidate should be an Indian National [S2].
+- Passed HSC or its equivalent examination with Physics and Mathematics as compulsory subjects, along with one of the Chemistry or Biotechnology or Biology or Technical Vocational subject or Computer Science or Information Technology or Informatics Practices or Agriculture or Engineering Graphics or Business Studies, and obtained at least 45% marks (at least 40% marks, in case of Backward class categories, Economically Weaker Section and Persons with Disability candidates belonging to Maharashtra State only) in the above subjects taken together and should have appeared in all the subjects in MHT-CET2022 and should obtain a non-zero score in MHT-CET 2022 [S2].
+- OR
+- Passed Diploma in Engineering and Technology and obtained at least 45% marks (at least 40% marks, in case of Backward class categories, Economically Weaker Section and Persons with Disability candidates belonging to Maharashtra State only) [S2].
+
+Sources:
+  [S1] Placements > 2021 Batch Placement
+        https://www.pce.ac.in/placements/
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 50 > page 53
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+  3 retrieved chunk(s) omitted for context budget.
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6436ms, generation 197841ms]

@@ -1,0 +1,16 @@
+The fee structure for the Computer Engineering programme is as follows: [S1]
+
+- 2100 USD for the first year, which is application processing fees, and is non-refundable. [S1]
+- 2000 USD for the fees to be paid from the second year onward. [S1]
+
+Sources:
+  [S1] Wp Content  Uploads  2023  06  Nri Pio 2023.Pdf > E-Mail Id : pceadmissions@mes.ac.in / pragneshshah@mes.ac.in > page 2
+        https://www.pce.ac.in/wp-content/uploads/2023/06/NRI-PIO-2023.pdf
+  [S2] Faculty Development Schemes
+        https://www.pce.ac.in/faculty/faculty-development-schemes/
+  [S3] Value Added / Certificate Programs
+        https://www.pce.ac.in/students/get-career-ready/value-added-certificate-programs/
+
+  17 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 6399ms, generation 159831ms]

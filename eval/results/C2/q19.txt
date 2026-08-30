@@ -1,0 +1,13 @@
+Pillai College of Engineering is located in New Panvel, specifically in the Navi Mumbai area [S1]. However, the context provided does not contain specific information about how to contact the admissions office. For such details, you might want to visit the official website of Pillai College of Engineering or contact their administration directly [S1].
+
+Sources:
+  [S1] Exploring First Year at PCE
+        https://www.pce.ac.in/exploring-first-year-at-pce/
+  [S2] Hostel Details
+        https://www.pce.ac.in/academics/admissions/hostel-details/
+  [S3] Hostel Facility
+        https://www.pce.ac.in/about/infrastructure-and-facilities/hostel-facility/
+
+  17 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 7098ms, generation 115071ms]

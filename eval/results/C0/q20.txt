@@ -1,0 +1,29 @@
+The vision and mission of Pillai College of Engineering (PCE) are as follows:
+
+**Vision:**
+Pillai College of Engineering (PCE) will admit, educate and train a diverse population of students who are academically prepared to benefit from the Institute’s infrastructure and faculty experience, to become responsible professionals or entrepreneurs in a technical arena. It will further attract, develop and retain, dedicated, excellent teachers, scholars and professionals from diverse backgrounds whose work gives them knowledge beyond the classroom and who are committed to making a significant difference in the lives of their students and the community.
+
+**Mission:**
+- To develop professional engineers with respect for the environment and to make them responsible citizens, both from a local and global perspective. This objective is fulfilled through quality education, practical training, research, entrepreneurship and interaction with industries and social organizations.
+- To make the students either one or more of the three: Employable, Researcher, Entrepreneur.
+- To develop the teaching-learning process where learners will have the freedom of thought to explore various aspects of Engineering, Science, and Entrepreneurship.
+- To encourage the faculty to pursue research and develop the skills to impart that knowledge to the students.
+- To provide the requisite infrastructure, including laboratories, library, internet facilities to facilitate research, entrepreneurship, and learning.
+- To promote the interaction of students and faculty with the industry.
+- To explore the possibilities of collaboration with other leading institutes in India and abroad for faculty and/or students training, exchange, and joint research.
+
+These statements reflect the core values and goals of Pillai College of Engineering, emphasizing education, research, entrepreneurship, and community engagement.
+
+Sources:
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 7 > page 10
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S2] PERKS of PILLAI
+        https://www.pce.ac.in/perks-of-pillai/
+  [S3] The Institute > Vision
+        https://www.pce.ac.in/about/the-institute/
+  [S4] Exploring the Landscape of Information Technology: A Comprehensive Guide to Opportunities and Innovation > Exploring Information Technology Programs at Pillai College of Engineering
+        https://www.pce.ac.in/exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-opportunities-and-innovation/
+  [S5] Wp Content  Uploads  2024  02  Iic Pce Annual Report 2022 23.Pdf > Annual Report 2022-23 > page 1
+        https://www.pce.ac.in/wp-content/uploads/2024/02/IIC-PCE-Annual-Report-2022-23.pdf
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 5939ms, generation 136831ms]

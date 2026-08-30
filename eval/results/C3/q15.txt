@@ -1,0 +1,13 @@
+The context provided does not contain specific information about the placement record of the Computer Engineering programme at Pillai College of Engineering. Therefore, I cannot compare the Computer Engineering programme's accreditation status with its placement record based on the given information.
+
+For more detailed information on the placement record, you might want to refer to the college's official website or contact the college directly. [S1] [S2]
+
+Sources:
+  [S1] About Us
+        https://www.pce.ac.in/about-us/
+  [S2] About Us
+        https://www.pce.ac.in/about-us/
+
+  3 retrieved chunk(s) omitted for context budget.
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 11070ms, generation 83168ms]

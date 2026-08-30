@@ -1,0 +1,15 @@
+The process for admission to the Ph.D. programme in Computer Engineering involves contacting the Ph.D. guides directly [S4]. Students interested in admission should reach out to the guides listed for more information on the Ph.D. program. [S4]
+
+Sources:
+  [S1] Program Overview > Ph.D. in Computer Engineering
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 53 > page 56
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S3] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 53 > page 56
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S4] Ph.D. Students
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/ph-d-students/
+  [S5] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 11141ms, generation 91675ms]

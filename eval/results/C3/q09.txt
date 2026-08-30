@@ -1,0 +1,13 @@
+The placement record for the Computer Engineering department at Pillai College of Engineering is robust, with a high placement rate where a majority of students secure jobs in reputable companies. [S1] The college's strong connection with the industry, particularly in the IT sector, plays a crucial role in its placement success. [S1] The placement cell schedules mock interviews, resume workshops, and skill development sessions to ensure a wide range of opportunities for students. [S1]
+
+Sources:
+  [S1] Information Technology
+        https://www.pce.ac.in/bachelors/information-technology/
+  [S2] Information Technology
+        https://www.pce.ac.in/bachelors/information-technology/
+  [S3] Program Overview > Research Areas
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+
+  2 retrieved chunk(s) omitted for context budget.
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 11487ms, generation 89936ms]

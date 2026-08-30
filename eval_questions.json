@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "description": "Fixed eval set for Chapter 4 ablation (C0-C5). Do not edit questions once C0 has been run against them — the whole point is a stable, reused set. Add new questions as v2 with a fresh baseline run if needed.",
+  "questions": [
+    { "id": "q01", "category": "programs_ug",       "question": "What is the intake for Computer Engineering and is the programme NBA accredited?" },
+    { "id": "q02", "category": "programs_pg",        "question": "What postgraduate programmes does the Computer Engineering department offer?" },
+    { "id": "q03", "category": "programs_phd",       "question": "What is the process for admission to the PhD programme in Computer Engineering?" },
+    { "id": "q04", "category": "admissions",         "question": "What is the eligibility criteria for admission to the B.Tech programme?" },
+    { "id": "q05", "category": "admissions",         "question": "What entrance exams are accepted for admission to Pillai College of Engineering?" },
+    { "id": "q06", "category": "fees",                "question": "What is the fee structure for the Computer Engineering programme?" },
+    { "id": "q07", "category": "faculty",             "question": "Who are the faculty members in the Computer Engineering department?" },
+    { "id": "q08", "category": "facilities",          "question": "What laboratory facilities are available for Computer Engineering students?" },
+    { "id": "q09", "category": "placement",           "question": "What is the placement record for the Computer Engineering department?" },
+    { "id": "q10", "category": "hostel",              "question": "Is hostel accommodation available for students at the college?" },
+    { "id": "q11", "category": "library",             "question": "What library resources are available to students?" },
+    { "id": "q12", "category": "research",            "question": "What research areas or centers does the Computer Engineering department focus on?" },
+    { "id": "q13", "category": "accreditation",       "question": "Which programmes at the college are NBA accredited?" },
+    { "id": "q14", "category": "policies",            "question": "What is the attendance policy for students?" },
+    { "id": "q15", "category": "multi_hop",           "question": "Compare the Computer Engineering programme's accreditation status with its placement record." },
+    { "id": "q16", "category": "multi_hop",           "question": "What are the differences between the undergraduate and postgraduate Computer Engineering programmes in terms of duration and eligibility?" },
+    { "id": "q17", "category": "out_of_scope",        "question": "What is the weather forecast for Mumbai this week?" },
+    { "id": "q18", "category": "out_of_scope",        "question": "Who is the current Prime Minister of India?" },
+    { "id": "q19", "category": "general_info",        "question": "Where is Pillai College of Engineering located and how can I contact the admissions office?" },
+    { "id": "q20", "category": "general_info",        "question": "What is the vision and mission of Pillai College of Engineering?" }
+  ]
+}

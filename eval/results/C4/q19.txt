@@ -1,0 +1,462 @@
+Pillai College of Engineering is located at Plot No. 10, Sector 16, New Panvel, Navi Mumbai – 410 206, Maharashtra, India [S1]. You can contact the admissions office at 022-65748009 or 022-65748010 [S1].
+
+Sources:
+  [S1] Contact
+        https://www.pce.ac.in/about/contact/
+  [S2] Placement Cell > Placement Contact
+        https://www.pce.ac.in/placements/placement-cell/
+  [S3] Wp Content  Uploads  2019  09  Seit Direct Second Year Student Extra Classes Odd Sem 2019 20.Pdf > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/09/SEIT-Direct-Second-Year-Student-Extra-Classes-Odd-Sem-2019-20.pdf
+  [S4] Wp Content  Uploads  2019  11  Ari C 33505.Pdf > Innovation, Pre-Incubation & Incubation Centre/Facilities exists in campus > page 12
+        https://www.pce.ac.in/wp-content/uploads/2019/11/ARI-C-33505.pdf
+  [S5] Wp Content  Uploads  2023  10  Makerthon.Pdf > www.pce.ac.in > page 4
+        https://www.pce.ac.in/wp-content/uploads/2023/10/MAKERTHON.pdf
+
+[C4 | qwen2.5:7b-instruct-q4_K_M | retrieval 87036ms, generation 105907ms]
+
+{
+  "question": "Where is Pillai College of Engineering located and how can I contact the admissions office?",
+  "config": "C4",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 193201.0,
+  "retrieval_ms": 87036.0,
+  "generation_ms": 105907.0,
+  "sources": [
+    "d8f1a581-3e5f-4424-b05a-26f90c3abc2b",
+    "9aa9b4df-299a-47ca-8b1c-e85a18078c58",
+    "c817508f-aed9-47ef-8e92-e1cc5eb7d22e",
+    "628d8556-c748-48e1-960c-0dd5a58566b7",
+    "663e0fef-aedb-46cd-9645-9315a96c9267"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "Where is Pillai College of Engineering located and how can I contact the admissions office?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "ca0f5028-861c-4ca3-8546-e594fbb396bd",
+        "score": 0.79243,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d8f1a581-3e5f-4424-b05a-26f90c3abc2b",
+        "score": 0.777747,
+        "document_id": "pce-about-contact",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "628d8556-c748-48e1-960c-0dd5a58566b7",
+        "score": 0.762752,
+        "document_id": "pce-pdf-ari-c-33505",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "96e312fd-9ff4-47cd-8d5f-f001ab5ed21d",
+        "score": 0.752689,
+        "document_id": "pce-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "22778487-7563-47dc-aa64-4f3f23057ba4",
+        "score": 0.747814,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c817508f-aed9-47ef-8e92-e1cc5eb7d22e",
+        "score": 0.746776,
+        "document_id": "pce-pdf-seit-direct-second-year-student-extra-classes-odd-sem-2019-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9aa9b4df-299a-47ca-8b1c-e85a18078c58",
+        "score": 0.744409,
+        "document_id": "pce-placements-placement-cell",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 0.739993,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0ffea4d6-0f0a-42c2-a662-1fd8d783440a",
+        "score": 0.735333,
+        "document_id": "pce-fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "663e0fef-aedb-46cd-9645-9315a96c9267",
+        "score": 0.734504,
+        "document_id": "pce-pdf-makerthon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e9eca599-4467-4d63-92d6-daa68f550e6a",
+        "score": 0.731803,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "da9e716b-d9e3-4bfa-8e6f-78ec78e11d22",
+        "score": 0.731378,
+        "document_id": "pce-pdf-2020-21-council-resolution",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "278a2ba5-8e95-48f6-888e-518bbb18f717",
+        "score": 0.728099,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8f5d4bd2-8025-4d5b-bd05-40dc94bac7ee",
+        "score": 0.726119,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8a37d06f-907d-4aa1-9bca-cd92c7d0cf60",
+        "score": 0.724234,
+        "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "88a38ce1-92c2-4e93-8e6c-49d71169d69f",
+        "score": 0.720147,
+        "document_id": "pce-category-exam-notices-timetable",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
+        "score": 0.717593,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c68c880d-5920-4295-acfd-d93904de96bd",
+        "score": 0.717349,
+        "document_id": "pce-bachelors-automobile-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "85b574df-a6ad-41ea-a861-5683e2026a99",
+        "score": 0.716449,
+        "document_id": "pce-library-digital-library-e-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "070e8bc0-835c-40cb-b099-e8c1ba609eea",
+        "score": 0.716449,
+        "document_id": "pce-students-student-activities-student-associations-tpc-pce",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "40ebab3f-1f96-41a5-89ca-004b627e8e9f",
+        "score": 28.139383,
+        "document_id": "pce-heres-how-you-can-have-the-best-college-experience",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d02b0fe2-8bf8-449d-8eb0-7ec64b1e6c89",
+        "score": 28.139383,
+        "document_id": "pce-heres-how-you-can-have-the-best-college-experience",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "55821e21-a87f-4a49-b399-4c68787c0707",
+        "score": 27.234249,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8f5d4bd2-8025-4d5b-bd05-40dc94bac7ee",
+        "score": 27.234249,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a3ad0355-bde4-4baf-ac66-7de1110ebaea",
+        "score": 27.079399,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e9eca599-4467-4d63-92d6-daa68f550e6a",
+        "score": 27.079399,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d0be1ed8-b6f9-4d0b-9733-6afe5f363b58",
+        "score": 26.663592,
+        "document_id": "pce-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "96e312fd-9ff4-47cd-8d5f-f001ab5ed21d",
+        "score": 26.663592,
+        "document_id": "pce-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cb2c5566-6bc9-45e1-b689-8fc714db089f",
+        "score": 24.45567,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cb8fb6f1-792c-4b78-835b-7f4c6af1928f",
+        "score": 24.45567,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "125f1aed-cbd7-441f-9c59-6b609580707b",
+        "score": 24.402049,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b0ed6cb9-a39b-4955-95c4-2a3018cbe5e3",
+        "score": 24.402049,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a354d2e6-6eb8-4689-9095-fbf76148624b",
+        "score": 23.11841,
+        "document_id": "pce-pdf-national-startup-and-innovation-policy-document-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "31404ca5-9d34-45ab-a49d-733827256cc6",
+        "score": 23.11841,
+        "document_id": "pce-pdf-national-startup-and-innovation-policy-document-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "58b5f6a0-0581-49f4-90db-64c45107b034",
+        "score": 22.964603,
+        "document_id": "pce-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "22ab3e4f-5b9b-4ba0-9061-9cd47c893862",
+        "score": 22.964603,
+        "document_id": "pce-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "533b2785-d084-47c3-9e5a-eb181245a8bf",
+        "score": 22.872445,
+        "document_id": "pce-pdf-ari-c-33505",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "555a6dfa-9612-42fd-a5ed-3c167dfd4960",
+        "score": 22.872445,
+        "document_id": "pce-pdf-ari-c-33505",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4ca014ee-ee41-48c5-811f-c11a8c96c76a",
+        "score": 22.741529,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "819e9b7b-5e06-4add-9437-e7ad397299c0",
+        "score": 22.741529,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "96e312fd-9ff4-47cd-8d5f-f001ab5ed21d",
+        "score": 0.030331,
+        "document_id": "pce-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e9eca599-4467-4d63-92d6-daa68f550e6a",
+        "score": 0.029236,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8f5d4bd2-8025-4d5b-bd05-40dc94bac7ee",
+        "score": 0.029139,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ca0f5028-861c-4ca3-8546-e594fbb396bd",
+        "score": 0.016393,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "40ebab3f-1f96-41a5-89ca-004b627e8e9f",
+        "score": 0.016393,
+        "document_id": "pce-heres-how-you-can-have-the-best-college-experience",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d8f1a581-3e5f-4424-b05a-26f90c3abc2b",
+        "score": 0.016129,
+        "document_id": "pce-about-contact",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d02b0fe2-8bf8-449d-8eb0-7ec64b1e6c89",
+        "score": 0.016129,
+        "document_id": "pce-heres-how-you-can-have-the-best-college-experience",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "628d8556-c748-48e1-960c-0dd5a58566b7",
+        "score": 0.015873,
+        "document_id": "pce-pdf-ari-c-33505",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "55821e21-a87f-4a49-b399-4c68787c0707",
+        "score": 0.015873,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "22778487-7563-47dc-aa64-4f3f23057ba4",
+        "score": 0.015385,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a3ad0355-bde4-4baf-ac66-7de1110ebaea",
+        "score": 0.015385,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c817508f-aed9-47ef-8e92-e1cc5eb7d22e",
+        "score": 0.015152,
+        "document_id": "pce-pdf-seit-direct-second-year-student-extra-classes-odd-sem-2019-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9aa9b4df-299a-47ca-8b1c-e85a18078c58",
+        "score": 0.014925,
+        "document_id": "pce-placements-placement-cell",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d0be1ed8-b6f9-4d0b-9733-6afe5f363b58",
+        "score": 0.014925,
+        "document_id": "pce-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 0.014706,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0ffea4d6-0f0a-42c2-a662-1fd8d783440a",
+        "score": 0.014493,
+        "document_id": "pce-fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cb2c5566-6bc9-45e1-b689-8fc714db089f",
+        "score": 0.014493,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "663e0fef-aedb-46cd-9645-9315a96c9267",
+        "score": 0.014286,
+        "document_id": "pce-pdf-makerthon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cb8fb6f1-792c-4b78-835b-7f4c6af1928f",
+        "score": 0.014286,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "125f1aed-cbd7-441f-9c59-6b609580707b",
+        "score": 0.014085,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "d8f1a581-3e5f-4424-b05a-26f90c3abc2b",
+        "score": 6.729635,
+        "document_id": "pce-about-contact",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9aa9b4df-299a-47ca-8b1c-e85a18078c58",
+        "score": 4.85933,
+        "document_id": "pce-placements-placement-cell",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c817508f-aed9-47ef-8e92-e1cc5eb7d22e",
+        "score": 3.794413,
+        "document_id": "pce-pdf-seit-direct-second-year-student-extra-classes-odd-sem-2019-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "628d8556-c748-48e1-960c-0dd5a58566b7",
+        "score": 3.032208,
+        "document_id": "pce-pdf-ari-c-33505",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "663e0fef-aedb-46cd-9645-9315a96c9267",
+        "score": 2.909085,
+        "document_id": "pce-pdf-makerthon",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 7453.86,
+      "dense_search_1": 23.74,
+      "sparse_search_1": 356.17,
+      "fuse_1": 0.04,
+      "decide_1": 73981.24,
+      "rerank": 5220.9
+    },
+    "iteration_count": 1,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "Where is Pillai College of Engineering located and how can I contact the admissions office?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "READY",
+        "decision_raw": "READY",
+        "latencies_ms": {
+          "embed_query": 7453.9,
+          "dense_search": 23.7,
+          "sparse_search": 356.2,
+          "fuse": 0.0,
+          "decide": 73981.2
+        }
+      }
+    ],
+    "stop_reason": "model_says_ready"
+  }
+}

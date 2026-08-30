@@ -1,0 +1,15 @@
+The High Performance Computing Lab, which is funded by AICTE under MODROB’s Scheme, is available for Computer Engineering students. This lab is equipped with AMD Thread Ripper (2nd Gen) 2970WX and Nvidia RTX 3090 24 GB GPU, and is used for various Machine Learning, Deep Learning projects [S1].
+
+Sources:
+  [S1] Research Facilities > High performance Computing Lab
+        https://www.pce.ac.in/research/research-facilities/
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 12 > page 15
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S3] Academic Infrastructure
+        https://www.pce.ac.in/about/infrastructure-and-facilities/academic-infrastructure/
+  [S4] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 10 > page 13
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+  1 retrieved chunk(s) omitted for context budget.
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 10954ms, generation 111067ms]

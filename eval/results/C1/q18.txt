@@ -1,0 +1,15 @@
+The context provided does not contain information about the current Prime Minister of India. The only reference to a Prime Minister is Hon’ble Prime Minister, Shri Narendra Modi, who is mentioned in the context of the Smart India Hackathon 2017 [S3]. However, this does not confirm if he is the current Prime Minister. For the most accurate and up-to-date information, you should refer to recent news sources or official government websites. [S3]
+
+Sources:
+  [S1] Wp Content  Uploads  2019  07  Dharmaraj Mech.Pdf > Dharmaraj Solanki > page 1
+        https://www.pce.ac.in/wp-content/uploads/2019/07/Dharmaraj-Mech.pdf
+  [S2] Netmagic Solutions Interview Schedule and Shortlisted Candidates List
+        https://www.pce.ac.in/netmagic-solutions-interview-schedule-and-shortlisted-candidates-list/
+  [S3] Hackathon
+        https://www.pce.ac.in/students/student-activities/student-awards-and-achievements/hackathon/
+  [S4] Dr. Rashed Ali > Education
+        https://www.pce.ac.in/faculty/faculty-directory/dr-rashed-ali/
+  [S5] Society of Women Engineers PCE Affiliate
+        https://www.pce.ac.in/students/student-activities/student-associations/society-of-women-engineers-pce-affiliate/
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6104ms, generation 125570ms]

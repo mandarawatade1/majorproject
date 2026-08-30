@@ -1,0 +1,19 @@
+The context provided does not explicitly mention laboratory facilities specifically for Computer Engineering students. However, it does describe advanced computer laboratories with the latest hardware and software [S6] and specialized research centers focused on emerging technologies [S6]. These facilities are likely available for Computer Engineering students as well as other programs. For more specific details, one might look at the detailed course descriptions or the Computer Engineering department's section of the institution's website. [S6]
+
+Sources:
+  [S1] Academic Infrastructure
+        https://www.pce.ac.in/about/infrastructure-and-facilities/academic-infrastructure/
+  [S2] Ruchira C. Patole > Courses
+        https://www.pce.ac.in/faculty/faculty-directory/ruchira-c-patole/
+  [S3] Research Facilities > The Electric Vehicle (EV) Laboratory
+        https://www.pce.ac.in/research/research-facilities/
+  [S4] Exploring the Landscape of Information Technology: A Comprehensive Guide to Opportunities and Innovation > Choosing the Right Program for Your Career Goals > Practical Aspects
+        https://www.pce.ac.in/exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-opportunities-and-innovation/
+  [S5] Hostel Details
+        https://www.pce.ac.in/academics/admissions/hostel-details/
+  [S6] Exploring the Landscape of Information Technology: A Comprehensive Guide to Opportunities and Innovation > Exploring Information Technology Programs at Pillai College of Engineering > Cutting-Edge Infrastructure
+        https://www.pce.ac.in/exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-opportunities-and-innovation/
+
+  14 retrieved chunk(s) omitted for context budget.
+
+[C2 | qwen2.5:7b-instruct-q4_K_M | retrieval 6454ms, generation 100652ms]

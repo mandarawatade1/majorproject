@@ -1,0 +1,13 @@
+The context provided does not explicitly mention any specific entrance exams accepted for admission to Pillai College of Engineering. However, it does list other admission-related information such as scholarships, e-learning, and important admission notices [S2]. For detailed information on entrance exams, you might want to refer to the "Admissions" section or contact the college directly [S2].
+
+Sources:
+  [S1] PERKS of PILLAI
+        https://www.pce.ac.in/perks-of-pillai/
+  [S2] Formula Student Combustion Event
+        https://www.pce.ac.in/bws-gallery/formula-student-combustion-event/
+  [S3] Graduation Day 2018
+        https://www.pce.ac.in/bws-gallery/graduation-day-2018/
+
+  2 retrieved chunk(s) omitted for context budget.
+
+[C1 | qwen2.5:7b-instruct-q4_K_M | retrieval 6383ms, generation 129222ms]

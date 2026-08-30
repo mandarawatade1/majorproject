@@ -1,0 +1,15 @@
+The undergraduate (Bachelor of Technology) Computer Engineering program at Pillai College of Engineering has a duration of 4 years [S4]. For postgraduate studies, the Master of Technology (M.Tech.) in Computer Engineering is offered, which lasts for 2 years [S4]. The eligibility for the undergraduate program typically requires a qualifying degree, such as a Bachelor of Technology in a relevant field, while the M.Tech. program is open to those who have completed a Bachelor of Technology or a related field, such as a Bachelor of Engineering [S4].
+
+Sources:
+  [S1] The Institute > Programs offered
+        https://www.pce.ac.in/about/the-institute/
+  [S2] The Institute > Programs offered
+        https://www.pce.ac.in/about/the-institute/
+  [S3] Program Overview > Ph.D. in Computer Engineering
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S4] Academics
+        https://www.pce.ac.in/academics-department/
+  [S5] Computer Engineering
+        https://www.pce.ac.in/bachelors/computer-engineering/
+
+[C3 | qwen2.5:7b-instruct-q4_K_M | retrieval 11273ms, generation 71190ms]

@@ -120,16 +120,29 @@ class TestEachChunkerGetsItsOwnCollection:
         from rag.factory import _collection_name
 
         monkeypatch.delenv("CHROMA_COLLECTION", raising=False)
-        monkeypatch.delenv("CHROMA_COLLECTION_PREFIX", raising=False)
+        monkeypatch.delenv("CHROMA_COLLECTION_EXACT", raising=False)
         assert _collection_name("fixed") != _collection_name("structure_aware")
         assert _collection_name("structure_aware").endswith("structure_aware")
 
-    def test_an_explicit_name_still_wins(self, monkeypatch) -> None:
-        """A deliberate side-by-side comparison needs one pinned collection,
-        and the environment variable remains the way to ask for it."""
+    def test_the_configured_name_is_a_base_not_a_pin(self, monkeypatch) -> None:
+        """The correction that made this feature work at all.
+
+        `.env.example` ships `CHROMA_COLLECTION` already set, so treating a set
+        value as "use exactly this name" pinned every installation and the
+        per-chunker split never happened anywhere. An escape hatch that is on
+        by default is not an escape hatch.
+        """
         from rag.factory import _collection_name
 
-        monkeypatch.setenv("CHROMA_COLLECTION", "pinned")
+        monkeypatch.delenv("CHROMA_COLLECTION_EXACT", raising=False)
+        monkeypatch.setenv("CHROMA_COLLECTION", "pce_chunks")
+        assert _collection_name("fixed") == "pce_chunks_fixed"
+        assert _collection_name("structure_aware") == "pce_chunks_structure_aware"
+
+    def test_the_real_escape_hatch_pins_one_name(self, monkeypatch) -> None:
+        from rag.factory import _collection_name
+
+        monkeypatch.setenv("CHROMA_COLLECTION_EXACT", "pinned")
         assert _collection_name("fixed") == "pinned"
         assert _collection_name("structure_aware") == "pinned"
 

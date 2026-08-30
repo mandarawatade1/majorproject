@@ -70,9 +70,9 @@ def build_index(
     evaluation left the portal — which serves C3 — unable to answer at all
     until someone re-indexed, and the reverse for the evaluation. The guard
     caught it every time, but a guard that fires during normal use is a design
-    telling you something. Setting CHROMA_COLLECTION explicitly overrides this
-    and pins one name, which is what a deliberate side-by-side comparison
-    wants.
+    telling you something. CHROMA_COLLECTION is the base name the strategy
+    is appended to; CHROMA_COLLECTION_EXACT pins one name outright, for the
+    rare deliberate side-by-side comparison.
     """
     backend = (backend or _env("INDEX_BACKEND", "chroma")).lower()
 
@@ -93,11 +93,22 @@ def build_index(
 
 
 def _collection_name(chunking: str) -> str:
-    """One collection per chunking strategy, unless explicitly overridden."""
-    explicit = _env("CHROMA_COLLECTION", "")
-    if explicit:
-        return explicit
-    base = _env("CHROMA_COLLECTION_PREFIX", "pce_chunks")
+    """One collection per chunking strategy.
+
+    `CHROMA_COLLECTION` is the *base* name, not the final one: the chunking
+    strategy is appended to it. This is a correction. The first version treated
+    an explicitly set `CHROMA_COLLECTION` as "use exactly this name" -- but
+    `.env.example` ships that variable already set, so every installation was
+    pinned and the per-chunker split happened nowhere. An escape hatch that is
+    on by default is not an escape hatch.
+
+    `CHROMA_COLLECTION_EXACT` is the real one, for the rare case of pointing
+    two configurations at a single collection on purpose.
+    """
+    exact = _env("CHROMA_COLLECTION_EXACT", "")
+    if exact:
+        return exact
+    base = _env("CHROMA_COLLECTION", "pce_chunks")
     return f"{base}_{chunking}" if chunking else base
 
 

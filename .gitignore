@@ -78,3 +78,4 @@ Thumbs.db
 !.vscode/extensions.json
 *.swp
 *~
+backend/data/

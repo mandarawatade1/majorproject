@@ -1,0 +1,80 @@
+The provided context does not explicitly mention any specific entrance exams accepted for admission to Pillai College of Engineering. The information focuses more on the college's achievements, accreditation, and various programs offered. For detailed information on the entrance exams accepted, you may need to refer to the official admission brochure or website of Pillai College of Engineering.
+
+Sources:
+  [S1] PERKS of PILLAI
+        https://www.pce.ac.in/perks-of-pillai/
+  [S2] Sitemap
+        https://www.pce.ac.in/sitemap/
+  [S3] Electronics & Telecommunication Engineering
+        https://www.pce.ac.in/bachelors/electronics-and-telecommunication/
+  [S4] Sitemap
+        https://www.pce.ac.in/sitemap/
+  [S5] Wp Content  Uploads  2019  07  Training Program On Reliability Engg For Beginners.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2019/07/training-program-on-reliability-engg-for-beginners.pdf
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6112ms, generation 48434ms]
+
+{
+  "question": "What entrance exams are accepted for admission to Pillai College of Engineering?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 54546.7,
+  "retrieval_ms": 6111.9,
+  "generation_ms": 48434.2,
+  "sources": [
+    "98ae9903-62df-4ece-ac8a-c12a9b348220",
+    "7dc223f8-ffa7-4c71-9d1d-ebb87fbd2370",
+    "be4d225a-d168-4e24-9470-25520a916eda",
+    "cbedd1a3-1404-4100-8476-c57cec64499a",
+    "ede1f5bb-7a2a-4630-bcdf-58894c753e7f"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What entrance exams are accepted for admission to Pillai College of Engineering?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "98ae9903-62df-4ece-ac8a-c12a9b348220",
+        "score": 0.775527,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7dc223f8-ffa7-4c71-9d1d-ebb87fbd2370",
+        "score": 0.767819,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "be4d225a-d168-4e24-9470-25520a916eda",
+        "score": 0.76636,
+        "document_id": "pce-bachelors-electronics-and-telecommunication",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cbedd1a3-1404-4100-8476-c57cec64499a",
+        "score": 0.76423,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ede1f5bb-7a2a-4630-bcdf-58894c753e7f",
+        "score": 0.75717,
+        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6103.33,
+      "dense_search": 8.54
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

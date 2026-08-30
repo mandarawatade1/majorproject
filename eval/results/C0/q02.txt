@@ -1,0 +1,84 @@
+The Computer Engineering department at Pillai College of Engineering, New Panvel, offers the following postgraduate programs:
+
+1. **Master of Technology (M.Tech.) in Computer Engineering**: This program is affiliated to the University of Mumbai and has a duration of 2 years, offered on a full-time basis with two semesters each year. The intake is 12 students per batch. The curriculum includes theory, practical, oral, and term work assessments, covering courses in the first four semesters.
+
+2. **Ph.D. in Computer Engineering**: This program provides post-master’s applicants the opportunity to study in a broad range of areas, with research focusing on theoretical and empirical studies. It involves external collaborations with industry and government laboratories, among others.
+
+Sources:
+  [S1] Program Overview
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S2] The Institute
+        https://www.pce.ac.in/about/the-institute/
+  [S3] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+  [S4] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S5] Program Overview
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6733ms, generation 52181ms]
+
+{
+  "question": "What postgraduate programmes does the Computer Engineering department offer?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 58914.1,
+  "retrieval_ms": 6732.9,
+  "generation_ms": 52181.1,
+  "sources": [
+    "7149a3b0-4aa8-4143-8f8e-6bdc48cd6425",
+    "8278e8d1-7275-4f6a-80da-fe63aa15f621",
+    "d0372a10-1b48-4678-8139-551481392ef5",
+    "51b78493-77da-419f-806b-480f979d314c",
+    "ea08b35f-4d96-4129-9a79-c7d557ae849d"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What postgraduate programmes does the Computer Engineering department offer?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "7149a3b0-4aa8-4143-8f8e-6bdc48cd6425",
+        "score": 0.757326,
+        "document_id": "pce-academics-ph-d-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8278e8d1-7275-4f6a-80da-fe63aa15f621",
+        "score": 0.746027,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d0372a10-1b48-4678-8139-551481392ef5",
+        "score": 0.709974,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "51b78493-77da-419f-806b-480f979d314c",
+        "score": 0.705815,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ea08b35f-4d96-4129-9a79-c7d557ae849d",
+        "score": 0.704951,
+        "document_id": "pce-academics-masters-computer-engineering-program-overview",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6723.63,
+      "dense_search": 9.22
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

@@ -1,0 +1,21 @@
+id,category,question,wall_seconds,retrieval_ms,generation_ms,model,stop_reason,iteration_count,follow_up_queries,sources_returned,output_file
+q01,programs_ug,What is the intake for Computer Engineering and is the programme NBA accredited?,83.6,6285,75751,qwen2.5:7b-instruct-q4_K_M,,1,,5,q01.txt
+q02,programs_pg,What postgraduate programmes does the Computer Engineering department offer?,60.5,6733,52181,qwen2.5:7b-instruct-q4_K_M,,1,,5,q02.txt
+q03,programs_phd,What is the process for admission to the PhD programme in Computer Engineering?,57.0,6157,49438,qwen2.5:7b-instruct-q4_K_M,,1,,5,q03.txt
+q04,admissions,What is the eligibility criteria for admission to the B.Tech programme?,75.0,6214,67426,qwen2.5:7b-instruct-q4_K_M,,1,,5,q04.txt
+q05,admissions,What entrance exams are accepted for admission to Pillai College of Engineering?,56.0,6112,48434,qwen2.5:7b-instruct-q4_K_M,,1,,5,q05.txt
+q06,fees,What is the fee structure for the Computer Engineering programme?,66.4,5885,59201,qwen2.5:7b-instruct-q4_K_M,,1,,5,q06.txt
+q07,faculty,Who are the faculty members in the Computer Engineering department?,51.8,5930,44540,qwen2.5:7b-instruct-q4_K_M,,1,,5,q07.txt
+q08,facilities,What laboratory facilities are available for Computer Engineering students?,78.1,6195,70463,qwen2.5:7b-instruct-q4_K_M,,1,,5,q08.txt
+q09,placement,What is the placement record for the Computer Engineering department?,64.0,6132,56553,qwen2.5:7b-instruct-q4_K_M,,1,,5,q09.txt
+q10,hostel,Is hostel accommodation available for students at the college?,49.2,6164,41727,qwen2.5:7b-instruct-q4_K_M,,1,,5,q10.txt
+q11,library,What library resources are available to students?,44.9,6020,37539,qwen2.5:7b-instruct-q4_K_M,,1,,5,q11.txt
+q12,research,What research areas or centers does the Computer Engineering department focus on?,56.1,6079,48727,qwen2.5:7b-instruct-q4_K_M,,1,,5,q12.txt
+q13,accreditation,Which programmes at the college are NBA accredited?,38.8,6185,31346,qwen2.5:7b-instruct-q4_K_M,,1,,5,q13.txt
+q14,policies,What is the attendance policy for students?,89.7,6450,81954,qwen2.5:7b-instruct-q4_K_M,,1,,5,q14.txt
+q15,multi_hop,Compare the Computer Engineering programme's accreditation status with its placement record.,54.4,6083,47047,qwen2.5:7b-instruct-q4_K_M,,1,,5,q15.txt
+q16,multi_hop,What are the differences between the undergraduate and postgraduate Computer Engineering programmes in terms of duration and eligibility?,76.1,6256,68534,qwen2.5:7b-instruct-q4_K_M,,1,,5,q16.txt
+q17,out_of_scope,What is the weather forecast for Mumbai this week?,64.1,5931,56882,qwen2.5:7b-instruct-q4_K_M,,1,,5,q17.txt
+q18,out_of_scope,Who is the current Prime Minister of India?,52.7,5910,45501,qwen2.5:7b-instruct-q4_K_M,,1,,5,q18.txt
+q19,general_info,Where is Pillai College of Engineering located and how can I contact the admissions office?,69.9,6330,62218,qwen2.5:7b-instruct-q4_K_M,,1,,5,q19.txt
+q20,general_info,What is the vision and mission of Pillai College of Engineering?,66.0,5939,58706,qwen2.5:7b-instruct-q4_K_M,,1,,5,q20.txt

@@ -1,0 +1,80 @@
+The provided context does not contain specific weather forecast information for Mumbai this week. The context mentions the "System of Air Quality and Weather Forecasting and Research" (SAFAR) initiative by the Ministry of Earth Sciences, Government of India, which provides air quality and weather forecasts for greater metropolitan cities of India, including Mumbai. However, it does not provide the current or upcoming week's weather forecast details. For the most accurate and up-to-date weather forecast, you should refer to reliable meteorological sources or websites.
+
+Sources:
+  [S1] Sitemap
+        https://www.pce.ac.in/sitemap/
+  [S2] Placements
+        https://www.pce.ac.in/placements/
+  [S3] Research Facilities
+        https://www.pce.ac.in/research/research-facilities/
+  [S4] Sitemap
+        https://www.pce.ac.in/sitemap/
+  [S5] Sitemap
+        https://www.pce.ac.in/sitemap/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 5931ms, generation 56882ms]
+
+{
+  "question": "What is the weather forecast for Mumbai this week?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 62812.7,
+  "retrieval_ms": 5930.8,
+  "generation_ms": 56881.7,
+  "sources": [
+    "64afbb53-edf0-497c-80a2-4d8296154697",
+    "4191eaed-5d65-4ceb-8cd6-6753340631e6",
+    "6d833a90-2561-4961-a572-484a97b50980",
+    "bffbf2df-c19b-41df-89b8-07f359b73780",
+    "a2ce7329-cc11-44c1-b071-14c942f82932"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What is the weather forecast for Mumbai this week?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "64afbb53-edf0-497c-80a2-4d8296154697",
+        "score": 0.644011,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4191eaed-5d65-4ceb-8cd6-6753340631e6",
+        "score": 0.637829,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d833a90-2561-4961-a572-484a97b50980",
+        "score": 0.627499,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bffbf2df-c19b-41df-89b8-07f359b73780",
+        "score": 0.626662,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a2ce7329-cc11-44c1-b071-14c942f82932",
+        "score": 0.617587,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 5924.91,
+      "dense_search": 5.94
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

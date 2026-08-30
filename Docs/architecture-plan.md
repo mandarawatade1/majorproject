@@ -2693,3 +2693,90 @@ remaining imperfection is documented rather than chased.
 
 One measurement still outstanding for the ablation as a whole: a genuine C0 on
 a fixed-chunk index (§22).
+
+---
+
+## 27. The genuine C0, and the end of data collection (30 Aug 2026)
+
+§22 established that `eval/results/C0` had been collected against a
+structure-aware index: C0 and C1 cited byte-identical sources on 20 of 20
+questions, and 60 of C0's 88 citations carried a section path that
+`FixedSizeChunker` cannot produce. The C0 → C1 row measured the grounding
+prompt, not chunking.
+
+That is now repaired, and the repair is verified rather than assumed.
+
+### 27.1 The evidence that this C0 is a real C0
+
+Re-indexed with `--config C0 --reset` (fixed chunking, and the §21.1 fix means
+the sparse index was reset with the dense one), then evaluated:
+
+| Configuration | Citations | Carrying a section path |
+| --- | --- | --- |
+| **C0 (new)** | 100 | **0** |
+| C1-CONTROL | 88 | 60 |
+| C1 | 88 | 60 |
+
+Zero is the number that matters. `FixedSizeChunker` sets `section_path=None` on
+every chunk it makes — deliberately, because a fixed window spans arbitrary
+parts of a document and belongs to no section. A C0 answer therefore *cannot*
+cite `... > BACHELOR OF TECHNOLOGY > page 1`, and none does.
+
+| Comparison | Identical sources |
+| --- | --- |
+| C0 vs C1-CONTROL | **0 / 20** |
+| C0 vs C1 | **0 / 20** |
+| C1-CONTROL vs C1 | **20 / 20** |
+
+The first two confirm C0 now retrieves over genuinely different chunks. The
+third confirms C1-CONTROL and C1 share an index exactly as intended — same
+chunker, same retrieval, differing only in the prompt.
+
+### 27.2 What the ablation can now claim
+
+The confound of §20.2 is resolved into two clean measurements:
+
+| Comparison | Isolates |
+| --- | --- |
+| C0 → C1-CONTROL | **structure-aware chunking** (prompt held at C0's) |
+| C1-CONTROL → C1 | **the grounding prompt** (chunking held at C1's) |
+| C1 → C2 | hybrid retrieval — *and context width, see §20.7* |
+| C2 → C3 | cross-encoder reranking |
+| C3 → C4 | agentic iterative retrieval |
+| C4 → C5 | post-answer verification |
+
+`eval/results/C1-CONTROL` is the run originally filed as C0; it was relabelled
+rather than re-run, because at query time "the C0 pipeline over a
+structure-aware index" *is* C1-CONTROL. That relabelling is recorded here so a
+reader is never left to discover it.
+
+### 27.3 Cost, measured
+
+C0 completed 20 questions in **20.9 minutes** against C5's **109.4**, with
+retrieval flat at ~6 s per question — no BM25, no fusion, no reranking, no
+agent loop, no verification.
+
+Per question the baseline makes **one** LLM call; the full system makes up to
+**four** (two `decide` calls, the answer, the verification), plus a
+cross-encoder pass over roughly 50 candidates.
+
+So the honest cost–benefit statement, with the numbers to support it: **the
+full system costs several times the baseline per question, and what it buys is
+grounding transparency rather than better retrieval** — C4 changed the answer's
+sources on 2 of 20 against C3, C5 changed none of them, and C5 flagged 17
+unsupported claims across 48 that a reader would otherwise never have seen.
+
+Quote the call counts rather than the seconds. Wall-clock on this machine
+varies about tenfold with load (§23.3); the ordering is structural and safe,
+the ratio is not.
+
+### 27.4 Data collection is complete
+
+Seven runs, 140 questions, all against the 765-document corpus:
+
+`C0`, `C1-CONTROL`, `C1`, `C2`, `C3`, `C4`, `C5`.
+
+No further evaluation runs are planned. What remains is Chapter 4 and the four
+decisions in §20.1 (the reranker the report may still name wrongly), §20.7
+(context width), §23.4 (temperature and single runs) and §24.6 (how to present
+C4's negative result).

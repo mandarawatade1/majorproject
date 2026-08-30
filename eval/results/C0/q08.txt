@@ -1,0 +1,86 @@
+For Computer Engineering students, several laboratory facilities are available:
+
+1. **High Performance Computing Lab**: This lab, funded by AICTE under MODROB’s Scheme, is equipped with advanced infrastructure such as AMD Thread Ripper (2nd Gen) 2970WX and Nvidia RTX 3090 24 GB GPU. It is utilized by students from UG, PG, and PhD programs for various Machine Learning and Deep Learning projects.
+
+2. **Maker's Studio**: While primarily a space for working on any engineering project, it also offers state-of-the-art facilities including 3D printers, laser cutting & engraving machines, PCB milling machines, and various CNC machines. These tools enable students to build and prototype their projects in one comprehensive lab.
+
+These facilities provide a robust environment for both theoretical and practical learning, supporting a wide range of research and project work in the field of Computer Engineering.
+
+Sources:
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S2] IT Facilities
+        https://www.pce.ac.in/about/infrastructure-and-facilities/it-facilities/
+  [S3] Research Facilities
+        https://www.pce.ac.in/research/research-facilities/
+  [S4] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6195ms, generation 70463ms]
+
+{
+  "question": "What laboratory facilities are available for Computer Engineering students?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 76658.5,
+  "retrieval_ms": 6195.3,
+  "generation_ms": 70462.9,
+  "sources": [
+    "c9d69413-fdeb-4642-85fa-4279aa4e09a8",
+    "d2e51182-37ad-44a6-b776-b7827e58bff9",
+    "cf868125-33fe-4040-8186-f2b09034947b",
+    "3a4d3342-f8d9-4c69-a955-1940a10fe79f",
+    "0d9aa0ef-2138-46c5-9971-cecedefa32cf"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What laboratory facilities are available for Computer Engineering students?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "c9d69413-fdeb-4642-85fa-4279aa4e09a8",
+        "score": 0.753287,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d2e51182-37ad-44a6-b776-b7827e58bff9",
+        "score": 0.72967,
+        "document_id": "pce-about-infrastructure-and-facilities-it-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cf868125-33fe-4040-8186-f2b09034947b",
+        "score": 0.721608,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3a4d3342-f8d9-4c69-a955-1940a10fe79f",
+        "score": 0.711397,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0d9aa0ef-2138-46c5-9971-cecedefa32cf",
+        "score": 0.700333,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6184.06,
+      "dense_search": 11.26
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

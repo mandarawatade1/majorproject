@@ -1,0 +1,80 @@
+Students have access to a variety of resources through the library, including books, lecture notes, and videos. Additionally, the library portal provides an easy interface for users to check their book circulation details, such as current issued books, due dates, and past fine details. The library also offers digital resources, including E-Journals, Pillai’s Digital Archive, NPTEL IIT Lecture series, and a good number of Open Access Resources. Furthermore, the library has a component library that allows students to issue electronic components and mechanical instruments for project development.
+
+Sources:
+  [S1] Digital Library
+        https://www.pce.ac.in/library/digital-library/
+  [S2] Digital Library
+        https://www.pce.ac.in/library/digital-library/
+  [S3] Library Information
+        https://www.pce.ac.in/library/library-information/
+  [S4] Institutional Values and Best Practices
+        https://www.pce.ac.in/iqac/institutional-values-and-best-practices/
+  [S5] The Institute
+        https://www.pce.ac.in/about/the-institute/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6020ms, generation 37539ms]
+
+{
+  "question": "What library resources are available to students?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 43559.4,
+  "retrieval_ms": 6019.8,
+  "generation_ms": 37539.4,
+  "sources": [
+    "574d4104-508f-47a5-b408-03daa3606a4b",
+    "a0c17ce3-8d18-4579-ad1b-703a32f9f594",
+    "aebd4ba4-6936-4f6d-9293-f63a1086d2b4",
+    "6175c2e8-c177-4392-9ef2-678638094086",
+    "46b8bc5f-0164-40b0-9c2c-6a42c023b731"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What library resources are available to students?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "574d4104-508f-47a5-b408-03daa3606a4b",
+        "score": 0.703303,
+        "document_id": "pce-library-digital-library",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a0c17ce3-8d18-4579-ad1b-703a32f9f594",
+        "score": 0.677989,
+        "document_id": "pce-library-digital-library",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "aebd4ba4-6936-4f6d-9293-f63a1086d2b4",
+        "score": 0.675546,
+        "document_id": "pce-library-library-information",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6175c2e8-c177-4392-9ef2-678638094086",
+        "score": 0.674544,
+        "document_id": "pce-iqac-institutional-values-and-best-practices",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "46b8bc5f-0164-40b0-9c2c-6a42c023b731",
+        "score": 0.671369,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6013.89,
+      "dense_search": 5.88
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

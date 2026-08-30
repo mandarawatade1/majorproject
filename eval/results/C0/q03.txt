@@ -1,0 +1,82 @@
+The provided context does not specifically detail the process for admission to the PhD programme in Computer Engineering at Pillai College of Engineering, New Panvel. The sitemaps and information provided cover general admission notices, scholarships, and curriculum details for various undergraduate programs but do not include specific information for the PhD programme.
+
+For detailed information on the admission process for the PhD programme in Computer Engineering, you should visit the official website of Pillai College of Engineering, New Panvel, or contact the admissions office directly. Typically, such information would include requirements for academic qualifications, research proposals, letters of recommendation, and any specific application deadlines.
+
+Sources:
+  [S1] Sitemap
+        https://www.pce.ac.in/sitemap/
+  [S2] Sitemap
+        https://www.pce.ac.in/sitemap/
+  [S3] Fee Fixation Committee
+        https://www.pce.ac.in/about/mandatory-disclosure/fee-fixation-committee/
+  [S4] European Study Tour 2018
+        https://www.pce.ac.in/bws-gallery/european-study-tour-2018/
+  [S5] Book Article Requisition Form
+        https://www.pce.ac.in/library/book-article-requisition-form/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6157ms, generation 49438ms]
+
+{
+  "question": "What is the process for admission to the PhD programme in Computer Engineering?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 55594.7,
+  "retrieval_ms": 6156.7,
+  "generation_ms": 49437.7,
+  "sources": [
+    "ec83fe9a-e2a2-4cc8-9191-da21527229a5",
+    "ac83276d-818d-4cb7-84e2-54ab69a3f4c4",
+    "0b6a1031-e0f5-4da9-8700-be518e515eed",
+    "12e58db3-0a2d-4f93-87c6-dc9f919038b0",
+    "a391d900-c3e4-43f6-a7ca-02f9acc44772"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What is the process for admission to the PhD programme in Computer Engineering?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "ec83fe9a-e2a2-4cc8-9191-da21527229a5",
+        "score": 0.706957,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ac83276d-818d-4cb7-84e2-54ab69a3f4c4",
+        "score": 0.664636,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0b6a1031-e0f5-4da9-8700-be518e515eed",
+        "score": 0.656361,
+        "document_id": "pce-about-mandatory-disclosure-fee-fixation-committee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "12e58db3-0a2d-4f93-87c6-dc9f919038b0",
+        "score": 0.656361,
+        "document_id": "pce-bws-gallery-european-study-tour-2018",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a391d900-c3e4-43f6-a7ca-02f9acc44772",
+        "score": 0.656361,
+        "document_id": "pce-library-book-article-requisition-form",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6148.53,
+      "dense_search": 8.2
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

@@ -1,0 +1,80 @@
+The provided context does not contain specific information about the accreditation status or placement records for the Computer Engineering programme at Pillai College of Engineering, New Panvel. The context lists various program overviews, curricula, and student information but does not include details on accreditation or placement records. To answer your question accurately, we would need additional information directly related to the Computer Engineering programme's accreditation status and placement records.
+
+Sources:
+  [S1] Applied Science and Mathematics
+        https://www.pce.ac.in/bachelors/applied-science-and-mathematics/
+  [S2] Book Article Requisition Form
+        https://www.pce.ac.in/library/book-article-requisition-form/
+  [S3] Agnipath Yojana
+        https://www.pce.ac.in/students/get-career-ready/agnipath-yojana/
+  [S4] TPC-PCE
+        https://www.pce.ac.in/students/student-activities/student-associations/tpc-pce/
+  [S5] Teacher’s Day Special
+        https://www.pce.ac.in/teachers-day-special/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6083ms, generation 47047ms]
+
+{
+  "question": "Compare the Computer Engineering programme's accreditation status with its placement record.",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 53130.1,
+  "retrieval_ms": 6083.4,
+  "generation_ms": 47046.6,
+  "sources": [
+    "40b80757-c566-4b2b-9c14-e001f21f908c",
+    "cf9f8307-697b-4830-a12d-35a5eed59dfb",
+    "7bb3f128-d76c-41d3-8992-76984842914e",
+    "c8343fd2-9b6e-4d92-9d93-9d04519d6cc6",
+    "fd231264-d9b3-4134-82d5-44e6455813d9"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "Compare the Computer Engineering programme's accreditation status with its placement record.",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "40b80757-c566-4b2b-9c14-e001f21f908c",
+        "score": 0.676874,
+        "document_id": "pce-bachelors-applied-science-and-mathematics",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cf9f8307-697b-4830-a12d-35a5eed59dfb",
+        "score": 0.676874,
+        "document_id": "pce-library-book-article-requisition-form",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7bb3f128-d76c-41d3-8992-76984842914e",
+        "score": 0.676874,
+        "document_id": "pce-students-get-career-ready-agnipath-yojana",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c8343fd2-9b6e-4d92-9d93-9d04519d6cc6",
+        "score": 0.676874,
+        "document_id": "pce-students-student-activities-student-associations-tpc-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fd231264-d9b3-4134-82d5-44e6455813d9",
+        "score": 0.676874,
+        "document_id": "pce-teachers-day-special",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6077.92,
+      "dense_search": 5.49
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

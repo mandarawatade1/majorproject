@@ -1,0 +1,80 @@
+Based on the provided context, the faculty member in the Computer Engineering department is Sheetal Gawande. She is listed as a faculty member in the Computer Engineering Department and can be contacted via email at sheetalp@mes.ac.in.
+
+Sources:
+  [S1] Sheetal Gawande
+        https://www.pce.ac.in/faculty/faculty-directory/sheetal-gawande/
+  [S2] Program Overview
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S3] Program Overview
+        https://www.pce.ac.in/academics/masters/computer-engineering/program-overview/
+  [S4] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 5930ms, generation 44540ms]
+
+{
+  "question": "Who are the faculty members in the Computer Engineering department?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 50470.2,
+  "retrieval_ms": 5929.6,
+  "generation_ms": 44540.4,
+  "sources": [
+    "805976d1-7843-4cd0-9936-2127b5a91d82",
+    "20c4f954-6791-49fd-bc9e-a805e9565d89",
+    "ea08b35f-4d96-4129-9a79-c7d557ae849d",
+    "c9d69413-fdeb-4642-85fa-4279aa4e09a8",
+    "f7be8c05-eb2b-4f2d-ad85-bcbf55a3cece"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "Who are the faculty members in the Computer Engineering department?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "805976d1-7843-4cd0-9936-2127b5a91d82",
+        "score": 0.767844,
+        "document_id": "pce-faculty-faculty-directory-sheetal-gawande",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "20c4f954-6791-49fd-bc9e-a805e9565d89",
+        "score": 0.736557,
+        "document_id": "pce-academics-bachelors-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ea08b35f-4d96-4129-9a79-c7d557ae849d",
+        "score": 0.732585,
+        "document_id": "pce-academics-masters-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c9d69413-fdeb-4642-85fa-4279aa4e09a8",
+        "score": 0.719272,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f7be8c05-eb2b-4f2d-ad85-bcbf55a3cece",
+        "score": 0.698061,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 5922.31,
+      "dense_search": 7.26
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

@@ -1,0 +1,92 @@
+The Computer Engineering department at Pillai College of Engineering focuses on the following research areas:
+
+- Artificial Intelligence & ML
+- Big Data Analytics
+- Cyber Security and Digital Forensics
+- High Performance Computing
+- Data Science
+- Computer Networks
+- Data Mining
+- Image Processing
+- Cyber Security & Digital Forensics
+
+These research areas reflect the department's commitment to advancing knowledge and innovation in various domains of computer engineering.
+
+Sources:
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S2] Program Overview
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S3] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S4] Program Overview
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6079ms, generation 48727ms]
+
+{
+  "question": "What research areas or centers does the Computer Engineering department focus on?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 54806.4,
+  "retrieval_ms": 6079.5,
+  "generation_ms": 48726.8,
+  "sources": [
+    "c9d69413-fdeb-4642-85fa-4279aa4e09a8",
+    "7149a3b0-4aa8-4143-8f8e-6bdc48cd6425",
+    "f7be8c05-eb2b-4f2d-ad85-bcbf55a3cece",
+    "20c4f954-6791-49fd-bc9e-a805e9565d89",
+    "486456ab-4cf1-47c7-9085-6180b0224074"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What research areas or centers does the Computer Engineering department focus on?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "c9d69413-fdeb-4642-85fa-4279aa4e09a8",
+        "score": 0.751281,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7149a3b0-4aa8-4143-8f8e-6bdc48cd6425",
+        "score": 0.749388,
+        "document_id": "pce-academics-ph-d-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f7be8c05-eb2b-4f2d-ad85-bcbf55a3cece",
+        "score": 0.742628,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "20c4f954-6791-49fd-bc9e-a805e9565d89",
+        "score": 0.72432,
+        "document_id": "pce-academics-bachelors-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "486456ab-4cf1-47c7-9085-6180b0224074",
+        "score": 0.723828,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6073.84,
+      "dense_search": 5.62
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

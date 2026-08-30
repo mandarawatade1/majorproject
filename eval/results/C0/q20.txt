@@ -1,0 +1,82 @@
+The vision of Pillai College of Engineering (PCE) is to admit, educate, and train a diverse population of students who are academically prepared to benefit from the Institute’s infrastructure and faculty experience, to become responsible professionals or entrepreneurs in a technical arena. It also aims to attract, develop, and retain dedicated, excellent teachers, scholars, and professionals from diverse backgrounds whose work gives them knowledge beyond the classroom.
+
+The mission of PCE is to develop professional engineers with respect for the environment and to make them responsible citizens in technological development, both from an Indian and global perspective. The college aims to mold its students into successful alumni by fostering an entrepreneurship culture among students, faculty members, and alumni. This is achieved through the training of a diverse population of students to become responsible professionals or entrepreneurs in a technical arena and by training faculty members and students to contribute to nation-building.
+
+Sources:
+  [S1] The Institute
+        https://www.pce.ac.in/about/the-institute/
+  [S2] PERKS of PILLAI
+        https://www.pce.ac.in/perks-of-pillai/
+  [S3] Wp Content  Uploads  2025  01  Iic Annual Report 2023 24 For Pce.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2025/01/IIC-Annual-Report-2023-24-for-PCE.pdf
+  [S4] Wp Content  Uploads  2024  02  Iic Pce Annual Report 2022 23.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2024/02/IIC-PCE-Annual-Report-2022-23.pdf
+  [S5] Electronics & Telecommunication Engineering
+        https://www.pce.ac.in/bachelors/electronics-and-telecommunication/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 5939ms, generation 58706ms]
+
+{
+  "question": "What is the vision and mission of Pillai College of Engineering?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 64644.6,
+  "retrieval_ms": 5938.8,
+  "generation_ms": 58705.7,
+  "sources": [
+    "eac5ff22-e6c3-46fc-b6f9-aec5171fed5f",
+    "98ae9903-62df-4ece-ac8a-c12a9b348220",
+    "5a06377a-b31c-456a-8988-5352a4af54e6",
+    "0b913077-185d-4c64-a6a2-63e6ded77471",
+    "be4d225a-d168-4e24-9470-25520a916eda"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What is the vision and mission of Pillai College of Engineering?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "eac5ff22-e6c3-46fc-b6f9-aec5171fed5f",
+        "score": 0.770707,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "98ae9903-62df-4ece-ac8a-c12a9b348220",
+        "score": 0.75239,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5a06377a-b31c-456a-8988-5352a4af54e6",
+        "score": 0.748395,
+        "document_id": "pce-pdf-iic-annual-report-2023-24-for-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0b913077-185d-4c64-a6a2-63e6ded77471",
+        "score": 0.745315,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "be4d225a-d168-4e24-9470-25520a916eda",
+        "score": 0.743422,
+        "document_id": "pce-bachelors-electronics-and-telecommunication",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 5932.62,
+      "dense_search": 6.17
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

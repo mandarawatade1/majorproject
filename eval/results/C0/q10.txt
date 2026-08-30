@@ -1,0 +1,80 @@
+Yes, hostel accommodation is available for students at Pillai College of Engineering, New Panvel. The college offers separate hostels for boys and girls, with various room options available. For girls, there are double rooms and six-bed dormitories, while for boys, there are triple rooms, double rooms, and single rooms. Both hostels are designed to provide a conducive environment for study and personal talent development, including sports and other extracurricular activities.
+
+Sources:
+  [S1] Hostel Details
+        https://www.pce.ac.in/academics/admissions/hostel-details/
+  [S2] Hostel Facility
+        https://www.pce.ac.in/about/infrastructure-and-facilities/hostel-facility/
+  [S3] Hostel Details
+        https://www.pce.ac.in/academics/admissions/hostel-details/
+  [S4] Hostel Details
+        https://www.pce.ac.in/academics/admissions/hostel-details/
+  [S5] Hostel Facility
+        https://www.pce.ac.in/about/infrastructure-and-facilities/hostel-facility/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6164ms, generation 41727ms]
+
+{
+  "question": "Is hostel accommodation available for students at the college?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 47890.9,
+  "retrieval_ms": 6164.1,
+  "generation_ms": 41726.7,
+  "sources": [
+    "e853b539-fc1f-4b1a-8c24-db3f3722b02c",
+    "6a198b03-0377-41b3-ac69-2a90b78262f3",
+    "ac416523-19e8-4ae6-a824-9a75f43ed1dd",
+    "824f484a-b1b2-4624-bda5-f3db26b68fdb",
+    "ece51ed2-e22c-4e6b-94c7-e21d0c32b55b"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "Is hostel accommodation available for students at the college?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "e853b539-fc1f-4b1a-8c24-db3f3722b02c",
+        "score": 0.720538,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6a198b03-0377-41b3-ac69-2a90b78262f3",
+        "score": 0.720107,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ac416523-19e8-4ae6-a824-9a75f43ed1dd",
+        "score": 0.715768,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "824f484a-b1b2-4624-bda5-f3db26b68fdb",
+        "score": 0.689725,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ece51ed2-e22c-4e6b-94c7-e21d0c32b55b",
+        "score": 0.667367,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6158.46,
+      "dense_search": 5.6
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

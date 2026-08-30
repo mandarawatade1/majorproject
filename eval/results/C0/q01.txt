@@ -1,0 +1,83 @@
+The provided context does not specify the intake for the Computer Engineering program at Pillai College of Engineering. However, it does mention that the B. Tech in Computer Engineering program has been re-accredited by the National Board of Accreditation (NBA) for 3 years from 2022-23 to 2024-25, which extends until 30th June, 2025. For more detailed information, you can refer to the autonomous curriculum links provided on the college's website:
+
+- [B. Tech Autonomous Curriculum](https://www.pce.ac.in/academics/bachelors/computer-engineering/curriculum/)
+- [M. Tech Autonomous Curriculum](https://www.pce.ac.in/academics/masters/computer-engineering/curriculum/)
+
+Sources:
+  [S1] About Us
+        https://www.pce.ac.in/about-us/
+  [S2] The Institute
+        https://www.pce.ac.in/about/the-institute/
+  [S3] About Us
+        https://www.pce.ac.in/about-us/
+  [S4] The Institute
+        https://www.pce.ac.in/about/the-institute/
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6285ms, generation 75751ms]
+
+{
+  "question": "What is the intake for Computer Engineering and is the programme NBA accredited?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 82036.6,
+  "retrieval_ms": 6284.8,
+  "generation_ms": 75751.4,
+  "sources": [
+    "c0e48dfa-07f0-4924-ae9b-4fed7f1a7ad7",
+    "a7cf9b56-cc22-429d-b6da-a29984dc21a6",
+    "54e96613-a5bc-49d9-ad5f-4a3af4dc5b7c",
+    "efa41217-04df-451a-b0fc-19183304b39b",
+    "327a9184-bf23-4c96-a651-4c644b430460"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What is the intake for Computer Engineering and is the programme NBA accredited?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "c0e48dfa-07f0-4924-ae9b-4fed7f1a7ad7",
+        "score": 0.77845,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a7cf9b56-cc22-429d-b6da-a29984dc21a6",
+        "score": 0.772136,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "54e96613-a5bc-49d9-ad5f-4a3af4dc5b7c",
+        "score": 0.750653,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "efa41217-04df-451a-b0fc-19183304b39b",
+        "score": 0.735431,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "327a9184-bf23-4c96-a651-4c644b430460",
+        "score": 0.734131,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6277.49,
+      "dense_search": 7.29
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

@@ -1,0 +1,82 @@
+Pillai College of Engineering is located at Dr. K. M. Vasudevan Pillai Campus, Plot No. 10, Sector 16, New Panvel – 410 206, Maharashtra, India.
+
+To contact the admissions office, you can call 022-65748009 or 022-65748010. Alternatively, you can reach out via email at pce@mes.ac.in or principalpce@mes.ac.in.
+
+Sources:
+  [S1] Hostel Details
+        https://www.pce.ac.in/academics/admissions/hostel-details/
+  [S2] Contact
+        https://www.pce.ac.in/about/contact/
+  [S3] Wp Content  Uploads  2019  11  Ari C 33505.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2019/11/ARI-C-33505.pdf
+  [S4] Wp Content  Uploads  2019  08  Api Workshop Brochure.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2019/08/API-Workshop-Brochure.pdf
+  [S5] Placement Cell
+        https://www.pce.ac.in/placements/placement-cell/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6330ms, generation 62218ms]
+
+{
+  "question": "Where is Pillai College of Engineering located and how can I contact the admissions office?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 68549.0,
+  "retrieval_ms": 6330.4,
+  "generation_ms": 62218.3,
+  "sources": [
+    "8aa511e0-1485-4078-b6d3-59a8ba53ac46",
+    "ff7627b3-e253-46e0-83c3-1f59c4eed3ea",
+    "87f178a2-740e-43a9-ad9e-2936ed23ab93",
+    "64b100e4-b61a-4a4c-94f9-b03a325f192b",
+    "7fbf74d0-3ff9-441e-89cd-47b14f537328"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "Where is Pillai College of Engineering located and how can I contact the admissions office?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "8aa511e0-1485-4078-b6d3-59a8ba53ac46",
+        "score": 0.786405,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ff7627b3-e253-46e0-83c3-1f59c4eed3ea",
+        "score": 0.777747,
+        "document_id": "pce-about-contact",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "87f178a2-740e-43a9-ad9e-2936ed23ab93",
+        "score": 0.770948,
+        "document_id": "pce-pdf-ari-c-33505",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "64b100e4-b61a-4a4c-94f9-b03a325f192b",
+        "score": 0.769808,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7fbf74d0-3ff9-441e-89cd-47b14f537328",
+        "score": 0.762164,
+        "document_id": "pce-placements-placement-cell",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6321.46,
+      "dense_search": 8.95
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

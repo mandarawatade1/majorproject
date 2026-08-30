@@ -1,0 +1,87 @@
+The attendance policy for students at Pillai College of Engineering, New Panvel, is as follows:
+
+1. **Recording and Adjustment of Attendance**: Attendance is recorded per session against the timetable grid. For rescheduled sessions, attendance is marked against the original slot, ensuring that adjustments are formally recorded rather than handled informally. Sessions cancelled by the institute are excluded from the attendance calculation.
+
+2. **Computation of Attendance**: Attendance is computed from the recorded sessions up to the cut-off date published each semester. This means that missed sessions due to personal commitments, travel, or unawareness of the schedule are not included in the calculation of attendance.
+
+3. **Handling of Missed Assessments and Attendance**: In the event of a missed assessment or attendance due to a medical emergency, the response is coordinated with the academic office to ensure that missed assessments are followed by DEMO/EXAM/2026/03 and missed attendance by DEMO/SOP/ACAD/2026/18. Students do not need to initiate this process themselves.
+
+4. **Detention Committee**: For students with significant attendance shortages, a detention committee reviews the student's per-course record, any warnings issued, condonations granted, and the student's written explanation. The committee can permit the student to appear with a recorded caution, permit appearance conditional on a make-up requirement, or detain the student in the course.
+
+These policies ensure a structured and fair approach to managing student attendance and addressing any issues that may arise.
+
+Sources:
+  [S1] SOP: Response to a Medical Emergency on Campus [DEMO DATA]
+  [S2] SOP: Industrial Visit and Field Trip Organisation [DEMO DATA]
+  [S3] Timetable: Computer Engineering Semester VII Division A (Illustrative) [DEMO DATA]
+  [S4] SOP: Attendance Shortage, Warning and Detention [DEMO DATA]
+  [S5] SOP: Attendance Shortage, Warning and Detention [DEMO DATA]
+
+  NOTE: one or more sources are synthetic DEMO DATA and do not describe real institutional fact.
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6450ms, generation 81954ms]
+
+{
+  "question": "What is the attendance policy for students?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 88404.4,
+  "retrieval_ms": 6450.4,
+  "generation_ms": 81953.9,
+  "sources": [
+    "b174ef9c-abd4-47dd-8ae2-fa81d8ba33da",
+    "04799dd6-8058-4997-9efc-1e9d5fa2913c",
+    "7cc03027-7d73-4fca-bffb-4fca5a4fc239",
+    "ddfd0ef6-5645-405c-b40a-c61d5d7ecfe4",
+    "1423b949-8645-4695-8aa6-4d6ec78b65b0"
+  ],
+  "used_demo_sources": true,
+  "retrieval": {
+    "original_query": "What is the attendance policy for students?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "b174ef9c-abd4-47dd-8ae2-fa81d8ba33da",
+        "score": 0.723238,
+        "document_id": "DEMO/SOP/SAFE/2026/02",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "04799dd6-8058-4997-9efc-1e9d5fa2913c",
+        "score": 0.708275,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "7cc03027-7d73-4fca-bffb-4fca5a4fc239",
+        "score": 0.703608,
+        "document_id": "DEMO/TT/CE/S7A/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "ddfd0ef6-5645-405c-b40a-c61d5d7ecfe4",
+        "score": 0.693341,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "1423b949-8645-4695-8aa6-4d6ec78b65b0",
+        "score": 0.689877,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6444.54,
+      "dense_search": 5.82
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

@@ -1,0 +1,86 @@
+Based on the context provided, the placement record for the Computer Engineering department at Pillai College of Engineering includes:
+
+- The Training & Placement Cell has opened up the 2020 campus hiring process.
+- Specific dates for placement activities are listed, such as a placement test or talk by Sanrad Medical Systems Pvt. Ltd. on December 12, 2020.
+- The placement process involves interested students filling out the Infosys Off-Campus Recruitment Form by a deadline of Thursday, July 29, 2021.
+
+These details indicate that the department actively engages in placing its students in relevant industries through company visits, placement tests, and registration processes. However, more specific data on the number of placements or companies involved is not provided in the given context.
+
+Sources:
+  [S1] Program Overview
+        https://www.pce.ac.in/academics/ph-d/computer-engineering/program-overview/
+  [S2] Program Overview
+        https://www.pce.ac.in/academics/bachelors/computer-engineering/program-overview/
+  [S3] Suhas J. Lawand
+        https://www.pce.ac.in/faculty/faculty-directory/suhas-j-lawand/
+  [S4] Placements
+        https://www.pce.ac.in/placements/
+  [S5] Dr. Pooja P. Raj
+        https://www.pce.ac.in/faculty/faculty-directory/dr-pooja-p-raj/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6132ms, generation 56553ms]
+
+{
+  "question": "What is the placement record for the Computer Engineering department?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 62685.4,
+  "retrieval_ms": 6132.3,
+  "generation_ms": 56553.0,
+  "sources": [
+    "7149a3b0-4aa8-4143-8f8e-6bdc48cd6425",
+    "20c4f954-6791-49fd-bc9e-a805e9565d89",
+    "b6fce0e6-ebfd-48d1-b77c-449243422ec5",
+    "980ec7be-df85-486c-915b-e6a24b958b81",
+    "00bc85e1-155e-4ed1-bb5c-fc0fd1fc3c83"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What is the placement record for the Computer Engineering department?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "7149a3b0-4aa8-4143-8f8e-6bdc48cd6425",
+        "score": 0.682948,
+        "document_id": "pce-academics-ph-d-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "20c4f954-6791-49fd-bc9e-a805e9565d89",
+        "score": 0.68045,
+        "document_id": "pce-academics-bachelors-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6fce0e6-ebfd-48d1-b77c-449243422ec5",
+        "score": 0.678807,
+        "document_id": "pce-faculty-faculty-directory-suhas-j-lawand",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "980ec7be-df85-486c-915b-e6a24b958b81",
+        "score": 0.677302,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "00bc85e1-155e-4ed1-bb5c-fc0fd1fc3c83",
+        "score": 0.67574,
+        "document_id": "pce-faculty-faculty-directory-dr-pooja-p-raj",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6125.51,
+      "dense_search": 6.75
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

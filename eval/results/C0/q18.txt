@@ -1,0 +1,80 @@
+The current Prime Minister of India mentioned in the context is Hon'ble Prime Minister, Shri Narendra Modi.
+
+Sources:
+  [S1] Hackathon
+        https://www.pce.ac.in/students/student-activities/student-awards-and-achievements/hackathon/
+  [S2] Hackathon
+        https://www.pce.ac.in/students/student-activities/student-awards-and-achievements/hackathon/
+  [S3] Wp Content  Uploads  2022  10  Iic Annual Report 2021 22.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/10/IIC-Annual-Report-2021-22.pdf
+  [S4] Netmagic Solutions Interview Schedule and Shortlisted Candidates List
+        https://www.pce.ac.in/netmagic-solutions-interview-schedule-and-shortlisted-candidates-list/
+  [S5] Research Grants
+        https://www.pce.ac.in/research/research-and-consultancy-grants/research-grants/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 5910ms, generation 45501ms]
+
+{
+  "question": "Who is the current Prime Minister of India?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 51411.9,
+  "retrieval_ms": 5910.2,
+  "generation_ms": 45501.5,
+  "sources": [
+    "f9f03e43-c46e-4ba6-94c3-c9998844a5ae",
+    "72e31dfe-86b2-411f-9bef-a0ebfcbbab70",
+    "a5a4c0d7-d6c3-4b62-a8a4-d49db55c8a63",
+    "d9544747-dfa6-4446-aef4-dfc8c28b4f65",
+    "31df97ec-96bd-4000-9fd3-f623676e43e2"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "Who is the current Prime Minister of India?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "f9f03e43-c46e-4ba6-94c3-c9998844a5ae",
+        "score": 0.678951,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "72e31dfe-86b2-411f-9bef-a0ebfcbbab70",
+        "score": 0.653295,
+        "document_id": "pce-students-student-activities-student-awards-and-achievements-hackathon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a5a4c0d7-d6c3-4b62-a8a4-d49db55c8a63",
+        "score": 0.643808,
+        "document_id": "pce-pdf-iic-annual-report-2021-22",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d9544747-dfa6-4446-aef4-dfc8c28b4f65",
+        "score": 0.639494,
+        "document_id": "pce-netmagic-solutions-interview-schedule-and-shortlisted-candidates-list",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "31df97ec-96bd-4000-9fd3-f623676e43e2",
+        "score": 0.630386,
+        "document_id": "pce-research-research-and-consultancy-grants-research-grants",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 5903.73,
+      "dense_search": 6.51
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

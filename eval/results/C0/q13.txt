@@ -1,0 +1,88 @@
+The National Board of Accreditation (NBA) has accredited the following programs at Pillai College of Engineering:
+
+- Automobile Engineering
+- Computer Engineering
+- Electronics and Telecommunication Engineering
+- Information Technology
+- Mechanical Engineering
+
+These programs have been accredited for 3 years, with the latest accreditation extending until June 30, 2025.
+
+Sources:
+  [S1] About Us
+        https://www.pce.ac.in/about-us/
+  [S2] The Institute
+        https://www.pce.ac.in/about/the-institute/
+  [S3] The Institute
+        https://www.pce.ac.in/about/the-institute/
+  [S4] About Us
+        https://www.pce.ac.in/about-us/
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6185ms, generation 31346ms]
+
+{
+  "question": "Which programmes at the college are NBA accredited?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 37531.5,
+  "retrieval_ms": 6185.3,
+  "generation_ms": 31346.0,
+  "sources": [
+    "c0e48dfa-07f0-4924-ae9b-4fed7f1a7ad7",
+    "a7cf9b56-cc22-429d-b6da-a29984dc21a6",
+    "efa41217-04df-451a-b0fc-19183304b39b",
+    "54e96613-a5bc-49d9-ad5f-4a3af4dc5b7c",
+    "52316c1c-0e07-4f2c-885a-5d28c240be83"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "Which programmes at the college are NBA accredited?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "c0e48dfa-07f0-4924-ae9b-4fed7f1a7ad7",
+        "score": 0.760897,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a7cf9b56-cc22-429d-b6da-a29984dc21a6",
+        "score": 0.751599,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "efa41217-04df-451a-b0fc-19183304b39b",
+        "score": 0.717342,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "54e96613-a5bc-49d9-ad5f-4a3af4dc5b7c",
+        "score": 0.707012,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "52316c1c-0e07-4f2c-885a-5d28c240be83",
+        "score": 0.699401,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6179.11,
+      "dense_search": 6.19
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

@@ -1,0 +1,85 @@
+Based on the information provided in the context, the fee structure for the Computer Engineering programme at Pillai College of Engineering, New Panvel, is as follows:
+
+- **First Year**: $100 as application processing fees, which is non-refundable.
+- **Total Fees for the Programme**: $3950 for the full-time 4-year programme.
+
+Please note that the fees mentioned are in US dollars, and the application processing fee is non-refundable.
+
+Sources:
+  [S1] Wp Content  Uploads  2023  06  Nri Pio 2023.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2023/06/NRI-PIO-2023.pdf
+  [S2] Wp Content  Uploads  2020  02  Workshop On C Brouchure.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2020/02/Workshop-on-C-Brouchure.pdf
+  [S3] Faculty Development Schemes
+        https://www.pce.ac.in/faculty/faculty-development-schemes/
+  [S4] Wp Content  Uploads  2023  06  Nri Pio 2023.Pdf
+        https://www.pce.ac.in/wp-content/uploads/2023/06/NRI-PIO-2023.pdf
+  [S5] Discover the Most Rewarding Engineering Careers Across Various Disciplines | Your Guide to Engineering Jobs
+        https://www.pce.ac.in/discover-the-most-rewarding-engineering-careers-across-various-disciplines-your-guide-to-engineering-jobs/
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 5885ms, generation 59201ms]
+
+{
+  "question": "What is the fee structure for the Computer Engineering programme?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 65086.3,
+  "retrieval_ms": 5885.2,
+  "generation_ms": 59200.9,
+  "sources": [
+    "01a7954f-e1a3-4bd3-a4b9-961881fc3de8",
+    "4c46a0fa-0357-46cd-9df8-fec510b7c356",
+    "ba8e6dc8-ecf6-42b0-bc32-5ae343fa1af6",
+    "64829d0e-6ab2-4b69-9bf8-75eadcc09030",
+    "3d7b6da4-a9d1-4b8a-8241-890a2e139891"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What is the fee structure for the Computer Engineering programme?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "01a7954f-e1a3-4bd3-a4b9-961881fc3de8",
+        "score": 0.726718,
+        "document_id": "pce-pdf-nri-pio-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4c46a0fa-0357-46cd-9df8-fec510b7c356",
+        "score": 0.721232,
+        "document_id": "pce-pdf-workshop-on-c-brouchure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ba8e6dc8-ecf6-42b0-bc32-5ae343fa1af6",
+        "score": 0.715917,
+        "document_id": "pce-faculty-faculty-development-schemes",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "64829d0e-6ab2-4b69-9bf8-75eadcc09030",
+        "score": 0.712824,
+        "document_id": "pce-pdf-nri-pio-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3d7b6da4-a9d1-4b8a-8241-890a2e139891",
+        "score": 0.709748,
+        "document_id": "pce-discover-the-most-rewarding-engineering-careers-across-various-disciplines-your",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 5875.43,
+      "dense_search": 9.73
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

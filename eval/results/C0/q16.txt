@@ -1,0 +1,91 @@
+The differences between the undergraduate and postgraduate Computer Engineering programmes in terms of duration and eligibility are as follows:
+
+- **Undergraduate Computer Engineering Programme:**
+  - **Duration:** 4 years
+  - **Eligibility:** Typically, candidates must have completed their 10+2 education with Physics, Chemistry, and Mathematics (PCM) as their main subjects. This programme is designed for students who wish to pursue a comprehensive education in Computer Engineering before entering the workforce or further studies.
+
+- **Postgraduate Computer Engineering Programme:**
+  - **Duration:** 2 years
+  - **Eligibility:** Candidates must hold a Bachelor's degree in Computer Engineering or a related field. This programme is ideal for those who have already gained foundational knowledge in Computer Engineering and are looking to specialize or enhance their skills in specific areas.
+
+These programmes are offered by Pillai College of Engineering, providing students with the opportunity to advance their education and career prospects in the field of Computer Engineering.
+
+Sources:
+  [S1] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+  [S2] Choosing the Best Path in Computer Engineering: A Guide to Colleges and Institutes in Mumbai
+        https://www.pce.ac.in/choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institutes-in-mumbai/
+  [S3] Academics
+        https://www.pce.ac.in/academics-department/
+  [S4] Circular: Elective Selection Window, Semester V Computer Engineering [DEMO DATA]
+  [S5] Electronics & Computer Science
+        https://www.pce.ac.in/bachelors/electronics-and-computer-science/
+
+  NOTE: one or more sources are synthetic DEMO DATA and do not describe real institutional fact.
+
+[C0 | qwen2.5:7b-instruct-q4_K_M | retrieval 6256ms, generation 68534ms]
+
+{
+  "question": "What are the differences between the undergraduate and postgraduate Computer Engineering programmes in terms of duration and eligibility?",
+  "config": "C0",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 74789.9,
+  "retrieval_ms": 6255.7,
+  "generation_ms": 68534.1,
+  "sources": [
+    "4fe9031d-4c2e-4c08-bf9d-bf49e0ed2c67",
+    "b96c098f-632c-4083-bf3d-748a3f31c49f",
+    "748b759e-c7bc-4e1c-964b-c32ecb7a7e53",
+    "d3b42598-e160-4526-9a15-3e870539e43f",
+    "b3f3bdf7-2790-46c1-80ac-0f643adad4f6"
+  ],
+  "used_demo_sources": true,
+  "retrieval": {
+    "original_query": "What are the differences between the undergraduate and postgraduate Computer Engineering programmes in terms of duration and eligibility?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "4fe9031d-4c2e-4c08-bf9d-bf49e0ed2c67",
+        "score": 0.763616,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b96c098f-632c-4083-bf3d-748a3f31c49f",
+        "score": 0.716738,
+        "document_id": "pce-choosing-the-best-path-in-computer-engineering-a-guide-to-colleges-and-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "748b759e-c7bc-4e1c-964b-c32ecb7a7e53",
+        "score": 0.713618,
+        "document_id": "pce-academics-department",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d3b42598-e160-4526-9a15-3e870539e43f",
+        "score": 0.711346,
+        "document_id": "DEMO/CE/2026/13",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "b3f3bdf7-2790-46c1-80ac-0f643adad4f6",
+        "score": 0.692619,
+        "document_id": "pce-bachelors-electronics-and-computer-science",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [],
+    "fused_hits": [],
+    "reranked_hits": [],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query": 6249.82,
+      "dense_search": 5.84
+    },
+    "iteration_count": 1,
+    "iterations": [],
+    "stop_reason": null
+  },
+  "verification": null
+}

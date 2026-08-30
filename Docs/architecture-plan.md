@@ -2780,3 +2780,133 @@ No further evaluation runs are planned. What remains is Chapter 4 and the four
 decisions in §20.1 (the reranker the report may still name wrongly), §20.7
 (context width), §23.4 (temperature and single runs) and §24.6 (how to present
 C4's negative result).
+
+---
+
+## 28. Phase 6a — the portal API, and a limitation it exposed (30 Aug 2026)
+
+Scoped with the team before any code: C3 as the portal default with C5 offered
+explicitly, Server-Sent Events with stage progress, and chat plus portal reads
+before auth and admin.
+
+### 28.1 What was built
+
+| File | Purpose |
+| --- | --- |
+| `rag/streaming.py` | answering as an event stream — stages, sources, tokens, answer |
+| `rag/generation/base.py` | `StreamingGenerator`, an *optional* protocol |
+| `rag/generation/ollama.py` | `stream()` over Ollama's newline-delimited JSON |
+| `rag/pipeline.py` | `ask()` split into `prepare()` and `finish()` |
+| `backend/app/services/rag_service.py` | pipeline cache, worker thread, config gate |
+| `backend/app/api/routes/chat.py` | `POST /api/v1/chat` as SSE |
+| `backend/app/api/routes/portal.py` | departments, programmes, faculty, notices, corpus |
+
+**The design rule.** The streaming path calls `Pipeline.prepare()` and
+`Pipeline.finish()` — the same methods `ask()` uses — and never re-implements a
+stage. A test asserts that both paths build **byte-identical prompts**. Without
+that, portal answers would drift from the answers Chapter 4 measured, and the
+evaluation would describe a system nobody used.
+
+**Why stage events, not just tokens.** Under C4 and C5 roughly 100 seconds pass
+in retrieval before the first token exists. Token streaming alone would leave a
+user watching nothing for a minute and a half. The agent's rounds — *searched
+again, found 11 new passages, decided it had enough* — become visible progress,
+which turns the system's worst property into the thing that makes it legible.
+
+**Only C3 and C5 are servable.** C0 was built deliberately naive; C0–C2 and C4
+are refused with a 400. The portal is not a research console.
+
+Verified live: retrieval 11.4 s under C3 (matching its measured average
+exactly), then token-by-token delivery, then the authoritative answer. 326 rag
+tests and 65 backend tests pass.
+
+### 28.2 The guard fired in production, and the design changed because of it
+
+The first live request failed with the §21.2 chunker-mismatch error: the index
+held C0's fixed chunks and the portal serves C3. The guard did its job — and a
+guard that fires during *ordinary* use is a design telling you something. One
+shared Chroma collection meant the portal and the evaluation permanently
+overwrote each other.
+
+Each chunking strategy now gets its own collection
+(`pce_chunks_fixed`, `pce_chunks_structure_aware`), so both can exist at once.
+
+**A correction worth recording.** The first version of that change treated an
+explicitly set `CHROMA_COLLECTION` as "use exactly this name" — but
+`.env.example` ships that variable already set, so every installation was
+pinned and the split happened nowhere. It failed identically the second time,
+with the same error naming the same collection. `CHROMA_COLLECTION` is now the
+*base* name; `CHROMA_COLLECTION_EXACT` is the real override. **An escape hatch
+that is on by default is not an escape hatch.**
+
+### 28.3 The finding: verification checks grounding, not attribution
+
+The portal was asked "What is the intake for Computer Engineering?" under C3.
+It answered:
+
+> "The intake for Computer Engineering at Pillai College of Engineering is 180
+> students **[S1]**."
+
+The two chunks it was given, both from the same intake PDF:
+
+| Marker | Section | Computer Engineering intake |
+| --- | --- | --- |
+| **[S1]** — cited | MASTER OF TECHNOLOGY, page 2 | **12** |
+| **[S2]** — not cited | BACHELOR OF TECHNOLOGY, page 1 | **180** |
+
+The fact is correct. The citation points at a table stating a different number.
+A reader who followed the citation to check — exactly the reader this project's
+page-level provenance is built for — would find it contradicted.
+
+Run again under C5, verification returned **`supported`, support rate 1.0**.
+
+**And that is correct behaviour by C5's own definition.** `VERIFY_SYSTEM` asks
+whether each sentence "is supported by the numbered context passages" —
+plural, the context as a whole. 180 *is* in the context. The verifier was never
+asked whether the sentence cites the passage the fact came from.
+
+So the property C5 establishes is narrower than "the citations are right":
+
+* **What C5 checks:** is this claim supported *somewhere* in the retrieved
+  context? (Groundedness.)
+* **What C5 does not check:** does this claim's citation marker point at the
+  passage that supports it? (Attribution.)
+
+Chapter 5 must state this precisely. Saying C5 "verifies citations" would
+overclaim; it verifies grounding. The distinction matters more than it might
+appear, because a misattributed citation is the *most* damaging kind of error
+in a system whose whole promise is traceability: it looks authoritative,
+survives verification, and is wrong only to a reader who checks.
+
+**Why the evaluation never caught this.** The 20-question harness records which
+chunks were retrieved and what was answered; it does not compare each citation
+marker against the passage that supports the sentence. Neither does RAGAS's
+faithfulness metric, which scores claims against the retrieved context as a
+whole. The failure was invisible until an answer was rendered with its sources
+beside it, in a UI — which is an argument for building the interface before
+writing the results chapter, not after.
+
+**Future work, scoped but not built.** Give the verifier, per sentence, only
+the passages that sentence actually cites, and ask whether *those* support it.
+That converts groundedness checking into attribution checking. It is a genuine
+capability change rather than a bug fix — it would alter what C5 measures and
+invalidate the collected C5 results — so it is recorded here as the natural
+successor to C5 rather than retrofitted into it.
+
+### 28.4 Cost, observed once more
+
+The same question, same index, C3 against C5:
+
+| | C3 | C5 |
+| --- | ---: | ---: |
+| Retrieval | 11.4 s | 116.7 s |
+| Total | 137.5 s | 210.1 s |
+
+Roughly 100 seconds of that difference is the agent, which the 20-question
+evaluation showed changes the retrieved evidence on 2 questions in 20. This is
+the single-question illustration of §4.4, and it is the evidence behind serving
+C3 by default.
+
+Note also that generation was 126 s of C3's 137 s — 92% of the wait. If the
+portal ever needs to feel faster, the lever is a smaller generator, not better
+retrieval.

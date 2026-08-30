@@ -1,0 +1,486 @@
+Students have access to a variety of library resources, including:
+
+- **E-Resources**: Students can access IEEE Explorer Digital Library, which includes 336 journals [S2].
+- **Aggregated Open Access Resources**: The library has a collection of open education resources, open courses, online free databases, and lecture videos [S3].
+- **Physical Books and Materials**: The library has a large collection of books, journals, project theses, CDs, multimedia CDs, and newspapers [S4, S5].
+- **Component Library**: For practical projects, students can check out components such as sensors, motors, IoT devices, Raspberry Pis, and Arduino boards [S1].
+- **Plagiarism Software**: The library uses Turnitin for plagiarism detection [S4, S5].
+- **Virtual Library Tools**: E-journals, Pillai’s Digital Archive, and NPTEL IIT Lecture series are available [S4, S5].
+
+These resources are designed to support both teaching and learning activities [S4, S5].
+
+Sources:
+  [S1] Research Facilities > Component Library
+        https://www.pce.ac.in/research/research-facilities/
+  [S2] Library Resources > Subscribed E-Resources
+        https://www.pce.ac.in/library/library-resources/
+  [S3] Library Resources > Aggregated Open Access
+        https://www.pce.ac.in/library/library-resources/
+  [S4] Library Information
+        https://www.pce.ac.in/library/library-information/
+  [S5] Library Information
+        https://www.pce.ac.in/library/library-information/
+
+  VERIFICATION: sentence(s) 7 of 7 were not supported by the cited sources (86% supported).
+
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 102501ms, generation 205219ms]
+
+{
+  "question": "What library resources are available to students?",
+  "config": "C5",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 423058.1,
+  "retrieval_ms": 102501.0,
+  "generation_ms": 205219.0,
+  "sources": [
+    "45b37dda-6e34-4e43-b474-6e5a0235b53b",
+    "5334eebd-b2fd-41ab-9ce2-71b59a1b33e9",
+    "3ee77826-86d7-4546-b7cb-95012e463a17",
+    "0c4ac5f6-cb7e-43ca-a9f3-1a3e657f351d",
+    "a7444cd1-21ea-4bb7-b66b-7702d3c10bf3"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What library resources are available to students?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "3ee77826-86d7-4546-b7cb-95012e463a17",
+        "score": 0.702141,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c05ee45f-30ba-4d59-8f5a-de0db5847e38",
+        "score": 0.698324,
+        "document_id": "DEMO/LIB/2026/09",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "3e2ad68d-21c0-4260-a8b3-0c13f0085ebf",
+        "score": 0.693748,
+        "document_id": "pce-library-digital-library",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5334eebd-b2fd-41ab-9ce2-71b59a1b33e9",
+        "score": 0.672473,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0c4ac5f6-cb7e-43ca-a9f3-1a3e657f351d",
+        "score": 0.660896,
+        "document_id": "pce-library-library-information",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bb711527-3c9b-441b-a4e4-69bf4979d4c7",
+        "score": 0.659419,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "36587dd4-1ba1-4774-88d5-78825534d736",
+        "score": 0.658243,
+        "document_id": "pce-15-things-you-cant-miss-at-pillais",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3cd5d789-8127-4bfa-94a6-007c3bdf790b",
+        "score": 0.655086,
+        "document_id": "DEMO/HELP/LIB/2026/06",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "d591ef97-1f53-4827-87e9-173b9fcf7723",
+        "score": 0.649499,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "bfb945dc-49d3-454d-8103-837c9ca51ebd",
+        "score": 0.646267,
+        "document_id": "pce-students-funds-for-students",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "45b37dda-6e34-4e43-b474-6e5a0235b53b",
+        "score": 0.645417,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9afa8677-c5e2-4964-ba92-1ec3b2ebedcb",
+        "score": 0.645115,
+        "document_id": "DEMO/IT/2026/02",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "772fd4bf-7f23-4966-b6b9-ed52ec40a68a",
+        "score": 0.631934,
+        "document_id": "DEMO/EXAM/2026/09",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "9fc18d79-2a11-4033-83c2-9d114c2bd25d",
+        "score": 0.625786,
+        "document_id": "DEMO/LIB/2026/09",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "ce83e000-af1f-4b5a-ad79-985b2b500e5b",
+        "score": 0.624896,
+        "document_id": "DEMO/HELP/LIB/2026/06",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "4cc5a235-25ea-4232-a249-94082f60c2f2",
+        "score": 0.61713,
+        "document_id": "pce-library-library-statistics",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f827d14c-bd37-4c31-ad40-bfbd7c61bc92",
+        "score": 0.615003,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0c7b3c0b-5e81-4a5e-9ae1-0ae3884051f8",
+        "score": 0.60634,
+        "document_id": "DEMO/IT/2026/02",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "4152921c-e28f-4c15-8da7-8e93174359c3",
+        "score": 0.605376,
+        "document_id": "DEMO/LIB/2026/09",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "38d0844d-32b1-4e97-a06e-8bf88ff52dea",
+        "score": 0.604018,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "cfe6651a-06ca-476c-a8e8-6cff081a8e60",
+        "score": 16.743129,
+        "document_id": "pce-about-infrastructure-and-facilities-resource-management-and-infrastructure-polic",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6139721-52a1-4f51-bd81-775eda6e2d54",
+        "score": 16.743129,
+        "document_id": "pce-about-infrastructure-and-facilities-resource-management-and-infrastructure-polic",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a7444cd1-21ea-4bb7-b66b-7702d3c10bf3",
+        "score": 15.032907,
+        "document_id": "pce-library-library-information",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0c4ac5f6-cb7e-43ca-a9f3-1a3e657f351d",
+        "score": 15.032907,
+        "document_id": "pce-library-library-information",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "efe3d848-5fc9-42a0-ad4b-2bf35954aa68",
+        "score": 14.453239,
+        "document_id": "pce-iqac-institutional-values-and-best-practices",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "39f2d8f6-b7b7-4c76-a519-8dc4c7057e0e",
+        "score": 14.453239,
+        "document_id": "pce-iqac-institutional-values-and-best-practices",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c6b762a0-77c6-4316-9769-87a7f87d86d2",
+        "score": 13.345637,
+        "document_id": "pce-mock-cet-online-platform-for-students-to-prepare-for-engineering-and-pharmacy-en",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e95be6cf-8ab1-49da-87a3-e0e72c2b7a26",
+        "score": 13.345637,
+        "document_id": "pce-mock-cet-online-platform-for-students-to-prepare-for-engineering-and-pharmacy-en",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c14b6f6a-1a60-4885-afbb-5cc0f34f4526",
+        "score": 13.049288,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "38d0844d-32b1-4e97-a06e-8bf88ff52dea",
+        "score": 13.049288,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cf7e0026-9e90-4b1f-9297-b723238545cf",
+        "score": 12.899134,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0eab1abf-9476-41eb-80b2-6b1031eff70f",
+        "score": 12.899134,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d1584f1e-f37d-41be-915b-9595e0b26957",
+        "score": 12.548337,
+        "document_id": "DEMO/HELP/LAB/2026/04",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "99b53d4a-f40b-4b15-bb1c-f73d90cc0007",
+        "score": 12.548337,
+        "document_id": "DEMO/HELP/LAB/2026/04",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "a27a1640-6404-42f0-8bda-fa5c685d7f81",
+        "score": 12.45649,
+        "document_id": "pce-library-digital-library-e-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9eeac2e2-6940-44ac-83a4-f8ea757cfa4d",
+        "score": 12.45649,
+        "document_id": "pce-library-digital-library-e-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c0cb8cbd-2593-42a0-be94-e19952c572e7",
+        "score": 12.413568,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3ee77826-86d7-4546-b7cb-95012e463a17",
+        "score": 12.413568,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "12dc8b7a-789f-4105-a571-4259e19e5108",
+        "score": 12.377177,
+        "document_id": "pce-webinar-on-gateway-to-success",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c067e9ab-b6e6-46ae-827e-9a3711b3ff0e",
+        "score": 12.377177,
+        "document_id": "pce-webinar-on-gateway-to-success",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "0c4ac5f6-cb7e-43ca-a9f3-1a3e657f351d",
+        "score": 0.03101,
+        "document_id": "pce-library-library-information",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3ee77826-86d7-4546-b7cb-95012e463a17",
+        "score": 0.029214,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "38d0844d-32b1-4e97-a06e-8bf88ff52dea",
+        "score": 0.026786,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cfe6651a-06ca-476c-a8e8-6cff081a8e60",
+        "score": 0.016393,
+        "document_id": "pce-about-infrastructure-and-facilities-resource-management-and-infrastructure-polic",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c05ee45f-30ba-4d59-8f5a-de0db5847e38",
+        "score": 0.016129,
+        "document_id": "DEMO/LIB/2026/09",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "b6139721-52a1-4f51-bd81-775eda6e2d54",
+        "score": 0.016129,
+        "document_id": "pce-about-infrastructure-and-facilities-resource-management-and-infrastructure-polic",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3e2ad68d-21c0-4260-a8b3-0c13f0085ebf",
+        "score": 0.015873,
+        "document_id": "pce-library-digital-library",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a7444cd1-21ea-4bb7-b66b-7702d3c10bf3",
+        "score": 0.015873,
+        "document_id": "pce-library-library-information",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5334eebd-b2fd-41ab-9ce2-71b59a1b33e9",
+        "score": 0.015625,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "efe3d848-5fc9-42a0-ad4b-2bf35954aa68",
+        "score": 0.015385,
+        "document_id": "pce-iqac-institutional-values-and-best-practices",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bb711527-3c9b-441b-a4e4-69bf4979d4c7",
+        "score": 0.015152,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "39f2d8f6-b7b7-4c76-a519-8dc4c7057e0e",
+        "score": 0.015152,
+        "document_id": "pce-iqac-institutional-values-and-best-practices",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "36587dd4-1ba1-4774-88d5-78825534d736",
+        "score": 0.014925,
+        "document_id": "pce-15-things-you-cant-miss-at-pillais",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c6b762a0-77c6-4316-9769-87a7f87d86d2",
+        "score": 0.014925,
+        "document_id": "pce-mock-cet-online-platform-for-students-to-prepare-for-engineering-and-pharmacy-en",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3cd5d789-8127-4bfa-94a6-007c3bdf790b",
+        "score": 0.014706,
+        "document_id": "DEMO/HELP/LIB/2026/06",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "e95be6cf-8ab1-49da-87a3-e0e72c2b7a26",
+        "score": 0.014706,
+        "document_id": "pce-mock-cet-online-platform-for-students-to-prepare-for-engineering-and-pharmacy-en",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d591ef97-1f53-4827-87e9-173b9fcf7723",
+        "score": 0.014493,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "c14b6f6a-1a60-4885-afbb-5cc0f34f4526",
+        "score": 0.014493,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bfb945dc-49d3-454d-8103-837c9ca51ebd",
+        "score": 0.014286,
+        "document_id": "pce-students-funds-for-students",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "45b37dda-6e34-4e43-b474-6e5a0235b53b",
+        "score": 0.014085,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "45b37dda-6e34-4e43-b474-6e5a0235b53b",
+        "score": 5.465874,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5334eebd-b2fd-41ab-9ce2-71b59a1b33e9",
+        "score": 5.112819,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3ee77826-86d7-4546-b7cb-95012e463a17",
+        "score": 3.79885,
+        "document_id": "pce-library-library-resources",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0c4ac5f6-cb7e-43ca-a9f3-1a3e657f351d",
+        "score": 3.382115,
+        "document_id": "pce-library-library-information",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a7444cd1-21ea-4bb7-b66b-7702d3c10bf3",
+        "score": 3.382115,
+        "document_id": "pce-library-library-information",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 7144.56,
+      "dense_search_1": 37.74,
+      "sparse_search_1": 302.69,
+      "fuse_1": 0.07,
+      "decide_1": 85543.16,
+      "rerank": 9472.81
+    },
+    "iteration_count": 1,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "What library resources are available to students?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "READY",
+        "decision_raw": "READY",
+        "latencies_ms": {
+          "embed_query": 7144.6,
+          "dense_search": 37.7,
+          "sparse_search": 302.7,
+          "fuse": 0.1,
+          "decide": 85543.2
+        }
+      }
+    ],
+    "stop_reason": "model_says_ready"
+  },
+  "verification": {
+    "verdict": "partially_supported",
+    "sentences": 7,
+    "checked": 7,
+    "supported": 6,
+    "unsupported": [
+      7
+    ],
+    "support_rate": 0.8571,
+    "refused": false,
+    "raw": "UNSUPPORTED: 7",
+    "latency_ms": 115109.3
+  }
+}

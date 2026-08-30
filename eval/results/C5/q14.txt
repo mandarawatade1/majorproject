@@ -1,0 +1,1052 @@
+The attendance policy for students at Pillai College of Engineering, New Panvel, is as follows:
+
+- Attendance is computed per course, not as an overall average. A student can be at risk in a course even if their overall attendance is high [S5].
+- The thresholds for attendance status are as follows:
+  - 75% and above: Satisfactory, no action required [S5].
+  - 65% to 74.9%: First warning, with a written warning and mentor informed [S5].
+  - 55% to 64.9%: Second warning, with the parent/guardian informed and a mentor meeting [S5].
+  - Below 55%: Detention risk, referred to the detention committee [S5].
+
+This policy aims to ensure that students maintain a satisfactory level of attendance in each course, as failing to do so can lead to warnings and, ultimately, detention risk [S5].
+
+Sources:
+  [S1] SOP: Attendance Shortage, Warning and Detention > 2. Computation [DEMO DATA]
+  [S2] Timetable: Computer Engineering Semester VII Division A (Illustrative) > Attendance [DEMO DATA]
+  [S3] SOP: Response to a Medical Emergency on Campus > 6. Follow-up [DEMO DATA]
+  [S4] SOP: Industrial Visit and Field Trip Organisation > 7. During the visit [DEMO DATA]
+  [S5] SOP: Attendance Shortage, Warning and Detention > 1. Thresholds [DEMO DATA]
+
+  NOTE: one or more sources are synthetic DEMO DATA and do not describe real institutional fact.
+
+  VERIFICATION: sentence(s) 7 of 7 were not supported by the cited sources (86% supported).
+
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 105423ms, generation 70184ms]
+
+{
+  "question": "What is the attendance policy for students?",
+  "config": "C5",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 227463.9,
+  "retrieval_ms": 105422.7,
+  "generation_ms": 70183.8,
+  "sources": [
+    "e166c646-a5a2-4404-8925-24f1f4026e5a",
+    "2f7779fc-15ef-40ea-8905-531e51883f1a",
+    "4c48dab1-4bb9-48bb-afed-2d36a4f122c6",
+    "30734e11-2be1-4b07-8be4-7278a89d7194",
+    "0e28bace-2053-4493-b146-75b99c8407bd"
+  ],
+  "used_demo_sources": true,
+  "retrieval": {
+    "original_query": "What is the attendance policy for students?",
+    "rewritten_queries": [
+      "attendance policy details for Pillai College of Engineering",
+      "specific attendance policy details for Pillai College of Engineering"
+    ],
+    "dense_hits": [
+      {
+        "chunk_id": "4c48dab1-4bb9-48bb-afed-2d36a4f122c6",
+        "score": 0.739473,
+        "document_id": "DEMO/SOP/SAFE/2026/02",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "2f7779fc-15ef-40ea-8905-531e51883f1a",
+        "score": 0.7362,
+        "document_id": "DEMO/TT/CE/S7A/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "30734e11-2be1-4b07-8be4-7278a89d7194",
+        "score": 0.735568,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "e166c646-a5a2-4404-8925-24f1f4026e5a",
+        "score": 0.713574,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "0e28bace-2053-4493-b146-75b99c8407bd",
+        "score": 0.690584,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "24f583c8-563e-4ddc-8d18-613b4bc18f78",
+        "score": 0.684176,
+        "document_id": "DEMO/ACAD/2026/11",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "4cee7c39-bff7-4ff3-a38a-0688246b45a9",
+        "score": 0.680653,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "4d7a311c-275b-4afb-a430-74131948cdb7",
+        "score": 0.663614,
+        "document_id": "DEMO/CE/2026/13",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "cf7dcd5f-ec84-47c8-b4ec-c99a84ee23aa",
+        "score": 0.662424,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "a2e02174-14ab-47ef-b2b6-35880b0f161d",
+        "score": 0.661603,
+        "document_id": "DEMO/CE/2026/13",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "a3b6dfce-aa08-4a29-84ee-5a3282b3a324",
+        "score": 0.66145,
+        "document_id": "DEMO/ACAD/2026/11",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "bfa48bfa-a34d-4f11-890c-9b9ec527d19c",
+        "score": 0.659211,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "902cd48c-1059-4220-848d-3bd81bb1725b",
+        "score": 0.658712,
+        "document_id": "pce-students-student-activities-student-events-induction-program",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "59040ea8-65e9-43ef-9665-3444e9c8a691",
+        "score": 0.657057,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "d591ef97-1f53-4827-87e9-173b9fcf7723",
+        "score": 0.656256,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "642a7d24-6469-4302-997f-c4dc7219a249",
+        "score": 0.656015,
+        "document_id": "DEMO/ACAD/2026/11",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "7b1237b9-927e-4b39-9df7-a2b4493864fd",
+        "score": 0.654113,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "5b873374-7232-4b56-b629-5861369b5e66",
+        "score": 0.653985,
+        "document_id": "DEMO/CE/2026/13",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "ef2ff0fb-0932-49ca-a5f4-bf208ff85821",
+        "score": 0.652565,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "4cef83a6-d380-4913-ac5e-fe737a703470",
+        "score": 0.650399,
+        "document_id": "DEMO/WIKI/ACAD/037",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "663e0fef-aedb-46cd-9645-9315a96c9267",
+        "score": 0.764556,
+        "document_id": "pce-pdf-makerthon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d0c6bab1-f6fb-4944-b8c1-6d40735f5fa5",
+        "score": 0.759911,
+        "document_id": "pce-pdf-mahadbt-notice-2025-26",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6139721-52a1-4f51-bd81-775eda6e2d54",
+        "score": 0.759847,
+        "document_id": "pce-about-infrastructure-and-facilities-resource-management-and-infrastructure-polic",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0ffea4d6-0f0a-42c2-a662-1fd8d783440a",
+        "score": 0.753021,
+        "document_id": "pce-fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a24862d4-6f42-4084-a8d9-00b853b1e833",
+        "score": 0.75206,
+        "document_id": "pce-students-student-activities-competitions-outstanding-student-award",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "628d8556-c748-48e1-960c-0dd5a58566b7",
+        "score": 0.747291,
+        "document_id": "pce-pdf-ari-c-33505",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ca0f5028-861c-4ca3-8546-e594fbb396bd",
+        "score": 0.744855,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
+        "score": 0.739702,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c817508f-aed9-47ef-8e92-e1cc5eb7d22e",
+        "score": 0.738467,
+        "document_id": "pce-pdf-seit-direct-second-year-student-extra-classes-odd-sem-2019-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c2daf092-2a1b-4fd2-bb01-3d636b127070",
+        "score": 0.735122,
+        "document_id": "pce-pdf-beca",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "da289d85-1fb7-4c79-8d60-37fce8dc9973",
+        "score": 0.735122,
+        "document_id": "pce-pdf-beitb",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "026042a0-0cae-4095-90cd-ccdd1daca990",
+        "score": 0.735122,
+        "document_id": "pce-pdf-becb",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "346f9be0-bba3-4d8d-b0b1-3a360dd9e2e8",
+        "score": 0.735122,
+        "document_id": "pce-pdf-beita",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7c278670-2d85-4f1f-afc5-ec635f764a4c",
+        "score": 0.735122,
+        "document_id": "pce-pdf-teita",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "dcc46284-a901-46a7-9b35-90934e0eb03f",
+        "score": 0.735122,
+        "document_id": "pce-pdf-tecb",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "56d6b4d0-06e8-4ed1-8b7d-108b1f2aea62",
+        "score": 0.735122,
+        "document_id": "pce-pdf-secb",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3428b9ec-5aec-4d8b-8fa1-b5111745062a",
+        "score": 0.735122,
+        "document_id": "pce-pdf-teca",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "28968577-823b-49b4-a3c6-d1ee9ba9ca43",
+        "score": 0.735122,
+        "document_id": "pce-pdf-teitb",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c192d28e-b136-458b-9b48-b4c5f14394f4",
+        "score": 0.735122,
+        "document_id": "pce-pdf-seitb",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d98354e2-4161-4ce8-8b45-db771c2dace6",
+        "score": 0.735122,
+        "document_id": "pce-pdf-seca",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "51dded6d-8b04-406b-948c-721081abe119",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-graduation-day-2017",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "281c9fc6-3fa8-4f98-9cf1-5d4118c2eb12",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-formula-student-combustion-event",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fa6d5100-d362-4589-80db-58ae58f44233",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-graduation-function-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "90ffa8c4-2451-4983-8b4d-996ae623330b",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-heres-how-you-can-have-the-best-college-experience",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e327b69e-3a46-4689-81af-1b5a21dc97c2",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-graduation-day-2018",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4f01aac4-e2e5-4817-ad2e-60f29aa74dcb",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3f26d3ae-d1fe-4437-a3fd-bce5af4489e8",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-workshop-on-concept-based-teachers-training-in-physics",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2c3d4bdf-3c71-491a-abe0-dcf4f4eac8f8",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-makers-day-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c8194377-7746-462b-9012-3bf728bf6abb",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-national-technology-day-2018",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2d00e483-0c3f-4efc-8428-adb01c326747",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-makers-day-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "66d8c324-7724-47ac-ae6a-f0854bdedd4b",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-vocabulary-treasure-hunt",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "861e0bba-ab77-444c-ad6d-332e778c901b",
+        "score": 0.734096,
+        "document_id": "pce-bws-gallery-pbl-topic-archive-fe-2017-18-2",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "3744160a-e9fd-49a1-bbc1-c310ae7a977a",
+        "score": 15.693822,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "7b1237b9-927e-4b39-9df7-a2b4493864fd",
+        "score": 15.693822,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "c46fefdd-7334-413b-afb2-7d4e8cc1cb0a",
+        "score": 15.15303,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "9da0defd-e63a-4ea5-a5aa-91c4a2f50a48",
+        "score": 15.15303,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "79382372-4649-4817-9e21-7da04fd8b9f2",
+        "score": 11.282711,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "5c6427af-4231-4222-af19-b059cfce92e9",
+        "score": 11.282711,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "84097484-d5aa-4881-8ebe-5197d3df12d1",
+        "score": 11.025071,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "e79368c3-d77b-4a6f-8871-462b380f7950",
+        "score": 11.025071,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "0bdc0d47-dc37-4439-9940-50c91bd2f2ab",
+        "score": 10.499119,
+        "document_id": "pce-pdf-nri-pio-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f84c4951-73bc-4482-b257-38c54f9f31b5",
+        "score": 10.499119,
+        "document_id": "pce-pdf-nri-pio-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b8ce4da9-5980-4ecc-843e-87302ed636d8",
+        "score": 10.408949,
+        "document_id": "pce-pdf-ashish-mathew-comp",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0cab0813-1df4-4458-8957-04bf794c440d",
+        "score": 10.408949,
+        "document_id": "pce-pdf-ashish-mathew-comp",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e83cd716-b3a1-4f39-a3c6-5255263059ee",
+        "score": 10.391706,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "0e28bace-2053-4493-b146-75b99c8407bd",
+        "score": 10.391706,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "62abf554-78e1-464a-92a1-6f4866bac80c",
+        "score": 10.228744,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "bfa48bfa-a34d-4f11-890c-9b9ec527d19c",
+        "score": 10.228744,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "12527575-c883-49f4-99ed-d62e276b8387",
+        "score": 10.125929,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "d591ef97-1f53-4827-87e9-173b9fcf7723",
+        "score": 10.125929,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "b6a1e0e5-dc9e-4993-96d0-d70fa3747395",
+        "score": 10.056896,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "70671d70-c8e8-4fd2-a8d5-9f062efd3652",
+        "score": 10.056896,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "634876c8-b4b1-439e-beee-6e223a0a180a",
+        "score": 15.165737,
+        "document_id": "pce-pdf-makerthon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "663e0fef-aedb-46cd-9645-9315a96c9267",
+        "score": 15.165737,
+        "document_id": "pce-pdf-makerthon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9cff6e22-5bb5-4837-8515-d0a9fc231662",
+        "score": 14.277105,
+        "document_id": "pce-national-level-webinar-on-assessment-and-accreditation-process-of-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d13e65f-31b7-4386-8751-4964b400ca9c",
+        "score": 14.277105,
+        "document_id": "pce-national-level-webinar-on-assessment-and-accreditation-process-of-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ddc9c5c1-bf38-4c36-9503-ccb1c70d1e4a",
+        "score": 14.159667,
+        "document_id": "pce-workshop-on-application-programming-interface-api-using-autodesk-fusion-360-soft",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fcfa1426-f80b-452f-9d99-a6b5022f75c0",
+        "score": 14.159667,
+        "document_id": "pce-workshop-on-application-programming-interface-api-using-autodesk-fusion-360-soft",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "86c181ad-aaf0-4ede-b0ec-eef3c4918c37",
+        "score": 13.802151,
+        "document_id": "pce-arduino-workshop",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2cdd585d-546e-4c9e-986a-731d7af65e94",
+        "score": 13.802151,
+        "document_id": "pce-arduino-workshop",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ec6c962c-b7fa-459c-b85d-81e78e511887",
+        "score": 13.750374,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ef0433c3-4002-4170-837b-32c7b67554ca",
+        "score": 13.750374,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "410f9712-e91e-45bb-95f5-46e2792178c1",
+        "score": 13.631631,
+        "document_id": "pce-students-funds-for-students",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5597a110-db01-4d08-b85a-72fa75ab1fa3",
+        "score": 13.631631,
+        "document_id": "pce-students-funds-for-students",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1219223f-3ad1-499c-b874-8d577c92b8ae",
+        "score": 13.263951,
+        "document_id": "pce-faculty-faculty-development-schemes",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1ee2dc51-12df-4b73-8eaf-c5d906e09dce",
+        "score": 13.263951,
+        "document_id": "pce-faculty-faculty-development-schemes",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6bb06154-2b88-4ee1-bc61-293e44ce03b3",
+        "score": 12.953992,
+        "document_id": "pce-one-week-fdp-on-r-programming",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "56660d14-9473-4c02-a116-5fd305a80afc",
+        "score": 12.953992,
+        "document_id": "pce-one-week-fdp-on-r-programming",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bdfd359a-a0dc-4285-87ab-c3551c4a023f",
+        "score": 12.94887,
+        "document_id": "pce-pdf-2020-21-council-resolution",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "da9e716b-d9e3-4bfa-8e6f-78ec78e11d22",
+        "score": 12.94887,
+        "document_id": "pce-pdf-2020-21-council-resolution",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "96e51ec7-9356-4f36-ac3b-98f479b616c3",
+        "score": 12.93513,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4b4609c5-e2d3-41e8-aff9-9dc33ffa2159",
+        "score": 12.93513,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d5eeedc3-24b4-4913-a7f3-d3b69f411481",
+        "score": 17.503216,
+        "document_id": "pce-students-project-based-learning-component-library",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4443f81a-ac9b-4b8b-906d-62635c2df1e7",
+        "score": 17.503216,
+        "document_id": "pce-students-project-based-learning-component-library",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "891cd424-dbaa-436d-98fa-e1395fad5fd7",
+        "score": 15.799345,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f827d14c-bd37-4c31-ad40-bfbd7c61bc92",
+        "score": 15.799345,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8968702-687d-4ce2-8867-be83c1b93490",
+        "score": 15.355769,
+        "document_id": "pce-pdf-job-fair-2020-form",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b68af9ab-c8d7-4e78-b93d-2bb75c448ede",
+        "score": 15.355769,
+        "document_id": "pce-pdf-job-fair-2020-form",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "7b1237b9-927e-4b39-9df7-a2b4493864fd",
+        "score": 0.029116,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "0e28bace-2053-4493-b146-75b99c8407bd",
+        "score": 0.028898,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "bfa48bfa-a34d-4f11-890c-9b9ec527d19c",
+        "score": 0.027047,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "d591ef97-1f53-4827-87e9-173b9fcf7723",
+        "score": 0.026154,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "4c48dab1-4bb9-48bb-afed-2d36a4f122c6",
+        "score": 0.016393,
+        "document_id": "DEMO/SOP/SAFE/2026/02",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "3744160a-e9fd-49a1-bbc1-c310ae7a977a",
+        "score": 0.016393,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "2f7779fc-15ef-40ea-8905-531e51883f1a",
+        "score": 0.016129,
+        "document_id": "DEMO/TT/CE/S7A/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "30734e11-2be1-4b07-8be4-7278a89d7194",
+        "score": 0.015873,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "c46fefdd-7334-413b-afb2-7d4e8cc1cb0a",
+        "score": 0.015873,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "e166c646-a5a2-4404-8925-24f1f4026e5a",
+        "score": 0.015625,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "9da0defd-e63a-4ea5-a5aa-91c4a2f50a48",
+        "score": 0.015625,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "79382372-4649-4817-9e21-7da04fd8b9f2",
+        "score": 0.015385,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "24f583c8-563e-4ddc-8d18-613b4bc18f78",
+        "score": 0.015152,
+        "document_id": "DEMO/ACAD/2026/11",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "5c6427af-4231-4222-af19-b059cfce92e9",
+        "score": 0.015152,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "4cee7c39-bff7-4ff3-a38a-0688246b45a9",
+        "score": 0.014925,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "84097484-d5aa-4881-8ebe-5197d3df12d1",
+        "score": 0.014925,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "4d7a311c-275b-4afb-a430-74131948cdb7",
+        "score": 0.014706,
+        "document_id": "DEMO/CE/2026/13",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "e79368c3-d77b-4a6f-8871-462b380f7950",
+        "score": 0.014706,
+        "document_id": "DEMO/ADMIN/2026/05",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "cf7dcd5f-ec84-47c8-b4ec-c99a84ee23aa",
+        "score": 0.014493,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "0bdc0d47-dc37-4439-9940-50c91bd2f2ab",
+        "score": 0.014493,
+        "document_id": "pce-pdf-nri-pio-2023",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "663e0fef-aedb-46cd-9645-9315a96c9267",
+        "score": 0.032522,
+        "document_id": "pce-pdf-makerthon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "634876c8-b4b1-439e-beee-6e223a0a180a",
+        "score": 0.016393,
+        "document_id": "pce-pdf-makerthon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d0c6bab1-f6fb-4944-b8c1-6d40735f5fa5",
+        "score": 0.016129,
+        "document_id": "pce-pdf-mahadbt-notice-2025-26",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b6139721-52a1-4f51-bd81-775eda6e2d54",
+        "score": 0.015873,
+        "document_id": "pce-about-infrastructure-and-facilities-resource-management-and-infrastructure-polic",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9cff6e22-5bb5-4837-8515-d0a9fc231662",
+        "score": 0.015873,
+        "document_id": "pce-national-level-webinar-on-assessment-and-accreditation-process-of-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0ffea4d6-0f0a-42c2-a662-1fd8d783440a",
+        "score": 0.015625,
+        "document_id": "pce-fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d13e65f-31b7-4386-8751-4964b400ca9c",
+        "score": 0.015625,
+        "document_id": "pce-national-level-webinar-on-assessment-and-accreditation-process-of-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a24862d4-6f42-4084-a8d9-00b853b1e833",
+        "score": 0.015385,
+        "document_id": "pce-students-student-activities-competitions-outstanding-student-award",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ddc9c5c1-bf38-4c36-9503-ccb1c70d1e4a",
+        "score": 0.015385,
+        "document_id": "pce-workshop-on-application-programming-interface-api-using-autodesk-fusion-360-soft",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "628d8556-c748-48e1-960c-0dd5a58566b7",
+        "score": 0.015152,
+        "document_id": "pce-pdf-ari-c-33505",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fcfa1426-f80b-452f-9d99-a6b5022f75c0",
+        "score": 0.015152,
+        "document_id": "pce-workshop-on-application-programming-interface-api-using-autodesk-fusion-360-soft",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ca0f5028-861c-4ca3-8546-e594fbb396bd",
+        "score": 0.014925,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "86c181ad-aaf0-4ede-b0ec-eef3c4918c37",
+        "score": 0.014925,
+        "document_id": "pce-arduino-workshop",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
+        "score": 0.014706,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2cdd585d-546e-4c9e-986a-731d7af65e94",
+        "score": 0.014706,
+        "document_id": "pce-arduino-workshop",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c817508f-aed9-47ef-8e92-e1cc5eb7d22e",
+        "score": 0.014493,
+        "document_id": "pce-pdf-seit-direct-second-year-student-extra-classes-odd-sem-2019-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ec6c962c-b7fa-459c-b85d-81e78e511887",
+        "score": 0.014493,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c2daf092-2a1b-4fd2-bb01-3d636b127070",
+        "score": 0.014286,
+        "document_id": "pce-pdf-beca",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ef0433c3-4002-4170-837b-32c7b67554ca",
+        "score": 0.014286,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "da289d85-1fb7-4c79-8d60-37fce8dc9973",
+        "score": 0.014085,
+        "document_id": "pce-pdf-beitb",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d5eeedc3-24b4-4913-a7f3-d3b69f411481",
+        "score": 0.015873,
+        "document_id": "pce-students-project-based-learning-component-library",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4443f81a-ac9b-4b8b-906d-62635c2df1e7",
+        "score": 0.015625,
+        "document_id": "pce-students-project-based-learning-component-library",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1219223f-3ad1-499c-b874-8d577c92b8ae",
+        "score": 0.015385,
+        "document_id": "pce-faculty-faculty-development-schemes",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1ee2dc51-12df-4b73-8eaf-c5d906e09dce",
+        "score": 0.015152,
+        "document_id": "pce-faculty-faculty-development-schemes",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "891cd424-dbaa-436d-98fa-e1395fad5fd7",
+        "score": 0.014925,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f827d14c-bd37-4c31-ad40-bfbd7c61bc92",
+        "score": 0.014706,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "51dded6d-8b04-406b-948c-721081abe119",
+        "score": 0.014493,
+        "document_id": "pce-bws-gallery-graduation-day-2017",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8968702-687d-4ce2-8867-be83c1b93490",
+        "score": 0.014493,
+        "document_id": "pce-pdf-job-fair-2020-form",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "281c9fc6-3fa8-4f98-9cf1-5d4118c2eb12",
+        "score": 0.014286,
+        "document_id": "pce-bws-gallery-formula-student-combustion-event",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b68af9ab-c8d7-4e78-b93d-2bb75c448ede",
+        "score": 0.014286,
+        "document_id": "pce-pdf-job-fair-2020-form",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "e166c646-a5a2-4404-8925-24f1f4026e5a",
+        "score": 2.052758,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "2f7779fc-15ef-40ea-8905-531e51883f1a",
+        "score": 0.978805,
+        "document_id": "DEMO/TT/CE/S7A/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "4c48dab1-4bb9-48bb-afed-2d36a4f122c6",
+        "score": 0.173323,
+        "document_id": "DEMO/SOP/SAFE/2026/02",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "30734e11-2be1-4b07-8be4-7278a89d7194",
+        "score": 0.161143,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "0e28bace-2053-4493-b146-75b99c8407bd",
+        "score": -1.647881,
+        "document_id": "DEMO/SOP/ACAD/2026/18",
+        "is_demo": true
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 6159.43,
+      "dense_search_1": 15.36,
+      "sparse_search_1": 289.84,
+      "fuse_1": 0.04,
+      "decide_1": 49880.94,
+      "embed_query_2": 39.95,
+      "dense_search_2": 14.56,
+      "sparse_search_2": 10.88,
+      "fuse_2": 0.04,
+      "decide_2": 41210.99,
+      "embed_query_3": 51.73,
+      "dense_search_3": 9.94,
+      "sparse_search_3": 12.37,
+      "fuse_3": 0.03,
+      "rerank": 7726.55
+    },
+    "iteration_count": 3,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "What is the attendance policy for students?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "SEARCH: attendance policy details for Pillai College of Engineering",
+        "decision_raw": "SEARCH: attendance policy details for Pillai College of Engineering",
+        "latencies_ms": {
+          "embed_query": 6159.4,
+          "dense_search": 15.4,
+          "sparse_search": 289.8,
+          "fuse": 0.0,
+          "decide": 49880.9
+        }
+      },
+      {
+        "iteration": 2,
+        "query": "attendance policy details for Pillai College of Engineering",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "SEARCH: specific attendance policy details for Pillai College of Engineering",
+        "decision_raw": "SEARCH: specific attendance policy details for Pillai College of Engineering",
+        "latencies_ms": {
+          "embed_query": 39.9,
+          "dense_search": 14.6,
+          "sparse_search": 10.9,
+          "fuse": 0.0,
+          "decide": 41211.0
+        }
+      },
+      {
+        "iteration": 3,
+        "query": "specific attendance policy details for Pillai College of Engineering",
+        "hits_returned": 20,
+        "new_chunks": 10,
+        "decision": "CAP",
+        "decision_raw": "",
+        "latencies_ms": {
+          "embed_query": 51.7,
+          "dense_search": 9.9,
+          "sparse_search": 12.4,
+          "fuse": 0.0
+        }
+      }
+    ],
+    "stop_reason": "iteration_cap"
+  },
+  "verification": {
+    "verdict": "partially_supported",
+    "sentences": 7,
+    "checked": 7,
+    "supported": 6,
+    "unsupported": [
+      7
+    ],
+    "support_rate": 0.8571,
+    "refused": false,
+    "raw": "UNSUPPORTED: 7",
+    "latency_ms": 51669.3
+  }
+}

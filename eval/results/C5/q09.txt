@@ -1,0 +1,696 @@
+The placement record for the Information Technology department at Pillai College of Engineering is robust, with a high placement rate. A majority of students secure jobs in reputable companies [S1]. The college's strong connection with the industry, particularly in the IT sector, plays a crucial role in its placement success [S1]. The placement cell schedules mock interviews, resume workshops, and skill development sessions to ensure students are well-prepared for their careers [S1].
+
+Sources:
+  [S1] Information Technology
+        https://www.pce.ac.in/bachelors/information-technology/
+  [S2] Information Technology
+        https://www.pce.ac.in/bachelors/information-technology/
+
+  3 retrieved chunk(s) omitted for context budget.
+
+  VERIFICATION: sentence(s) 1 of 4 were not supported by the cited sources (75% supported).
+
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 106102ms, generation 88797ms]
+
+{
+  "question": "What is the placement record for the Computer Engineering department?",
+  "config": "C5",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 297280.5,
+  "retrieval_ms": 106102.1,
+  "generation_ms": 88797.1,
+  "sources": [
+    "9f9f580d-f9be-4791-b2f6-4e6fb0f88996",
+    "58fe8923-c403-472f-8dbe-5d2036de27da"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What is the placement record for the Computer Engineering department?",
+    "rewritten_queries": [
+      "placement record for Computer Engineering department"
+    ],
+    "dense_hits": [
+      {
+        "chunk_id": "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
+        "score": 0.68877,
+        "document_id": "pce-academics-bachelors-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0180fc0b-e133-4c9a-ab67-41ac18057ffb",
+        "score": 0.686747,
+        "document_id": "pce-faculty-faculty-directory-k-charumathi",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8a37d06f-907d-4aa1-9bca-cd92c7d0cf60",
+        "score": 0.684323,
+        "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8e69c5f5-a741-49d6-a098-afb72aeb9d94",
+        "score": 0.682152,
+        "document_id": "pce-faculty-faculty-directory-dr-mimi-m-cherian",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "48768858-cd07-400c-90d7-7d31a4a8215d",
+        "score": 0.680957,
+        "document_id": "pce-faculty-faculty-directory-deepti-lawand-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "df1f4101-8aac-4041-a440-034f89a3b3ad",
+        "score": 0.678619,
+        "document_id": "pce-faculty-faculty-directory-krishnendu-s-nair",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "31580f91-9fe2-48d7-b26e-a6361292818b",
+        "score": 0.676553,
+        "document_id": "pce-faculty-faculty-directory-diksha-kale",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2f6b080a-b4d7-4a46-8007-843521750385",
+        "score": 0.676441,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6162e0b0-0d55-48dd-8912-6d861c6c29bc",
+        "score": 0.675653,
+        "document_id": "pce-faculty-faculty-directory-dr-sharvari-s-govilkar",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9d610a77-959f-48b2-91c2-0ee4bbe4f87b",
+        "score": 0.675578,
+        "document_id": "pce-faculty-faculty-directory-madhu-m-nashipudimath",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9e61c5d9-1a37-4a5e-b0bf-2e584a6776eb",
+        "score": 0.674591,
+        "document_id": "pce-faculty-faculty-directory-dr-satishkumar-l-varma",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9cfc3d8c-bd21-4cf7-a45a-eee6410fa702",
+        "score": 0.674446,
+        "document_id": "pce-academics-masters-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c45e1309-ffc7-4a1c-ae29-a8a0c6feac2f",
+        "score": 0.673944,
+        "document_id": "pce-faculty-faculty-directory-shweta-patil-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ca0f5028-861c-4ca3-8546-e594fbb396bd",
+        "score": 0.673743,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4be8d7c6-ffc0-42a4-8f01-2c3ef47a3dd2",
+        "score": 0.673385,
+        "document_id": "pce-faculty-faculty-directory-varunakshi-s-bhojane",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "46b3b785-3587-44ae-812f-ce6312435ee0",
+        "score": 0.672069,
+        "document_id": "pce-academics-ph-d-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "15bbae2d-7bcf-44e2-bf6f-5450b76da683",
+        "score": 0.671083,
+        "document_id": "pce-faculty-faculty-directory-ashwini-d-mate",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "86caf4a6-9060-429c-8387-d0d4fbf6357e",
+        "score": 0.669089,
+        "document_id": "DEMO/CE/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "7dce2b01-47ee-4c88-86ba-6193bbc64d05",
+        "score": 0.668904,
+        "document_id": "pce-faculty-faculty-directory-dr-gopinath-karmakar",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d919a8e-2830-4367-b261-5ee91dfee106",
+        "score": 0.668688,
+        "document_id": "pce-faculty-faculty-directory-sheetal-gawande",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ec03ec0a-8aff-4a93-9d90-ce8de6964f23",
+        "score": 0.706252,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "629feea7-81b3-49c5-bd10-48c1336a9ae5",
+        "score": 0.704564,
+        "document_id": "DEMO/CE/2026/13",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "98ec8d4e-da30-4eb0-8a5d-e6311c40f34f",
+        "score": 0.703629,
+        "document_id": "pce-faculty-faculty-directory-suhas-j-lawand",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "94831270-337f-458b-b9e6-cc863c964ebf",
+        "score": 0.697897,
+        "document_id": "pce-faculty-faculty-directory-neha-ashok",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "eb2c5301-a6cb-4032-93f7-9aeb7bd4e13b",
+        "score": 15.594366,
+        "document_id": "DEMO/LAB/CE/WT/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "6a8d0fe1-c447-4746-8805-c8175a62cb0f",
+        "score": 15.594366,
+        "document_id": "DEMO/LAB/CE/WT/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "2ae631a1-e815-4819-a464-6fa1a2d8fd3f",
+        "score": 14.901329,
+        "document_id": "DEMO/LAB/CE/DS/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "036653c2-68c5-46d6-af9a-38066a72d765",
+        "score": 14.901329,
+        "document_id": "DEMO/LAB/CE/DS/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "3744160a-e9fd-49a1-bbc1-c310ae7a977a",
+        "score": 14.823931,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "7b1237b9-927e-4b39-9df7-a2b4493864fd",
+        "score": 14.823931,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "9f9f580d-f9be-4791-b2f6-4e6fb0f88996",
+        "score": 14.728177,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
+        "score": 14.728177,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b108e801-699d-4fc5-bc49-d94e70ba1418",
+        "score": 14.597368,
+        "document_id": "DEMO/LAB/CE/CN/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "46abfd16-7305-49c6-b53a-9904ac76c64b",
+        "score": 14.597368,
+        "document_id": "DEMO/LAB/CE/CN/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "c46fefdd-7334-413b-afb2-7d4e8cc1cb0a",
+        "score": 14.418687,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "9da0defd-e63a-4ea5-a5aa-91c4a2f50a48",
+        "score": 14.418687,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "a38e9d21-4b54-4101-96f8-a1f951240360",
+        "score": 13.463571,
+        "document_id": "pce-pdf-qspiders-incubation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a9a6a20e-6761-4796-a88e-d6fa12be253f",
+        "score": 13.463571,
+        "document_id": "pce-pdf-qspiders-incubation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b225b340-8671-48f0-88ba-aee085a3a359",
+        "score": 12.980397,
+        "document_id": "DEMO/LAB/CE/CN/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "20b1877e-4332-4062-97b7-8951d8b85d63",
+        "score": 12.980397,
+        "document_id": "DEMO/LAB/CE/CN/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "88c5b1c6-74cc-4527-a4a0-e3cdc6b7d8b9",
+        "score": 12.203685,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c4a0bd9c-8db9-4320-a2db-45389d2ac3b5",
+        "score": 12.203685,
+        "document_id": "pce-alumni-alumni-contribution-engagement",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "588585a8-0146-4da5-8e25-e30cea7c9312",
+        "score": 12.197103,
+        "document_id": "pce-webinar-on-cv-resume-writing",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b0a4e9b0-c683-4736-b0d1-345cad8adb61",
+        "score": 12.197103,
+        "document_id": "pce-webinar-on-cv-resume-writing",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9d3167fa-c5b0-4fe7-b245-cf61262d77d3",
+        "score": 10.241587,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "78abaf9b-57fa-4c1f-be3f-8e53a6599a68",
+        "score": 10.241587,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "0443e093-cf35-4cc4-8173-d8673688e614",
+        "score": 9.620562,
+        "document_id": "pce-about-careers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a312e8c5-e529-47da-956a-7714d3e6c0c7",
+        "score": 9.620562,
+        "document_id": "pce-about-institute-organogram",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a0530dcb-ee2a-4057-81b6-231944795c35",
+        "score": 9.620562,
+        "document_id": "pce-about-mandatory-disclosure-fee-fixation-committee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1170f7c8-bc09-4e07-9db7-7275f1f78ffb",
+        "score": 9.620562,
+        "document_id": "pce-about-mandatory-disclosure-pce-handbook",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d086f74a-e153-4af6-9806-195a6ee22f6a",
+        "score": 9.620562,
+        "document_id": "pce-about-mandatory-disclosure-ugc-2f-and-12b",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "af5ee47f-727c-4524-8bd2-f48bf5bdb8f7",
+        "score": 9.620562,
+        "document_id": "pce-about-mandatory-disclosure-university-affiliation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e7f53939-ec99-41ce-aafd-3f1f5408d0c0",
+        "score": 9.620562,
+        "document_id": "pce-about-mandatory-disclosure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "de7a9edf-f8ee-4ea6-bc30-6355a47e3ab7",
+        "score": 9.620562,
+        "document_id": "pce-about-service-rules-regulations",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d79a591b-d258-44f5-bacc-12b750353975",
+        "score": 9.620562,
+        "document_id": "pce-academics-academic-and-administrative-activity-planner-aaap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7f127f9c-d7da-429b-ac6a-85671dbc6537",
+        "score": 9.620562,
+        "document_id": "pce-academics-admissions-important-admission-notice",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e3076805-eaca-4dc0-bb9a-829a2e97bd57",
+        "score": 9.620562,
+        "document_id": "pce-academics-bachelors-electronics-and-telecommunication-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8a1c4d5f-807f-4c6e-9a33-aec925f4ec47",
+        "score": 9.620562,
+        "document_id": "pce-academics-bachelors-electronics-computer-science",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3827d55c-81b6-4419-ac93-55a6f85508de",
+        "score": 9.620562,
+        "document_id": "pce-academics-mock-cet-apply-online",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7ccd1d06-bf80-4600-8fbd-c4424117b854",
+        "score": 9.620562,
+        "document_id": "pce-academics-mock-cet",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "66fdbf22-5a44-4467-aca5-9256617f4844",
+        "score": 9.620562,
+        "document_id": "pce-accreditation-naac",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5375fd4f-9ac6-4c3e-b359-165526e60bb4",
+        "score": 9.620562,
+        "document_id": "pce-accreditation",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "795d67c5-1459-4f6a-bcf0-923dc8aacb70",
+        "score": 0.016393,
+        "document_id": "pce-academics-bachelors-computer-engineering-program-overview",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "eb2c5301-a6cb-4032-93f7-9aeb7bd4e13b",
+        "score": 0.016393,
+        "document_id": "DEMO/LAB/CE/WT/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "0180fc0b-e133-4c9a-ab67-41ac18057ffb",
+        "score": 0.016129,
+        "document_id": "pce-faculty-faculty-directory-k-charumathi",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6a8d0fe1-c447-4746-8805-c8175a62cb0f",
+        "score": 0.016129,
+        "document_id": "DEMO/LAB/CE/WT/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "8a37d06f-907d-4aa1-9bca-cd92c7d0cf60",
+        "score": 0.015873,
+        "document_id": "pce-faculty-faculty-directory-payel-g-thakur",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2ae631a1-e815-4819-a464-6fa1a2d8fd3f",
+        "score": 0.015873,
+        "document_id": "DEMO/LAB/CE/DS/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "8e69c5f5-a741-49d6-a098-afb72aeb9d94",
+        "score": 0.015625,
+        "document_id": "pce-faculty-faculty-directory-dr-mimi-m-cherian",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "036653c2-68c5-46d6-af9a-38066a72d765",
+        "score": 0.015625,
+        "document_id": "DEMO/LAB/CE/DS/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "48768858-cd07-400c-90d7-7d31a4a8215d",
+        "score": 0.015385,
+        "document_id": "pce-faculty-faculty-directory-deepti-lawand-2",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3744160a-e9fd-49a1-bbc1-c310ae7a977a",
+        "score": 0.015385,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "df1f4101-8aac-4041-a440-034f89a3b3ad",
+        "score": 0.015152,
+        "document_id": "pce-faculty-faculty-directory-krishnendu-s-nair",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7b1237b9-927e-4b39-9df7-a2b4493864fd",
+        "score": 0.015152,
+        "document_id": "DEMO/SOP/ACAD/2026/15",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "31580f91-9fe2-48d7-b26e-a6361292818b",
+        "score": 0.014925,
+        "document_id": "pce-faculty-faculty-directory-diksha-kale",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9f9f580d-f9be-4791-b2f6-4e6fb0f88996",
+        "score": 0.014925,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2f6b080a-b4d7-4a46-8007-843521750385",
+        "score": 0.014706,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
+        "score": 0.014706,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6162e0b0-0d55-48dd-8912-6d861c6c29bc",
+        "score": 0.014493,
+        "document_id": "pce-faculty-faculty-directory-dr-sharvari-s-govilkar",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b108e801-699d-4fc5-bc49-d94e70ba1418",
+        "score": 0.014493,
+        "document_id": "DEMO/LAB/CE/CN/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "9d610a77-959f-48b2-91c2-0ee4bbe4f87b",
+        "score": 0.014286,
+        "document_id": "pce-faculty-faculty-directory-madhu-m-nashipudimath",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "46abfd16-7305-49c6-b53a-9904ac76c64b",
+        "score": 0.014286,
+        "document_id": "DEMO/LAB/CE/CN/2026",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "9d3167fa-c5b0-4fe7-b245-cf61262d77d3",
+        "score": 0.015873,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "78abaf9b-57fa-4c1f-be3f-8e53a6599a68",
+        "score": 0.015625,
+        "document_id": "DEMO/SOP/ACAD/2026/07",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "0443e093-cf35-4cc4-8173-d8673688e614",
+        "score": 0.015385,
+        "document_id": "pce-about-careers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ec03ec0a-8aff-4a93-9d90-ce8de6964f23",
+        "score": 0.015152,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a312e8c5-e529-47da-956a-7714d3e6c0c7",
+        "score": 0.015152,
+        "document_id": "pce-about-institute-organogram",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9e61c5d9-1a37-4a5e-b0bf-2e584a6776eb",
+        "score": 0.014925,
+        "document_id": "pce-faculty-faculty-directory-dr-satishkumar-l-varma",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a0530dcb-ee2a-4057-81b6-231944795c35",
+        "score": 0.014925,
+        "document_id": "pce-about-mandatory-disclosure-fee-fixation-committee",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "629feea7-81b3-49c5-bd10-48c1336a9ae5",
+        "score": 0.014706,
+        "document_id": "DEMO/CE/2026/13",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "1170f7c8-bc09-4e07-9db7-7275f1f78ffb",
+        "score": 0.014706,
+        "document_id": "pce-about-mandatory-disclosure-pce-handbook",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d086f74a-e153-4af6-9806-195a6ee22f6a",
+        "score": 0.014493,
+        "document_id": "pce-about-mandatory-disclosure-ugc-2f-and-12b",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "15bbae2d-7bcf-44e2-bf6f-5450b76da683",
+        "score": 0.014286,
+        "document_id": "pce-faculty-faculty-directory-ashwini-d-mate",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "af5ee47f-727c-4524-8bd2-f48bf5bdb8f7",
+        "score": 0.014286,
+        "document_id": "pce-about-mandatory-disclosure-university-affiliation",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "9f9f580d-f9be-4791-b2f6-4e6fb0f88996",
+        "score": -1.212085,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "58fe8923-c403-472f-8dbe-5d2036de27da",
+        "score": -1.212085,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0443e093-cf35-4cc4-8173-d8673688e614",
+        "score": -1.987815,
+        "document_id": "pce-about-careers",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a312e8c5-e529-47da-956a-7714d3e6c0c7",
+        "score": -1.987815,
+        "document_id": "pce-about-institute-organogram",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a0530dcb-ee2a-4057-81b6-231944795c35",
+        "score": -1.987815,
+        "document_id": "pce-about-mandatory-disclosure-fee-fixation-committee",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 7156.5,
+      "dense_search_1": 26.88,
+      "sparse_search_1": 336.06,
+      "fuse_1": 0.03,
+      "decide_1": 50115.65,
+      "embed_query_2": 61.75,
+      "dense_search_2": 12.34,
+      "sparse_search_2": 24.79,
+      "fuse_2": 0.04,
+      "decide_2": 41937.62,
+      "rerank": 6430.47
+    },
+    "iteration_count": 2,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "What is the placement record for the Computer Engineering department?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "SEARCH: placement record for Computer Engineering department",
+        "decision_raw": "SEARCH: placement record for Computer Engineering department",
+        "latencies_ms": {
+          "embed_query": 7156.5,
+          "dense_search": 26.9,
+          "sparse_search": 336.1,
+          "fuse": 0.0,
+          "decide": 50115.6
+        }
+      },
+      {
+        "iteration": 2,
+        "query": "placement record for Computer Engineering department",
+        "hits_returned": 20,
+        "new_chunks": 12,
+        "decision": "SEARCH: placement record for Computer Engineering department",
+        "decision_raw": "SEARCH: placement record for Computer Engineering department",
+        "latencies_ms": {
+          "embed_query": 61.8,
+          "dense_search": 12.3,
+          "sparse_search": 24.8,
+          "fuse": 0.0,
+          "decide": 41937.6
+        }
+      }
+    ],
+    "stop_reason": "repeated_query"
+  },
+  "verification": {
+    "verdict": "partially_supported",
+    "sentences": 4,
+    "checked": 4,
+    "supported": 3,
+    "unsupported": [
+      1
+    ],
+    "support_rate": 0.75,
+    "refused": false,
+    "raw": "UNSUPPORTED: 1",
+    "latency_ms": 102181.7
+  }
+}

@@ -1,0 +1,478 @@
+Yes, hostel accommodation is available for students at the college [S1, S2, S3, S4, S5]. The facilities are designed to provide a comfortable and convenient living environment for both boys and girls [S1, S2, S5]. Girls' and boys' hostels are separately available with various room options including single bed rooms with AC, double rooms, and triple rooms [S1, S2, S5].
+
+Sources:
+  [S1] Hostel Details
+        https://www.pce.ac.in/academics/admissions/hostel-details/
+  [S2] Hostel Details
+        https://www.pce.ac.in/academics/admissions/hostel-details/
+  [S3] Hostel Facility
+        https://www.pce.ac.in/about/infrastructure-and-facilities/hostel-facility/
+  [S4] Hostel Facility
+        https://www.pce.ac.in/about/infrastructure-and-facilities/hostel-facility/
+  [S5] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 13 > page 16
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+
+  VERIFICATION: sentence(s) 2, 3 of 3 were not supported by the cited sources (33% supported).
+
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 66466ms, generation 132654ms]
+
+{
+  "question": "Is hostel accommodation available for students at the college?",
+  "config": "C5",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 363589.6,
+  "retrieval_ms": 66465.5,
+  "generation_ms": 132653.7,
+  "sources": [
+    "e9eca599-4467-4d63-92d6-daa68f550e6a",
+    "a3ad0355-bde4-4baf-ac66-7de1110ebaea",
+    "8f5d4bd2-8025-4d5b-bd05-40dc94bac7ee",
+    "55821e21-a87f-4a49-b399-4c68787c0707",
+    "08bc2a58-c1fb-4b09-b0a0-8cad5e654ab9"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "Is hostel accommodation available for students at the college?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "e9eca599-4467-4d63-92d6-daa68f550e6a",
+        "score": 0.715538,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8f5d4bd2-8025-4d5b-bd05-40dc94bac7ee",
+        "score": 0.704473,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d1a99de8-29c4-4fbb-ba7b-10a5196c793c",
+        "score": 0.690107,
+        "document_id": "pce-pdf-national-startup-and-innovation-policy-document-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "08bc2a58-c1fb-4b09-b0a0-8cad5e654ab9",
+        "score": 0.657317,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "642a7d24-6469-4302-997f-c4dc7219a249",
+        "score": 0.652435,
+        "document_id": "DEMO/ACAD/2026/11",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "24f583c8-563e-4ddc-8d18-613b4bc18f78",
+        "score": 0.630864,
+        "document_id": "DEMO/ACAD/2026/11",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "02b86c06-df25-4356-9b16-3050cccd19ed",
+        "score": 0.626932,
+        "document_id": "DEMO/EXAM/2026/09",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "83aba75c-ec20-4557-a090-baf453fc18a1",
+        "score": 0.620742,
+        "document_id": "DEMO/HELP/WIFI/2026/01",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "59040ea8-65e9-43ef-9665-3444e9c8a691",
+        "score": 0.611008,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "583a9cd2-307e-48c3-86d8-790b734ac618",
+        "score": 0.609957,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c05ee45f-30ba-4d59-8f5a-de0db5847e38",
+        "score": 0.609521,
+        "document_id": "DEMO/LIB/2026/09",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "1d06dcb3-d985-4e2c-a798-c6aee7085e04",
+        "score": 0.606481,
+        "document_id": "pce-pdf-iic-annual-report-2021-22",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "96e312fd-9ff4-47cd-8d5f-f001ab5ed21d",
+        "score": 0.604916,
+        "document_id": "pce-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b88eb8cd-ae92-48b6-b521-d45b194bd5b1",
+        "score": 0.603963,
+        "document_id": "pce-pdf-notice-regarding-goi-post-matric-scholarship",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "663e0fef-aedb-46cd-9645-9315a96c9267",
+        "score": 0.602912,
+        "document_id": "pce-pdf-makerthon",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0ffea4d6-0f0a-42c2-a662-1fd8d783440a",
+        "score": 0.601786,
+        "document_id": "pce-fdp-on-xai-for-social-good-application-in-healthcare-finance-and-education",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ca0f5028-861c-4ca3-8546-e594fbb396bd",
+        "score": 0.601516,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8106aca0-2559-4bc7-9785-212b347f2353",
+        "score": 0.600369,
+        "document_id": "pce-placements",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bfb945dc-49d3-454d-8103-837c9ca51ebd",
+        "score": 0.600162,
+        "document_id": "pce-students-funds-for-students",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7836a790-4461-4b35-adb7-a64d53bf2d4e",
+        "score": 0.599825,
+        "document_id": "pce-pdf-term-calendar-for-odd-sem-2023-24",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "a3ad0355-bde4-4baf-ac66-7de1110ebaea",
+        "score": 17.494065,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e9eca599-4467-4d63-92d6-daa68f550e6a",
+        "score": 17.494065,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "23cebe9b-baf0-4d14-af09-0e7355d2db0b",
+        "score": 15.990563,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "08bc2a58-c1fb-4b09-b0a0-8cad5e654ab9",
+        "score": 15.990563,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7cb8f292-9285-4c45-a98e-2f9d41dc9796",
+        "score": 14.607,
+        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "98341a3e-a6a5-4ac9-82cc-2c8b55849ed9",
+        "score": 14.607,
+        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "87d20413-c243-475f-b01d-6ab5426c2cff",
+        "score": 13.314184,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 13.314184,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "55821e21-a87f-4a49-b399-4c68787c0707",
+        "score": 12.808397,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8f5d4bd2-8025-4d5b-bd05-40dc94bac7ee",
+        "score": 12.808397,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "49a185c1-1826-4a41-82d4-9c54140b3542",
+        "score": 11.747193,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "63f8c5a8-510e-43e5-9635-bb4982e9acb2",
+        "score": 11.747193,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "fbdd60bb-8ff3-492f-89f5-04226fb68591",
+        "score": 11.686582,
+        "document_id": "pce-pdf-workshop-on-c-brouchure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d057440d-b43c-447d-a1e3-00998de5e2d9",
+        "score": 11.686582,
+        "document_id": "pce-pdf-workshop-on-c-brouchure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c5a8476f-bede-4835-9b0a-b7b17ec4846b",
+        "score": 11.559504,
+        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8fa5320-b22b-41e1-8114-987dd600a445",
+        "score": 11.559504,
+        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "575e36ef-4e64-4fe5-b77a-626a5e2f650b",
+        "score": 11.472468,
+        "document_id": "pce-students-online-payment-refund-cancellation-policy",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "316a8f34-2e20-4059-8d6e-0ad02e2144c9",
+        "score": 11.472468,
+        "document_id": "pce-students-online-payment-refund-cancellation-policy",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3b1380e4-e040-4562-adaf-3a8a230780f2",
+        "score": 10.573188,
+        "document_id": "pce-about-leadership",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "797d163a-dc73-4a24-81ab-ade88ac2c6be",
+        "score": 10.573188,
+        "document_id": "pce-about-leadership",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "e9eca599-4467-4d63-92d6-daa68f550e6a",
+        "score": 0.032522,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "08bc2a58-c1fb-4b09-b0a0-8cad5e654ab9",
+        "score": 0.03125,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8f5d4bd2-8025-4d5b-bd05-40dc94bac7ee",
+        "score": 0.030415,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a3ad0355-bde4-4baf-ac66-7de1110ebaea",
+        "score": 0.016393,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d1a99de8-29c4-4fbb-ba7b-10a5196c793c",
+        "score": 0.015873,
+        "document_id": "pce-pdf-national-startup-and-innovation-policy-document-2019",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "23cebe9b-baf0-4d14-af09-0e7355d2db0b",
+        "score": 0.015873,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "642a7d24-6469-4302-997f-c4dc7219a249",
+        "score": 0.015385,
+        "document_id": "DEMO/ACAD/2026/11",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "7cb8f292-9285-4c45-a98e-2f9d41dc9796",
+        "score": 0.015385,
+        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "24f583c8-563e-4ddc-8d18-613b4bc18f78",
+        "score": 0.015152,
+        "document_id": "DEMO/ACAD/2026/11",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "98341a3e-a6a5-4ac9-82cc-2c8b55849ed9",
+        "score": 0.015152,
+        "document_id": "pce-pdf-training-program-on-reliability-engg-for-beginners",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "02b86c06-df25-4356-9b16-3050cccd19ed",
+        "score": 0.014925,
+        "document_id": "DEMO/EXAM/2026/09",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "87d20413-c243-475f-b01d-6ab5426c2cff",
+        "score": 0.014925,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "83aba75c-ec20-4557-a090-baf453fc18a1",
+        "score": 0.014706,
+        "document_id": "DEMO/HELP/WIFI/2026/01",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 0.014706,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "59040ea8-65e9-43ef-9665-3444e9c8a691",
+        "score": 0.014493,
+        "document_id": "DEMO/WIKI/ACAD/031",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "55821e21-a87f-4a49-b399-4c68787c0707",
+        "score": 0.014493,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "583a9cd2-307e-48c3-86d8-790b734ac618",
+        "score": 0.014286,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c05ee45f-30ba-4d59-8f5a-de0db5847e38",
+        "score": 0.014085,
+        "document_id": "DEMO/LIB/2026/09",
+        "is_demo": true
+      },
+      {
+        "chunk_id": "49a185c1-1826-4a41-82d4-9c54140b3542",
+        "score": 0.014085,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1d06dcb3-d985-4e2c-a798-c6aee7085e04",
+        "score": 0.013889,
+        "document_id": "pce-pdf-iic-annual-report-2021-22",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "e9eca599-4467-4d63-92d6-daa68f550e6a",
+        "score": 3.483529,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a3ad0355-bde4-4baf-ac66-7de1110ebaea",
+        "score": 3.483529,
+        "document_id": "pce-academics-admissions-hostel-details",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8f5d4bd2-8025-4d5b-bd05-40dc94bac7ee",
+        "score": 3.288399,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "55821e21-a87f-4a49-b399-4c68787c0707",
+        "score": 3.288399,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "08bc2a58-c1fb-4b09-b0a0-8cad5e654ab9",
+        "score": 2.789727,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 8070.64,
+      "dense_search_1": 36.74,
+      "sparse_search_1": 346.18,
+      "fuse_1": 0.04,
+      "decide_1": 52662.85,
+      "rerank": 5349.1
+    },
+    "iteration_count": 1,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "Is hostel accommodation available for students at the college?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "READY",
+        "decision_raw": "READY",
+        "latencies_ms": {
+          "embed_query": 8070.6,
+          "dense_search": 36.7,
+          "sparse_search": 346.2,
+          "fuse": 0.0,
+          "decide": 52662.8
+        }
+      }
+    ],
+    "stop_reason": "model_says_ready"
+  },
+  "verification": {
+    "verdict": "partially_supported",
+    "sentences": 3,
+    "checked": 3,
+    "supported": 1,
+    "unsupported": [
+      2,
+      3
+    ],
+    "support_rate": 0.3333,
+    "refused": false,
+    "raw": "UNSUPPORTED: 2,3",
+    "latency_ms": 164281.9
+  }
+}

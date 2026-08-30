@@ -1,0 +1,476 @@
+According to the provided context, the following UG engineering programs at Pillai College of Engineering are NBA accredited:
+
+- 2 UG courses in Automobile, Electronics and Telecommunication are accredited.
+- 3 UG courses in Computer, Information Technology, and Mechanical Engineering are re-accredited for 3 years, up to 30th June, 2025 [S1, S2].
+
+Sources:
+  [S1] The Institute > Accreditation
+        https://www.pce.ac.in/about/the-institute/
+  [S2] The Institute > Accreditation
+        https://www.pce.ac.in/about/the-institute/
+  [S3] IQAC Roles and Responsibilities > IQAC Responsibilities:
+        https://www.pce.ac.in/iqac/iqac-roles-and-responsibilities/
+  [S4] IQAC Roles and Responsibilities > IQAC Responsibilities:
+        https://www.pce.ac.in/iqac/iqac-roles-and-responsibilities/
+  [S5] Sitemap
+        https://www.pce.ac.in/sitemap/
+
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 59939ms, generation 129760ms]
+
+{
+  "question": "Which programmes at the college are NBA accredited?",
+  "config": "C5",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 311571.7,
+  "retrieval_ms": 59939.5,
+  "generation_ms": 129759.6,
+  "sources": [
+    "927c64c7-5b22-4d41-a2ed-0243184262b6",
+    "ff41e0dc-4535-41fe-b1e9-3015cc17829d",
+    "7924b562-f6fb-43b1-ba98-bd6b27a4ce7e",
+    "269b37d6-1692-4dc7-99fe-908df3d18b83",
+    "338cbb73-ed17-4dce-97e3-0441160f42d0"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "Which programmes at the college are NBA accredited?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "927c64c7-5b22-4d41-a2ed-0243184262b6",
+        "score": 0.704136,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ce193b3d-beb9-414b-aa50-9e07c1545b7d",
+        "score": 0.59239,
+        "document_id": "pce-faculty-faculty-directory-lalit-m-mehta",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "19f0030d-ad14-4d2b-a8f3-ec67deac08a6",
+        "score": 0.589854,
+        "document_id": "pce-free-coursera-courses-a-pillai-group-initiative",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f5fcdf35-c760-4395-a668-1fd71f93fadc",
+        "score": 0.589202,
+        "document_id": "pce-faculty-faculty-directory-vinod-d-mane",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bd81eec2-8c9a-4175-893a-ffc6fcb29087",
+        "score": 0.586875,
+        "document_id": "pce-nba-dcs-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1918823c-2c0d-4191-a72e-1df6e7efecdf",
+        "score": 0.586775,
+        "document_id": "pce-nba-dcs-electronics-telecommunication-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d14897cd-9c3c-489d-827d-53480b041c9c",
+        "score": 0.584501,
+        "document_id": "pce-faculty-faculty-directory-pranita-s-pingale",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2cf42b8c-4fa0-437a-bdcc-b8af51cd200e",
+        "score": 0.584346,
+        "document_id": "pce-bws-gallery-heres-how-you-can-have-the-best-college-experience",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d1ba77b-fa96-4d58-b59c-c114615ec662",
+        "score": 0.584252,
+        "document_id": "pce-category-uncategorized",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3f4173cf-7a91-4169-bc15-51e6966892ce",
+        "score": 0.582995,
+        "document_id": "pce-faculty-faculty-directory-sonali-p-parida",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4f6bf6e8-b50c-4211-9861-e14d68454a27",
+        "score": 0.582658,
+        "document_id": "pce-accreditation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "57683aec-6c54-42c6-ad8a-f1c9a48f1cbd",
+        "score": 0.581635,
+        "document_id": "pce-about-mandatory-disclosure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "07015e2d-66dd-417e-932d-a71717adc753",
+        "score": 0.58081,
+        "document_id": "pce-about-mandatory-disclosure-ugc-2f-and-12b",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d9ebf409-662e-48d4-8ba3-b20ee0c0793d",
+        "score": 0.580653,
+        "document_id": "pce-faculty-faculty-directory-sojan-v-v-07102021",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "342f3122-f681-4702-9dfd-16757c0ad934",
+        "score": 0.579797,
+        "document_id": "pce-faculty-faculty-directory-pranita-g-thakur",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c6be7900-b9b4-4bd8-baab-a3867e3a1766",
+        "score": 0.579644,
+        "document_id": "pce-nba-dcs-automobile-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c067e9ab-b6e6-46ae-827e-9a3711b3ff0e",
+        "score": 0.579143,
+        "document_id": "pce-webinar-on-gateway-to-success",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "83ed9fb3-e8ea-4f49-9076-ff9e66759fed",
+        "score": 0.578916,
+        "document_id": "pce-teachers-day-special",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "a35dde0e-639f-48b1-b69c-ecbe6cdb3f91",
+        "score": 0.578801,
+        "document_id": "pce-bws-gallery-workshop-on-concept-based-teachers-training-in-physics",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "57ca73c7-5d99-4236-ae27-2c1c19f275d5",
+        "score": 0.577971,
+        "document_id": "pce-bws-gallery-exploring-first-year-at-pce",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "7924b562-f6fb-43b1-ba98-bd6b27a4ce7e",
+        "score": 24.392843,
+        "document_id": "pce-iqac-iqac-roles-and-responsibilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "269b37d6-1692-4dc7-99fe-908df3d18b83",
+        "score": 24.392843,
+        "document_id": "pce-iqac-iqac-roles-and-responsibilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ff41e0dc-4535-41fe-b1e9-3015cc17829d",
+        "score": 19.840392,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "927c64c7-5b22-4d41-a2ed-0243184262b6",
+        "score": 19.840392,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3945a8a0-52f3-466f-b1cc-b0260fd9ec1c",
+        "score": 17.848494,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6b8582e6-b4b2-425d-9598-3b51a42b69df",
+        "score": 17.848494,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "512c0ba3-958a-4f3e-ac9a-b3d4e8edf6d4",
+        "score": 14.717704,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0b1c51c7-c186-435b-a881-6f0f365bd354",
+        "score": 14.717704,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "338cbb73-ed17-4dce-97e3-0441160f42d0",
+        "score": 13.50494,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b3c810f3-167f-4119-b0c0-da1f0f8b3eaa",
+        "score": 13.50494,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "87d20413-c243-475f-b01d-6ab5426c2cff",
+        "score": 13.494668,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 13.494668,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "851ea827-bbc4-47d5-94af-1e951497ba3e",
+        "score": 13.453315,
+        "document_id": "pce-engineers-day",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cd82b91e-7a8e-4307-a5e7-1c30b8574c27",
+        "score": 13.453315,
+        "document_id": "pce-engineers-day",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b1524fa6-6628-4056-86c5-3a680b166e8a",
+        "score": 13.414897,
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2d866af2-ad8e-4562-81c2-c77293528eef",
+        "score": 13.414897,
+        "document_id": "pce-pdf-brochure-for-fdp-on-r-programming",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d77cf167-8fd2-4d47-a2f6-764b04237b8d",
+        "score": 13.401391,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "99c5e8e7-0ea7-4c76-abfc-a203d2aa986a",
+        "score": 13.401391,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5e52e57d-7319-4127-adb3-4b260634e900",
+        "score": 13.3883,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "76efce62-25ae-408d-9e65-3a8fdc56f934",
+        "score": 13.3883,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "927c64c7-5b22-4d41-a2ed-0243184262b6",
+        "score": 0.032018,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7924b562-f6fb-43b1-ba98-bd6b27a4ce7e",
+        "score": 0.016393,
+        "document_id": "pce-iqac-iqac-roles-and-responsibilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ce193b3d-beb9-414b-aa50-9e07c1545b7d",
+        "score": 0.016129,
+        "document_id": "pce-faculty-faculty-directory-lalit-m-mehta",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "269b37d6-1692-4dc7-99fe-908df3d18b83",
+        "score": 0.016129,
+        "document_id": "pce-iqac-iqac-roles-and-responsibilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "19f0030d-ad14-4d2b-a8f3-ec67deac08a6",
+        "score": 0.015873,
+        "document_id": "pce-free-coursera-courses-a-pillai-group-initiative",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ff41e0dc-4535-41fe-b1e9-3015cc17829d",
+        "score": 0.015873,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "f5fcdf35-c760-4395-a668-1fd71f93fadc",
+        "score": 0.015625,
+        "document_id": "pce-faculty-faculty-directory-vinod-d-mane",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "bd81eec2-8c9a-4175-893a-ffc6fcb29087",
+        "score": 0.015385,
+        "document_id": "pce-nba-dcs-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3945a8a0-52f3-466f-b1cc-b0260fd9ec1c",
+        "score": 0.015385,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1918823c-2c0d-4191-a72e-1df6e7efecdf",
+        "score": 0.015152,
+        "document_id": "pce-nba-dcs-electronics-telecommunication-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6b8582e6-b4b2-425d-9598-3b51a42b69df",
+        "score": 0.015152,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d14897cd-9c3c-489d-827d-53480b041c9c",
+        "score": 0.014925,
+        "document_id": "pce-faculty-faculty-directory-pranita-s-pingale",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "512c0ba3-958a-4f3e-ac9a-b3d4e8edf6d4",
+        "score": 0.014925,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2cf42b8c-4fa0-437a-bdcc-b8af51cd200e",
+        "score": 0.014706,
+        "document_id": "pce-bws-gallery-heres-how-you-can-have-the-best-college-experience",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0b1c51c7-c186-435b-a881-6f0f365bd354",
+        "score": 0.014706,
+        "document_id": "pce-pdf-api-workshop-brochure",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6d1ba77b-fa96-4d58-b59c-c114615ec662",
+        "score": 0.014493,
+        "document_id": "pce-category-uncategorized",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "338cbb73-ed17-4dce-97e3-0441160f42d0",
+        "score": 0.014493,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "3f4173cf-7a91-4169-bc15-51e6966892ce",
+        "score": 0.014286,
+        "document_id": "pce-faculty-faculty-directory-sonali-p-parida",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b3c810f3-167f-4119-b0c0-da1f0f8b3eaa",
+        "score": 0.014286,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4f6bf6e8-b50c-4211-9861-e14d68454a27",
+        "score": 0.014085,
+        "document_id": "pce-accreditation",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "927c64c7-5b22-4d41-a2ed-0243184262b6",
+        "score": 3.164668,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ff41e0dc-4535-41fe-b1e9-3015cc17829d",
+        "score": 3.164668,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "7924b562-f6fb-43b1-ba98-bd6b27a4ce7e",
+        "score": 2.667275,
+        "document_id": "pce-iqac-iqac-roles-and-responsibilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "269b37d6-1692-4dc7-99fe-908df3d18b83",
+        "score": 2.667275,
+        "document_id": "pce-iqac-iqac-roles-and-responsibilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "338cbb73-ed17-4dce-97e3-0441160f42d0",
+        "score": -0.21481,
+        "document_id": "pce-sitemap",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 6143.28,
+      "dense_search_1": 23.06,
+      "sparse_search_1": 337.95,
+      "fuse_1": 0.05,
+      "decide_1": 48914.01,
+      "rerank": 4521.11
+    },
+    "iteration_count": 1,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "Which programmes at the college are NBA accredited?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "READY",
+        "decision_raw": "READY",
+        "latencies_ms": {
+          "embed_query": 6143.3,
+          "dense_search": 23.1,
+          "sparse_search": 337.9,
+          "fuse": 0.1,
+          "decide": 48914.0
+        }
+      }
+    ],
+    "stop_reason": "model_says_ready"
+  },
+  "verification": {
+    "verdict": "supported",
+    "sentences": 2,
+    "checked": 2,
+    "supported": 2,
+    "unsupported": [],
+    "support_rate": 1.0,
+    "refused": false,
+    "raw": "SUPPORTED",
+    "latency_ms": 121609.2
+  }
+}

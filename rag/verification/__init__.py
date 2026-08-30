@@ -10,6 +10,7 @@ from rag.verification.claim_check import (
     VERIFY_SYSTEM,
     ClaimVerifier,
     build_verify_prompt,
+    is_claim,
     parse_verdict,
     split_sentences,
 )
@@ -21,6 +22,7 @@ __all__ = [
     "Verdict",
     "Verifier",
     "build_verify_prompt",
+    "is_claim",
     "parse_verdict",
     "split_sentences",
 ]

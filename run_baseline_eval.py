@@ -24,6 +24,8 @@ Assumptions (check these against your actual CLI and adjust if wrong):
     TIMING_RE.
 """
 
+from __future__ import annotations
+
 import argparse
 import collections
 import csv

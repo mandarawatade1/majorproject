@@ -1,0 +1,477 @@
+The vision of Pillai College of Engineering (PCE) is to admit, educate, and train a diverse population of students who are academically prepared to benefit from the Institute’s infrastructure and faculty experience, to become responsible professionals or entrepreneurs in a technical arena. [S1] [S3] The mission of PCE is to develop entrepreneurs and make them responsible citizens in technological development both from an Indian and global perspective. This objective is fulfilled through quality education, practical training, and interaction with start-up founders. [S4]
+
+Sources:
+  [S1] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 7 > page 10
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S2] Wp Content  Uploads  2022  12  Pce Prospectus 2022.Pdf > Page 7 > page 10
+        https://www.pce.ac.in/wp-content/uploads/2022/12/PCE-Prospectus-2022.pdf
+  [S3] The Institute > Vision
+        https://www.pce.ac.in/about/the-institute/
+  [S4] Wp Content  Uploads  2024  02  Iic Pce Annual Report 2022 23.Pdf > Annual Report 2022-23 > page 1
+        https://www.pce.ac.in/wp-content/uploads/2024/02/IIC-PCE-Annual-Report-2022-23.pdf
+  [S5] Exploring the Landscape of Information Technology: A Comprehensive Guide to Opportunities and Innovation > Exploring Information Technology Programs at Pillai College of Engineering
+        https://www.pce.ac.in/exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-opportunities-and-innovation/
+
+  VERIFICATION: sentence(s) 3 of 3 were not supported by the cited sources (67% supported).
+
+[C5 | qwen2.5:7b-instruct-q4_K_M | retrieval 62335ms, generation 141635ms]
+
+{
+  "question": "What is the vision and mission of Pillai College of Engineering?",
+  "config": "C5",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "latency_ms": 297128.5,
+  "retrieval_ms": 62334.5,
+  "generation_ms": 141634.8,
+  "sources": [
+    "4acf45ee-beb0-4c69-8a9b-a2f1e0a7af1f",
+    "d1ec6874-8666-4ac9-b0dd-34d9657d437c",
+    "cedf3365-e53b-4edf-9260-a83915915ae4",
+    "dada9911-178c-4068-a81a-4ed5c8b75d51",
+    "278a2ba5-8e95-48f6-888e-518bbb18f717"
+  ],
+  "used_demo_sources": false,
+  "retrieval": {
+    "original_query": "What is the vision and mission of Pillai College of Engineering?",
+    "rewritten_queries": [],
+    "dense_hits": [
+      {
+        "chunk_id": "4acf45ee-beb0-4c69-8a9b-a2f1e0a7af1f",
+        "score": 0.790711,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "22778487-7563-47dc-aa64-4f3f23057ba4",
+        "score": 0.765255,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
+        "score": 0.758736,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "278a2ba5-8e95-48f6-888e-518bbb18f717",
+        "score": 0.742002,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "dada9911-178c-4068-a81a-4ed5c8b75d51",
+        "score": 0.7334,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0f1464ef-d64b-469f-9f7e-21475d6f1869",
+        "score": 0.725493,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6939b636-e348-4cc4-8e11-657af62fac43",
+        "score": 0.723575,
+        "document_id": "pce-understanding-information-technology-a-beginners-guide-to-the-it-world",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "74826d43-e080-4f8a-b557-10007e996fef",
+        "score": 0.716509,
+        "document_id": "pce-pdf-action-formulation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "01050fda-0fa7-4152-bc5a-6ea5e27b8ada",
+        "score": 0.714508,
+        "document_id": "pce-an-introduction-to-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "53479c96-0e54-4cbe-ae76-ad2061cd903e",
+        "score": 0.713517,
+        "document_id": "pce-an-introduction-to-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8a811a3-03d5-43a9-b1c7-71e6e7d94396",
+        "score": 0.712696,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "9376b3bf-f766-43a7-a1ca-414fe6930b04",
+        "score": 0.709809,
+        "document_id": "pce-pdf-iic-annual-report-2023-24-for-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c817508f-aed9-47ef-8e92-e1cc5eb7d22e",
+        "score": 0.709614,
+        "document_id": "pce-pdf-seit-direct-second-year-student-extra-classes-odd-sem-2019-20",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "96e312fd-9ff4-47cd-8d5f-f001ab5ed21d",
+        "score": 0.708219,
+        "document_id": "pce-exploring-first-year-at-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8ff88678-8003-43a0-85cc-5d8c6bd15d55",
+        "score": 0.707054,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1dd2f0f9-3e1b-409b-86d2-9902dc12286b",
+        "score": 0.707044,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "b99a153e-c34c-4fb9-933d-d8fcb00f3d49",
+        "score": 0.705676,
+        "document_id": "pce-research-research-facilities",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "c68c880d-5920-4295-acfd-d93904de96bd",
+        "score": 0.699741,
+        "document_id": "pce-bachelors-automobile-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "8f5d4bd2-8025-4d5b-bd05-40dc94bac7ee",
+        "score": 0.698969,
+        "document_id": "pce-about-infrastructure-and-facilities-hostel-facility",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ca0f5028-861c-4ca3-8546-e594fbb396bd",
+        "score": 0.697807,
+        "document_id": "pce-placements",
+        "is_demo": false
+      }
+    ],
+    "sparse_hits": [
+      {
+        "chunk_id": "1d5c7e3f-791f-4497-b6f1-5d30c2da2f34",
+        "score": 25.679532,
+        "document_id": "pce-bachelors-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0fad5f93-9eef-4e65-9d7a-6b68019bd854",
+        "score": 25.679532,
+        "document_id": "pce-bachelors-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ddd788ac-c305-441b-b594-a77d0c7f6b5b",
+        "score": 25.478294,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1079c352-81c2-4943-a9e3-a9033312eee8",
+        "score": 25.478294,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ec6c962c-b7fa-459c-b85d-81e78e511887",
+        "score": 24.89628,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ef0433c3-4002-4170-837b-32c7b67554ca",
+        "score": 24.89628,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d1ec6874-8666-4ac9-b0dd-34d9657d437c",
+        "score": 24.324406,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "4acf45ee-beb0-4c69-8a9b-a2f1e0a7af1f",
+        "score": 24.324406,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d30df486-908f-41be-a3e6-17184f6c4e5a",
+        "score": 24.024811,
+        "document_id": "pce-bachelors-computer-engineering-student-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "be28be01-048f-4eb2-93ed-2dd37f30ffad",
+        "score": 24.024811,
+        "document_id": "pce-bachelors-computer-engineering-student-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2e5122a8-b8cb-4569-b16c-37dda39f893e",
+        "score": 23.807817,
+        "document_id": "pce-bachelors-information-technology-student-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "82c1e8f2-ca83-48b1-bce6-3ccc5ad3b342",
+        "score": 23.807817,
+        "document_id": "pce-bachelors-information-technology-student-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d77cf167-8fd2-4d47-a2f6-764b04237b8d",
+        "score": 23.047794,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "99c5e8e7-0ea7-4c76-abfc-a203d2aa986a",
+        "score": 23.047794,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "5e52e57d-7319-4127-adb3-4b260634e900",
+        "score": 23.035495,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "76efce62-25ae-408d-9e65-3a8fdc56f934",
+        "score": 23.035495,
+        "document_id": "pce-about-us",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "2d77385a-292b-4d61-828d-774f592bfee8",
+        "score": 23.014779,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "120e9d0c-4dad-4afa-9a1f-17b6870d3dff",
+        "score": 23.014779,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "af55b065-c95f-4a16-bc7a-dc6108b84f42",
+        "score": 22.526572,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "dada9911-178c-4068-a81a-4ed5c8b75d51",
+        "score": 22.526572,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      }
+    ],
+    "fused_hits": [
+      {
+        "chunk_id": "4acf45ee-beb0-4c69-8a9b-a2f1e0a7af1f",
+        "score": 0.031099,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "dada9911-178c-4068-a81a-4ed5c8b75d51",
+        "score": 0.027885,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1d5c7e3f-791f-4497-b6f1-5d30c2da2f34",
+        "score": 0.016393,
+        "document_id": "pce-bachelors-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "22778487-7563-47dc-aa64-4f3f23057ba4",
+        "score": 0.016129,
+        "document_id": "pce-perks-of-pillai",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0fad5f93-9eef-4e65-9d7a-6b68019bd854",
+        "score": 0.016129,
+        "document_id": "pce-bachelors-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
+        "score": 0.015873,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ddd788ac-c305-441b-b594-a77d0c7f6b5b",
+        "score": 0.015873,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "278a2ba5-8e95-48f6-888e-518bbb18f717",
+        "score": 0.015625,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "1079c352-81c2-4943-a9e3-a9033312eee8",
+        "score": 0.015625,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ec6c962c-b7fa-459c-b85d-81e78e511887",
+        "score": 0.015385,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "0f1464ef-d64b-469f-9f7e-21475d6f1869",
+        "score": 0.015152,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "ef0433c3-4002-4170-837b-32c7b67554ca",
+        "score": 0.015152,
+        "document_id": "pce-academics-admissions-explore-pce",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "6939b636-e348-4cc4-8e11-657af62fac43",
+        "score": 0.014925,
+        "document_id": "pce-understanding-information-technology-a-beginners-guide-to-the-it-world",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d1ec6874-8666-4ac9-b0dd-34d9657d437c",
+        "score": 0.014925,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "74826d43-e080-4f8a-b557-10007e996fef",
+        "score": 0.014706,
+        "document_id": "pce-pdf-action-formulation",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "01050fda-0fa7-4152-bc5a-6ea5e27b8ada",
+        "score": 0.014493,
+        "document_id": "pce-an-introduction-to-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d30df486-908f-41be-a3e6-17184f6c4e5a",
+        "score": 0.014493,
+        "document_id": "pce-bachelors-computer-engineering-student-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "53479c96-0e54-4cbe-ae76-ad2061cd903e",
+        "score": 0.014286,
+        "document_id": "pce-an-introduction-to-mechanical-engineering",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "be28be01-048f-4eb2-93ed-2dd37f30ffad",
+        "score": 0.014286,
+        "document_id": "pce-bachelors-computer-engineering-student-journal",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "e8a811a3-03d5-43a9-b1c7-71e6e7d94396",
+        "score": 0.014085,
+        "document_id": "pce-bachelors-information-technology",
+        "is_demo": false
+      }
+    ],
+    "reranked_hits": [
+      {
+        "chunk_id": "4acf45ee-beb0-4c69-8a9b-a2f1e0a7af1f",
+        "score": 8.115532,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "d1ec6874-8666-4ac9-b0dd-34d9657d437c",
+        "score": 8.115532,
+        "document_id": "pce-pdf-pce-prospectus-2022",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "cedf3365-e53b-4edf-9260-a83915915ae4",
+        "score": 6.447725,
+        "document_id": "pce-about-the-institute",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "dada9911-178c-4068-a81a-4ed5c8b75d51",
+        "score": 6.289513,
+        "document_id": "pce-pdf-iic-pce-annual-report-2022-23",
+        "is_demo": false
+      },
+      {
+        "chunk_id": "278a2ba5-8e95-48f6-888e-518bbb18f717",
+        "score": 5.978543,
+        "document_id": "pce-exploring-the-landscape-of-information-technology-a-comprehensive-guide-to-oppor",
+        "is_demo": false
+      }
+    ],
+    "filters_applied": {},
+    "stage_latencies": {
+      "embed_query_1": 7012.4,
+      "dense_search_1": 16.99,
+      "sparse_search_1": 319.36,
+      "fuse_1": 0.04,
+      "decide_1": 50494.62,
+      "rerank": 4491.11
+    },
+    "iteration_count": 1,
+    "iterations": [
+      {
+        "iteration": 1,
+        "query": "What is the vision and mission of Pillai College of Engineering?",
+        "hits_returned": 20,
+        "new_chunks": 20,
+        "decision": "READY",
+        "decision_raw": "READY",
+        "latencies_ms": {
+          "embed_query": 7012.4,
+          "dense_search": 17.0,
+          "sparse_search": 319.4,
+          "fuse": 0.0,
+          "decide": 50494.6
+        }
+      }
+    ],
+    "stop_reason": "model_says_ready"
+  },
+  "verification": {
+    "verdict": "partially_supported",
+    "sentences": 3,
+    "checked": 3,
+    "supported": 2,
+    "unsupported": [
+      3
+    ],
+    "support_rate": 0.6667,
+    "refused": false,
+    "raw": "UNSUPPORTED: 3",
+    "latency_ms": 92953.4
+  }
+}

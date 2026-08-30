@@ -28,6 +28,7 @@ from rag.verification.claim_check import (
     VERIFY_SYSTEM,
     ClaimVerifier,
     build_verify_prompt,
+    is_claim,
     parse_verdict,
     split_sentences,
 )
@@ -138,6 +139,62 @@ class TestSplittingSentences:
         assert split_sentences(text) == []
 
 
+class TestWhichSentencesAreWorthChecking:
+    """Every case here is a real sentence from the first C5 evaluation.
+
+    That run flagged "the context does not contain X" as an unsupported claim
+    on 3 of 19 answers, and on q18 refused an answer made entirely of them —
+    replacing a correct, specific "I don't have that, and here is what the
+    context is about" with the generic refusal. The prompt had always
+    forbidden this; the model disobeyed. So it is enforced in code.
+    """
+
+    @pytest.mark.parametrize(
+        "text",
+        [
+            "The context provided does not contain any information about the "
+            "current or future weather forecast for Mumbai.",
+            "The context provided does not specify which entrance exams are "
+            "accepted for admission to Pillai College of Engineering.",
+            "The context is focused on the Smart India Hackathon 2017 and does "
+            "not include details about the current political leadership [S1].",
+            "The provided information does not mention hostel fees.",
+        ],
+    )
+    def test_a_statement_that_the_context_lacks_something_is_not_a_claim(
+        self, text: str
+    ) -> None:
+        assert is_claim(text) is False
+
+    @pytest.mark.parametrize(
+        "text",
+        [
+            "For current weather conditions, you might want to check a reliable "
+            "weather forecasting website or service.",
+            "For a complete list of faculty members, you might want to refer to "
+            "the official website or contact the department directly [S4].",
+            "Please contact the admissions office for more details.",
+        ],
+    )
+    def test_a_signpost_is_not_a_claim(self, text: str) -> None:
+        assert is_claim(text) is False
+
+    @pytest.mark.parametrize(
+        "text",
+        [
+            "The intake for Computer Engineering is 180 students [S1].",
+            "The text discusses Pillai College's involvement with the SAFAR "
+            "project, which provides air quality forecasting.",
+            "However, it does provide information about the research areas.",
+            "Dr. Mimi Cherian is an Assistant Professor in the department.",
+        ],
+    )
+    def test_anything_assertable_stays_a_claim(self, text: str) -> None:
+        """Deliberately narrow. A sentence describing what the context *does*
+        contain is checkable and could be wrong, so it stays."""
+        assert is_claim(text) is True
+
+
 class TestParsingTheVerdict:
     @pytest.mark.parametrize(
         "text",
@@ -246,6 +303,55 @@ class TestTheVerifier:
         assert result.refused is False
         assert result.checked == 0
         assert result.support_rate is None
+
+    def test_an_answer_of_only_absence_statements_cannot_be_refused(self) -> None:
+        """The q18 regression, pinned.
+
+        The generated answer was: "The context provided does not contain
+        information about the current Prime Minister of India. The context is
+        focused on the Smart India Hackathon 2017..." — a correct, useful
+        response to an out-of-scope question. C5 flagged both sentences and
+        replaced it with the generic refusal, which is strictly worse for the
+        reader. With no claims to judge there is nothing that can be unfounded,
+        so no LLM call is made and no refusal is possible.
+        """
+        answer = (
+            "The context provided does not contain information about the "
+            "current Prime Minister of India. The context is focused on the "
+            "Smart India Hackathon 2017 and does not include details about "
+            "the current political leadership in India. [S1] [S2]"
+        )
+        generator = _ScriptedGenerator("UNSUPPORTED: 1, 2")
+        result = ClaimVerifier(generator).verify("q", answer, _context())
+
+        assert result.verdict is Verdict.SKIPPED
+        assert result.refused is False
+        assert generator.calls == []
+
+    def test_signposts_are_excluded_from_the_support_rate(self) -> None:
+        """A signpost counted as supported inflates the rate as surely as one
+        counted unsupported deflates it, so it is not counted at all."""
+        answer = (
+            "The intake for Computer Engineering is 180 students [S1]. "
+            "For more details, please contact the admissions office."
+        )
+        result = ClaimVerifier(_ScriptedGenerator("SUPPORTED")).verify(
+            "q", answer, _context()
+        )
+        assert result.sentences == 2
+        assert result.checked == 1
+        assert result.support_rate == 1.0
+
+    def test_the_verifier_only_sees_the_claims(self) -> None:
+        answer = (
+            "The intake is 180 students [S1]. "
+            "Please contact the admissions office for more details."
+        )
+        generator = _ScriptedGenerator("SUPPORTED")
+        ClaimVerifier(generator).verify("q", answer, _context())
+        prompt = generator.calls[0][0]
+        assert "1. The intake is 180 students [S1]." in prompt
+        assert "admissions office" not in prompt
 
     def test_empty_context_is_skipped_without_an_llm_call(self) -> None:
         """The 'no information' answer has nothing to verify against.

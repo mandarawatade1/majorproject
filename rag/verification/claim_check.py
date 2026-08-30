@@ -64,22 +64,32 @@ class ClaimVerifier:
         self, question: str, answer: str, context: AssembledContext
     ) -> VerificationResult:
         sentences = split_sentences(answer)
+        # Only claim-bearing sentences are shown to the verifier at all. The
+        # prompt has always said that a signpost or a statement about what the
+        # context lacks can never be "unsupported" — the model ignored that
+        # instruction on the first 20-question run and flagged them anyway, so
+        # the rule is now enforced in code, where a model cannot disobey it.
+        claims = [s for s in sentences if is_claim(s)]
+
         result = VerificationResult(sentences=len(sentences), original_answer=answer)
 
-        # Nothing to check against, or nothing to check. Recorded as SKIPPED
-        # rather than passed off as SUPPORTED: an unexamined answer is not a
-        # verified one, and C5's whole claim is about what was examined.
-        if context.is_empty or not sentences:
+        # Nothing to check against, or nothing that asserts anything. Recorded
+        # as SKIPPED rather than passed off as SUPPORTED: an unexamined answer
+        # is not a verified one, and C5's whole claim is about what was
+        # examined. Crucially this is also what makes a refusal impossible for
+        # an answer that only says the context lacks information — there is no
+        # claim there to be unfounded.
+        if context.is_empty or not claims:
             result.verdict = Verdict.SKIPPED
             return result
 
-        system, prompt = build_verify_prompt(question, sentences, context)
+        system, prompt = build_verify_prompt(question, claims, context)
 
         started = time.perf_counter()
         generated = self.generator.generate(prompt, system=system)
         result.latency_ms = (time.perf_counter() - started) * 1000
 
-        unsupported, parsed = parse_verdict(generated.answer, len(sentences))
+        unsupported, parsed = parse_verdict(generated.answer, len(claims))
         result.raw = (generated.answer or "").strip()
 
         if not parsed:
@@ -89,17 +99,19 @@ class ClaimVerifier:
             result.verdict = Verdict.UNPARSEABLE
             return result
 
-        result.checked = len(sentences)
+        # `unsupported` indexes the claims shown to the model, not the original
+        # sentences, so the support rate is over what was actually judged.
+        result.checked = len(claims)
         result.unsupported = unsupported
-        result.unsupported_text = [sentences[i - 1] for i in unsupported]
+        result.unsupported_text = [claims[i - 1] for i in unsupported]
 
         if not unsupported:
             result.verdict = Verdict.SUPPORTED
-        elif len(unsupported) < len(sentences):
+        elif len(unsupported) < len(claims):
             result.verdict = Verdict.PARTIALLY_SUPPORTED
         else:
-            # Every sentence unsupported. This is the refusal case: the answer
-            # is not partly wrong, it is unfounded, and returning it with a
+            # Every claim unsupported. This is the refusal case: the answer is
+            # not partly wrong, it is unfounded, and returning it with a
             # warning attached would still be putting it in front of a reader.
             result.verdict = Verdict.UNSUPPORTED
             result.refused = True
@@ -129,6 +141,63 @@ def build_verify_prompt(
         f"Reply with one line: SUPPORTED, or UNSUPPORTED: <numbers>"
     )
     return VERIFY_SYSTEM, body
+
+
+# ---------------------------------------------------------------------------
+# Which sentences assert anything
+# ---------------------------------------------------------------------------
+
+# A sentence whose subject is the context itself, asserting that it lacks
+# something: "The context provided does not contain information about X."
+# This is a statement about the retrieval, not about the world, and it is
+# exactly what a well-behaved grounded answer says when it has nothing. The
+# first C5 run flagged these as unsupported on 3 of 19 answers and, on q18,
+# refused an answer composed entirely of them — replacing a correct, specific
+# "I don't have that, here's what I do have" with a generic refusal. That is
+# the worst outcome C5 can produce, so the rule is enforced here rather than
+# asked for in a prompt.
+_ABOUT_CONTEXT = re.compile(
+    r"\b(context|excerpts?|passages?|sources?|documents?|"
+    r"(provided|given) (text|information)|the text)\b",
+    re.IGNORECASE,
+)
+_ASSERTS_ABSENCE = re.compile(
+    r"\b(do(es)?\s+not|don'?t|doesn'?t|did\s+not|lacks?|"
+    r"no\s+(information|details?|mention|reference)|"
+    r"not\s+(contain|include|specify|mention|provide|available|present))\b",
+    re.IGNORECASE,
+)
+
+# Advice to look elsewhere. Asserts nothing about the institution, so it can
+# be neither supported nor unsupported.
+_SIGNPOST = re.compile(
+    r"\b(you (might|may|can|should)\s+want|please\s+(contact|refer|visit|check)|"
+    r"for (more|further|detailed|complete|additional)\s+\w+|"
+    r"(might|may|can|should)\s+(want\s+to\s+)?(contact|refer|visit|check|consult|look)|"
+    r"refer\s+to\s+the|contact\s+the|visit\s+the\s+official)\b",
+    re.IGNORECASE,
+)
+
+
+def is_claim(sentence: str) -> bool:
+    """Does this sentence assert something about the institution?
+
+    Only claim-bearing sentences are worth verifying, and only they belong in
+    the support rate — a signpost counted as "supported" inflates the score
+    just as surely as one counted "unsupported" deflates it.
+
+    Deliberately narrow. A sentence that describes what the context *does*
+    contain ("The text discusses the SAFAR project") stays a claim, because it
+    is checkable and could be wrong. Only absence-statements and signposts are
+    excluded, which is the smallest exclusion that covers the false positives
+    actually observed.
+    """
+    text = sentence.strip()
+    if not text:
+        return False
+    if _ABOUT_CONTEXT.search(text) and _ASSERTS_ABSENCE.search(text):
+        return False
+    return not _SIGNPOST.search(text)
 
 
 # ---------------------------------------------------------------------------
@@ -283,6 +352,7 @@ __all__ = [
     "VERIFY_SYSTEM",
     "ClaimVerifier",
     "build_verify_prompt",
+    "is_claim",
     "parse_verdict",
     "split_sentences",
 ]

@@ -184,6 +184,12 @@ services:
       - ./rag:/app/rag
       - ./corpus:/corpus
       - ./data:/data
+      # Read-only: the API reads evaluation runs to serve /compare and
+      # /admin/evaluations, and must never be able to alter the evidence
+      # Chapter 4 cites. Without this mount both endpoints report "no results
+      # directory", which reads as an empty evaluation rather than a missing
+      # volume.
+      - ./eval:/app/eval:ro
     healthcheck:
       test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=5)\""]
       interval: 15s

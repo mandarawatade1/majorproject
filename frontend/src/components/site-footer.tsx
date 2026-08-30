@@ -45,6 +45,16 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link href="/explore" className="text-ink-soft link-underline">
+                Knowledge base
+              </Link>
+            </li>
+            <li>
+              <Link href="/compare" className="text-ink-soft link-underline">
+                Baseline vs proposed
+              </Link>
+            </li>
+            <li>
               <a
                 href="https://www.pce.ac.in"
                 className="text-ink-soft link-underline"

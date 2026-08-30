@@ -17,6 +17,8 @@
  */
 
 import type {
+  CompareIndex,
+  Comparison,
   CorpusDocument,
   CorpusStats,
   Department,
@@ -90,6 +92,13 @@ export const api = {
     limit?: number;
     offset?: number;
   }) => get<Paged<CorpusDocument>>("/corpus/documents", options),
+
+  compareIndex: () => get<CompareIndex>("/compare"),
+
+  compareQuestion: (questionId: string, configs: string[]) =>
+    get<Comparison>(`/compare/${encodeURIComponent(questionId)}`, {
+      configs: configs.join(","),
+    }),
 };
 
 export const API_BASE_URL = BASE;

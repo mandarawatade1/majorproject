@@ -7,6 +7,7 @@ const NAV = [
   { href: "/departments", label: "Departments" },
   { href: "/programs", label: "Programmes" },
   { href: "/faculty", label: "Faculty" },
+  { href: "/explore", label: "Knowledge base" },
   { href: "/ask", label: "Ask PCE" },
 ];
 

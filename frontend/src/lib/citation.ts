@@ -1,4 +1,12 @@
-import type { SourceRef } from "./sse";
+/**
+ * Accepts anything carrying a label and a URL, so the live answer stream and
+ * the recorded evaluation runs share one implementation. Two prettifiers over
+ * one label format would drift.
+ */
+interface Labelled {
+  label: string;
+  url: string | null;
+}
 
 /**
  * Make a citation label readable, without changing what it refers to.
@@ -25,7 +33,7 @@ export interface DisplaySource {
   raw: string;
 }
 
-export function displaySource(source: SourceRef): DisplaySource {
+export function displaySource(source: Labelled): DisplaySource {
   const raw = source.label;
 
   const parts = raw

@@ -70,6 +70,49 @@ export interface CorpusStats {
   by_category: Record<string, number>;
 }
 
+export interface EvaluatedQuestion {
+  id: string;
+  question: string;
+  category?: string;
+}
+
+export interface CompareIndex {
+  configs: { name: string; description: string }[];
+  questions: EvaluatedQuestion[];
+  default?: { baseline: string; proposed: string };
+  note?: string;
+}
+
+export interface RecordedRun {
+  config: string;
+  description: string;
+  question_id: string;
+  question: string;
+  answer: string;
+  sources: { marker: string; label: string; url: string | null }[];
+  /** False where the run recorded no source block at all, so an empty
+   *  `sources` means "not recorded" rather than "cited nothing". */
+  sources_recorded: boolean;
+  omitted_chunks: number | null;
+  used_demo_sources: boolean;
+  latency_ms: number | null;
+  retrieval_ms: number | null;
+  generation_ms: number | null;
+  iteration_count: number | null;
+  stop_reason: string | null;
+  verification: {
+    verdict: string;
+    support_rate: number | null;
+    refused: boolean;
+  } | null;
+}
+
+export interface Comparison {
+  question_id: string;
+  question: string;
+  answers: RecordedRun[];
+}
+
 /** Human labels for the programme levels the API returns as bare strings. */
 export const LEVEL_LABELS: Record<string, string> = {
   btech: "B.Tech",

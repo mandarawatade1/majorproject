@@ -28,12 +28,12 @@ from pydantic import BaseModel, Field
 from sqlalchemy import func, select
 
 from app.api.deps import AdminUser, DbSession
+from app.services.evaluation import EVAL_ROOT
 
 logger = get_logger(__name__)
 router = APIRouter(prefix="/admin", tags=["admin"])
 
 CORPUS_ROOT = Path("/corpus")
-EVAL_ROOT = Path("/app/eval/results")
 
 
 # ---------------------------------------------------------------------------

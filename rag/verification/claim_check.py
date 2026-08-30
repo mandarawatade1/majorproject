@@ -110,11 +110,21 @@ class ClaimVerifier:
         elif len(unsupported) < len(claims):
             result.verdict = Verdict.PARTIALLY_SUPPORTED
         else:
-            # Every claim unsupported. This is the refusal case: the answer is
-            # not partly wrong, it is unfounded, and returning it with a
-            # warning attached would still be putting it in front of a reader.
             result.verdict = Verdict.UNSUPPORTED
-            result.refused = True
+            # Every claim is unsupported — but that alone is not enough to
+            # withhold the answer, and the difference matters.
+            #
+            # Excluding non-claims shrinks the denominator, so an answer that
+            # is mostly an honest "the context does not specify X" plus one
+            # hedged observation can reduce to a single claim; if that claim is
+            # flagged, "all claims unsupported" becomes true and a refusal
+            # would replace a largely truthful answer with a blunter one. Two
+            # answers in the first C5 run had exactly that shape.
+            #
+            # So a refusal requires the answer to be *nothing but* unfounded
+            # assertion. If it contains any hedge, absence statement or
+            # signpost, it is not a fabrication and the annotation is enough.
+            result.refused = len(claims) == len(sentences)
 
         return result
 

@@ -290,6 +290,42 @@ class TestTheVerifier:
         # taken on trust.
         assert result.original_answer == answer
 
+    def test_a_hedged_answer_is_annotated_not_withheld(self) -> None:
+        """The second refusal defect, found by replaying the first C5 run.
+
+        Excluding non-claims shrinks the denominator. An answer that is mostly
+        an honest "the context does not specify X" plus one hedged observation
+        reduces to a single claim; flag that claim and "all claims unsupported"
+        becomes true. Refusing there would replace a largely truthful answer
+        with a blunter one — the same harm as the q18 case, arrived at from the
+        opposite direction. Two answers in the first run had this shape.
+        """
+        answer = (
+            "The context provided does not specify which entrance exams are "
+            "accepted. However, it mentions MOCK CET under Other Programs, "
+            "which might be related. For more details, contact the college."
+        )
+        result = ClaimVerifier(_ScriptedGenerator("UNSUPPORTED: 1")).verify(
+            "q", answer, _context()
+        )
+        assert result.verdict is Verdict.UNSUPPORTED
+        assert result.checked == 1
+        assert result.support_rate == 0.0
+        assert result.refused is False  # annotated, and the answer survives
+
+    def test_an_answer_that_is_nothing_but_false_claims_is_withheld(self) -> None:
+        """The refusal still fires where it should: pure fabrication, no hedge,
+        nothing for a reader to salvage."""
+        answer = (
+            "The intake for Computer Engineering is 900 students [S1]. "
+            "The programme has been ranked first in Maharashtra since 2019 [S1]."
+        )
+        result = ClaimVerifier(_ScriptedGenerator("UNSUPPORTED: 1, 2")).verify(
+            "q", answer, _context()
+        )
+        assert result.verdict is Verdict.UNSUPPORTED
+        assert result.refused is True
+
     def test_an_unreadable_verdict_never_refuses(self) -> None:
         """The rule C4 established: a parse failure must not change an outcome.
 

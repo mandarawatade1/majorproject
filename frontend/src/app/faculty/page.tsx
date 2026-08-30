@@ -34,7 +34,7 @@ export default async function FacultyPage({ searchParams }: Props) {
     offset,
   });
 
-  const total = result.data?.total ?? 0;
+  const total = result.ok ? result.data.total : 0;
   const lastPage = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
   return (
@@ -67,7 +67,7 @@ export default async function FacultyPage({ searchParams }: Props) {
       </PageHeader>
 
       <div className="container-page py-12">
-        {result.error ? (
+        {!result.ok ? (
           <ApiError message={result.error} />
         ) : result.data.items.length === 0 ? (
           <EmptyState

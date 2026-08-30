@@ -12,14 +12,17 @@ type Props = { params: { slug: string } };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const result = await api.department(params.slug);
-  return { title: result.data?.name ?? "Department" };
+  return { title: result.ok ? result.data.name : "Department" };
 }
 
 export default async function DepartmentPage({ params }: Props) {
   const result = await api.department(params.slug);
 
-  if (result.error === "not found") notFound();
-  if (result.error) {
+  if (!result.ok) {
+    // A missing department is a 404, not an outage. The two look identical to
+    // a visitor otherwise, and only one of them is worth telling them how to
+    // fix.
+    if (result.error === "not found") notFound();
     return (
       <div className="container-page py-12">
         <ApiError message={result.error} />

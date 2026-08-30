@@ -40,7 +40,7 @@ export default async function HomePage() {
       {/* The corpus counts, published rather than asserted. The project claims a
           predominantly real corpus; showing the split lets a visitor check it
           instead of taking it on trust. */}
-      {stats.data ? (
+      {stats.ok ? (
         <section aria-labelledby="corpus-heading" className="border-b border-line bg-navy-50">
           <div className="container-page py-10">
             <h2 id="corpus-heading" className="eyebrow mb-5">
@@ -84,7 +84,7 @@ export default async function HomePage() {
           </Link>
         </div>
 
-        {departments.error ? (
+        {!departments.ok ? (
           <ApiError message={departments.error} />
         ) : (
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -20,7 +20,7 @@ export default async function DepartmentsPage() {
       />
 
       <div className="container-page py-12">
-        {result.error ? (
+        {!result.ok ? (
           <ApiError message={result.error} />
         ) : result.data.items.length === 0 ? (
           <EmptyState

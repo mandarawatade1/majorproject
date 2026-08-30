@@ -30,7 +30,16 @@ const BASE =
   process.env.NEXT_PUBLIC_API_BASE_URL ??
   "http://localhost:8000/api/v1";
 
-export type Result<T> = { data: T; error?: undefined } | { data?: undefined; error: string };
+/**
+ * Discriminated on a literal `ok`, not on whether `error` is set.
+ *
+ * The obvious shape — `{ data: T } | { error: string }` — does not narrow.
+ * `if (result.error)` is a truthiness test, and `""` is a valid `string`, so
+ * TypeScript cannot rule out the error branch and `data` stays possibly
+ * undefined at every use site. A literal `true`/`false` tag is the only thing
+ * the compiler can eliminate a branch on.
+ */
+export type Result<T> = { ok: true; data: T } | { ok: false; error: string };
 
 async function get<T>(path: string, params?: Record<string, string | number | undefined>): Promise<Result<T>> {
   const url = new URL(`${BASE}${path}`);
@@ -44,16 +53,16 @@ async function get<T>(path: string, params?: Record<string, string | number | un
       headers: { Accept: "application/json" },
     });
 
-    if (response.status === 404) return { error: "not found" };
+    if (response.status === 404) return { ok: false, error: "not found" };
     if (!response.ok) {
-      return { error: `the API answered ${response.status} for ${path}` };
+      return { ok: false, error: `the API answered ${response.status} for ${path}` };
     }
-    return { data: (await response.json()) as T };
+    return { ok: true, data: (await response.json()) as T };
   } catch {
     // Almost always the API container not being up yet. Naming the address is
     // the single most useful thing to put on the screen, because the fix is
     // either starting it or correcting API_BASE_URL.
-    return { error: `could not reach the API at ${BASE}` };
+    return { ok: false, error: `could not reach the API at ${BASE}` };
   }
 }
 

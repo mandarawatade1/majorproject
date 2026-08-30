@@ -45,7 +45,7 @@ export default async function ProgramsPage({ searchParams }: Props) {
       </PageHeader>
 
       <div className="container-page py-12">
-        {result.error ? (
+        {!result.ok ? (
           <ApiError message={result.error} />
         ) : result.data.items.length === 0 ? (
           <EmptyState

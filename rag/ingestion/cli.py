@@ -42,6 +42,7 @@ def cmd_crawl(args: argparse.Namespace) -> int:
 
     config = CrawlConfig(
         base_urls=base_urls,
+        only_seeds=args.only_seeds,
         output_dir=raw_dir,
         user_agent=args.user_agent,
         delay_seconds=args.delay,
@@ -473,6 +474,11 @@ def build_parser() -> argparse.ArgumentParser:
             "--max-pages", type=int, default=int(_env("CRAWL_MAX_PAGES", "1000"))
         )
         p.add_argument("--max-depth", type=int, default=4)
+        p.add_argument(
+            "--only-seeds",
+            action="store_true",
+            help="Fetch exactly the --urls given; do not expand the site's sitemap.",
+        )
         p.add_argument(
             "--refresh", action="store_true", help="Re-fetch even if cached."
         )

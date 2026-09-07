@@ -46,7 +46,7 @@ class CrossEncoderReranker:
         if not hits:
             return []
 
-        pairs = [(query, hit.content) for hit in hits]
+        pairs = [(query, hit.search_text) for hit in hits]
         scores = self.model.predict(pairs)
 
         scored = sorted(

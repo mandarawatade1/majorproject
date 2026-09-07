@@ -1,0 +1,846 @@
+{
+  "reason": "under MIN_USEFUL_CHARS (250) of body text",
+  "count": 168,
+  "documents": [
+    {
+      "stem": "3-days-practice-oriented-workshop-on-best-maintenance-practices",
+      "url": "https://www.pce.ac.in/3-days-practice-oriented-workshop-on-best-maintenance-practices/",
+      "local_path": "/corpus/raw/www.pce.ac.in/3-days-practice-oriented-workshop-on-best-maintenance-practices.html"
+    },
+    {
+      "stem": "3009-r12-etrx-vi-power-electronics-i",
+      "url": "https://www.pce.ac.in/3009-r12-etrx-vi-power-electronics-i/",
+      "local_path": "/corpus/raw/www.pce.ac.in/3009-r12-etrx-vi-power-electronics-i.html"
+    },
+    {
+      "stem": "about__infrastructure-and-facilities",
+      "url": "https://www.pce.ac.in/about/infrastructure-and-facilities/",
+      "local_path": "/corpus/raw/www.pce.ac.in/about__infrastructure-and-facilities.html"
+    },
+    {
+      "stem": "about__infrastructure-and-facilities__canteen",
+      "url": "https://www.pce.ac.in/about/infrastructure-and-facilities/canteen/",
+      "local_path": "/corpus/raw/www.pce.ac.in/about__infrastructure-and-facilities__canteen.html"
+    },
+    {
+      "stem": "about__mandatory-disclosure__dte-approved-merit-list",
+      "url": "https://www.pce.ac.in/about/mandatory-disclosure/dte-approved-merit-list/",
+      "local_path": "/corpus/raw/www.pce.ac.in/about__mandatory-disclosure__dte-approved-merit-list.html"
+    },
+    {
+      "stem": "about__mandatory-disclosure__mandatory-disclosure-annexure",
+      "url": "https://www.pce.ac.in/about/mandatory-disclosure/mandatory-disclosure-annexure/",
+      "local_path": "/corpus/raw/www.pce.ac.in/about__mandatory-disclosure__mandatory-disclosure-annexure.html"
+    },
+    {
+      "stem": "about__perspective-strategic-plan",
+      "url": "https://www.pce.ac.in/about/perspective-strategic-plan/",
+      "local_path": "/corpus/raw/www.pce.ac.in/about__perspective-strategic-plan.html"
+    },
+    {
+      "stem": "academics__bachelors__automobile-engineering__curriculum",
+      "url": "https://www.pce.ac.in/academics/bachelors/automobile-engineering/curriculum/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__bachelors__automobile-engineering__curriculum.html"
+    },
+    {
+      "stem": "academics__bachelors__automobile-engineering__department-research-journal",
+      "url": "https://www.pce.ac.in/academics/bachelors/automobile-engineering/department-research-journal/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__bachelors__automobile-engineering__department-research-journal.html"
+    },
+    {
+      "stem": "academics__bachelors__computer-engineering__department-research-journal",
+      "url": "https://www.pce.ac.in/academics/bachelors/computer-engineering/department-research-journal/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__bachelors__computer-engineering__department-research-journal.html"
+    },
+    {
+      "stem": "academics__bachelors__computer-engineering__innovations-by-the-faculty-in-teaching-and-learning",
+      "url": "https://www.pce.ac.in/academics/bachelors/computer-engineering/innovations-by-the-faculty-in-teaching-and-learning/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__bachelors__computer-engineering__innovations-by-the-faculty-in-teaching-and-learning.html"
+    },
+    {
+      "stem": "academics__bachelors__electronics-and-telecommunication__student-journal",
+      "url": "https://www.pce.ac.in/academics/bachelors/electronics-and-telecommunication/student-journal/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__bachelors__electronics-and-telecommunication__student-journal.html"
+    },
+    {
+      "stem": "academics__bachelors__electronics-computer-science__department-research-journal",
+      "url": "https://www.pce.ac.in/academics/bachelors/electronics-computer-science/department-research-journal/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__bachelors__electronics-computer-science__department-research-journal.html"
+    },
+    {
+      "stem": "academics__bachelors__information-technology__department-research-journal",
+      "url": "https://www.pce.ac.in/academics/bachelors/information-technology/department-research-journal/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__bachelors__information-technology__department-research-journal.html"
+    },
+    {
+      "stem": "academics__bachelors__information-technology__innovations-by-the-faculty-in-teaching-and-learning",
+      "url": "https://www.pce.ac.in/academics/bachelors/information-technology/innovations-by-the-faculty-in-teaching-and-learning/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__bachelors__information-technology__innovations-by-the-faculty-in-teaching-and-learning.html"
+    },
+    {
+      "stem": "academics__bachelors__mechanical-engineering__curriculum",
+      "url": "https://www.pce.ac.in/academics/bachelors/mechanical-engineering/curriculum/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__bachelors__mechanical-engineering__curriculum.html"
+    },
+    {
+      "stem": "academics__bachelors__mechanical-engineering__department-research-journal",
+      "url": "https://www.pce.ac.in/academics/bachelors/mechanical-engineering/department-research-journal/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__bachelors__mechanical-engineering__department-research-journal.html"
+    },
+    {
+      "stem": "academics__masters__computer-engineering__curriculum",
+      "url": "https://www.pce.ac.in/academics/masters/computer-engineering/curriculum/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__masters__computer-engineering__curriculum.html"
+    },
+    {
+      "stem": "academics__masters__information-technology__curriculum",
+      "url": "https://www.pce.ac.in/academics/masters/information-technology/curriculum/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__masters__information-technology__curriculum.html"
+    },
+    {
+      "stem": "academics__masters__mechanical-engineering__curriculum",
+      "url": "https://www.pce.ac.in/academics/masters/mechanical-engineering/curriculum/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__masters__mechanical-engineering__curriculum.html"
+    },
+    {
+      "stem": "academics__ph-d",
+      "url": "https://www.pce.ac.in/academics/ph-d/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__ph-d.html"
+    },
+    {
+      "stem": "academics__stakeholders-feedback",
+      "url": "https://www.pce.ac.in/academics/stakeholders-feedback/",
+      "local_path": "/corpus/raw/www.pce.ac.in/academics__stakeholders-feedback.html"
+    },
+    {
+      "stem": "accreditation__nba",
+      "url": "https://www.pce.ac.in/accreditation/nba/",
+      "local_path": "/corpus/raw/www.pce.ac.in/accreditation__nba.html"
+    },
+    {
+      "stem": "accreditation__nirf",
+      "url": "https://www.pce.ac.in/accreditation/nirf/",
+      "local_path": "/corpus/raw/www.pce.ac.in/accreditation__nirf.html"
+    },
+    {
+      "stem": "accreditation__nirf__nirf-award-and-certificate",
+      "url": "https://www.pce.ac.in/accreditation/nirf/nirf-award-and-certificate/",
+      "local_path": "/corpus/raw/www.pce.ac.in/accreditation__nirf__nirf-award-and-certificate.html"
+    },
+    {
+      "stem": "accreditation__nirf__nirf-innovation",
+      "url": "https://www.pce.ac.in/accreditation/nirf/nirf-innovation/",
+      "local_path": "/corpus/raw/www.pce.ac.in/accreditation__nirf__nirf-innovation.html"
+    },
+    {
+      "stem": "aliana-paul-won-gold-medal-at-national-rifle-shooting-championship",
+      "url": "https://www.pce.ac.in/aliana-paul-won-gold-medal-at-national-rifle-shooting-championship/",
+      "local_path": "/corpus/raw/www.pce.ac.in/aliana-paul-won-gold-medal-at-national-rifle-shooting-championship.html"
+    },
+    {
+      "stem": "alumni-meet-2018",
+      "url": "https://www.pce.ac.in/alumni-meet-2018/",
+      "local_path": "/corpus/raw/www.pce.ac.in/alumni-meet-2018.html"
+    },
+    {
+      "stem": "alumni",
+      "url": "https://www.pce.ac.in/alumni/",
+      "local_path": "/corpus/raw/www.pce.ac.in/alumni.html"
+    },
+    {
+      "stem": "alumni__alumni-audit",
+      "url": "https://www.pce.ac.in/alumni/alumni-audit/",
+      "local_path": "/corpus/raw/www.pce.ac.in/alumni__alumni-audit.html"
+    },
+    {
+      "stem": "alumni__continuing-education",
+      "url": "https://www.pce.ac.in/alumni/continuing-education/",
+      "local_path": "/corpus/raw/www.pce.ac.in/alumni__continuing-education.html"
+    },
+    {
+      "stem": "anit-kumar-b-e-i-t-topper-in-the-university-of-mumbai",
+      "url": "https://www.pce.ac.in/anit-kumar-b-e-i-t-topper-in-the-university-of-mumbai/",
+      "local_path": "/corpus/raw/www.pce.ac.in/anit-kumar-b-e-i-t-topper-in-the-university-of-mumbai.html"
+    },
+    {
+      "stem": "bachelors__automobile-engineering__curriculum",
+      "url": "https://www.pce.ac.in/bachelors/automobile-engineering/curriculum/",
+      "local_path": "/corpus/raw/www.pce.ac.in/bachelors__automobile-engineering__curriculum.html"
+    },
+    {
+      "stem": "bachelors__automobile-engineering__department-research-journal",
+      "url": "https://www.pce.ac.in/bachelors/automobile-engineering/department-research-journal/",
+      "local_path": "/corpus/raw/www.pce.ac.in/bachelors__automobile-engineering__department-research-journal.html"
+    },
+    {
+      "stem": "bachelors__computer-engineering__department-research-journal",
+      "url": "https://www.pce.ac.in/bachelors/computer-engineering/department-research-journal/",
+      "local_path": "/corpus/raw/www.pce.ac.in/bachelors__computer-engineering__department-research-journal.html"
+    },
+    {
+      "stem": "bachelors__computer-engineering__innovations-by-the-faculty-in-teaching-and-learning",
+      "url": "https://www.pce.ac.in/bachelors/computer-engineering/innovations-by-the-faculty-in-teaching-and-learning/",
+      "local_path": "/corpus/raw/www.pce.ac.in/bachelors__computer-engineering__innovations-by-the-faculty-in-teaching-and-learning.html"
+    },
+    {
+      "stem": "bachelors__electronics-computer-science__department-research-journal",
+      "url": "https://www.pce.ac.in/bachelors/electronics-computer-science/department-research-journal/",
+      "local_path": "/corpus/raw/www.pce.ac.in/bachelors__electronics-computer-science__department-research-journal.html"
+    },
+    {
+      "stem": "bachelors__information-technology__department-research-journal",
+      "url": "https://www.pce.ac.in/bachelors/information-technology/department-research-journal/",
+      "local_path": "/corpus/raw/www.pce.ac.in/bachelors__information-technology__department-research-journal.html"
+    },
+    {
+      "stem": "bachelors__information-technology__innovations-by-the-faculty-in-teaching-and-learning",
+      "url": "https://www.pce.ac.in/bachelors/information-technology/innovations-by-the-faculty-in-teaching-and-learning/",
+      "local_path": "/corpus/raw/www.pce.ac.in/bachelors__information-technology__innovations-by-the-faculty-in-teaching-and-learning.html"
+    },
+    {
+      "stem": "bachelors__mechanical-engineering__curriculum",
+      "url": "https://www.pce.ac.in/bachelors/mechanical-engineering/curriculum/",
+      "local_path": "/corpus/raw/www.pce.ac.in/bachelors__mechanical-engineering__curriculum.html"
+    },
+    {
+      "stem": "bachelors__mechanical-engineering__department-research-journal",
+      "url": "https://www.pce.ac.in/bachelors/mechanical-engineering/department-research-journal/",
+      "local_path": "/corpus/raw/www.pce.ac.in/bachelors__mechanical-engineering__department-research-journal.html"
+    },
+    {
+      "stem": "best-wishes-to-our-student-entrepreneur-prashant-sharma",
+      "url": "https://www.pce.ac.in/best-wishes-to-our-student-entrepreneur-prashant-sharma/",
+      "local_path": "/corpus/raw/www.pce.ac.in/best-wishes-to-our-student-entrepreneur-prashant-sharma.html"
+    },
+    {
+      "stem": "category__announcements",
+      "url": "https://www.pce.ac.in/category/announcements/",
+      "local_path": "/corpus/raw/www.pce.ac.in/category__announcements.html"
+    },
+    {
+      "stem": "category__summit",
+      "url": "https://www.pce.ac.in/category/summit/",
+      "local_path": "/corpus/raw/www.pce.ac.in/category__summit.html"
+    },
+    {
+      "stem": "chhatra-vishwakarma-award-2018",
+      "url": "https://www.pce.ac.in/chhatra-vishwakarma-award-2018/",
+      "local_path": "/corpus/raw/www.pce.ac.in/chhatra-vishwakarma-award-2018.html"
+    },
+    {
+      "stem": "conference-on-polymer-processing",
+      "url": "https://www.pce.ac.in/conference-on-polymer-processing/",
+      "local_path": "/corpus/raw/www.pce.ac.in/conference-on-polymer-processing.html"
+    },
+    {
+      "stem": "congratulations-hitmay-mutha",
+      "url": "https://www.pce.ac.in/congratulations-hitmay-mutha/",
+      "local_path": "/corpus/raw/www.pce.ac.in/congratulations-hitmay-mutha.html"
+    },
+    {
+      "stem": "congratulations-to-shrey-jakhmola-and-pallavi-aher",
+      "url": "https://www.pce.ac.in/congratulations-to-shrey-jakhmola-and-pallavi-aher/",
+      "local_path": "/corpus/raw/www.pce.ac.in/congratulations-to-shrey-jakhmola-and-pallavi-aher.html"
+    },
+    {
+      "stem": "convocation-ceremony-2016",
+      "url": "https://www.pce.ac.in/convocation-ceremony-2016/",
+      "local_path": "/corpus/raw/www.pce.ac.in/convocation-ceremony-2016.html"
+    },
+    {
+      "stem": "entrepreneurship-summit-2019",
+      "url": "https://www.pce.ac.in/entrepreneurship-summit-2019/",
+      "local_path": "/corpus/raw/www.pce.ac.in/entrepreneurship-summit-2019.html"
+    },
+    {
+      "stem": "extension__miscellaneous",
+      "url": "https://www.pce.ac.in/extension/miscellaneous/",
+      "local_path": "/corpus/raw/www.pce.ac.in/extension__miscellaneous.html"
+    },
+    {
+      "stem": "extension__uber-rang",
+      "url": "https://www.pce.ac.in/extension/uber-rang/",
+      "local_path": "/corpus/raw/www.pce.ac.in/extension__uber-rang.html"
+    },
+    {
+      "stem": "faculty__faculty-directory__lilly-d-pradhan",
+      "url": "https://www.pce.ac.in/faculty/faculty-directory/lilly-d-pradhan/",
+      "local_path": "/corpus/raw/www.pce.ac.in/faculty__faculty-directory__lilly-d-pradhan.html"
+    },
+    {
+      "stem": "faculty__faculty-directory__m-shivapradeep",
+      "url": "https://www.pce.ac.in/faculty/faculty-directory/m-shivapradeep/",
+      "local_path": "/corpus/raw/www.pce.ac.in/faculty__faculty-directory__m-shivapradeep.html"
+    },
+    {
+      "stem": "faculty__faculty-directory__ninad-v-gaikwad",
+      "url": "https://www.pce.ac.in/faculty/faculty-directory/ninad-v-gaikwad/",
+      "local_path": "/corpus/raw/www.pce.ac.in/faculty__faculty-directory__ninad-v-gaikwad.html"
+    },
+    {
+      "stem": "faculty__faculty-directory__pallavi-s-marulkar",
+      "url": "https://www.pce.ac.in/faculty/faculty-directory/pallavi-s-marulkar/",
+      "local_path": "/corpus/raw/www.pce.ac.in/faculty__faculty-directory__pallavi-s-marulkar.html"
+    },
+    {
+      "stem": "faculty__faculty-directory__sangit-m-mhatre",
+      "url": "https://www.pce.ac.in/faculty/faculty-directory/sangit-m-mhatre/",
+      "local_path": "/corpus/raw/www.pce.ac.in/faculty__faculty-directory__sangit-m-mhatre.html"
+    },
+    {
+      "stem": "faculty__faculty-directory__sonali-r-nikam",
+      "url": "https://www.pce.ac.in/faculty/faculty-directory/sonali-r-nikam/",
+      "local_path": "/corpus/raw/www.pce.ac.in/faculty__faculty-directory__sonali-r-nikam.html"
+    },
+    {
+      "stem": "faculty__faculty-directory__yugandhara-a-gaware",
+      "url": "https://www.pce.ac.in/faculty/faculty-directory/yugandhara-a-gaware/",
+      "local_path": "/corpus/raw/www.pce.ac.in/faculty__faculty-directory__yugandhara-a-gaware.html"
+    },
+    {
+      "stem": "faculty__faculty-events",
+      "url": "https://www.pce.ac.in/faculty/faculty-events/",
+      "local_path": "/corpus/raw/www.pce.ac.in/faculty__faculty-events.html"
+    },
+    {
+      "stem": "faculty__faculty-events__conferences",
+      "url": "https://www.pce.ac.in/faculty/faculty-events/conferences/",
+      "local_path": "/corpus/raw/www.pce.ac.in/faculty__faculty-events__conferences.html"
+    },
+    {
+      "stem": "faculty__faculty-events__faculty-development-programs",
+      "url": "https://www.pce.ac.in/faculty/faculty-events/faculty-development-programs/",
+      "local_path": "/corpus/raw/www.pce.ac.in/faculty__faculty-events__faculty-development-programs.html"
+    },
+    {
+      "stem": "fifa-cies-sports-management-course",
+      "url": "https://www.pce.ac.in/fifa-cies-sports-management-course/",
+      "local_path": "/corpus/raw/www.pce.ac.in/fifa-cies-sports-management-course.html"
+    },
+    {
+      "stem": "graduation-function-2018",
+      "url": "https://www.pce.ac.in/graduation-function-2018/",
+      "local_path": "/corpus/raw/www.pce.ac.in/graduation-function-2018.html"
+    },
+    {
+      "stem": "iic__aicte-idea-lab",
+      "url": "https://www.pce.ac.in/iic/aicte-idea-lab/",
+      "local_path": "/corpus/raw/www.pce.ac.in/iic__aicte-idea-lab.html"
+    },
+    {
+      "stem": "index__q10739300",
+      "url": "https://www.pce.ac.in/best-wishes-to-our-student-entrepreneur-prashant-sharma/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q10739300.html"
+    },
+    {
+      "stem": "index__q12679031",
+      "url": "https://www.pce.ac.in/shubhang-rajput-on-winning-1st-prize-in-1hr-t-shirt-design-competition/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q12679031.html"
+    },
+    {
+      "stem": "index__q13441088",
+      "url": "https://www.pce.ac.in/congratulations-hitmay-mutha/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q13441088.html"
+    },
+    {
+      "stem": "index__q15499541",
+      "url": "https://www.pce.ac.in/conference-on-polymer-processing/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q15499541.html"
+    },
+    {
+      "stem": "index__q15696162",
+      "url": "https://www.pce.ac.in/makers-day-2019/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q15696162.html"
+    },
+    {
+      "stem": "index__q16227443",
+      "url": "https://www.pce.ac.in/training-program-on-reliability-engineering/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q16227443.html"
+    },
+    {
+      "stem": "index__q17205933",
+      "url": "https://www.pce.ac.in/students/announcements/exams/extra-classes-timetable/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q17205933.html"
+    },
+    {
+      "stem": "index__q20230886",
+      "url": "https://www.pce.ac.in/aliana-paul-won-gold-medal-at-national-rifle-shooting-championship/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q20230886.html"
+    },
+    {
+      "stem": "index__q21952466",
+      "url": "https://www.pce.ac.in/students/announcements/exams/extra-classes-timetable/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q21952466.html"
+    },
+    {
+      "stem": "index__q22800112",
+      "url": "https://www.pce.ac.in/thistlethwaites-algorithm-deployed-to-solve-rubiks-cube-challenge/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q22800112.html"
+    },
+    {
+      "stem": "index__q22855579",
+      "url": "https://www.pce.ac.in/pratima-purohit-university-topper/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q22855579.html"
+    },
+    {
+      "stem": "index__q2402378",
+      "url": "https://www.pce.ac.in/solid-state-metal-joining-setup/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q2402378.html"
+    },
+    {
+      "stem": "index__q25409422",
+      "url": "https://www.pce.ac.in/best-wishes-to-our-student-entrepreneur-prashant-sharma/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q25409422.html"
+    },
+    {
+      "stem": "index__q26453292",
+      "url": "https://www.pce.ac.in/peugeot-ardent-electric-pick-up-concept-design-2022/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q26453292.html"
+    },
+    {
+      "stem": "index__q26828249",
+      "url": "https://www.pce.ac.in/chhatra-vishwakarma-award-2018/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q26828249.html"
+    },
+    {
+      "stem": "index__q26970884",
+      "url": "https://www.pce.ac.in/students/academic-calendar/term-calendar/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q26970884.html"
+    },
+    {
+      "stem": "index__q27850149",
+      "url": "https://www.pce.ac.in/post-with-youtube-video/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q27850149.html"
+    },
+    {
+      "stem": "index__q31165918",
+      "url": "https://www.pce.ac.in/thistlethwaites-algorithm-deployed-to-solve-rubiks-cube-challenge/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q31165918.html"
+    },
+    {
+      "stem": "index__q35336352",
+      "url": "https://www.pce.ac.in/students/academic-calendar/term-calendar/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q35336352.html"
+    },
+    {
+      "stem": "index__q35934648",
+      "url": "https://www.pce.ac.in/makerthon-2023/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q35934648.html"
+    },
+    {
+      "stem": "index__q41315675",
+      "url": "https://www.pce.ac.in/convocation-ceremony-2016/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q41315675.html"
+    },
+    {
+      "stem": "index__q42231502",
+      "url": "https://www.pce.ac.in/workshop-on-polymer-processing-characterization/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q42231502.html"
+    },
+    {
+      "stem": "index__q43657654",
+      "url": "https://www.pce.ac.in/vocabulary-treasure-hunt-2019/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q43657654.html"
+    },
+    {
+      "stem": "index__q45602716",
+      "url": "https://www.pce.ac.in/workshop-on-polymer-processing-characterization/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q45602716.html"
+    },
+    {
+      "stem": "index__q4705847",
+      "url": "https://www.pce.ac.in/3009-r12-etrx-vi-power-electronics-i/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q4705847.html"
+    },
+    {
+      "stem": "index__q47279398",
+      "url": "https://www.pce.ac.in/internal-hackathon-for-smart-india-hackathan-2020/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q47279398.html"
+    },
+    {
+      "stem": "index__q48017076",
+      "url": "https://www.pce.ac.in/post-with-youtube-video/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q48017076.html"
+    },
+    {
+      "stem": "index__q49965204",
+      "url": "https://www.pce.ac.in/workshop-on-linux/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q49965204.html"
+    },
+    {
+      "stem": "index__q53081177",
+      "url": "https://www.pce.ac.in/makerthon-2023/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q53081177.html"
+    },
+    {
+      "stem": "index__q55083508",
+      "url": "https://www.pce.ac.in/fifa-cies-sports-management-course/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q55083508.html"
+    },
+    {
+      "stem": "index__q55778774",
+      "url": "https://www.pce.ac.in/vocabulary-treasure-hunt-2019/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q55778774.html"
+    },
+    {
+      "stem": "index__q55938070",
+      "url": "https://www.pce.ac.in/congratulations-to-shrey-jakhmola-and-pallavi-aher/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q55938070.html"
+    },
+    {
+      "stem": "index__q55977965",
+      "url": "https://www.pce.ac.in/alumni-meet-2018/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q55977965.html"
+    },
+    {
+      "stem": "index__q58814880",
+      "url": "https://www.pce.ac.in/makers-day-2019/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q58814880.html"
+    },
+    {
+      "stem": "index__q5894160",
+      "url": "https://www.pce.ac.in/pratima-purohit-university-topper/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q5894160.html"
+    },
+    {
+      "stem": "index__q59957985",
+      "url": "https://www.pce.ac.in/congratulations-hitmay-mutha/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q59957985.html"
+    },
+    {
+      "stem": "index__q59967964",
+      "url": "https://www.pce.ac.in/anit-kumar-b-e-i-t-topper-in-the-university-of-mumbai/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q59967964.html"
+    },
+    {
+      "stem": "index__q63152187",
+      "url": "https://www.pce.ac.in/fifa-cies-sports-management-course/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q63152187.html"
+    },
+    {
+      "stem": "index__q65115790",
+      "url": "https://www.pce.ac.in/workshop-on-linux/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q65115790.html"
+    },
+    {
+      "stem": "index__q6637175",
+      "url": "https://www.pce.ac.in/internal-hackathon-for-smart-india-hackathan-2020/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q6637175.html"
+    },
+    {
+      "stem": "index__q666399",
+      "url": "https://www.pce.ac.in/graduation-function-2018/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q666399.html"
+    },
+    {
+      "stem": "index__q67819945",
+      "url": "https://www.pce.ac.in/peugeot-ardent-electric-pick-up-concept-design-2022/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q67819945.html"
+    },
+    {
+      "stem": "index__q68256597",
+      "url": "https://www.pce.ac.in/entrepreneurship-summit-2019/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q68256597.html"
+    },
+    {
+      "stem": "index__q70360756",
+      "url": "https://www.pce.ac.in/conference-on-polymer-processing/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q70360756.html"
+    },
+    {
+      "stem": "index__q70670177",
+      "url": "https://www.pce.ac.in/prannoy-sandilyan-raj-for-a-profile-mention-on-construction-infrastructure-architect-cia/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q70670177.html"
+    },
+    {
+      "stem": "index__q71255891",
+      "url": "https://www.pce.ac.in/3-days-practice-oriented-workshop-on-best-maintenance-practices/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q71255891.html"
+    },
+    {
+      "stem": "index__q73520954",
+      "url": "https://www.pce.ac.in/accreditation/nirf/nirf-award-and-certificate/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q73520954.html"
+    },
+    {
+      "stem": "index__q77812332",
+      "url": "https://www.pce.ac.in/convocation-ceremony-2016/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q77812332.html"
+    },
+    {
+      "stem": "index__q82671405",
+      "url": "https://www.pce.ac.in/parent-teacher-meeting/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q82671405.html"
+    },
+    {
+      "stem": "index__q83486488",
+      "url": "https://www.pce.ac.in/3009-r12-etrx-vi-power-electronics-i/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q83486488.html"
+    },
+    {
+      "stem": "index__q84730826",
+      "url": "https://www.pce.ac.in/3-days-practice-oriented-workshop-on-best-maintenance-practices/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q84730826.html"
+    },
+    {
+      "stem": "index__q85083352",
+      "url": "https://www.pce.ac.in/prannoy-sandilyan-raj-for-a-profile-mention-on-construction-infrastructure-architect-cia/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q85083352.html"
+    },
+    {
+      "stem": "index__q85652477",
+      "url": "https://www.pce.ac.in/shubhang-rajput-on-winning-1st-prize-in-1hr-t-shirt-design-competition/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q85652477.html"
+    },
+    {
+      "stem": "index__q88612193",
+      "url": "https://www.pce.ac.in/chhatra-vishwakarma-award-2018/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q88612193.html"
+    },
+    {
+      "stem": "index__q88641177",
+      "url": "https://www.pce.ac.in/graduation-function-2018/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q88641177.html"
+    },
+    {
+      "stem": "index__q89621453",
+      "url": "https://www.pce.ac.in/parent-teacher-meeting/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q89621453.html"
+    },
+    {
+      "stem": "index__q93840935",
+      "url": "https://www.pce.ac.in/solid-state-metal-joining-setup/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q93840935.html"
+    },
+    {
+      "stem": "index__q93894287",
+      "url": "https://www.pce.ac.in/aliana-paul-won-gold-medal-at-national-rifle-shooting-championship/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q93894287.html"
+    },
+    {
+      "stem": "index__q95432178",
+      "url": "https://www.pce.ac.in/entrepreneurship-summit-2019/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q95432178.html"
+    },
+    {
+      "stem": "index__q95678616",
+      "url": "https://www.pce.ac.in/accreditation/nirf/nirf-award-and-certificate/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q95678616.html"
+    },
+    {
+      "stem": "index__q96360326",
+      "url": "https://www.pce.ac.in/congratulations-to-shrey-jakhmola-and-pallavi-aher/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q96360326.html"
+    },
+    {
+      "stem": "index__q96634443",
+      "url": "https://www.pce.ac.in/alumni-meet-2018/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q96634443.html"
+    },
+    {
+      "stem": "index__q99804360",
+      "url": "https://www.pce.ac.in/anit-kumar-b-e-i-t-topper-in-the-university-of-mumbai/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q99804360.html"
+    },
+    {
+      "stem": "index__q99901104",
+      "url": "https://www.pce.ac.in/training-program-on-reliability-engineering/",
+      "local_path": "/corpus/raw/www.pce.ac.in/index__q99901104.html"
+    },
+    {
+      "stem": "internal-hackathon-for-smart-india-hackathan-2020",
+      "url": "https://www.pce.ac.in/internal-hackathon-for-smart-india-hackathan-2020/",
+      "local_path": "/corpus/raw/www.pce.ac.in/internal-hackathon-for-smart-india-hackathan-2020.html"
+    },
+    {
+      "stem": "iqac",
+      "url": "https://www.pce.ac.in/iqac/",
+      "local_path": "/corpus/raw/www.pce.ac.in/iqac.html"
+    },
+    {
+      "stem": "iqac__aqar-reports",
+      "url": "https://www.pce.ac.in/iqac/aqar-reports/",
+      "local_path": "/corpus/raw/www.pce.ac.in/iqac__aqar-reports.html"
+    },
+    {
+      "stem": "iqac__iqac-composition",
+      "url": "https://www.pce.ac.in/iqac/iqac-composition/",
+      "local_path": "/corpus/raw/www.pce.ac.in/iqac__iqac-composition.html"
+    },
+    {
+      "stem": "makers-day-2019",
+      "url": "https://www.pce.ac.in/makers-day-2019/",
+      "local_path": "/corpus/raw/www.pce.ac.in/makers-day-2019.html"
+    },
+    {
+      "stem": "makerthon-2023",
+      "url": "https://www.pce.ac.in/makerthon-2023/",
+      "local_path": "/corpus/raw/www.pce.ac.in/makerthon-2023.html"
+    },
+    {
+      "stem": "parent-teacher-meeting",
+      "url": "https://www.pce.ac.in/parent-teacher-meeting/",
+      "local_path": "/corpus/raw/www.pce.ac.in/parent-teacher-meeting.html"
+    },
+    {
+      "stem": "peugeot-ardent-electric-pick-up-concept-design-2022",
+      "url": "https://www.pce.ac.in/peugeot-ardent-electric-pick-up-concept-design-2022/",
+      "local_path": "/corpus/raw/www.pce.ac.in/peugeot-ardent-electric-pick-up-concept-design-2022.html"
+    },
+    {
+      "stem": "post-with-youtube-video",
+      "url": "https://www.pce.ac.in/post-with-youtube-video/",
+      "local_path": "/corpus/raw/www.pce.ac.in/post-with-youtube-video.html"
+    },
+    {
+      "stem": "prannoy-sandilyan-raj-for-a-profile-mention-on-construction-infrastructure-architect-cia",
+      "url": "https://www.pce.ac.in/prannoy-sandilyan-raj-for-a-profile-mention-on-construction-infrastructure-architect-cia/",
+      "local_path": "/corpus/raw/www.pce.ac.in/prannoy-sandilyan-raj-for-a-profile-mention-on-construction-infrastructure-architect-cia.html"
+    },
+    {
+      "stem": "pratima-purohit-university-topper",
+      "url": "https://www.pce.ac.in/pratima-purohit-university-topper/",
+      "local_path": "/corpus/raw/www.pce.ac.in/pratima-purohit-university-topper.html"
+    },
+    {
+      "stem": "research__research-and-consultancy-grants",
+      "url": "https://www.pce.ac.in/research/research-and-consultancy-grants/",
+      "local_path": "/corpus/raw/www.pce.ac.in/research__research-and-consultancy-grants.html"
+    },
+    {
+      "stem": "shubhang-rajput-on-winning-1st-prize-in-1hr-t-shirt-design-competition",
+      "url": "https://www.pce.ac.in/shubhang-rajput-on-winning-1st-prize-in-1hr-t-shirt-design-competition/",
+      "local_path": "/corpus/raw/www.pce.ac.in/shubhang-rajput-on-winning-1st-prize-in-1hr-t-shirt-design-competition.html"
+    },
+    {
+      "stem": "solid-state-metal-joining-setup",
+      "url": "https://www.pce.ac.in/solid-state-metal-joining-setup/",
+      "local_path": "/corpus/raw/www.pce.ac.in/solid-state-metal-joining-setup.html"
+    },
+    {
+      "stem": "students__academic-calendar__term-calendar",
+      "url": "https://www.pce.ac.in/students/academic-calendar/term-calendar/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__academic-calendar__term-calendar.html"
+    },
+    {
+      "stem": "students__announcements__exams__extra-classes-timetable",
+      "url": "https://www.pce.ac.in/students/announcements/exams/extra-classes-timetable/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__announcements__exams__extra-classes-timetable.html"
+    },
+    {
+      "stem": "students__announcements__exams__extra-kt-classes-timetable",
+      "url": "https://www.pce.ac.in/students/announcements/exams/extra-kt-classes-timetable/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__announcements__exams__extra-kt-classes-timetable.html"
+    },
+    {
+      "stem": "students__get-career-ready",
+      "url": "https://www.pce.ac.in/students/get-career-ready/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__get-career-ready.html"
+    },
+    {
+      "stem": "students__online-payment",
+      "url": "https://www.pce.ac.in/students/online-payment/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__online-payment.html"
+    },
+    {
+      "stem": "students__sports-and-games",
+      "url": "https://www.pce.ac.in/students/sports-and-games/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__sports-and-games.html"
+    },
+    {
+      "stem": "students__student-activities__competitions",
+      "url": "https://www.pce.ac.in/students/student-activities/competitions/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__student-activities__competitions.html"
+    },
+    {
+      "stem": "students__student-activities__competitions__quizzes",
+      "url": "https://www.pce.ac.in/students/student-activities/competitions/quizzes/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__student-activities__competitions__quizzes.html"
+    },
+    {
+      "stem": "students__student-activities__newsletter",
+      "url": "https://www.pce.ac.in/students/student-activities/newsletter/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__student-activities__newsletter.html"
+    },
+    {
+      "stem": "students__student-activities__student-associations__nature-club",
+      "url": "https://www.pce.ac.in/students/student-activities/student-associations/nature-club/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__student-activities__student-associations__nature-club.html"
+    },
+    {
+      "stem": "students__student-activities__student-associations__spark-racing-team",
+      "url": "https://www.pce.ac.in/students/student-activities/student-associations/spark-racing-team/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__student-activities__student-associations__spark-racing-team.html"
+    },
+    {
+      "stem": "students__student-activities__student-associations__tapas",
+      "url": "https://www.pce.ac.in/students/student-activities/student-associations/tapas/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__student-activities__student-associations__tapas.html"
+    },
+    {
+      "stem": "students__student-activities__student-associations__vanguard-racing",
+      "url": "https://www.pce.ac.in/students/student-activities/student-associations/vanguard-racing/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__student-activities__student-associations__vanguard-racing.html"
+    },
+    {
+      "stem": "students__student-activities__student-awards-and-achievements",
+      "url": "https://www.pce.ac.in/students/student-activities/student-awards-and-achievements/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__student-activities__student-awards-and-achievements.html"
+    },
+    {
+      "stem": "students__student-activities__student-events",
+      "url": "https://www.pce.ac.in/students/student-activities/student-events/",
+      "local_path": "/corpus/raw/www.pce.ac.in/students__student-activities__student-events.html"
+    },
+    {
+      "stem": "testimonial__just-a-sample-testimonial",
+      "url": "https://www.pce.ac.in/testimonial/just-a-sample-testimonial/",
+      "local_path": "/corpus/raw/www.pce.ac.in/testimonial__just-a-sample-testimonial.html"
+    },
+    {
+      "stem": "testimonial__laurence-fishburn-testimonial",
+      "url": "https://www.pce.ac.in/testimonial/laurence-fishburn-testimonial/",
+      "local_path": "/corpus/raw/www.pce.ac.in/testimonial__laurence-fishburn-testimonial.html"
+    },
+    {
+      "stem": "testimonial__mattie-sanchez",
+      "url": "https://www.pce.ac.in/testimonial/mattie-sanchez/",
+      "local_path": "/corpus/raw/www.pce.ac.in/testimonial__mattie-sanchez.html"
+    },
+    {
+      "stem": "thistlethwaites-algorithm-deployed-to-solve-rubiks-cube-challenge",
+      "url": "https://www.pce.ac.in/thistlethwaites-algorithm-deployed-to-solve-rubiks-cube-challenge/",
+      "local_path": "/corpus/raw/www.pce.ac.in/thistlethwaites-algorithm-deployed-to-solve-rubiks-cube-challenge.html"
+    },
+    {
+      "stem": "training-program-on-reliability-engineering",
+      "url": "https://www.pce.ac.in/training-program-on-reliability-engineering/",
+      "local_path": "/corpus/raw/www.pce.ac.in/training-program-on-reliability-engineering.html"
+    },
+    {
+      "stem": "vocabulary-treasure-hunt-2019",
+      "url": "https://www.pce.ac.in/vocabulary-treasure-hunt-2019/",
+      "local_path": "/corpus/raw/www.pce.ac.in/vocabulary-treasure-hunt-2019.html"
+    },
+    {
+      "stem": "workshop-on-linux",
+      "url": "https://www.pce.ac.in/workshop-on-linux/",
+      "local_path": "/corpus/raw/www.pce.ac.in/workshop-on-linux.html"
+    },
+    {
+      "stem": "workshop-on-polymer-processing-characterization",
+      "url": "https://www.pce.ac.in/workshop-on-polymer-processing-characterization/",
+      "local_path": "/corpus/raw/www.pce.ac.in/workshop-on-polymer-processing-characterization.html"
+    },
+    {
+      "stem": "wp-content__plugins__svc-post-grid-addon__assets__css__front.css__q21938223",
+      "url": "https://www.pce.ac.in/wp-content/plugins/svc-post-grid-addon/assets/css/front.css?ver=6.9.7",
+      "local_path": "/corpus/raw/www.pce.ac.in/wp-content__plugins__svc-post-grid-addon__assets__css__front.css__q21938223.html"
+    },
+    {
+      "stem": "wp-content__plugins__svc-post-grid-addon__assets__css__front.css__q70327802",
+      "url": "https://www.pce.ac.in/wp-content/plugins/svc-post-grid-addon/assets/css/front.css?ver=6.9.7",
+      "local_path": "/corpus/raw/www.pce.ac.in/wp-content__plugins__svc-post-grid-addon__assets__css__front.css__q70327802.html"
+    }
+  ]
+}

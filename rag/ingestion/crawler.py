@@ -50,6 +50,14 @@ class CrawlConfig:
     respect_robots: bool = True
     refresh: bool = False
     max_depth: int = 4
+    # Fetch exactly the URLs given, ignoring the site's sitemap.
+    #
+    # `_seeds_for` expands a base URL into everything the host's sitemap
+    # lists, which is right for taking a whole site and wrong for adding a
+    # handful of named pages: `urljoin(base, "/sitemap.xml")` resolves to the
+    # host root, so even a deep seed URL pulls the entire site. Topping up a
+    # corpus with specific pages needs this off.
+    only_seeds: bool = False
 
     @property
     def allowed_hosts(self) -> set[str]:
@@ -133,7 +141,17 @@ class Crawler:
                 continue
             results.append(result)
 
-            if depth >= self.config.max_depth or is_pdf_url(url):
+            # `only_seeds` has to stop link-following too, not just sitemap
+            # expansion. It originally did only the latter, so a run seeded
+            # with three URLs breadth-first-followed every link on them and
+            # fetched 39 pages -- the whole university site, blogs and a font
+            # file included. The flag said "only the seeds" and delivered
+            # "no sitemap", which is the kind of gap that looks like success.
+            if (
+                self.config.only_seeds
+                or depth >= self.config.max_depth
+                or is_pdf_url(url)
+            ):
                 continue
 
             for link in self._links_in(result):
@@ -157,6 +175,8 @@ class Crawler:
     def _seeds_for(self, base: str) -> list[str]:
         """Prefer the site's own sitemap; fall back to the base URL."""
         seeds: list[str] = [base]
+        if self.config.only_seeds:
+            return seeds
         for sitemap_url in self._sitemap_candidates(base):
             urls = self._read_sitemap(sitemap_url)
             if urls:

@@ -29,7 +29,7 @@ Nothing leaves the machine it runs on.
 | **6** | Backend API: auth, portal endpoints, streaming chat | **complete** — 6a portal + SSE, 6b auth + admin |
 | **7** | Portal frontend (Next.js) | **complete** — home, departments, programmes, faculty |
 | **8** | Ask PCE chat, knowledge explorer, baseline-vs-proposed comparison | **complete** — streaming chat with citations, /explore, /compare |
-| 9 | Admin console | partial — endpoints exist, no UI |
+| **9** | Admin console | **partial** — console at `/admin` (corpus, indexes, evaluation runs, index rebuild); crawling, content editing and launching eval runs remain command-line |
 | 10 | Evaluation: RAGAS, LLM-judge, ablation study | mostly done — 7 configs over 140 questions; RAGAS harness outstanding |
 | 11 | Hardening and handover | not started |
 

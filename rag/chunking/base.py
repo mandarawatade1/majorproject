@@ -9,6 +9,21 @@ from typing import Any, Protocol
 from rag.ingestion.models import ParsedDocument
 
 
+def context_header(document_title: str | None, section_path: str | None) -> str:
+    """"{title} > {section}", with the title's repetition in the path removed.
+
+    Shared by `Chunk.embed_text` and `IndexedHit.search_text` so the text the
+    indexes are built from and the text the reranker judges cannot drift apart.
+    They did drift once, and the result was that a syllabus could be retrieved
+    and then discarded by the stage that decides what the model sees.
+    """
+    title = document_title or ""
+    path = section_path or ""
+    if title and path.startswith(title):
+        path = path[len(title):].lstrip(" >")
+    return " > ".join(part for part in (title, path) if part)
+
+
 @dataclass(slots=True)
 class Chunk:
     """A retrievable unit, before it is embedded or persisted.
@@ -42,6 +57,27 @@ class Chunk:
     @property
     def char_count(self) -> int:
         return len(self.content)
+
+    @property
+    def embed_text(self) -> str:
+        """The text that is embedded and tokenised for search.
+
+        `content` is the section body verbatim, and that is what a citation
+        quotes and what the generator is shown. But the body alone is not
+        what a reader would call this passage. A syllabus table headed
+        "Semester I" never repeats "B.Tech Mechanical Engineering" often
+        enough to win a retrieval contest against a short prose page where
+        those two words are most of the token mass -- so the department's own
+        syllabus loses to a page that merely mentions the department.
+
+        The title and section path are what say the passage is about, and
+        until now they lived only in metadata, where no retriever could see
+        them. Prefixing them here rather than editing `content` keeps
+        provenance exact while letting the dense and sparse indexes match on
+        the words a question actually uses.
+        """
+        header = context_header(self.document_title, self.section_path)
+        return f"{header}\n\n{self.content}" if header else self.content
 
     def citation_label(self) -> str:
         """How this chunk identifies itself in a source list.

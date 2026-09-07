@@ -32,6 +32,46 @@ def _tokenize(text: str) -> list[str]:
     return _TOKEN_RE.findall(text.lower())
 
 
+# Applied to the QUERY only, never to documents. Filtering documents would
+# change the collection statistics BM25 scores against -- document frequency
+# and average length -- and so would require rebuilding the index. Filtering
+# only the query leaves those statistics untouched and still removes the
+# terms that were doing the damage.
+#
+# Measured on the question "What subjects are in Semester I of Mechanical
+# Engineering?", which BM25 ranked 11th behind a page titled "The best college
+# experience!": the query carried `what`, `are`, `in` and `of`, present in up
+# to 2,759 of 4,114 chunks, so any page repeating "mechanical engineering"
+# outscored the one table that answered the question. Dropping them moves the
+# correct passage from 11th to 2nd.
+#
+# `i` is deliberately ABSENT from this list even though it is a pronoun. It is
+# also the roman numeral that separates "Semester I" from "Semester IV", "VI"
+# and "VIII" -- fourteen near-identical tables in one syllabus. Removing it
+# was tried and made the same question worse, 11th to 35th, because it deleted
+# the only evidence distinguishing the semesters. Single letters carry meaning
+# in a course catalogue.
+_QUERY_STOPWORDS = frozenset(
+    {
+        "a", "an", "and", "are", "as", "at", "be", "by", "can", "do", "does",
+        "for", "from", "how", "is", "in", "it", "of", "on", "or", "that",
+        "the", "to", "was", "what", "when", "where", "which", "who", "why",
+        "with",
+    }
+)
+
+
+def _tokenize_query(text: str) -> list[str]:
+    """Tokenise a question, dropping terms that carry no discriminating power.
+
+    Falls back to the unfiltered tokens if filtering would empty the query --
+    a question made entirely of stopwords should still retrieve something.
+    """
+    tokens = _tokenize(text)
+    kept = [token for token in tokens if token not in _QUERY_STOPWORDS]
+    return kept or tokens
+
+
 class BM25Index:
     """Sparse keyword index, persisted to a pickle file on disk."""
 
@@ -84,7 +124,7 @@ class BM25Index:
         self._ensure_loaded()
         added = 0
         for chunk in chunks:
-            tokens = _tokenize(chunk.content)
+            tokens = _tokenize(chunk.embed_text)
             metadata = chunk.to_metadata()
             if chunk.chunk_id in self._id_to_pos:
                 pos = self._id_to_pos[chunk.chunk_id]
@@ -112,7 +152,7 @@ class BM25Index:
         if self._bm25 is None or not self._chunk_ids:
             return []
 
-        query_tokens = _tokenize(query)
+        query_tokens = _tokenize_query(query)
         scores = self._bm25.get_scores(query_tokens)
 
         candidates = list(range(len(self._chunk_ids)))

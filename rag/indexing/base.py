@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Protocol
 
-from rag.chunking.base import Chunk
+from rag.chunking.base import Chunk, context_header
 
 
 @dataclass(slots=True)
@@ -16,6 +16,23 @@ class IndexedHit:
     content: str
     score: float
     metadata: dict[str, Any] = field(default_factory=dict)
+
+    @property
+    def search_text(self) -> str:
+        """Content carrying the same context header the indexes were built from.
+
+        A reranker can only judge what it is handed. Handed bare `content`, a
+        cross-encoder was asked to score a table of course codes against a
+        question naming a department that the table never spells out -- and so
+        it ranked the department's own syllabus below a blog post whose title
+        repeats the department name. The header was already sitting in the
+        metadata; it simply never reached the stage that decides what survives.
+        """
+        meta = self.metadata or {}
+        header = context_header(
+            str(meta.get("document_title", "")), str(meta.get("section_path", ""))
+        )
+        return f"{header}\n\n{self.content}" if header else self.content
 
     @property
     def document_id(self) -> str:

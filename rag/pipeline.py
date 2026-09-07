@@ -236,7 +236,7 @@ class Pipeline:
         return report
 
     def _flush(self, chunks: list[Chunk]) -> int:
-        vectors = self.embedder.embed_documents([chunk.content for chunk in chunks])
+        vectors = self.embedder.embed_documents([chunk.embed_text for chunk in chunks])
         indexed = self.index.add(chunks, vectors)
         if self.sparse_index is not None:
             self.sparse_index.add(chunks)

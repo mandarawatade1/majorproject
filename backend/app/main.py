@@ -4,6 +4,7 @@ Run locally:   uvicorn app.main:app --reload
 In Docker:     handled by the image CMD
 """
 
+import asyncio
 import time
 import uuid
 from collections.abc import AsyncIterator, Awaitable, Callable
@@ -38,8 +39,36 @@ async def lifespan(_app: FastAPI) -> AsyncIterator[None]:
         chroma=settings.chroma_url,
         ollama=settings.ollama_base_url,
     )
+    # Warm the retrieval stack in the background.
+    #
+    # The embedder, the cross-encoder and the BM25 pickle all load lazily, so
+    # without this the FIRST question after a restart pays for all three:
+    # measured at 11.2s against 2.6s for every question after it. That first
+    # question is the one a demonstration or a viva is judged on.
+    #
+    # In the background, never awaited, and every failure swallowed: a warm-up
+    # is an optimisation, and an optimisation that can prevent the API from
+    # serving requests is a liability. If Chroma is not ready yet this simply
+    # logs and the old lazy path still works.
+    warm = asyncio.create_task(asyncio.to_thread(_warm_retrieval))
+    warm.add_done_callback(lambda _: None)
+
     yield
     logger.info("shutdown")
+
+
+def _warm_retrieval() -> None:
+    """Run one throwaway retrieval so the models are resident before a user asks."""
+    started = time.perf_counter()
+    try:
+        from rag.config import get_config
+        from rag.factory import build_pipeline
+
+        build_pipeline(get_config("C3")).prepare("warm up the retrieval stack")
+    except Exception as exc:  # noqa: BLE001 - warm-up must never break startup
+        logger.warning("warmup_failed", error=str(exc))
+        return
+    logger.info("warmup_complete", seconds=round(time.perf_counter() - started, 1))
 
 
 app = FastAPI(

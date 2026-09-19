@@ -182,6 +182,7 @@ asked the same question.
 | **C1** + structure-aware chunking | 17/20 | 4.5 | 11 | 1 |
 | **C2** + hybrid dense/BM25 with RRF, top-20 | 18/20 | 8.0 | 263 | 1 |
 | **C3** + cross-encoder reranking to top-5 | 19/20 | 4.7 | 7 | 0 |
+| **C5** + post-answer claim verification | 19/20 | 4.6 | 9 | 0 |
 
 Each step contributes through a different mechanism, and each is visible in the
 instrumentation rather than inferred from the score.
@@ -211,6 +212,13 @@ better passages; C2 had already found the right one. It is deciding which of
 the twenty found passages survive a fixed budget. Reranking to five returns the
 context to 4.7 chunks and 7 drops, and the Semester I table is kept. Retrieval
 and selection are separate jobs, and C2 performs the first without the second.
+
+**C3 → C5 (0), verification.** C5 scores identically to C3, which is the
+correct result rather than a null one: claim verification runs *after*
+generation and cannot change which passages were retrieved. Its value, if any,
+lies in detecting unsupported claims in the answer, which this measurement does
+not examine. Reporting it as a flat step is what shows the harness is measuring
+retrieval and only retrieval.
 
 ### Where the benefit is concentrated
 
